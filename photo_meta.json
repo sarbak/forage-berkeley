@@ -1,0 +1,2820 @@
+{
+  "dandelion": [
+    {
+      "slot": "leaf",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Taraxacum_officinale_leaf1_%2816189363040%29.jpg/1280px-Taraxacum_officinale_leaf1_%2816189363040%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "Harry Rose from South West Rocks, Australia",
+      "title": "Taraxacum officinale leaf1 (16189363040).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ATaraxacum%20officinale%20leaf1%20%2816189363040%29.jpg"
+    },
+    {
+      "slot": "leaf2",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Taraxacum_officinale_leaf2_%2816189358420%29.jpg/1280px-Taraxacum_officinale_leaf2_%2816189358420%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "Harry Rose from South West Rocks, Australia",
+      "title": "Taraxacum officinale leaf2 (16189358420).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ATaraxacum%20officinale%20leaf2%20%2816189358420%29.jpg"
+    },
+    {
+      "slot": "plant",
+      "label": "whole plant",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Starr_070208-4379_Taraxacum_officinale.jpg/1280px-Starr_070208-4379_Taraxacum_officinale.jpg",
+      "license": "CC BY 3.0",
+      "license_code": "cc-by-3.0",
+      "attribution": "Forest & Kim Starr",
+      "title": "Starr 070208-4379 Taraxacum officinale.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AStarr%20070208-4379%20Taraxacum%20officinale.jpg"
+    },
+    {
+      "slot": "flower",
+      "label": "flower",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Dandelion_%28Taraxacum_officinale%29_blossom.jpg/1280px-Dandelion_%28Taraxacum_officinale%29_blossom.jpg",
+      "license": "CC0",
+      "license_code": "cc0",
+      "attribution": "Kollibri1969",
+      "title": "Dandelion (Taraxacum officinale) blossom.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ADandelion%20%28Taraxacum%20officinale%29%20blossom.jpg"
+    },
+    {
+      "slot": "fruit",
+      "label": "fruit / seed",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Taraxacum_officinale_21.04.2025_01.jpg/1280px-Taraxacum_officinale_21.04.2025_01.jpg",
+      "license": "CC BY 4.0",
+      "license_code": "cc-by-4.0",
+      "attribution": "Wiki leylek",
+      "title": "Taraxacum officinale 21.04.2025 01.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ATaraxacum%20officinale%2021.04.2025%2001.jpg"
+    },
+    {
+      "slot": "bark",
+      "label": "bark / stem",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Taraxacum_officinale_stem4_%2815756642463%29.jpg/1280px-Taraxacum_officinale_stem4_%2815756642463%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "Harry Rose from South West Rocks, Australia",
+      "title": "Taraxacum officinale stem4 (15756642463).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ATaraxacum%20officinale%20stem4%20%2815756642463%29.jpg"
+    }
+  ],
+  "common-mallow": [
+    {
+      "slot": "leaf",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Malva_neglecta_-_leaf_%2818438620523%29.jpg/1280px-Malva_neglecta_-_leaf_%2818438620523%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "NY State IPM Program at Cornell University from New York, USA",
+      "title": "Malva neglecta - leaf (18438620523).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AMalva%20neglecta%20-%20leaf%20%2818438620523%29.jpg"
+    },
+    {
+      "slot": "leaf2",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Malva_neglecta_-_leaf_%2819059301425%29.jpg/1280px-Malva_neglecta_-_leaf_%2819059301425%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "NY State IPM Program at Cornell University from New York, USA",
+      "title": "Malva neglecta - leaf (19059301425).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AMalva%20neglecta%20-%20leaf%20%2819059301425%29.jpg"
+    },
+    {
+      "slot": "plant",
+      "label": "whole plant",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Malva_neglecta_-_whole_plant_%2818438619353%29.jpg/1280px-Malva_neglecta_-_whole_plant_%2818438619353%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "NY State IPM Program at Cornell University from New York, USA",
+      "title": "Malva neglecta - whole plant (18438619353).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AMalva%20neglecta%20-%20whole%20plant%20%2818438619353%29.jpg"
+    },
+    {
+      "slot": "flower",
+      "label": "flower",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Malva_neglecta_FlowerCloseup_17June2009_CampoCalatrava.jpg/1280px-Malva_neglecta_FlowerCloseup_17June2009_CampoCalatrava.jpg",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "Javier martin",
+      "title": "Malva neglecta FlowerCloseup 17June2009 CampoCalatrava.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AMalva%20neglecta%20FlowerCloseup%2017June2009%20CampoCalatrava.jpg"
+    },
+    {
+      "slot": "fruit",
+      "label": "fruit / seed",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Malva_neglecta_in_Antalya_by_David_Merrick_14.jpg/1280px-Malva_neglecta_in_Antalya_by_David_Merrick_14.jpg",
+      "license": "CC BY 4.0",
+      "license_code": "cc-by-4.0",
+      "attribution": "Meteorquake",
+      "title": "Malva neglecta in Antalya by David Merrick 14.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AMalva%20neglecta%20in%20Antalya%20by%20David%20Merrick%2014.jpg"
+    },
+    {
+      "slot": "bark",
+      "label": "bark / stem",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Malva_neglecta_-_stem_%2818871618238%29.jpg/1280px-Malva_neglecta_-_stem_%2818871618238%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "NY State IPM Program at Cornell University from New York, USA",
+      "title": "Malva neglecta - stem (18871618238).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AMalva%20neglecta%20-%20stem%20%2818871618238%29.jpg"
+    }
+  ],
+  "chickweed": [
+    {
+      "slot": "leaf",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Stellaria_media_-_leaves_%2818876945718%29.jpg/1280px-Stellaria_media_-_leaves_%2818876945718%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "NY State IPM Program at Cornell University from New York, USA",
+      "title": "Stellaria media - leaves (18876945718).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AStellaria%20media%20-%20leaves%20%2818876945718%29.jpg"
+    },
+    {
+      "slot": "leaf2",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/37/Leaves_of_three_species_of_chickweed.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_code": "cc-by-sa-4.0",
+      "attribution": "Alex Lockton",
+      "title": "Leaves of three species of chickweed.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ALeaves%20of%20three%20species%20of%20chickweed.jpg"
+    },
+    {
+      "slot": "plant",
+      "label": "whole plant",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Stellaria_media_-_whole_plant_%2818443955003%29.jpg/1280px-Stellaria_media_-_whole_plant_%2818443955003%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "NY State IPM Program at Cornell University from New York, USA",
+      "title": "Stellaria media - whole plant (18443955003).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AStellaria%20media%20-%20whole%20plant%20%2818443955003%29.jpg"
+    },
+    {
+      "slot": "flower",
+      "label": "flower",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Stellaria_media_-_flower_buds%2C_stems_%2818443956683%29.jpg/1280px-Stellaria_media_-_flower_buds%2C_stems_%2818443956683%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "NY State IPM Program at Cornell University from New York, USA",
+      "title": "Stellaria media - flower buds, stems (18443956683).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AStellaria%20media%20-%20flower%20buds%2C%20stems%20%2818443956683%29.jpg"
+    },
+    {
+      "slot": "fruit",
+      "label": "fruit / seed",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Stellaria_media_%28s._str.%29_sl132.jpg/1280px-Stellaria_media_%28s._str.%29_sl132.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_code": "cc-by-sa-4.0",
+      "attribution": "Stefan.lefnaer",
+      "title": "Stellaria media (s. str.) sl132.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AStellaria%20media%20%28s.%20str.%29%20sl132.jpg"
+    },
+    {
+      "slot": "bark",
+      "label": "bark / stem",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Stellaria_media_stem_hairs.jpg/1280px-Stellaria_media_stem_hairs.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_code": "cc-by-sa-4.0",
+      "attribution": "Alex Lockton",
+      "title": "Stellaria media stem hairs.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AStellaria%20media%20stem%20hairs.jpg"
+    }
+  ],
+  "purslane": [
+    {
+      "slot": "leaf",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Portulaca_oleracea_plant7_%2816728974773%29.jpg/1280px-Portulaca_oleracea_plant7_%2816728974773%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "Harry Rose from South West Rocks, Australia",
+      "title": "Portulaca oleracea plant7 (16728974773).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3APortulaca%20oleracea%20plant7%20%2816728974773%29.jpg"
+    },
+    {
+      "slot": "leaf2",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Portulaca_oleracea_plant8_%2817349216245%29.jpg/1280px-Portulaca_oleracea_plant8_%2817349216245%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "Harry Rose from South West Rocks, Australia",
+      "title": "Portulaca oleracea plant8 (17349216245).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3APortulaca%20oleracea%20plant8%20%2817349216245%29.jpg"
+    },
+    {
+      "slot": "plant",
+      "label": "whole plant",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Portulaca_oleracea_habitusDehesaBoyalPuertollano.jpg/1280px-Portulaca_oleracea_habitusDehesaBoyalPuertollano.jpg",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "Javier martin",
+      "title": "Portulaca oleracea habitusDehesaBoyalPuertollano.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3APortulaca%20oleracea%20habitusDehesaBoyalPuertollano.jpg"
+    },
+    {
+      "slot": "flower",
+      "label": "flower",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Portulaca_oleracea_blossom.jpg/1280px-Portulaca_oleracea_blossom.jpg",
+      "license": "CC BY 3.0",
+      "license_code": "cc-by-3.0",
+      "attribution": "Ethel Aardvark",
+      "title": "Portulaca oleracea blossom.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3APortulaca%20oleracea%20blossom.jpg"
+    },
+    {
+      "slot": "fruit",
+      "label": "fruit / seed",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Portulaca_oleracea_fruit01.jpg/1280px-Portulaca_oleracea_fruit01.jpg",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "Loasa",
+      "title": "Portulaca oleracea fruit01.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3APortulaca%20oleracea%20fruit01.jpg"
+    },
+    {
+      "slot": "bark",
+      "label": "bark / stem",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Portulaca_oleracea_stems.jpg/1280px-Portulaca_oleracea_stems.jpg",
+      "license": "CC BY-SA 2.5",
+      "license_code": "cc-by-sa-2.5",
+      "attribution": "J\u00falio Reis (Tintazul)",
+      "title": "Portulaca oleracea stems.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3APortulaca%20oleracea%20stems.jpg"
+    }
+  ],
+  "lambs-quarters": [
+    {
+      "slot": "leaf",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Chenopodium_album_-_leaves_%2818841880431%29.jpg/1280px-Chenopodium_album_-_leaves_%2818841880431%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "NY State IPM Program at Cornell University from New York, USA",
+      "title": "Chenopodium album - leaves (18841880431).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AChenopodium%20album%20-%20leaves%20%2818841880431%29.jpg"
+    },
+    {
+      "slot": "leaf2",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/37/Rice_and_chenopodium_album_leaf_curry_with_potatoes_and_onions40.JPG",
+      "license": "CC BY-SA 3.0",
+      "license_code": "cc-by-sa-3.0",
+      "attribution": "Xufanc",
+      "title": "Rice and chenopodium album leaf curry with potatoes and onions40.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File%3ARice%20and%20chenopodium%20album%20leaf%20curry%20with%20potatoes%20and%20onions40.JPG"
+    },
+    {
+      "slot": "plant",
+      "label": "whole plant",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/04/Melganzenvoet_plant_Chenopodium_album.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_code": "cc-by-sa-3.0",
+      "attribution": "Rasbak",
+      "title": "Melganzenvoet plant Chenopodium album.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AMelganzenvoet%20plant%20Chenopodium%20album.jpg"
+    },
+    {
+      "slot": "flower",
+      "label": "flower",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Chenopodium_album_-_leaves%2C_flower_bud_%2818651445218%29.jpg/1280px-Chenopodium_album_-_leaves%2C_flower_bud_%2818651445218%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "NY State IPM Program at Cornell University from New York, USA",
+      "title": "Chenopodium album - leaves, flower bud (18651445218).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AChenopodium%20album%20-%20leaves%2C%20flower%20bud%20%2818651445218%29.jpg"
+    },
+    {
+      "slot": "fruit",
+      "label": "fruit / seed",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Chenopodium_album%2C_upper_marlboro_2016-10-22-19.04_%2829867233343%29.jpg/1280px-Chenopodium_album%2C_upper_marlboro_2016-10-22-19.04_%2829867233343%29.jpg",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "USGS Bee Inventory and Monitoring Lab from Beltsville, Maryland, USA",
+      "title": "Chenopodium album, upper marlboro 2016-10-22-19.04 (29867233343).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AChenopodium%20album%2C%20upper%20marlboro%202016-10-22-19.04%20%2829867233343%29.jpg"
+    },
+    {
+      "slot": "bark",
+      "label": "bark / stem",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Chenopodium_album_stem1_%2814356578313%29.jpg/1280px-Chenopodium_album_stem1_%2814356578313%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "Harry Rose from South West Rocks, Australia",
+      "title": "Chenopodium album stem1 (14356578313).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AChenopodium%20album%20stem1%20%2814356578313%29.jpg"
+    }
+  ],
+  "broadleaf-plantain": [
+    {
+      "slot": "leaf",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Broadleaf_Plantain_Spike.jpg/1280px-Broadleaf_Plantain_Spike.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_code": "cc-by-sa-4.0",
+      "attribution": "Sanjay Acharya",
+      "title": "Broadleaf Plantain Spike.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ABroadleaf%20Plantain%20Spike.jpg"
+    },
+    {
+      "slot": "leaf2",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Broadleaf_plantain_in_the_middle_of_road_162%2C_Brastad.jpg/1280px-Broadleaf_plantain_in_the_middle_of_road_162%2C_Brastad.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_code": "cc-by-sa-4.0",
+      "attribution": "W.carter",
+      "title": "Broadleaf plantain in the middle of road 162, Brastad.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ABroadleaf%20plantain%20in%20the%20middle%20of%20road%20162%2C%20Brastad.jpg"
+    },
+    {
+      "slot": "plant",
+      "label": "whole plant",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Plantago_major_-_whole_plant_%2818440737953%29.jpg/1280px-Plantago_major_-_whole_plant_%2818440737953%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "NY State IPM Program at Cornell University from New York, USA",
+      "title": "Plantago major - whole plant (18440737953).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3APlantago%20major%20-%20whole%20plant%20%2818440737953%29.jpg"
+    },
+    {
+      "slot": "flower",
+      "label": "flower",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Plantago_major_flowers_crop_01.jpg/1280px-Plantago_major_flowers_crop_01.jpg",
+      "license": "CC BY 4.0",
+      "license_code": "cc-by-4.0",
+      "attribution": "CriticalDrinking",
+      "title": "Plantago major flowers crop 01.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3APlantago%20major%20flowers%20crop%2001.jpg"
+    },
+    {
+      "slot": "fruit",
+      "label": "fruit / seed",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Grote_weegbree_vruchten_%28Plantago_major_subsp._major_fruits%29.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_code": "cc-by-sa-3.0",
+      "attribution": "Rasbak",
+      "title": "Grote weegbree vruchten (Plantago major subsp. major fruits).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AGrote%20weegbree%20vruchten%20%28Plantago%20major%20subsp.%20major%20fruits%29.jpg"
+    },
+    {
+      "slot": "bark",
+      "label": "bark / stem",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Plantago_major-1-yercaud-salem-India.jpg/1280px-Plantago_major-1-yercaud-salem-India.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_code": "cc-by-sa-4.0",
+      "attribution": "Yercaud-elango",
+      "title": "Plantago major-1-yercaud-salem-India.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3APlantago%20major-1-yercaud-salem-India.jpg"
+    }
+  ],
+  "sow-thistle": [
+    {
+      "slot": "leaf",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Sonchus_oleraceus_-_leaf_%2818876567750%29.jpg/1280px-Sonchus_oleraceus_-_leaf_%2818876567750%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "NY State IPM Program at Cornell University from New York, USA",
+      "title": "Sonchus oleraceus - leaf (18876567750).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASonchus%20oleraceus%20-%20leaf%20%2818876567750%29.jpg"
+    },
+    {
+      "slot": "leaf2",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Sonchus_oleraceus_-_leaf_%2818878121079%29.jpg/1280px-Sonchus_oleraceus_-_leaf_%2818878121079%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "NY State IPM Program at Cornell University from New York, USA",
+      "title": "Sonchus oleraceus - leaf (18878121079).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASonchus%20oleraceus%20-%20leaf%20%2818878121079%29.jpg"
+    },
+    {
+      "slot": "plant",
+      "label": "whole plant",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Sonchus_oleraceus_-_whole_plant_%2819058690412%29.jpg/1280px-Sonchus_oleraceus_-_whole_plant_%2819058690412%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "NY State IPM Program at Cornell University from New York, USA",
+      "title": "Sonchus oleraceus - whole plant (19058690412).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASonchus%20oleraceus%20-%20whole%20plant%20%2819058690412%29.jpg"
+    },
+    {
+      "slot": "flower",
+      "label": "flower",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Sonchus_oleraceus_Flowercloseup_2009-12-13_DehesaBoyaldePuertollano.jpg/1280px-Sonchus_oleraceus_Flowercloseup_2009-12-13_DehesaBoyaldePuertollano.jpg",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "Javier martin",
+      "title": "Sonchus oleraceus Flowercloseup 2009-12-13 DehesaBoyaldePuertollano.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASonchus%20oleraceus%20Flowercloseup%202009-12-13%20DehesaBoyaldePuertollano.jpg"
+    },
+    {
+      "slot": "fruit",
+      "label": "fruit / seed",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Sonchus_oleraceus_fruit1_%2816210689045%29.jpg/1280px-Sonchus_oleraceus_fruit1_%2816210689045%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "Harry Rose from South West Rocks, Australia",
+      "title": "Sonchus oleraceus fruit1 (16210689045).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASonchus%20oleraceus%20fruit1%20%2816210689045%29.jpg"
+    },
+    {
+      "slot": "bark",
+      "label": "bark / stem",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Sonchus_oleraceus_head2_%2815588283774%29.jpg/1280px-Sonchus_oleraceus_head2_%2815588283774%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "Harry Rose from South West Rocks, Australia",
+      "title": "Sonchus oleraceus head2 (15588283774).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASonchus%20oleraceus%20head2%20%2815588283774%29.jpg"
+    }
+  ],
+  "prickly-lettuce": [
+    {
+      "slot": "leaf",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Lactuca_serriola_-_leaves_%2818865781610%29.jpg/1280px-Lactuca_serriola_-_leaves_%2818865781610%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "NY State IPM Program at Cornell University from New York, USA",
+      "title": "Lactuca serriola - leaves (18865781610).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ALactuca%20serriola%20-%20leaves%20%2818865781610%29.jpg"
+    },
+    {
+      "slot": "leaf2",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Lactuca_serriola_Mann.jpg/1280px-Lactuca_serriola_Mann.jpg",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "Johann Gottlieb Mann, digitized by Loyola University New Orleans",
+      "title": "Lactuca serriola Mann.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ALactuca%20serriola%20Mann.jpg"
+    },
+    {
+      "slot": "plant",
+      "label": "whole plant",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Lactuca_serriola_-_whole_plant_%2818432812883%29.jpg/1280px-Lactuca_serriola_-_whole_plant_%2818432812883%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "NY State IPM Program at Cornell University from New York, USA",
+      "title": "Lactuca serriola - whole plant (18432812883).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ALactuca%20serriola%20-%20whole%20plant%20%2818432812883%29.jpg"
+    },
+    {
+      "slot": "flower",
+      "label": "flower",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Lactuca_serriola_flowers_RJP_01.jpg/1280px-Lactuca_serriola_flowers_RJP_01.jpg",
+      "license": "CC BY 2.5",
+      "license_code": "cc-by-2.5",
+      "attribution": "RickP",
+      "title": "Lactuca serriola flowers RJP 01.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ALactuca%20serriola%20flowers%20RJP%2001.jpg"
+    },
+    {
+      "slot": "fruit",
+      "label": "fruit / seed",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Lactuca_serriola_%284971024495%29.jpg/1280px-Lactuca_serriola_%284971024495%29.jpg",
+      "license": "CC BY-SA 2.0",
+      "license_code": "cc-by-sa-2.0",
+      "attribution": "Matt Lavin from Bozeman, Montana, USA",
+      "title": "Lactuca serriola (4971024495).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ALactuca%20serriola%20%284971024495%29.jpg"
+    },
+    {
+      "slot": "bark",
+      "label": "bark / stem",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Lactuca_serriola_%284971027909%29.jpg/1280px-Lactuca_serriola_%284971027909%29.jpg",
+      "license": "CC BY-SA 2.0",
+      "license_code": "cc-by-sa-2.0",
+      "attribution": "Matt Lavin from Bozeman, Montana, USA",
+      "title": "Lactuca serriola (4971027909).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ALactuca%20serriola%20%284971027909%29.jpg"
+    }
+  ],
+  "curly-dock": [
+    {
+      "slot": "leaf",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Rumex_crispus_Leaves_2009December07_DehesaBoyalPuertollano.jpg/1280px-Rumex_crispus_Leaves_2009December07_DehesaBoyalPuertollano.jpg",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "Javier martin",
+      "title": "Rumex crispus Leaves 2009December07 DehesaBoyalPuertollano.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ARumex%20crispus%20Leaves%202009December07%20DehesaBoyalPuertollano.jpg"
+    },
+    {
+      "slot": "leaf2",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Rumex_crispus_leaf2_%2814901284158%29.jpg/1280px-Rumex_crispus_leaf2_%2814901284158%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "Harry Rose from South West Rocks, Australia",
+      "title": "Rumex crispus leaf2 (14901284158).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ARumex%20crispus%20leaf2%20%2814901284158%29.jpg"
+    },
+    {
+      "slot": "plant",
+      "label": "whole plant",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Rumex_crispus_-_seedhead%2C_whole_plant_%2818875443190%29.jpg/1280px-Rumex_crispus_-_seedhead%2C_whole_plant_%2818875443190%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "NY State IPM Program at Cornell University from New York, USA",
+      "title": "Rumex crispus - seedhead, whole plant (18875443190).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ARumex%20crispus%20-%20seedhead%2C%20whole%20plant%20%2818875443190%29.jpg"
+    },
+    {
+      "slot": "flower",
+      "label": "flower",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Rumex_crispus_flowerhead3_%2815064774986%29.jpg/1280px-Rumex_crispus_flowerhead3_%2815064774986%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "Harry Rose from South West Rocks, Australia",
+      "title": "Rumex crispus flowerhead3 (15064774986).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ARumex%20crispus%20flowerhead3%20%2815064774986%29.jpg"
+    },
+    {
+      "slot": "fruit",
+      "label": "fruit / seed",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Rumex_crispus-fruits-1.jpg",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "Pfiffner, L., USDA/ARS/NCRPIS - Iowa State University",
+      "title": "Rumex crispus-fruits-1.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ARumex%20crispus-fruits-1.jpg"
+    },
+    {
+      "slot": "bark",
+      "label": "bark / stem",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Rumex_crispus_habit1_%2814901322080%29.jpg/1280px-Rumex_crispus_habit1_%2814901322080%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "Harry Rose from South West Rocks, Australia",
+      "title": "Rumex crispus habit1 (14901322080).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ARumex%20crispus%20habit1%20%2814901322080%29.jpg"
+    }
+  ],
+  "sheep-sorrel": [
+    {
+      "slot": "leaf",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/8/82/Acetosella_vulgaris_leaf_%2811507767305%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "Harry Rose from South West Rocks, Australia",
+      "title": "Acetosella vulgaris leaf (11507767305).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AAcetosella%20vulgaris%20leaf%20%2811507767305%29.jpg"
+    },
+    {
+      "slot": "leaf2",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Manchas_foliares_-_hongos_sobre_hoja_de_Rumex_sp.-_Leaf_spot_%287494223286%29.jpg/1280px-Manchas_foliares_-_hongos_sobre_hoja_de_Rumex_sp.-_Leaf_spot_%287494223286%29.jpg",
+      "license": "CC BY-SA 2.0",
+      "license_code": "cc-by-sa-2.0",
+      "attribution": "jacilluch",
+      "title": "Manchas foliares - hongos sobre hoja de Rumex sp.- Leaf spot (7494223286).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AManchas%20foliares%20-%20hongos%20sobre%20hoja%20de%20Rumex%20sp.-%20Leaf%20spot%20%287494223286%29.jpg"
+    },
+    {
+      "slot": "plant",
+      "label": "whole plant",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Rumex_acetosella_-_whole_plant%2C_inflorescence_%2819036840046%29.jpg/1280px-Rumex_acetosella_-_whole_plant%2C_inflorescence_%2819036840046%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "NY State IPM Program at Cornell University from New York, USA",
+      "title": "Rumex acetosella - whole plant, inflorescence (19036840046).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ARumex%20acetosella%20-%20whole%20plant%2C%20inflorescence%20%2819036840046%29.jpg"
+    },
+    {
+      "slot": "flower",
+      "label": "flower",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Rumex_acetosella_flowersCloseup2_12April2009_DehesaBoyalPuertollano.jpg/1280px-Rumex_acetosella_flowersCloseup2_12April2009_DehesaBoyalPuertollano.jpg",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "Javier martin",
+      "title": "Rumex acetosella flowersCloseup2 12April2009 DehesaBoyalPuertollano.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ARumex%20acetosella%20flowersCloseup2%2012April2009%20DehesaBoyalPuertollano.jpg"
+    },
+    {
+      "slot": "fruit",
+      "label": "fruit / seed",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Rumex_acetosella_fruits_and_seeds%2C_Schapenzuring_vruchten_en_zaden.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_code": "cc-by-sa-3.0",
+      "attribution": "Rasbak",
+      "title": "Rumex acetosella fruits and seeds, Schapenzuring vruchten en zaden.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ARumex%20acetosella%20fruits%20and%20seeds%2C%20Schapenzuring%20vruchten%20en%20zaden.jpg"
+    },
+    {
+      "slot": "bark",
+      "label": "bark / stem",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Rumex_acetosella_-_stem_%2818875378138%29.jpg/1280px-Rumex_acetosella_-_stem_%2818875378138%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "NY State IPM Program at Cornell University from New York, USA",
+      "title": "Rumex acetosella - stem (18875378138).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ARumex%20acetosella%20-%20stem%20%2818875378138%29.jpg"
+    }
+  ],
+  "shepherds-purse": [
+    {
+      "slot": "leaf",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Capsella_bursa_pastoris_0.2_R.jpg/1280px-Capsella_bursa_pastoris_0.2_R.jpg",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "Rob Hille",
+      "title": "Capsella bursa pastoris 0.2 R.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ACapsella%20bursa%20pastoris%200.2%20R.jpg"
+    },
+    {
+      "slot": "leaf2",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/BM001161368_Capsella_bursa-pastoris_%28L.%29_Medikus_%2815489376272%29.jpg/1280px-BM001161368_Capsella_bursa-pastoris_%28L.%29_Medikus_%2815489376272%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "NATT-at-NKM",
+      "title": "BM001161368 Capsella bursa-pastoris (L.) Medikus (15489376272).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ABM001161368%20Capsella%20bursa-pastoris%20%28L.%29%20Medikus%20%2815489376272%29.jpg"
+    },
+    {
+      "slot": "plant",
+      "label": "whole plant",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Capsella_bursa-pastoris_2009-11-22_DehesaBoyaldePuertollano.jpg/1280px-Capsella_bursa-pastoris_2009-11-22_DehesaBoyaldePuertollano.jpg",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "Javier martin",
+      "title": "Capsella bursa-pastoris 2009-11-22 DehesaBoyaldePuertollano.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ACapsella%20bursa-pastoris%202009-11-22%20DehesaBoyaldePuertollano.jpg"
+    },
+    {
+      "slot": "flower",
+      "label": "flower",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Flowers_of_Capsella_bursa-pastoris_%28Brassicaceae%29.jpg/1280px-Flowers_of_Capsella_bursa-pastoris_%28Brassicaceae%29.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_code": "cc-by-sa-4.0",
+      "attribution": "Juan Carlos Fonseca Mata",
+      "title": "Flowers of Capsella bursa-pastoris (Brassicaceae).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AFlowers%20of%20Capsella%20bursa-pastoris%20%28Brassicaceae%29.jpg"
+    },
+    {
+      "slot": "fruit",
+      "label": "fruit / seed",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Capsella_bursa-pastoris_109927620.jpg/1280px-Capsella_bursa-pastoris_109927620.jpg",
+      "license": "CC BY 4.0",
+      "license_code": "cc-by-4.0",
+      "attribution": "Alexis",
+      "title": "Capsella bursa-pastoris 109927620.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ACapsella%20bursa-pastoris%20109927620.jpg"
+    },
+    {
+      "slot": "bark",
+      "label": "bark / stem",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Capsella_bursa-pastoris_flower10_%2814679441514%29.jpg/1280px-Capsella_bursa-pastoris_flower10_%2814679441514%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "Harry Rose from South West Rocks, Australia",
+      "title": "Capsella bursa-pastoris flower10 (14679441514).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ACapsella%20bursa-pastoris%20flower10%20%2814679441514%29.jpg"
+    }
+  ],
+  "black-mustard": [
+    {
+      "slot": "leaf",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Brassica_nigra_%27Black_Mustard%27_%28Cruciferae%29_leaves.JPG/1280px-Brassica_nigra_%27Black_Mustard%27_%28Cruciferae%29_leaves.JPG",
+      "license": "CC BY-SA 3.0",
+      "license_code": "cc-by-sa-3.0",
+      "attribution": "Magnus Manske",
+      "title": "Brassica nigra 'Black Mustard' (Cruciferae) leaves.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File%3ABrassica%20nigra%20%27Black%20Mustard%27%20%28Cruciferae%29%20leaves.JPG"
+    },
+    {
+      "slot": "leaf2",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Sinapis_nigra_Mann.jpg/1280px-Sinapis_nigra_Mann.jpg",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "Johann Gottlieb Mann, digitized by Loyola University New Orleans",
+      "title": "Sinapis nigra Mann.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASinapis%20nigra%20Mann.jpg"
+    },
+    {
+      "slot": "plant",
+      "label": "whole plant",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Brassica_nigra_%27Black_Mustard%27_%28Cruciferae%29_plant.JPG/1280px-Brassica_nigra_%27Black_Mustard%27_%28Cruciferae%29_plant.JPG",
+      "license": "CC BY-SA 3.0",
+      "license_code": "cc-by-sa-3.0",
+      "attribution": "Magnus Manske",
+      "title": "Brassica nigra 'Black Mustard' (Cruciferae) plant.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File%3ABrassica%20nigra%20%27Black%20Mustard%27%20%28Cruciferae%29%20plant.JPG"
+    },
+    {
+      "slot": "flower",
+      "label": "flower",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Brassica_nigra_%27Black_Mustard%27_%28Cruciferae%29_flowers.JPG/1280px-Brassica_nigra_%27Black_Mustard%27_%28Cruciferae%29_flowers.JPG",
+      "license": "CC BY-SA 3.0",
+      "license_code": "cc-by-sa-3.0",
+      "attribution": "Magnus Manske",
+      "title": "Brassica nigra 'Black Mustard' (Cruciferae) flowers.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File%3ABrassica%20nigra%20%27Black%20Mustard%27%20%28Cruciferae%29%20flowers.JPG"
+    },
+    {
+      "slot": "fruit",
+      "label": "fruit / seed",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Brassica_nigra_Pod.jpg/1280px-Brassica_nigra_Pod.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_code": "cc-by-sa-3.0",
+      "attribution": "Krish Dulal",
+      "title": "Brassica nigra Pod.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ABrassica%20nigra%20Pod.jpg"
+    }
+  ],
+  "wild-radish": [
+    {
+      "slot": "leaf",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Raphanus_sativus_leaf.JPG/1280px-Raphanus_sativus_leaf.JPG",
+      "license": "CC BY-SA 3.0",
+      "license_code": "cc-by-sa-3.0",
+      "attribution": "Wikimedia Commons",
+      "title": "Raphanus sativus leaf.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File%3ARaphanus%20sativus%20leaf.JPG"
+    },
+    {
+      "slot": "leaf2",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Mise_en_%C3%A9vidence_de_deux_cotyl%C3%A9dons_suivi_des_premi%C3%A8res_feuilles._Raphanus_sativus_%28radis%29%2C_vari%C3%A9t%C3%A9_national_2..JPG/1280px-Mise_en_%C3%A9vidence_de_deux_cotyl%C3%A9dons_suivi_des_premi%C3%A8res_feuilles._Raphanus_sativus_%28radis%29%2C_vari%C3%A9t%C3%A9_national_2..JPG",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "Benjamin.pollet",
+      "title": "Mise en \u00e9vidence de deux cotyl\u00e9dons suivi des premi\u00e8res feuilles. Raphanus sativus (radis), vari\u00e9t\u00e9 national 2..JPG",
+      "source": "https://commons.wikimedia.org/wiki/File%3AMise%20en%20%C3%A9vidence%20de%20deux%20cotyl%C3%A9dons%20suivi%20des%20premi%C3%A8res%20feuilles.%20Raphanus%20sativus%20%28radis%29%2C%20vari%C3%A9t%C3%A9%20national%202..JPG"
+    },
+    {
+      "slot": "plant",
+      "label": "whole plant",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/df/Bladrammenas_plant_Raphanus_sativus_subsp._oleiferus.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_code": "cc-by-sa-3.0",
+      "attribution": "Rasbak",
+      "title": "Bladrammenas plant Raphanus sativus subsp. oleiferus.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ABladrammenas%20plant%20Raphanus%20sativus%20subsp.%20oleiferus.jpg"
+    },
+    {
+      "slot": "flower",
+      "label": "flower",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Flowers_of_Raphanus_sativus.jpg/1280px-Flowers_of_Raphanus_sativus.jpg",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "Kinori",
+      "title": "Flowers of Raphanus sativus.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AFlowers%20of%20Raphanus%20sativus.jpg"
+    },
+    {
+      "slot": "fruit",
+      "label": "fruit / seed",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Raphanus_sativus_silique_IP0209056.jpg/1280px-Raphanus_sativus_silique_IP0209056.jpg",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "Leo Michels",
+      "title": "Raphanus sativus silique IP0209056.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ARaphanus%20sativus%20silique%20IP0209056.jpg"
+    }
+  ],
+  "filaree": [
+    {
+      "slot": "leaf",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Erodium_cicutarium_%28leaves%29_2016.03_-_andrey_zharkikh.jpg/1280px-Erodium_cicutarium_%28leaves%29_2016.03_-_andrey_zharkikh.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "Andrey Zharkikh from Salt Lake City, USA",
+      "title": "Erodium cicutarium (leaves) 2016.03 - andrey zharkikh.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AErodium%20cicutarium%20%28leaves%29%202016.03%20-%20andrey%20zharkikh.jpg"
+    },
+    {
+      "slot": "leaf2",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Erodium_cicutarium_leaf3_ST_%2815442059768%29.jpg/1280px-Erodium_cicutarium_leaf3_ST_%2815442059768%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "Harry Rose from South West Rocks, Australia",
+      "title": "Erodium cicutarium leaf3 ST (15442059768).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AErodium%20cicutarium%20leaf3%20ST%20%2815442059768%29.jpg"
+    },
+    {
+      "slot": "plant",
+      "label": "whole plant",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Erodium_cicutarium_whole_plant.jpg/1280px-Erodium_cicutarium_whole_plant.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_code": "cc-by-sa-4.0",
+      "attribution": "E Wusk",
+      "title": "Erodium cicutarium whole plant.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AErodium%20cicutarium%20whole%20plant.jpg"
+    },
+    {
+      "slot": "flower",
+      "label": "flower",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Erodium_cicutarium_Flowers_Closeup_DehesaBoyaldePuertollano.jpg/1280px-Erodium_cicutarium_Flowers_Closeup_DehesaBoyaldePuertollano.jpg",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "Javier martin",
+      "title": "Erodium cicutarium Flowers Closeup DehesaBoyaldePuertollano.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AErodium%20cicutarium%20Flowers%20Closeup%20DehesaBoyaldePuertollano.jpg"
+    },
+    {
+      "slot": "fruit",
+      "label": "fruit / seed",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Erodium_cicutarium_fruit.JPG/1280px-Erodium_cicutarium_fruit.JPG",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "Syp",
+      "title": "Erodium cicutarium fruit.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File%3AErodium%20cicutarium%20fruit.JPG"
+    },
+    {
+      "slot": "bark",
+      "label": "bark / stem",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Erodium_cicutarium_flower12_%2815059435058%29.jpg/1280px-Erodium_cicutarium_flower12_%2815059435058%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "Harry Rose from South West Rocks, Australia",
+      "title": "Erodium cicutarium flower12 (15059435058).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AErodium%20cicutarium%20flower12%20%2815059435058%29.jpg"
+    }
+  ],
+  "cleavers": [
+    {
+      "slot": "leaf",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Galium_aparine_-_leaf_%2818246284154%29.jpg/1280px-Galium_aparine_-_leaf_%2818246284154%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "NY State IPM Program at Cornell University from New York, USA",
+      "title": "Galium aparine - leaf (18246284154).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AGalium%20aparine%20-%20leaf%20%2818246284154%29.jpg"
+    },
+    {
+      "slot": "leaf2",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Galium_aparine_-_leaf_%2818842583676%29.jpg/1280px-Galium_aparine_-_leaf_%2818842583676%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "NY State IPM Program at Cornell University from New York, USA",
+      "title": "Galium aparine - leaf (18842583676).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AGalium%20aparine%20-%20leaf%20%2818842583676%29.jpg"
+    },
+    {
+      "slot": "plant",
+      "label": "whole plant",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Galium_aparine_-_whole_plant_%2818682683999%29.jpg/1280px-Galium_aparine_-_whole_plant_%2818682683999%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "NY State IPM Program at Cornell University from New York, USA",
+      "title": "Galium aparine - whole plant (18682683999).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AGalium%20aparine%20-%20whole%20plant%20%2818682683999%29.jpg"
+    },
+    {
+      "slot": "flower",
+      "label": "flower",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Galium_aparine_flowers_RJP_01.jpg/1280px-Galium_aparine_flowers_RJP_01.jpg",
+      "license": "CC BY 2.5",
+      "license_code": "cc-by-2.5",
+      "attribution": "RickP",
+      "title": "Galium aparine flowers RJP 01.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AGalium%20aparine%20flowers%20RJP%2001.jpg"
+    },
+    {
+      "slot": "fruit",
+      "label": "fruit / seed",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Galium_aparine_fruit_%2801%29.jpg/1280px-Galium_aparine_fruit_%2801%29.jpg",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "Steve Hurst, hosted by the USDA-NRCS PLANTS Database",
+      "title": "Galium aparine fruit (01).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AGalium%20aparine%20fruit%20%2801%29.jpg"
+    },
+    {
+      "slot": "bark",
+      "label": "bark / stem",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Galium_aparine_stem1_%2814618972482%29.jpg/1280px-Galium_aparine_stem1_%2814618972482%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "Harry Rose from South West Rocks, Australia",
+      "title": "Galium aparine stem1 (14618972482).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AGalium%20aparine%20stem1%20%2814618972482%29.jpg"
+    }
+  ],
+  "miners-lettuce": [
+    {
+      "slot": "leaf",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Claytonia_perfoliata_basal_leaves_2003-02-04.jpg/1280px-Claytonia_perfoliata_basal_leaves_2003-02-04.jpg",
+      "license": "CC BY-SA 2.5",
+      "license_code": "cc-by-sa-2.5",
+      "attribution": "Copyright by Curtis Clark, licensed as noted",
+      "title": "Claytonia perfoliata basal leaves 2003-02-04.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AClaytonia%20perfoliata%20basal%20leaves%202003-02-04.jpg"
+    },
+    {
+      "slot": "leaf2",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/20190322_Claytonia_perfoliata_1.jpg/1280px-20190322_Claytonia_perfoliata_1.jpg",
+      "license": "CC0",
+      "license_code": "cc0",
+      "attribution": "AnRo0002",
+      "title": "20190322 Claytonia perfoliata 1.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3A20190322%20Claytonia%20perfoliata%201.jpg"
+    },
+    {
+      "slot": "plant",
+      "label": "whole plant",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Claytonia_perfoliata_Miner%27s_Lettuce.jpg/1280px-Claytonia_perfoliata_Miner%27s_Lettuce.jpg",
+      "license": "CC0",
+      "license_code": "cc0",
+      "attribution": "glmory",
+      "title": "Claytonia perfoliata Miner's Lettuce.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AClaytonia%20perfoliata%20Miner%27s%20Lettuce.jpg"
+    },
+    {
+      "slot": "flower",
+      "label": "flower",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Claytonia_perfoliata_ssp_perfoliata_flowers.jpg/1280px-Claytonia_perfoliata_ssp_perfoliata_flowers.jpg",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "Wikimedia Commons",
+      "title": "Claytonia perfoliata ssp perfoliata flowers.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AClaytonia%20perfoliata%20ssp%20perfoliata%20flowers.jpg"
+    },
+    {
+      "slot": "fruit",
+      "label": "fruit / seed",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/20150606Claytonia_perfoliata3.jpg/1280px-20150606Claytonia_perfoliata3.jpg",
+      "license": "CC0",
+      "license_code": "cc0",
+      "attribution": "AnRo0002",
+      "title": "20150606Claytonia perfoliata3.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3A20150606Claytonia%20perfoliata3.jpg"
+    },
+    {
+      "slot": "bark",
+      "label": "bark / stem",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Claytonia_perfoliata_at_Chapeltoun.JPG/1280px-Claytonia_perfoliata_at_Chapeltoun.JPG",
+      "license": "CC BY-SA 4.0",
+      "license_code": "cc-by-sa-4.0",
+      "attribution": "Rosser1954",
+      "title": "Claytonia perfoliata at Chapeltoun.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File%3AClaytonia%20perfoliata%20at%20Chapeltoun.JPG"
+    }
+  ],
+  "stinging-nettle": [
+    {
+      "slot": "leaf",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Leaf_of_Urtica_Dioica.jpg",
+      "license": "CC0",
+      "license_code": "cc0",
+      "attribution": "Mdantonio2005",
+      "title": "Leaf of Urtica Dioica.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ALeaf%20of%20Urtica%20Dioica.jpg"
+    },
+    {
+      "slot": "leaf2",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Urtica_dioica_Plant.jpg",
+      "license": "CC0",
+      "license_code": "cc0",
+      "attribution": "Matildalove12",
+      "title": "Urtica dioica Plant.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AUrtica%20dioica%20Plant.jpg"
+    },
+    {
+      "slot": "plant",
+      "label": "whole plant",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Urtica_dioica_001.JPG/1280px-Urtica_dioica_001.JPG",
+      "license": "CC BY-SA 3.0",
+      "license_code": "cc-by-sa-3.0",
+      "attribution": "H. Zell",
+      "title": "Urtica dioica 001.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File%3AUrtica%20dioica%20001.JPG"
+    },
+    {
+      "slot": "flower",
+      "label": "flower",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Urtica_dioica_-_Stinging_Nettle_on_way_from_Gangria_to_Valley_of_Flowers_National_Park_-_during_LGFC_-_VOF_2019_%281%29.jpg/1280px-Urtica_dioica_-_Stinging_Nettle_on_way_from_Gangria_to_Valley_of_Flowers_National_Park_-_during_LGFC_-_VOF_2019_%281%29.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_code": "cc-by-sa-4.0",
+      "attribution": "Vinayaraj",
+      "title": "Urtica dioica - Stinging Nettle on way from Gangria to Valley of Flowers National Park - during LGFC - VOF 2019 (1).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AUrtica%20dioica%20-%20Stinging%20Nettle%20on%20way%20from%20Gangria%20to%20Valley%20of%20Flowers%20National%20Park%20-%20during%20LGFC%20-%20VOF%202019%20%281%29.jpg"
+    },
+    {
+      "slot": "fruit",
+      "label": "fruit / seed",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Urtica_dioica_fruit.jpg/1280px-Urtica_dioica_fruit.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_code": "cc-by-sa-3.0",
+      "attribution": "Pancrat",
+      "title": "Urtica dioica fruit.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AUrtica%20dioica%20fruit.jpg"
+    },
+    {
+      "slot": "bark",
+      "label": "bark / stem",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Urtica_dioica_2839.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_code": "cc-by-sa-3.0",
+      "attribution": "Randy A. Nonenmacher",
+      "title": "Urtica dioica 2839.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AUrtica%20dioica%202839.jpg"
+    }
+  ],
+  "yerba-buena": [
+    {
+      "slot": "plant",
+      "label": "whole plant",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Clinopodiumdouglasii.jpg",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "Gordon Leppig & Andrea J. Pickart",
+      "title": "Clinopodiumdouglasii.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AClinopodiumdouglasii.jpg"
+    },
+    {
+      "slot": "flower",
+      "label": "flower",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/2014-06-13-19.58.18_ZS_PMax_Clinopodium_douglasii-1_%2814431444842%29.jpg/1280px-2014-06-13-19.58.18_ZS_PMax_Clinopodium_douglasii-1_%2814431444842%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "John Rusk from Berkeley, CA, United States of America",
+      "title": "2014-06-13-19.58.18 ZS PMax Clinopodium douglasii-1 (14431444842).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3A2014-06-13-19.58.18%20ZS%20PMax%20Clinopodium%20douglasii-1%20%2814431444842%29.jpg"
+    },
+    {
+      "slot": "more1",
+      "label": "plant",
+      "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/139078088/large.jpg",
+      "license": "CC BY -NC",
+      "license_code": "cc-by-nc",
+      "attribution": "(c) Damon Tighe, some rights reserved (CC BY-NC), uploaded by Damon Tighe",
+      "title": "iNaturalist photo 139078088",
+      "source": "https://www.inaturalist.org/photos/139078088"
+    }
+  ],
+  "mugwort": [
+    {
+      "slot": "leaf",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Artemisia_douglasiana_90.jpg/1280px-Artemisia_douglasiana_90.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "Jerry Kirkhart from Los Osos, Calif.",
+      "title": "Artemisia douglasiana 90.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AArtemisia%20douglasiana%2090.jpg"
+    },
+    {
+      "slot": "plant",
+      "label": "whole plant",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Artemisia_douglasiana_-_Manhattan_Beach_Botanical_Garden_-_Manhattan_Beach%2C_CA_-_DSC01354.jpg/1280px-Artemisia_douglasiana_-_Manhattan_Beach_Botanical_Garden_-_Manhattan_Beach%2C_CA_-_DSC01354.jpg",
+      "license": "CC0",
+      "license_code": "cc0",
+      "attribution": "Daderot",
+      "title": "Artemisia douglasiana - Manhattan Beach Botanical Garden - Manhattan Beach, CA - DSC01354.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AArtemisia%20douglasiana%20-%20Manhattan%20Beach%20Botanical%20Garden%20-%20Manhattan%20Beach%2C%20CA%20-%20DSC01354.jpg"
+    },
+    {
+      "slot": "more1",
+      "label": "plant",
+      "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/5232/large.jpg",
+      "license": "CC BY -SA",
+      "license_code": "cc-by-sa",
+      "attribution": "(c) stonebird, some rights reserved (CC BY-SA)",
+      "title": "iNaturalist photo 5232",
+      "source": "https://www.inaturalist.org/photos/5232"
+    }
+  ],
+  "pineapple-weed": [
+    {
+      "slot": "leaf",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Detail_on_the_midvein_of_a_Matricaria_discoidea_leaf.jpg/1280px-Detail_on_the_midvein_of_a_Matricaria_discoidea_leaf.jpg",
+      "license": "CC BY 4.0",
+      "license_code": "cc-by-4.0",
+      "attribution": "Simiaparva",
+      "title": "Detail on the midvein of a Matricaria discoidea leaf.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ADetail%20on%20the%20midvein%20of%20a%20Matricaria%20discoidea%20leaf.jpg"
+    },
+    {
+      "slot": "leaf2",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Trichomes_on_upper_surface_of_Matricaria_discoidea_leaf.jpg/1280px-Trichomes_on_upper_surface_of_Matricaria_discoidea_leaf.jpg",
+      "license": "CC BY 4.0",
+      "license_code": "cc-by-4.0",
+      "attribution": "Simiaparva",
+      "title": "Trichomes on upper surface of Matricaria discoidea leaf.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ATrichomes%20on%20upper%20surface%20of%20Matricaria%20discoidea%20leaf.jpg"
+    },
+    {
+      "slot": "plant",
+      "label": "whole plant",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Matricaria_discoidea_plant_%2809%29.jpg/1280px-Matricaria_discoidea_plant_%2809%29.jpg",
+      "license": "CC0",
+      "license_code": "cc0",
+      "attribution": "Ira Gershenhorn",
+      "title": "Matricaria discoidea plant (09).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AMatricaria%20discoidea%20plant%20%2809%29.jpg"
+    },
+    {
+      "slot": "flower",
+      "label": "flower",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Matricaria_discoidea_flower_%2819%29.jpg/1280px-Matricaria_discoidea_flower_%2819%29.jpg",
+      "license": "CC BY 4.0",
+      "license_code": "cc-by-4.0",
+      "attribution": "ninacourlee",
+      "title": "Matricaria discoidea flower (19).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AMatricaria%20discoidea%20flower%20%2819%29.jpg"
+    },
+    {
+      "slot": "fruit",
+      "label": "fruit / seed",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Matricaria_discoidea_DC._%28Group%29.jpg/1280px-Matricaria_discoidea_DC._%28Group%29.jpg",
+      "license": "CC BY 4.0",
+      "license_code": "cc-by-4.0",
+      "attribution": "Paul-in-KY",
+      "title": "Matricaria discoidea DC. (Group).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AMatricaria%20discoidea%20DC.%20%28Group%29.jpg"
+    },
+    {
+      "slot": "bark",
+      "label": "bark / stem",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Matricaria_discoidea_stem_%2805%29.jpg/1280px-Matricaria_discoidea_stem_%2805%29.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_code": "cc-by-sa-4.0",
+      "attribution": "Andrea Moro",
+      "title": "Matricaria discoidea stem (05).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AMatricaria%20discoidea%20stem%20%2805%29.jpg"
+    }
+  ],
+  "three-cornered-leek": [
+    {
+      "slot": "leaf",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Three_Cornered_Leeks_and_Bluebells.jpg/1280px-Three_Cornered_Leeks_and_Bluebells.jpg",
+      "license": "CC BY-SA 2.0",
+      "license_code": "cc-by-sa-2.0",
+      "attribution": "Myrtle26",
+      "title": "Three Cornered Leeks and Bluebells.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AThree%20Cornered%20Leeks%20and%20Bluebells.jpg"
+    },
+    {
+      "slot": "plant",
+      "label": "whole plant",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Allium_triquetrum_L._%28AM_AK299165-1%29.jpg/1280px-Allium_triquetrum_L._%28AM_AK299165-1%29.jpg",
+      "license": "CC BY 4.0",
+      "license_code": "cc-by-4.0",
+      "attribution": "Davies, Neil",
+      "title": "Allium triquetrum L. (AM AK299165-1).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AAllium%20triquetrum%20L.%20%28AM%20AK299165-1%29.jpg"
+    },
+    {
+      "slot": "flower",
+      "label": "flower",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Allium_triquetrum%2C_Three-cornered_leek._Floors_Farm%2C_East_Ayrshire._Flowers_opening.jpg/1280px-Allium_triquetrum%2C_Three-cornered_leek._Floors_Farm%2C_East_Ayrshire._Flowers_opening.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_code": "cc-by-sa-4.0",
+      "attribution": "Rosser1954",
+      "title": "Allium triquetrum, Three-cornered leek. Floors Farm, East Ayrshire. Flowers opening.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AAllium%20triquetrum%2C%20Three-cornered%20leek.%20Floors%20Farm%2C%20East%20Ayrshire.%20Flowers%20opening.jpg"
+    },
+    {
+      "slot": "bark",
+      "label": "bark / stem",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/59/Chives_%28Allium_schoenoprasum%29_and_a_garlic_p_Wellcome_V0044064.jpg",
+      "license": "CC BY 4.0",
+      "license_code": "cc-by-4.0",
+      "attribution": "Wikimedia Commons",
+      "title": "Chives (Allium schoenoprasum) and a garlic p Wellcome V0044064.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AChives%20%28Allium%20schoenoprasum%29%20and%20a%20garlic%20p%20Wellcome%20V0044064.jpg"
+    }
+  ],
+  "wild-fennel": [
+    {
+      "slot": "leaf",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Foeniculum_vulgare_leaf3_%2814357190716%29.jpg/1280px-Foeniculum_vulgare_leaf3_%2814357190716%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "Harry Rose from South West Rocks, Australia",
+      "title": "Foeniculum vulgare leaf3 (14357190716).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AFoeniculum%20vulgare%20leaf3%20%2814357190716%29.jpg"
+    },
+    {
+      "slot": "leaf2",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Foeniculum_vulgare_leaf.JPG/1280px-Foeniculum_vulgare_leaf.JPG",
+      "license": "CC BY-SA 3.0",
+      "license_code": "cc-by-sa-3.0",
+      "attribution": "Petruss",
+      "title": "Foeniculum vulgare leaf.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File%3AFoeniculum%20vulgare%20leaf.JPG"
+    },
+    {
+      "slot": "plant",
+      "label": "whole plant",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Foeniculum_vulgare_Habitus_15July2009_ParqueNaturalLagunasdelaMata.jpg/1280px-Foeniculum_vulgare_Habitus_15July2009_ParqueNaturalLagunasdelaMata.jpg",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "Javier martin",
+      "title": "Foeniculum vulgare Habitus 15July2009 ParqueNaturalLagunasdelaMata.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AFoeniculum%20vulgare%20Habitus%2015July2009%20ParqueNaturalLagunasdelaMata.jpg"
+    },
+    {
+      "slot": "flower",
+      "label": "flower",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Foeniculum_vulgare_FlowersCloseup_15July2009_ParqueNaturalLagunasdelaMata.jpg/1280px-Foeniculum_vulgare_FlowersCloseup_15July2009_ParqueNaturalLagunasdelaMata.jpg",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "Javier martin",
+      "title": "Foeniculum vulgare FlowersCloseup 15July2009 ParqueNaturalLagunasdelaMata.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AFoeniculum%20vulgare%20FlowersCloseup%2015July2009%20ParqueNaturalLagunasdelaMata.jpg"
+    },
+    {
+      "slot": "fruit",
+      "label": "fruit / seed",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Foeniculum_vulgare_frutos.jpg",
+      "license": "CC BY 2.5",
+      "license_code": "cc-by-2.5",
+      "attribution": "No machine-readable author provided. Javier martin assumed (based on copyright c",
+      "title": "Foeniculum vulgare frutos.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AFoeniculum%20vulgare%20frutos.jpg"
+    },
+    {
+      "slot": "bark",
+      "label": "bark / stem",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Foeniculum_vulgare_cut_stems_and_leaves.jpg/1280px-Foeniculum_vulgare_cut_stems_and_leaves.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_code": "cc-by-sa-4.0",
+      "attribution": "Saintfevrier",
+      "title": "Foeniculum vulgare cut stems and leaves.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AFoeniculum%20vulgare%20cut%20stems%20and%20leaves.jpg"
+    }
+  ],
+  "nasturtium": [
+    {
+      "slot": "leaf",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/170411_723_Encinitas_-_San_Diego_Botanic_Gdn%2C_Herb_Garden%2C_Tropaeolum_majus_%27Alaska%27_Variegated-leaf_Nasturtium_%2834587581515%29.jpg/1280px-170411_723_Encinitas_-_San_Diego_Botanic_Gdn%2C_Herb_Garden%2C_Tropaeolum_majus_%27Alaska%27_Variegated-leaf_Nasturtium_%2834587581515%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "cultivar413 from Fallbrook, California",
+      "title": "170411 723 Encinitas - San Diego Botanic Gdn, Herb Garden, Tropaeolum majus 'Alaska' Variegated-leaf Nasturtium (34587581515).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3A170411%20723%20Encinitas%20-%20San%20Diego%20Botanic%20Gdn%2C%20Herb%20Garden%2C%20Tropaeolum%20majus%20%27Alaska%27%20Variegated-leaf%20Nasturtium%20%2834587581515%29.jpg"
+    },
+    {
+      "slot": "leaf2",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/170411_724_Encinitas_-_San_Diego_Botanic_Gdn%2C_Herb_Garden%2C_Tropaeolum_majus_%27Alaska%27_Variegated-leaf_Nasturtium_%2834425642282%29.jpg/1280px-170411_724_Encinitas_-_San_Diego_Botanic_Gdn%2C_Herb_Garden%2C_Tropaeolum_majus_%27Alaska%27_Variegated-leaf_Nasturtium_%2834425642282%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "cultivar413 from Fallbrook, California",
+      "title": "170411 724 Encinitas - San Diego Botanic Gdn, Herb Garden, Tropaeolum majus 'Alaska' Variegated-leaf Nasturtium (34425642282).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3A170411%20724%20Encinitas%20-%20San%20Diego%20Botanic%20Gdn%2C%20Herb%20Garden%2C%20Tropaeolum%20majus%20%27Alaska%27%20Variegated-leaf%20Nasturtium%20%2834425642282%29.jpg"
+    },
+    {
+      "slot": "plant",
+      "label": "whole plant",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Tropaeolum_majus_2005_G1.jpg/1280px-Tropaeolum_majus_2005_G1.jpg",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "George Chernilevsky",
+      "title": "Tropaeolum majus 2005 G1.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ATropaeolum%20majus%202005%20G1.jpg"
+    },
+    {
+      "slot": "flower",
+      "label": "flower",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Tropaeolum_majus_flower_%281%29.jpg/1280px-Tropaeolum_majus_flower_%281%29.jpg",
+      "license": "CC BY 4.0",
+      "license_code": "cc-by-4.0",
+      "attribution": "Tournasol7",
+      "title": "Tropaeolum majus flower (1).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ATropaeolum%20majus%20flower%20%281%29.jpg"
+    },
+    {
+      "slot": "fruit",
+      "label": "fruit / seed",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Tropaeolum_majus_fruit_J1.jpg/1280px-Tropaeolum_majus_fruit_J1.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_code": "cc-by-sa-3.0",
+      "attribution": "Jamain",
+      "title": "Tropaeolum majus fruit J1.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ATropaeolum%20majus%20fruit%20J1.jpg"
+    },
+    {
+      "slot": "bark",
+      "label": "bark / stem",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Tropaeolum_majus-3-five_road-yercaud-salem-India.jpg/1280px-Tropaeolum_majus-3-five_road-yercaud-salem-India.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_code": "cc-by-sa-4.0",
+      "attribution": "Yercaud-elango",
+      "title": "Tropaeolum majus-3-five road-yercaud-salem-India.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ATropaeolum%20majus-3-five%20road-yercaud-salem-India.jpg"
+    }
+  ],
+  "sourgrass": [
+    {
+      "slot": "leaf",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Oxalis_pes-caprae_leaf.JPG/1280px-Oxalis_pes-caprae_leaf.JPG",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "Daniel Feliciano",
+      "title": "Oxalis pes-caprae leaf.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File%3AOxalis%20pes-caprae%20leaf.JPG"
+    },
+    {
+      "slot": "leaf2",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/210328_012_Fallbrook_-_Lupinus_latifolius_Broad-leaf_Lupine%2C_Erodium_moschatum_Musky_Stork%27s_Bill%2C_Oxalis_pes-caprae_Bermuda_Buttercup%2C_Lantana_montevidensis.jpg/1280px-thumbnail.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "cultivar413",
+      "title": "210328 012 Fallbrook - Lupinus latifolius Broad-leaf Lupine, Erodium moschatum Musky Stork's Bill, Oxalis pes-caprae Bermuda Buttercup, Lantana montevidensis.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3A210328%20012%20Fallbrook%20-%20Lupinus%20latifolius%20Broad-leaf%20Lupine%2C%20Erodium%20moschatum%20Musky%20Stork%27s%20Bill%2C%20Oxalis%20pes-caprae%20Bermuda%20Buttercup%2C%20Lantana%20montevidensis.jpg"
+    },
+    {
+      "slot": "plant",
+      "label": "whole plant",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Oxalis_pes-caprae_%28Habitus%29.jpg/1280px-Oxalis_pes-caprae_%28Habitus%29.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_code": "cc-by-sa-3.0",
+      "attribution": "Ixitixel",
+      "title": "Oxalis pes-caprae (Habitus).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AOxalis%20pes-caprae%20%28Habitus%29.jpg"
+    },
+    {
+      "slot": "flower",
+      "label": "flower",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Oxalis_pes-caprae_flower_detail.JPG/1280px-Oxalis_pes-caprae_flower_detail.JPG",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "Daniel Feliciano",
+      "title": "Oxalis pes-caprae flower detail.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File%3AOxalis%20pes-caprae%20flower%20detail.JPG"
+    },
+    {
+      "slot": "fruit",
+      "label": "fruit / seed",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Oxalis_pes-caprae_flower1_%2814543275689%29.jpg/1280px-Oxalis_pes-caprae_flower1_%2814543275689%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "Harry Rose from South West Rocks, Australia",
+      "title": "Oxalis pes-caprae flower1 (14543275689).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AOxalis%20pes-caprae%20flower1%20%2814543275689%29.jpg"
+    },
+    {
+      "slot": "bark",
+      "label": "bark / stem",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Oxalis_pes-caprae_habit1_%2814543177100%29.jpg/1280px-Oxalis_pes-caprae_habit1_%2814543177100%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "Harry Rose from South West Rocks, Australia",
+      "title": "Oxalis pes-caprae habit1 (14543177100).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AOxalis%20pes-caprae%20habit1%20%2814543177100%29.jpg"
+    }
+  ],
+  "california-blackberry": [
+    {
+      "slot": "leaf",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Pacific_blackberry_%28Rubus_ursinus%29_%287189622698%29.jpg/1280px-Pacific_blackberry_%28Rubus_ursinus%29_%287189622698%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "Leslie Seaton from Seattle, WA, USA",
+      "title": "Pacific blackberry (Rubus ursinus) (7189622698).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3APacific%20blackberry%20%28Rubus%20ursinus%29%20%287189622698%29.jpg"
+    },
+    {
+      "slot": "plant",
+      "label": "whole plant",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Trailing_blackberry_%28dce25c8f2aa847e3b27df41014736cbf%29.JPG/1280px-Trailing_blackberry_%28dce25c8f2aa847e3b27df41014736cbf%29.JPG",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "Steve Redman (MORA)",
+      "title": "Trailing blackberry (dce25c8f2aa847e3b27df41014736cbf).JPG",
+      "source": "https://commons.wikimedia.org/wiki/File%3ATrailing%20blackberry%20%28dce25c8f2aa847e3b27df41014736cbf%29.JPG"
+    },
+    {
+      "slot": "fruit",
+      "label": "fruit / seed",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Native_blackberry_%285962818513%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "Leslie Seaton from Seattle, WA, USA",
+      "title": "Native blackberry (5962818513).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ANative%20blackberry%20%285962818513%29.jpg"
+    }
+  ],
+  "himalayan-blackberry": [
+    {
+      "slot": "leaf",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Starr-190930-6988-Rubus_discolor-glaucous_underside_of_leaf-Puu_Nianiau-Maui_%2849254794987%29.jpg/1280px-Starr-190930-6988-Rubus_discolor-glaucous_underside_of_leaf-Puu_Nianiau-Maui_%2849254794987%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "Forest and Kim Starr",
+      "title": "Starr-190930-6988-Rubus discolor-glaucous underside of leaf-Puu Nianiau-Maui (49254794987).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AStarr-190930-6988-Rubus%20discolor-glaucous%20underside%20of%20leaf-Puu%20Nianiau-Maui%20%2849254794987%29.jpg"
+    },
+    {
+      "slot": "leaf2",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Starr-190930-6992-Rubus_discolor-thorny_red_stems_and_leaves-Puu_Nianiau-Maui_%2849254796717%29.jpg/1280px-Starr-190930-6992-Rubus_discolor-thorny_red_stems_and_leaves-Puu_Nianiau-Maui_%2849254796717%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "Forest and Kim Starr",
+      "title": "Starr-190930-6992-Rubus discolor-thorny red stems and leaves-Puu Nianiau-Maui (49254796717).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AStarr-190930-6992-Rubus%20discolor-thorny%20red%20stems%20and%20leaves-Puu%20Nianiau-Maui%20%2849254796717%29.jpg"
+    },
+    {
+      "slot": "plant",
+      "label": "whole plant",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Starr-190930-6986-Rubus_discolor-habit_side_of_road-Puu_Nianiau-Maui_%2849254597596%29.jpg/1280px-Starr-190930-6986-Rubus_discolor-habit_side_of_road-Puu_Nianiau-Maui_%2849254597596%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "Forest and Kim Starr",
+      "title": "Starr-190930-6986-Rubus discolor-habit side of road-Puu Nianiau-Maui (49254597596).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AStarr-190930-6986-Rubus%20discolor-habit%20side%20of%20road-Puu%20Nianiau-Maui%20%2849254597596%29.jpg"
+    },
+    {
+      "slot": "flower",
+      "label": "flower",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Blackberry_flower_and_developing_unripe_berries.jpg/1280px-Blackberry_flower_and_developing_unripe_berries.jpg",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "Pseudopanax at English Wikipedia",
+      "title": "Blackberry flower and developing unripe berries.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ABlackberry%20flower%20and%20developing%20unripe%20berries.jpg"
+    },
+    {
+      "slot": "fruit",
+      "label": "fruit / seed",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Starr-190930-6989-Rubus_discolor-fruit_leaves-Puu_Nianiau-Maui_%2849254124678%29.jpg/1280px-Starr-190930-6989-Rubus_discolor-fruit_leaves-Puu_Nianiau-Maui_%2849254124678%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "Forest and Kim Starr",
+      "title": "Starr-190930-6989-Rubus discolor-fruit leaves-Puu Nianiau-Maui (49254124678).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AStarr-190930-6989-Rubus%20discolor-fruit%20leaves-Puu%20Nianiau-Maui%20%2849254124678%29.jpg"
+    },
+    {
+      "slot": "bark",
+      "label": "bark / stem",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Starr-190930-6987-Rubus_discolor-stems_and_leaves_with_chewings-Puu_Nianiau_Haleakala_National_Park-Maui_%2849254123693%29.jpg/1280px-Starr-190930-6987-Rubus_discolor-stems_and_leaves_with_chewings-Puu_Nianiau_Haleakala_National_Park-Maui_%2849254123693%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "Forest and Kim Starr",
+      "title": "Starr-190930-6987-Rubus discolor-stems and leaves with chewings-Puu Nianiau Haleakala National Park-Maui (49254123693).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AStarr-190930-6987-Rubus%20discolor-stems%20and%20leaves%20with%20chewings-Puu%20Nianiau%20Haleakala%20National%20Park-Maui%20%2849254123693%29.jpg"
+    }
+  ],
+  "thimbleberry": [
+    {
+      "slot": "leaf",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Rubus_parviflorus_%28987298cc62de4606bb5538c9d475b122%29.jpg/1280px-Rubus_parviflorus_%28987298cc62de4606bb5538c9d475b122%29.jpg",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "NPS Staff",
+      "title": "Rubus parviflorus (987298cc62de4606bb5538c9d475b122).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ARubus%20parviflorus%20%28987298cc62de4606bb5538c9d475b122%29.jpg"
+    },
+    {
+      "slot": "leaf2",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Rubus_parviflorus_%285088036058%29.jpg/1280px-Rubus_parviflorus_%285088036058%29.jpg",
+      "license": "CC BY-SA 2.0",
+      "license_code": "cc-by-sa-2.0",
+      "attribution": "Matt Lavin from Bozeman, Montana, USA",
+      "title": "Rubus parviflorus (5088036058).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ARubus%20parviflorus%20%285088036058%29.jpg"
+    },
+    {
+      "slot": "plant",
+      "label": "whole plant",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Rubus_parviflorus_%28Thimbleberry%29_%281987%29.jpg",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "Wikimedia Commons",
+      "title": "Rubus parviflorus (Thimbleberry) (1987).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ARubus%20parviflorus%20%28Thimbleberry%29%20%281987%29.jpg"
+    },
+    {
+      "slot": "flower",
+      "label": "flower",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Thimbleberry_flower_%28Rubus_parviflorus%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "Alan Vernon",
+      "title": "Thimbleberry flower (Rubus parviflorus).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AThimbleberry%20flower%20%28Rubus%20parviflorus%29.jpg"
+    },
+    {
+      "slot": "fruit",
+      "label": "fruit / seed",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Thimbleberry%2C_fruit_of_Rubus_parviflorus_var._parviflorus.jpg/1280px-Thimbleberry%2C_fruit_of_Rubus_parviflorus_var._parviflorus.jpg",
+      "license": "CC0",
+      "license_code": "cc0",
+      "attribution": "Fernsebner",
+      "title": "Thimbleberry, fruit of Rubus parviflorus var. parviflorus.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AThimbleberry%2C%20fruit%20of%20Rubus%20parviflorus%20var.%20parviflorus.jpg"
+    },
+    {
+      "slot": "bark",
+      "label": "bark / stem",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Thimbleberry.jpg/1280px-Thimbleberry.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "Forest Service Alaska Region, USDA",
+      "title": "Thimbleberry.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AThimbleberry.jpg"
+    }
+  ],
+  "california-grape": [
+    {
+      "slot": "leaf",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/California_Wild_Grape_Maturer_Leaf_at_CMSP.jpg/1280px-California_Wild_Grape_Maturer_Leaf_at_CMSP.jpg",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "User:KP Botany",
+      "title": "California Wild Grape Maturer Leaf at CMSP.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ACalifornia%20Wild%20Grape%20Maturer%20Leaf%20at%20CMSP.jpg"
+    },
+    {
+      "slot": "leaf2",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Vitis_californica_at_Caswell_Memorial_State_Park_spring_leaves.jpg",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "Wikimedia Commons",
+      "title": "Vitis californica at Caswell Memorial State Park spring leaves.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AVitis%20californica%20at%20Caswell%20Memorial%20State%20Park%20spring%20leaves.jpg"
+    },
+    {
+      "slot": "plant",
+      "label": "whole plant",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/USFWS_vitus_californica_%2823747125641%29.jpg/1280px-USFWS_vitus_californica_%2823747125641%29.jpg",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "USFWS - Pacific Region",
+      "title": "USFWS vitus californica (23747125641).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AUSFWS%20vitus%20californica%20%2823747125641%29.jpg"
+    },
+    {
+      "slot": "fruit",
+      "label": "fruit / seed",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/J20150917-0018%E2%80%94Vitis_californica%E2%80%94RPBG_%2821068421593%29.jpg/1280px-J20150917-0018%E2%80%94Vitis_californica%E2%80%94RPBG_%2821068421593%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "John Rusk from Berkeley, CA, United States of America",
+      "title": "J20150917-0018\u2014Vitis californica\u2014RPBG (21068421593).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AJ20150917-0018%E2%80%94Vitis%20californica%E2%80%94RPBG%20%2821068421593%29.jpg"
+    }
+  ],
+  "blue-elderberry": [
+    {
+      "slot": "leaf",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Hojas_de_Sauco_%28Sambucus_nigra%29.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_code": "cc-by-sa-4.0",
+      "attribution": "Mart\u00edn Huam\u00e1n",
+      "title": "Hojas de Sauco (Sambucus nigra).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AHojas%20de%20Sauco%20%28Sambucus%20nigra%29.jpg"
+    },
+    {
+      "slot": "leaf2",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/08/Hojas_de_Sauco_%28Sambucus_nigra%29_en_Takiwasi%2C_Tarapoto%2C_Per%C3%BA.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_code": "cc-by-sa-4.0",
+      "attribution": "Mart\u00edn Huam\u00e1n",
+      "title": "Hojas de Sauco (Sambucus nigra) en Takiwasi, Tarapoto, Per\u00fa.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AHojas%20de%20Sauco%20%28Sambucus%20nigra%29%20en%20Takiwasi%2C%20Tarapoto%2C%20Per%C3%BA.jpg"
+    },
+    {
+      "slot": "plant",
+      "label": "whole plant",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Hojas_del_Sauco_%28Sambucus_nigra%29.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_code": "cc-by-sa-4.0",
+      "attribution": "Mart\u00edn Huam\u00e1n",
+      "title": "Hojas del Sauco (Sambucus nigra).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AHojas%20del%20Sauco%20%28Sambucus%20nigra%29.jpg"
+    },
+    {
+      "slot": "flower",
+      "label": "flower",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Blue_elderberry_Sambucus_mexicana_flowerhead.jpg/1280px-Blue_elderberry_Sambucus_mexicana_flowerhead.jpg",
+      "license": "CC BY 3.0",
+      "license_code": "cc-by-3.0",
+      "attribution": "Dcrjsr",
+      "title": "Blue elderberry Sambucus mexicana flowerhead.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ABlue%20elderberry%20Sambucus%20mexicana%20flowerhead.jpg"
+    },
+    {
+      "slot": "fruit",
+      "label": "fruit / seed",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Sambucus_cerulea_MHNT.BOT.2016.12.33.jpg/1280px-Sambucus_cerulea_MHNT.BOT.2016.12.33.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_code": "cc-by-sa-3.0",
+      "attribution": "Roger Culos",
+      "title": "Sambucus cerulea MHNT.BOT.2016.12.33.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASambucus%20cerulea%20MHNT.BOT.2016.12.33.jpg"
+    },
+    {
+      "slot": "bark",
+      "label": "bark / stem",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Sambucus_nigra_ssp._caerulea_3.jpg/1280px-Sambucus_nigra_ssp._caerulea_3.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_code": "cc-by-sa-4.0",
+      "attribution": "Thayne Tuason",
+      "title": "Sambucus nigra ssp. caerulea 3.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASambucus%20nigra%20ssp.%20caerulea%203.jpg"
+    }
+  ],
+  "toyon": [
+    {
+      "slot": "leaf",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Heteromeles_arbutifolia_01.jpg/1280px-Heteromeles_arbutifolia_01.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "Joyce Cory on Flickr as docentjoyce from Los Osos, U.S.A.",
+      "title": "Heteromeles arbutifolia 01.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AHeteromeles%20arbutifolia%2001.jpg"
+    },
+    {
+      "slot": "leaf2",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/%28Heteromeles_arbutifolia_in_Hope_Ranch%2C_United_States%29_-_DPLA_-_33f53ae652a7bbf1cccafa3197601eac.jpg/1280px-%28Heteromeles_arbutifolia_in_Hope_Ranch%2C_United_States%29_-_DPLA_-_33f53ae652a7bbf1cccafa3197601eac.jpg",
+      "license": "CC BY 4.0",
+      "license_code": "cc-by-4.0",
+      "attribution": "Carlquist, Sherwin John, 1930-2021",
+      "title": "(Heteromeles arbutifolia in Hope Ranch, United States) - DPLA - 33f53ae652a7bbf1cccafa3197601eac.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3A%28Heteromeles%20arbutifolia%20in%20Hope%20Ranch%2C%20United%20States%29%20-%20DPLA%20-%2033f53ae652a7bbf1cccafa3197601eac.jpg"
+    },
+    {
+      "slot": "plant",
+      "label": "whole plant",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Heteromeles_shrub_at_rest_stop.jpg/1280px-Heteromeles_shrub_at_rest_stop.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_code": "cc-by-sa-4.0",
+      "attribution": "SnowyZeko",
+      "title": "Heteromeles shrub at rest stop.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AHeteromeles%20shrub%20at%20rest%20stop.jpg"
+    },
+    {
+      "slot": "flower",
+      "label": "flower",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/TOYON_%28heteromeles_arbutifolia%29_%282-18-09%29_canet_-2_%283294205754%29.jpg/1280px-TOYON_%28heteromeles_arbutifolia%29_%282-18-09%29_canet_-2_%283294205754%29.jpg",
+      "license": "CC0",
+      "license_code": "cc0",
+      "attribution": "ALAN SCHMIERER",
+      "title": "TOYON (heteromeles arbutifolia) (2-18-09) canet -2 (3294205754).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ATOYON%20%28heteromeles%20arbutifolia%29%20%282-18-09%29%20canet%20-2%20%283294205754%29.jpg"
+    },
+    {
+      "slot": "fruit",
+      "label": "fruit / seed",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Toyon_With_Fruit_-_Warm_Springs_Park_and_Preserve.jpg/1280px-Toyon_With_Fruit_-_Warm_Springs_Park_and_Preserve.jpg",
+      "license": "CC0",
+      "license_code": "cc0",
+      "attribution": "Z3lvs",
+      "title": "Toyon With Fruit - Warm Springs Park and Preserve.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AToyon%20With%20Fruit%20-%20Warm%20Springs%20Park%20and%20Preserve.jpg"
+    },
+    {
+      "slot": "bark",
+      "label": "bark / stem",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/f9/P20131102-0018%E2%80%94Heteromeles_arbutifolia_%2810697709804%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "John Rusk from Berkeley, CA, United States of America",
+      "title": "P20131102-0018\u2014Heteromeles arbutifolia (10697709804).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AP20131102-0018%E2%80%94Heteromeles%20arbutifolia%20%2810697709804%29.jpg"
+    }
+  ],
+  "manzanita": [
+    {
+      "slot": "leaf",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Arctostaphylos_patula_%28Green_leaf_Manzanita%29.jpg/1280px-Arctostaphylos_patula_%28Green_leaf_Manzanita%29.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_code": "cc-by-sa-4.0",
+      "attribution": "Ricraider",
+      "title": "Arctostaphylos patula (Green leaf Manzanita).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AArctostaphylos%20patula%20%28Green%20leaf%20Manzanita%29.jpg"
+    },
+    {
+      "slot": "leaf2",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Arctostaphylos_spatulata_USNM_P38143_img1.jpg/1280px-Arctostaphylos_spatulata_USNM_P38143_img1.jpg",
+      "license": "CC0",
+      "license_code": "cc0",
+      "attribution": "Gabriel Brown",
+      "title": "Arctostaphylos spatulata USNM P38143 img1.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AArctostaphylos%20spatulata%20USNM%20P38143%20img1.jpg"
+    },
+    {
+      "slot": "plant",
+      "label": "whole plant",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Arctostaphylos_hookeri_whole_plant.jpg/1280px-Arctostaphylos_hookeri_whole_plant.jpg",
+      "license": "CC BY 4.0",
+      "license_code": "cc-by-4.0",
+      "attribution": "Dcskagirl",
+      "title": "Arctostaphylos hookeri whole plant.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AArctostaphylos%20hookeri%20whole%20plant.jpg"
+    },
+    {
+      "slot": "flower",
+      "label": "flower",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Arctostaphylos_glandulosa_crassifolia_flowers.jpg/1280px-Arctostaphylos_glandulosa_crassifolia_flowers.jpg",
+      "license": "CC0",
+      "license_code": "cc0",
+      "attribution": "Ruff tuff cream puff",
+      "title": "Arctostaphylos glandulosa crassifolia flowers.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AArctostaphylos%20glandulosa%20crassifolia%20flowers.jpg"
+    },
+    {
+      "slot": "fruit",
+      "label": "fruit / seed",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Common_bearberry_%28%22Kinnikinnick%22%2C_Arctostaphylos_uva-ursi%29_-_fruits_and_leaves.JPG/1280px-Common_bearberry_%28%22Kinnikinnick%22%2C_Arctostaphylos_uva-ursi%29_-_fruits_and_leaves.JPG",
+      "license": "CC BY-SA 3.0",
+      "license_code": "cc-by-sa-3.0",
+      "attribution": "Jesse Taylor",
+      "title": "Common bearberry (\"Kinnikinnick\", Arctostaphylos uva-ursi) - fruits and leaves.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File%3ACommon%20bearberry%20%28%22Kinnikinnick%22%2C%20Arctostaphylos%20uva-ursi%29%20-%20fruits%20and%20leaves.JPG"
+    },
+    {
+      "slot": "bark",
+      "label": "bark / stem",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Arctostaphylos_osoensis_%28Oso_manzanita%29_%2832615346866%29.jpg/1280px-Arctostaphylos_osoensis_%28Oso_manzanita%29_%2832615346866%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "John Game",
+      "title": "Arctostaphylos osoensis (Oso manzanita) (32615346866).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AArctostaphylos%20osoensis%20%28Oso%20manzanita%29%20%2832615346866%29.jpg"
+    }
+  ],
+  "california-rose": [
+    {
+      "slot": "plant",
+      "label": "whole plant",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/J20150929-0132%E2%80%94Rosa_californica%E2%80%94RPBG_%2822180631810%29.jpg/1280px-J20150929-0132%E2%80%94Rosa_californica%E2%80%94RPBG_%2822180631810%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "John Rusk from Berkeley, CA, United States of America",
+      "title": "J20150929-0132\u2014Rosa californica\u2014RPBG (22180631810).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AJ20150929-0132%E2%80%94Rosa%20californica%E2%80%94RPBG%20%2822180631810%29.jpg"
+    },
+    {
+      "slot": "flower",
+      "label": "flower",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Rosa_californica_flowers_2002-11-18.jpg/1280px-Rosa_californica_flowers_2002-11-18.jpg",
+      "license": "CC BY-SA 2.5",
+      "license_code": "cc-by-sa-2.5",
+      "attribution": "No machine-readable author provided. Curtis Clark assumed (based on copyright cl",
+      "title": "Rosa californica flowers 2002-11-18.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ARosa%20californica%20flowers%202002-11-18.jpg"
+    },
+    {
+      "slot": "fruit",
+      "label": "fruit / seed",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Rosa_californica.jpg",
+      "license": "CC BY 2.5",
+      "license_code": "cc-by-2.5",
+      "attribution": "Paula Kate Marmor PKM",
+      "title": "Rosa californica.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ARosa%20californica.jpg"
+    }
+  ],
+  "prickly-pear": [
+    {
+      "slot": "leaf",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Opuntia_leaf.JPG/1280px-Opuntia_leaf.JPG",
+      "license": "CC BY-SA 3.0",
+      "license_code": "cc-by-sa-3.0",
+      "attribution": "ZooFari",
+      "title": "Opuntia leaf.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File%3AOpuntia%20leaf.JPG"
+    },
+    {
+      "slot": "leaf2",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Prickly_pear_leaf_bud.JPG/1280px-Prickly_pear_leaf_bud.JPG",
+      "license": "CC BY-SA 3.0",
+      "license_code": "cc-by-sa-3.0",
+      "attribution": "ZooFari",
+      "title": "Prickly pear leaf bud.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File%3APrickly%20pear%20leaf%20bud.JPG"
+    },
+    {
+      "slot": "plant",
+      "label": "whole plant",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/20220605_Hortus_Botanicus_-_Opuntia_ficus-indica_%28plant%29.jpg/1280px-20220605_Hortus_Botanicus_-_Opuntia_ficus-indica_%28plant%29.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_code": "cc-by-sa-4.0",
+      "attribution": "Rudolphous",
+      "title": "20220605 Hortus Botanicus - Opuntia ficus-indica (plant).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3A20220605%20Hortus%20Botanicus%20-%20Opuntia%20ficus-indica%20%28plant%29.jpg"
+    },
+    {
+      "slot": "flower",
+      "label": "flower",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Opuntia_ficus-indica_flower_-_%C3%8Ele_de_Ngor.jpg/1280px-Opuntia_ficus-indica_flower_-_%C3%8Ele_de_Ngor.jpg",
+      "license": "CC0",
+      "license_code": "cc0",
+      "attribution": "Zyth\u00e8me",
+      "title": "Opuntia ficus-indica flower - \u00cele de Ngor.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AOpuntia%20ficus-indica%20flower%20-%20%C3%8Ele%20de%20Ngor.jpg"
+    },
+    {
+      "slot": "fruit",
+      "label": "fruit / seed",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Opuntia_ficus-indica_fruit_%2810007109215%29.jpg/1280px-Opuntia_ficus-indica_fruit_%2810007109215%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "John Tann from Sydney, Australia",
+      "title": "Opuntia ficus-indica fruit (10007109215).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AOpuntia%20ficus-indica%20fruit%20%2810007109215%29.jpg"
+    },
+    {
+      "slot": "bark",
+      "label": "bark / stem",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Lignification_d%27Opuntia_ficus-indica.jpg/1280px-Lignification_d%27Opuntia_ficus-indica.jpg",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "Tangopaso",
+      "title": "Lignification d'Opuntia ficus-indica.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ALignification%20d%27Opuntia%20ficus-indica.jpg"
+    }
+  ],
+  "coast-live-oak": [
+    {
+      "slot": "leaf",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Quercus_agrifolia_leaf.JPG",
+      "license": "CC0",
+      "license_code": "cc0",
+      "attribution": "Daderot",
+      "title": "Quercus agrifolia leaf.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File%3AQuercus%20agrifolia%20leaf.JPG"
+    },
+    {
+      "slot": "leaf2",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Starr-230126-0065-Quercus_agrifolia-leaf_upper_and_underside-Cooke_Rd_Kula-Maui_%2852665960215%29.jpg/1280px-Starr-230126-0065-Quercus_agrifolia-leaf_upper_and_underside-Cooke_Rd_Kula-Maui_%2852665960215%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "Forest and Kim Starr",
+      "title": "Starr-230126-0065-Quercus agrifolia-leaf upper and underside-Cooke Rd Kula-Maui (52665960215).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AStarr-230126-0065-Quercus%20agrifolia-leaf%20upper%20and%20underside-Cooke%20Rd%20Kula-Maui%20%2852665960215%29.jpg"
+    },
+    {
+      "slot": "plant",
+      "label": "whole plant",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Starr-230126-0063-Quercus_agrifolia-habit-Cooke_Rd_Kula-Maui_%2852665959530%29.jpg/1280px-Starr-230126-0063-Quercus_agrifolia-habit-Cooke_Rd_Kula-Maui_%2852665959530%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "Forest and Kim Starr",
+      "title": "Starr-230126-0063-Quercus agrifolia-habit-Cooke Rd Kula-Maui (52665959530).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AStarr-230126-0063-Quercus%20agrifolia-habit-Cooke%20Rd%20Kula-Maui%20%2852665959530%29.jpg"
+    },
+    {
+      "slot": "flower",
+      "label": "flower",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Quercus_agrifolia_Flowers_Golden_Gate_park.jpg/1280px-Quercus_agrifolia_Flowers_Golden_Gate_park.jpg",
+      "license": "CC0",
+      "license_code": "cc0",
+      "attribution": "Awinch1001",
+      "title": "Quercus agrifolia Flowers Golden Gate park.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AQuercus%20agrifolia%20Flowers%20Golden%20Gate%20park.jpg"
+    },
+    {
+      "slot": "fruit",
+      "label": "fruit / seed",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Quercus_agrifolia_acorns_Mount_Diablo.jpg/1280px-Quercus_agrifolia_acorns_Mount_Diablo.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "John Morgan from Walnut Creek, CA, USA",
+      "title": "Quercus agrifolia acorns Mount Diablo.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AQuercus%20agrifolia%20acorns%20Mount%20Diablo.jpg"
+    },
+    {
+      "slot": "bark",
+      "label": "bark / stem",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Quercus_agrifolius_%28coastal_live_oak%3B_California_live_oak%29_%28near_Calistoga%2C_California%2C_USA%29_5_%2849093646107%29.jpg/1280px-Quercus_agrifolius_%28coastal_live_oak%3B_California_live_oak%29_%28near_Calistoga%2C_California%2C_USA%29_5_%2849093646107%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "James St. John",
+      "title": "Quercus agrifolius (coastal live oak; California live oak) (near Calistoga, California, USA) 5 (49093646107).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AQuercus%20agrifolius%20%28coastal%20live%20oak%3B%20California%20live%20oak%29%20%28near%20Calistoga%2C%20California%2C%20USA%29%205%20%2849093646107%29.jpg"
+    }
+  ],
+  "valley-oak": [
+    {
+      "slot": "leaf",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Quercus_lobata_leaves_Caswell_Memorial_State_Park_San_Joaquin_Valley_California.jpg",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "Wikimedia Commons",
+      "title": "Quercus lobata leaves Caswell Memorial State Park San Joaquin Valley California.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AQuercus%20lobata%20leaves%20Caswell%20Memorial%20State%20Park%20San%20Joaquin%20Valley%20California.jpg"
+    },
+    {
+      "slot": "leaf2",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/File--i-Quercus_lobata-i--br--Oak_family_%28Fagaceae%29_%28f4ed6668-b57a-2b85-4f1c-5797e8d55dc7%29.jpg/1280px-File--i-Quercus_lobata-i--br--Oak_family_%28Fagaceae%29_%28f4ed6668-b57a-2b85-4f1c-5797e8d55dc7%29.jpg",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "NPS",
+      "title": "File--i-Quercus lobata-i--br--Oak family (Fagaceae) (f4ed6668-b57a-2b85-4f1c-5797e8d55dc7).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AFile--i-Quercus%20lobata-i--br--Oak%20family%20%28Fagaceae%29%20%28f4ed6668-b57a-2b85-4f1c-5797e8d55dc7%29.jpg"
+    },
+    {
+      "slot": "plant",
+      "label": "whole plant",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Quercus_lobata_Briones_12.jpg/1280px-Quercus_lobata_Briones_12.jpg",
+      "license": "CC0",
+      "license_code": "cc0",
+      "attribution": "Awinch1001",
+      "title": "Quercus lobata Briones 12.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AQuercus%20lobata%20Briones%2012.jpg"
+    },
+    {
+      "slot": "flower",
+      "label": "flower",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Quercus_lobatus_%28California_valley_oak%29_%28near_Calistoga%2C_California%2C_USA%29_1_%2849092893853%29.jpg/1280px-Quercus_lobatus_%28California_valley_oak%29_%28near_Calistoga%2C_California%2C_USA%29_1_%2849092893853%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "James St. John",
+      "title": "Quercus lobatus (California valley oak) (near Calistoga, California, USA) 1 (49092893853).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AQuercus%20lobatus%20%28California%20valley%20oak%29%20%28near%20Calistoga%2C%20California%2C%20USA%29%201%20%2849092893853%29.jpg"
+    },
+    {
+      "slot": "fruit",
+      "label": "fruit / seed",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Valleyoakae.jpg/1280px-Valleyoakae.jpg",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "User:Anlace",
+      "title": "Valleyoakae.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AValleyoakae.jpg"
+    },
+    {
+      "slot": "bark",
+      "label": "bark / stem",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Quercus_lobata_bark_Briones_14.jpg/1280px-Quercus_lobata_bark_Briones_14.jpg",
+      "license": "CC0",
+      "license_code": "cc0",
+      "attribution": "Awinch1001",
+      "title": "Quercus lobata bark Briones 14.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AQuercus%20lobata%20bark%20Briones%2014.jpg"
+    }
+  ],
+  "california-bay": [
+    {
+      "slot": "leaf",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/CALIFORNIA_BAY_LEAVES_IN_SPRING_%285-28-10%29_cerro_alto_trail_-01_%284648911022%29.jpg/1280px-CALIFORNIA_BAY_LEAVES_IN_SPRING_%285-28-10%29_cerro_alto_trail_-01_%284648911022%29.jpg",
+      "license": "CC0",
+      "license_code": "cc0",
+      "attribution": "ALAN SCHMIERER",
+      "title": "CALIFORNIA BAY LEAVES IN SPRING (5-28-10) cerro alto trail -01 (4648911022).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ACALIFORNIA%20BAY%20LEAVES%20IN%20SPRING%20%285-28-10%29%20cerro%20alto%20trail%20-01%20%284648911022%29.jpg"
+    },
+    {
+      "slot": "leaf2",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/170411_744_Encinitas_-_San_Diego_Botanic_Gdn%2C_Mexican_Gdn%2C_Umbellularia_californica_California_Bay_Tree%2C_used_like_culinary_bay_leaf%2C_but_stonger_flavored_%2834201332450%29.jpg/1280px-thumbnail.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "cultivar413 from Fallbrook, California",
+      "title": "170411 744 Encinitas - San Diego Botanic Gdn, Mexican Gdn, Umbellularia californica California Bay Tree, used like culinary bay leaf, but stonger flavored (34201332450).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3A170411%20744%20Encinitas%20-%20San%20Diego%20Botanic%20Gdn%2C%20Mexican%20Gdn%2C%20Umbellularia%20californica%20California%20Bay%20Tree%2C%20used%20like%20culinary%20bay%20leaf%2C%20but%20stonger%20flavored%20%2834201332450%29.jpg"
+    },
+    {
+      "slot": "plant",
+      "label": "whole plant",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Umbellularia_californica_-_January_2023_-_Sarah_Stierch.jpg/1280px-Umbellularia_californica_-_January_2023_-_Sarah_Stierch.jpg",
+      "license": "CC0",
+      "license_code": "cc0",
+      "attribution": "Missvain",
+      "title": "Umbellularia californica - January 2023 - Sarah Stierch.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AUmbellularia%20californica%20-%20January%202023%20-%20Sarah%20Stierch.jpg"
+    },
+    {
+      "slot": "flower",
+      "label": "flower",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/52/CaliforniaBayLaurelFlowers_crwb.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_code": "cc-by-sa-3.0",
+      "attribution": "No machine-readable author provided. Elf assumed (based on copyright claims).",
+      "title": "CaliforniaBayLaurelFlowers crwb.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ACaliforniaBayLaurelFlowers%20crwb.jpg"
+    },
+    {
+      "slot": "fruit",
+      "label": "fruit / seed",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/UmbellulariaFruitRipe.JPG",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "Nimmolo",
+      "title": "UmbellulariaFruitRipe.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File%3AUmbellulariaFruitRipe.JPG"
+    }
+  ],
+  "madrone": [
+    {
+      "slot": "leaf",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/38/1916._Lepidoptera._Tischeriidae._Arbutus_madrona_leaf_miner._%2836187899176%29.jpg",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "R6, State & Private Forestry, Forest Health Protection",
+      "title": "1916. Lepidoptera. Tischeriidae. Arbutus madrona leaf miner. (36187899176).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3A1916.%20Lepidoptera.%20Tischeriidae.%20Arbutus%20madrona%20leaf%20miner.%20%2836187899176%29.jpg"
+    },
+    {
+      "slot": "leaf2",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/E20170223-0002%E2%80%94Arbutus_menziesii%E2%80%94RPBG_%2832713484470%29.jpg/1280px-E20170223-0002%E2%80%94Arbutus_menziesii%E2%80%94RPBG_%2832713484470%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "John Rusk from Berkeley, CA, United States of America",
+      "title": "E20170223-0002\u2014Arbutus menziesii\u2014RPBG (32713484470).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AE20170223-0002%E2%80%94Arbutus%20menziesii%E2%80%94RPBG%20%2832713484470%29.jpg"
+    },
+    {
+      "slot": "plant",
+      "label": "whole plant",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Arbutus_menziesii_%28Pacific_madrone_tree%29_%28near_Calistoga%2C_California%2C_USA%29_1_%2849095163082%29.jpg/1280px-Arbutus_menziesii_%28Pacific_madrone_tree%29_%28near_Calistoga%2C_California%2C_USA%29_1_%2849095163082%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "James St. John",
+      "title": "Arbutus menziesii (Pacific madrone tree) (near Calistoga, California, USA) 1 (49095163082).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AArbutus%20menziesii%20%28Pacific%20madrone%20tree%29%20%28near%20Calistoga%2C%20California%2C%20USA%29%201%20%2849095163082%29.jpg"
+    },
+    {
+      "slot": "flower",
+      "label": "flower",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Arbutus_menziesii_%28Pacific_madrone_tree%29_%28near_Calistoga%2C_California%2C_USA%29_2_%2849094456538%29.jpg/1280px-Arbutus_menziesii_%28Pacific_madrone_tree%29_%28near_Calistoga%2C_California%2C_USA%29_2_%2849094456538%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "James St. John",
+      "title": "Arbutus menziesii (Pacific madrone tree) (near Calistoga, California, USA) 2 (49094456538).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AArbutus%20menziesii%20%28Pacific%20madrone%20tree%29%20%28near%20Calistoga%2C%20California%2C%20USA%29%202%20%2849094456538%29.jpg"
+    },
+    {
+      "slot": "fruit",
+      "label": "fruit / seed",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/The_Pacific_Madrone_tree%27s_berries%2C_where_we_looked_and_looked_for_Varied_Thrush_%2830682891697%29.jpg/1280px-The_Pacific_Madrone_tree%27s_berries%2C_where_we_looked_and_looked_for_Varied_Thrush_%2830682891697%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "Andy Reago & Chrissy McClarren",
+      "title": "The Pacific Madrone tree's berries, where we looked and looked for Varied Thrush (30682891697).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AThe%20Pacific%20Madrone%20tree%27s%20berries%2C%20where%20we%20looked%20and%20looked%20for%20Varied%20Thrush%20%2830682891697%29.jpg"
+    },
+    {
+      "slot": "bark",
+      "label": "bark / stem",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/MADRONE_TREES_WITH_PEELING_BARK._NEAR_DEER_HARBOR_ON_ORCAS_ISLAND_-_NARA_-_545281.jpg/1280px-MADRONE_TREES_WITH_PEELING_BARK._NEAR_DEER_HARBOR_ON_ORCAS_ISLAND_-_NARA_-_545281.jpg",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "Gene Daniels",
+      "title": "MADRONE TREES WITH PEELING BARK. NEAR DEER HARBOR ON ORCAS ISLAND - NARA - 545281.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AMADRONE%20TREES%20WITH%20PEELING%20BARK.%20NEAR%20DEER%20HARBOR%20ON%20ORCAS%20ISLAND%20-%20NARA%20-%20545281.jpg"
+    }
+  ],
+  "black-walnut": [
+    {
+      "slot": "leaf",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Northern_California_black_walnut_%28f55213de-d9d4-2aea-f128-8eeba258c9cd%29.JPG/1280px-Northern_California_black_walnut_%28f55213de-d9d4-2aea-f128-8eeba258c9cd%29.JPG",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "NPS",
+      "title": "Northern California black walnut (f55213de-d9d4-2aea-f128-8eeba258c9cd).JPG",
+      "source": "https://commons.wikimedia.org/wiki/File%3ANorthern%20California%20black%20walnut%20%28f55213de-d9d4-2aea-f128-8eeba258c9cd%29.JPG"
+    },
+    {
+      "slot": "leaf2",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/%28Juglans_hindsii_female_inflorescence_close-up_at_unidentified_location%29_-_DPLA_-_08dd84bd1b8dd0d6acb0199613d584b2.jpg/1280px-%28Juglans_hindsii_female_inflorescence_close-up_at_unidentified_location%29_-_DPLA_-_08dd84bd1b8dd0d6acb0199613d584b2.jpg",
+      "license": "CC BY 4.0",
+      "license_code": "cc-by-4.0",
+      "attribution": "Carlquist, Sherwin John, 1930-2021",
+      "title": "(Juglans hindsii female inflorescence close-up at unidentified location) - DPLA - 08dd84bd1b8dd0d6acb0199613d584b2.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3A%28Juglans%20hindsii%20female%20inflorescence%20close-up%20at%20unidentified%20location%29%20-%20DPLA%20-%2008dd84bd1b8dd0d6acb0199613d584b2.jpg"
+    },
+    {
+      "slot": "plant",
+      "label": "whole plant",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Juglans_hindsii%2C_Antioch_Dunes_NWR%2C_Contra_Costa%2C_California_2.jpg/1280px-Juglans_hindsii%2C_Antioch_Dunes_NWR%2C_Contra_Costa%2C_California_2.jpg",
+      "license": "CC0",
+      "license_code": "cc0",
+      "attribution": "marcus_t",
+      "title": "Juglans hindsii, Antioch Dunes NWR, Contra Costa, California 2.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AJuglans%20hindsii%2C%20Antioch%20Dunes%20NWR%2C%20Contra%20Costa%2C%20California%202.jpg"
+    },
+    {
+      "slot": "fruit",
+      "label": "fruit / seed",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Juglans_californica_nut.JPG/1280px-Juglans_californica_nut.JPG",
+      "license": "CC BY-SA 4.0",
+      "license_code": "cc-by-sa-4.0",
+      "attribution": "Albarubescens",
+      "title": "Juglans californica nut.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File%3AJuglans%20californica%20nut.JPG"
+    }
+  ],
+  "loquat": [
+    {
+      "slot": "leaf",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Loquat_leaf.JPG/1280px-Loquat_leaf.JPG",
+      "license": "CC BY 3.0",
+      "license_code": "cc-by-3.0",
+      "attribution": "Elucidate",
+      "title": "Loquat leaf.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File%3ALoquat%20leaf.JPG"
+    },
+    {
+      "slot": "leaf2",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Starr-230107-0803-Eriobotrya_japonica-leaf-Hawea_Pl_Olinda-Maui_%2852665861664%29.jpg/1280px-Starr-230107-0803-Eriobotrya_japonica-leaf-Hawea_Pl_Olinda-Maui_%2852665861664%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "Forest and Kim Starr",
+      "title": "Starr-230107-0803-Eriobotrya japonica-leaf-Hawea Pl Olinda-Maui (52665861664).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AStarr-230107-0803-Eriobotrya%20japonica-leaf-Hawea%20Pl%20Olinda-Maui%20%2852665861664%29.jpg"
+    },
+    {
+      "slot": "plant",
+      "label": "whole plant",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Starr-230106-0624-Eriobotrya_japonica-habit_outside_fence-Hosmers_Grove_Haleakala_National_Park-Maui_%2852665970240%29.jpg/1280px-Starr-230106-0624-Eriobotrya_japonica-habit_outside_fence-Hosmers_Grove_Haleakala_National_Park-Maui_%2852665970240%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "Forest and Kim Starr",
+      "title": "Starr-230106-0624-Eriobotrya japonica-habit outside fence-Hosmers Grove Haleakala National Park-Maui (52665970240).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AStarr-230106-0624-Eriobotrya%20japonica-habit%20outside%20fence-Hosmers%20Grove%20Haleakala%20National%20Park-Maui%20%2852665970240%29.jpg"
+    },
+    {
+      "slot": "flower",
+      "label": "flower",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/6/62/BlossomingLoquat.jpg",
+      "license": "CC BY 2.5",
+      "license_code": "cc-by-2.5",
+      "attribution": "No machine-readable author provided. Rickjpelleg assumed (based on copyright cla",
+      "title": "BlossomingLoquat.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ABlossomingLoquat.jpg"
+    },
+    {
+      "slot": "fruit",
+      "label": "fruit / seed",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Loquat_fruit_and_foliage_%28Eriobotrya_japonica%29.jpg/1280px-Loquat_fruit_and_foliage_%28Eriobotrya_japonica%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "Ed Uthman",
+      "title": "Loquat fruit and foliage (Eriobotrya japonica).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ALoquat%20fruit%20and%20foliage%20%28Eriobotrya%20japonica%29.jpg"
+    },
+    {
+      "slot": "bark",
+      "label": "bark / stem",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Starr-230107-0812-Eriobotrya_japonica-bark_and_branches-Hawea_Pl_Olinda-Maui_%2852665577136%29.jpg/1280px-Starr-230107-0812-Eriobotrya_japonica-bark_and_branches-Hawea_Pl_Olinda-Maui_%2852665577136%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "Forest and Kim Starr",
+      "title": "Starr-230107-0812-Eriobotrya japonica-bark and branches-Hawea Pl Olinda-Maui (52665577136).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AStarr-230107-0812-Eriobotrya%20japonica-bark%20and%20branches-Hawea%20Pl%20Olinda-Maui%20%2852665577136%29.jpg"
+    }
+  ],
+  "cherry-plum": [
+    {
+      "slot": "leaf",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/2019-11-30_12_05_44_Autumn_leaves_on_a_Purple-leaf_Plum_along_Tranquility_Court_in_the_Franklin_Farm_section_of_Oak_Hill%2C_Fairfax_County%2C_Virginia.jpg/1280px-2019-11-30_12_05_44_Autumn_leaves_on_a_Purple-leaf_Plum_along_Tranquility_Court_in_the_Franklin_Farm_section_of_Oak_Hill%2C_Fairfax_County%2C_Virginia.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_code": "cc-by-sa-4.0",
+      "attribution": "Famartin",
+      "title": "2019-11-30 12 05 44 Autumn leaves on a Purple-leaf Plum along Tranquility Court in the Franklin Farm section of Oak Hill, Fairfax County, Virginia.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3A2019-11-30%2012%2005%2044%20Autumn%20leaves%20on%20a%20Purple-leaf%20Plum%20along%20Tranquility%20Court%20in%20the%20Franklin%20Farm%20section%20of%20Oak%20Hill%2C%20Fairfax%20County%2C%20Virginia.jpg"
+    },
+    {
+      "slot": "leaf2",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/2019-12-03_13_05_56_Autumn_leaves_on_a_Purple-leaf_Plum_along_Tranquility_Court_in_the_Franklin_Farm_section_of_Oak_Hill%2C_Fairfax_County%2C_Virginia.jpg/1280px-2019-12-03_13_05_56_Autumn_leaves_on_a_Purple-leaf_Plum_along_Tranquility_Court_in_the_Franklin_Farm_section_of_Oak_Hill%2C_Fairfax_County%2C_Virginia.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_code": "cc-by-sa-4.0",
+      "attribution": "Famartin",
+      "title": "2019-12-03 13 05 56 Autumn leaves on a Purple-leaf Plum along Tranquility Court in the Franklin Farm section of Oak Hill, Fairfax County, Virginia.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3A2019-12-03%2013%2005%2056%20Autumn%20leaves%20on%20a%20Purple-leaf%20Plum%20along%20Tranquility%20Court%20in%20the%20Franklin%20Farm%20section%20of%20Oak%20Hill%2C%20Fairfax%20County%2C%20Virginia.jpg"
+    },
+    {
+      "slot": "plant",
+      "label": "whole plant",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Prunus_cerasifera_var._atropurpurea_Habitus_2009October3_DehesaBoyalPuertollano.jpg/1280px-Prunus_cerasifera_var._atropurpurea_Habitus_2009October3_DehesaBoyalPuertollano.jpg",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "Javier martin",
+      "title": "Prunus cerasifera var. atropurpurea Habitus 2009October3 DehesaBoyalPuertollano.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3APrunus%20cerasifera%20var.%20atropurpurea%20Habitus%202009October3%20DehesaBoyalPuertollano.jpg"
+    },
+    {
+      "slot": "flower",
+      "label": "flower",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Prunus_blossoms.JPG/1280px-Prunus_blossoms.JPG",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "Mateusz210",
+      "title": "Prunus blossoms.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File%3APrunus%20blossoms.JPG"
+    },
+    {
+      "slot": "fruit",
+      "label": "fruit / seed",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Prunus_cerasifera%2C_cut_in_half.jpg/1280px-Prunus_cerasifera%2C_cut_in_half.jpg",
+      "license": "CC BY 3.0",
+      "license_code": "cc-by-3.0",
+      "attribution": "Herzi Pinki",
+      "title": "Prunus cerasifera, cut in half.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3APrunus%20cerasifera%2C%20cut%20in%20half.jpg"
+    },
+    {
+      "slot": "bark",
+      "label": "bark / stem",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Prunus_cerasifera_trunk.jpg/1280px-Prunus_cerasifera_trunk.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_code": "cc-by-sa-4.0",
+      "attribution": "Maasaak",
+      "title": "Prunus cerasifera trunk.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3APrunus%20cerasifera%20trunk.jpg"
+    }
+  ],
+  "fig": [
+    {
+      "slot": "leaf",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Ficus_carica_bonsai_A_D210628_young_leaf.jpg/1280px-Ficus_carica_bonsai_A_D210628_young_leaf.jpg",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "Tangopaso",
+      "title": "Ficus carica bonsai A D210628 young leaf.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AFicus%20carica%20bonsai%20A%20D210628%20young%20leaf.jpg"
+    },
+    {
+      "slot": "leaf2",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Ficus_carica_bonsai_A_D151026_leaves.jpg/1280px-Ficus_carica_bonsai_A_D151026_leaves.jpg",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "Tangopaso",
+      "title": "Ficus carica bonsai A D151026 leaves.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AFicus%20carica%20bonsai%20A%20D151026%20leaves.jpg"
+    },
+    {
+      "slot": "plant",
+      "label": "whole plant",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Ficus_carica_habitus_2009December07_DehesaBoyaldePuertollano.jpg/1280px-Ficus_carica_habitus_2009December07_DehesaBoyaldePuertollano.jpg",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "Javier martin",
+      "title": "Ficus carica habitus 2009December07 DehesaBoyaldePuertollano.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AFicus%20carica%20habitus%202009December07%20DehesaBoyaldePuertollano.jpg"
+    },
+    {
+      "slot": "flower",
+      "label": "flower",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Britannica_Fig_Ficus_Carica.png",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "Unknown authorUnknown author",
+      "title": "Britannica Fig Ficus Carica.png",
+      "source": "https://commons.wikimedia.org/wiki/File%3ABritannica%20Fig%20Ficus%20Carica.png"
+    },
+    {
+      "slot": "fruit",
+      "label": "fruit / seed",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Ficus_carica_fruits_-_%CF%8E%CF%81%CE%B9%CE%BC%CE%B1_%CF%83%CF%8D%CE%BA%CE%B1.jpg/1280px-Ficus_carica_fruits_-_%CF%8E%CF%81%CE%B9%CE%BC%CE%B1_%CF%83%CF%8D%CE%BA%CE%B1.jpg",
+      "license": "CC BY 3.0",
+      "license_code": "cc-by-3.0",
+      "attribution": "\u0391\u03bd\u03ce\u03bd\u03c5\u03bc\u03bf\u03c2 \u0392\u03b9\u03ba\u03b9\u03c0\u03b1\u03b9\u03b4\u03b9\u03c3\u03c4\u03ae\u03c2",
+      "title": "Ficus carica fruits - \u03ce\u03c1\u03b9\u03bc\u03b1 \u03c3\u03cd\u03ba\u03b1.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AFicus%20carica%20fruits%20-%20%CF%8E%CF%81%CE%B9%CE%BC%CE%B1%20%CF%83%CF%8D%CE%BA%CE%B1.jpg"
+    },
+    {
+      "slot": "bark",
+      "label": "bark / stem",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Ficus_carica_bonsai_A_D150915_trunk.jpg/1280px-Ficus_carica_bonsai_A_D150915_trunk.jpg",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "Tangopaso",
+      "title": "Ficus carica bonsai A D150915 trunk.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AFicus%20carica%20bonsai%20A%20D150915%20trunk.jpg"
+    }
+  ],
+  "olive": [
+    {
+      "slot": "leaf",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Olea_europaea_subsp_europaea_Leafs.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_code": "cc-by-sa-3.0",
+      "attribution": "Wikimedia Commons",
+      "title": "Olea europaea subsp europaea Leafs.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AOlea%20europaea%20subsp%20europaea%20Leafs.jpg"
+    },
+    {
+      "slot": "leaf2",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Olea-europaea-foliage.JPG/1280px-Olea-europaea-foliage.JPG",
+      "license": "CC BY-SA 3.0",
+      "license_code": "cc-by-sa-3.0",
+      "attribution": "Sten Porse",
+      "title": "Olea-europaea-foliage.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File%3AOlea-europaea-foliage.JPG"
+    },
+    {
+      "slot": "plant",
+      "label": "whole plant",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Olea_europaea_young_plant01.jpg",
+      "license": "CC BY 2.5",
+      "license_code": "cc-by-2.5",
+      "attribution": "No machine-readable author provided. Rickjpelleg assumed (based on copyright cla",
+      "title": "Olea europaea young plant01.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AOlea%20europaea%20young%20plant01.jpg"
+    },
+    {
+      "slot": "flower",
+      "label": "flower",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Olea_europaea_FlowersCloseup_SolanadelPino.jpg/1280px-Olea_europaea_FlowersCloseup_SolanadelPino.jpg",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "Javier martin",
+      "title": "Olea europaea FlowersCloseup SolanadelPino.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AOlea%20europaea%20FlowersCloseup%20SolanadelPino.jpg"
+    },
+    {
+      "slot": "fruit",
+      "label": "fruit / seed",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Olea_europaea_fruit_Navarre_St_7th_Brigade_Park_Chermside_L1050166.jpg/1280px-Olea_europaea_fruit_Navarre_St_7th_Brigade_Park_Chermside_L1050166.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_code": "cc-by-sa-4.0",
+      "attribution": "John Robert McPherson",
+      "title": "Olea europaea fruit Navarre St 7th Brigade Park Chermside L1050166.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AOlea%20europaea%20fruit%20Navarre%20St%207th%20Brigade%20Park%20Chermside%20L1050166.jpg"
+    },
+    {
+      "slot": "bark",
+      "label": "bark / stem",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/The_epiphytic_association_Lecanoretum_carpineae_on_the_bark_of_Olea_europaea.jpg/1280px-The_epiphytic_association_Lecanoretum_carpineae_on_the_bark_of_Olea_europaea.jpg",
+      "license": "CC0",
+      "license_code": "cc0",
+      "attribution": "Industrees",
+      "title": "The epiphytic association Lecanoretum carpineae on the bark of Olea europaea.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AThe%20epiphytic%20association%20Lecanoretum%20carpineae%20on%20the%20bark%20of%20Olea%20europaea.jpg"
+    }
+  ],
+  "rosemary": [
+    {
+      "slot": "leaf",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Rosemary%2C_Salvia_rosmarinus%2C_leaf_underside.jpg/1280px-Rosemary%2C_Salvia_rosmarinus%2C_leaf_underside.jpg",
+      "license": "CC BY 4.0",
+      "license_code": "cc-by-4.0",
+      "attribution": "GrahamInHorsham",
+      "title": "Rosemary, Salvia rosmarinus, leaf underside.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ARosemary%2C%20Salvia%20rosmarinus%2C%20leaf%20underside.jpg"
+    },
+    {
+      "slot": "leaf2",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Starr_070906-8835_Rosmarinus_officinalis.jpg/1280px-Starr_070906-8835_Rosmarinus_officinalis.jpg",
+      "license": "CC BY 3.0",
+      "license_code": "cc-by-3.0",
+      "attribution": "Forest & Kim Starr",
+      "title": "Starr 070906-8835 Rosmarinus officinalis.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AStarr%20070906-8835%20Rosmarinus%20officinalis.jpg"
+    },
+    {
+      "slot": "plant",
+      "label": "whole plant",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Starr-080117-1553-Rosmarinus_officinalis-habit-Walmart_Kahului-Maui_%2824604707700%29.jpg/1280px-Starr-080117-1553-Rosmarinus_officinalis-habit-Walmart_Kahului-Maui_%2824604707700%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "Forest and Kim Starr",
+      "title": "Starr-080117-1553-Rosmarinus officinalis-habit-Walmart Kahului-Maui (24604707700).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AStarr-080117-1553-Rosmarinus%20officinalis-habit-Walmart%20Kahului-Maui%20%2824604707700%29.jpg"
+    },
+    {
+      "slot": "flower",
+      "label": "flower",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Rosmarinus_officinalis_FlowerCloseup_DehesaBoyaldePuertollano.jpg/1280px-Rosmarinus_officinalis_FlowerCloseup_DehesaBoyaldePuertollano.jpg",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "Javier martin",
+      "title": "Rosmarinus officinalis FlowerCloseup DehesaBoyaldePuertollano.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ARosmarinus%20officinalis%20FlowerCloseup%20DehesaBoyaldePuertollano.jpg"
+    },
+    {
+      "slot": "fruit",
+      "label": "fruit / seed",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Rosmarinus_officinalis_IP1106011.jpg/1280px-Rosmarinus_officinalis_IP1106011.jpg",
+      "license": "CC0",
+      "license_code": "cc0",
+      "attribution": "Leo Michels",
+      "title": "Rosmarinus officinalis IP1106011.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ARosmarinus%20officinalis%20IP1106011.jpg"
+    },
+    {
+      "slot": "bark",
+      "label": "bark / stem",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/24/Rosemary%2C_ca_1500.jpg",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "Unknown artist from Italy",
+      "title": "Rosemary, ca 1500.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ARosemary%2C%20ca%201500.jpg"
+    }
+  ],
+  "poison-hemlock": [
+    {
+      "slot": "leaf",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Conium_maculatum_leaf1_%2814658871516%29.jpg/1280px-Conium_maculatum_leaf1_%2814658871516%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "Harry Rose from South West Rocks, Australia",
+      "title": "Conium maculatum leaf1 (14658871516).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AConium%20maculatum%20leaf1%20%2814658871516%29.jpg"
+    },
+    {
+      "slot": "leaf2",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Conium_maculatum_leaf2_%2814495221529%29.jpg/1280px-Conium_maculatum_leaf2_%2814495221529%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "Harry Rose from South West Rocks, Australia",
+      "title": "Conium maculatum leaf2 (14495221529).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AConium%20maculatum%20leaf2%20%2814495221529%29.jpg"
+    },
+    {
+      "slot": "plant",
+      "label": "whole plant",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Conium_maculatum_plant_%2808%29.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_code": "cc-by-sa-3.0",
+      "attribution": "Julia Kruse",
+      "title": "Conium maculatum plant (08).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AConium%20maculatum%20plant%20%2808%29.jpg"
+    },
+    {
+      "slot": "flower",
+      "label": "flower",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Conium_maculatum_flowers_2015_-_andrey_zharkikh.jpg/1280px-Conium_maculatum_flowers_2015_-_andrey_zharkikh.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "Andrey Zharkikh from Salt Lake City, USA",
+      "title": "Conium maculatum flowers 2015 - andrey zharkikh.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AConium%20maculatum%20flowers%202015%20-%20andrey%20zharkikh.jpg"
+    },
+    {
+      "slot": "fruit",
+      "label": "fruit / seed",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Conium_maculatum_fruit_%2809%29.jpg/1280px-Conium_maculatum_fruit_%2809%29.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_code": "cc-by-sa-3.0",
+      "attribution": "Andrea Moro",
+      "title": "Conium maculatum fruit (09).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AConium%20maculatum%20fruit%20%2809%29.jpg"
+    },
+    {
+      "slot": "bark",
+      "label": "bark / stem",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Conium_maculatum_stem_%2818%29.jpg/1280px-Conium_maculatum_stem_%2818%29.jpg",
+      "license": "CC BY 4.0",
+      "license_code": "cc-by-4.0",
+      "attribution": "E K Cameron",
+      "title": "Conium maculatum stem (18).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AConium%20maculatum%20stem%20%2818%29.jpg"
+    }
+  ],
+  "poison-oak": [
+    {
+      "slot": "leaf",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/%22Leaves_of_three%2C_let_it_be%22_-_Poison_Oak_-_Flickr_-_S._Rae.jpg/1280px-%22Leaves_of_three%2C_let_it_be%22_-_Poison_Oak_-_Flickr_-_S._Rae.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "S. Rae from Scotland, UK",
+      "title": "\"Leaves of three, let it be\" - Poison Oak - Flickr - S. Rae.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3A%22Leaves%20of%20three%2C%20let%20it%20be%22%20-%20Poison%20Oak%20-%20Flickr%20-%20S.%20Rae.jpg"
+    },
+    {
+      "slot": "leaf2",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Toxicodendron_diversilobum_foliage_at_Samuel_P._Taylor_State_Park.jpg/1280px-Toxicodendron_diversilobum_foliage_at_Samuel_P._Taylor_State_Park.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_code": "cc-by-sa-4.0",
+      "attribution": "Frank Schulenburg",
+      "title": "Toxicodendron diversilobum foliage at Samuel P. Taylor State Park.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AToxicodendron%20diversilobum%20foliage%20at%20Samuel%20P.%20Taylor%20State%20Park.jpg"
+    },
+    {
+      "slot": "plant",
+      "label": "whole plant",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Poison-oak_Toxicodendron_diversilobum_%283-16-07%29%2C_San_Luis_Obispo_-2_%28535341428%29.jpg/1280px-Poison-oak_Toxicodendron_diversilobum_%283-16-07%29%2C_San_Luis_Obispo_-2_%28535341428%29.jpg",
+      "license": "CC0",
+      "license_code": "cc0",
+      "attribution": "ALAN SCHMIERER",
+      "title": "Poison-oak Toxicodendron diversilobum (3-16-07), San Luis Obispo -2 (535341428).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3APoison-oak%20Toxicodendron%20diversilobum%20%283-16-07%29%2C%20San%20Luis%20Obispo%20-2%20%28535341428%29.jpg"
+    },
+    {
+      "slot": "flower",
+      "label": "flower",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/POISON_OAK_%28toxicodendron_diversilobum%29_%284-5-08%29_canet_-1_%282391067502%29.jpg/1280px-POISON_OAK_%28toxicodendron_diversilobum%29_%284-5-08%29_canet_-1_%282391067502%29.jpg",
+      "license": "CC0",
+      "license_code": "cc0",
+      "attribution": "ALAN SCHMIERER",
+      "title": "POISON OAK (toxicodendron diversilobum) (4-5-08) canet -1 (2391067502).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3APOISON%20OAK%20%28toxicodendron%20diversilobum%29%20%284-5-08%29%20canet%20-1%20%282391067502%29.jpg"
+    },
+    {
+      "slot": "fruit",
+      "label": "fruit / seed",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Toxicodendron_diversilobum_berries.jpg",
+      "license": "CC BY-SA 2.5",
+      "license_code": "cc-by-sa-2.5",
+      "attribution": "Noah Elhardt",
+      "title": "Toxicodendron diversilobum berries.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AToxicodendron%20diversilobum%20berries.jpg"
+    }
+  ],
+  "datura": [
+    {
+      "slot": "leaf",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/DaturaFoliage.jpg/1280px-DaturaFoliage.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_code": "cc-by-sa-3.0",
+      "attribution": "Fred Bauder",
+      "title": "DaturaFoliage.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ADaturaFoliage.jpg"
+    },
+    {
+      "slot": "leaf2",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Datura_wrightii_22232963.jpg/1280px-Datura_wrightii_22232963.jpg",
+      "license": "CC BY 4.0",
+      "license_code": "cc-by-4.0",
+      "attribution": "Alex Abair",
+      "title": "Datura wrightii 22232963.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ADatura%20wrightii%2022232963.jpg"
+    },
+    {
+      "slot": "plant",
+      "label": "whole plant",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Datura_wrightii_plant.jpg/1280px-Datura_wrightii_plant.jpg",
+      "license": "CC BY 4.0",
+      "license_code": "cc-by-4.0",
+      "attribution": "Dcrjsr",
+      "title": "Datura wrightii plant.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ADatura%20wrightii%20plant.jpg"
+    },
+    {
+      "slot": "flower",
+      "label": "flower",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Datura_wrightii_flower2.jpg/1280px-Datura_wrightii_flower2.jpg",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "Dlarsen",
+      "title": "Datura wrightii flower2.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ADatura%20wrightii%20flower2.jpg"
+    },
+    {
+      "slot": "fruit",
+      "label": "fruit / seed",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Datura_wrightii_seed_pods.jpg/1280px-Datura_wrightii_seed_pods.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "Clinton & Charles Robertson from Del Rio, Texas & College Station, TX, USA",
+      "title": "Datura wrightii seed pods.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ADatura%20wrightii%20seed%20pods.jpg"
+    },
+    {
+      "slot": "bark",
+      "label": "bark / stem",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Datura_wrightii_sl13.jpg/1280px-Datura_wrightii_sl13.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_code": "cc-by-sa-4.0",
+      "attribution": "Stefan.lefnaer",
+      "title": "Datura wrightii sl13.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ADatura%20wrightii%20sl13.jpg"
+    }
+  ],
+  "oleander": [
+    {
+      "slot": "leaf",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Angiosperm_Leaf_Leaf_Tip_in_Nerium_%2824010128358%29.jpg/1280px-Angiosperm_Leaf_Leaf_Tip_in_Nerium_%2824010128358%29.jpg",
+      "license": "CC0",
+      "license_code": "cc0",
+      "attribution": "Berkshire Community College Bioscience Image Library",
+      "title": "Angiosperm Leaf Leaf Tip in Nerium (24010128358).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AAngiosperm%20Leaf%20Leaf%20Tip%20in%20Nerium%20%2824010128358%29.jpg"
+    },
+    {
+      "slot": "leaf2",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Angiosperm_Leaf_Mesophyll_in_Nerium_%2834321745784%29.jpg/1280px-Angiosperm_Leaf_Mesophyll_in_Nerium_%2834321745784%29.jpg",
+      "license": "CC0",
+      "license_code": "cc0",
+      "attribution": "Berkshire Community College Bioscience Image Library",
+      "title": "Angiosperm Leaf Mesophyll in Nerium (34321745784).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AAngiosperm%20Leaf%20Mesophyll%20in%20Nerium%20%2834321745784%29.jpg"
+    },
+    {
+      "slot": "plant",
+      "label": "whole plant",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Oleander_%28Nerium_oleander%29_habit.jpg/1280px-Oleander_%28Nerium_oleander%29_habit.jpg",
+      "license": "CC0",
+      "license_code": "cc0",
+      "attribution": "David E Mead",
+      "title": "Oleander (Nerium oleander) habit.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AOleander%20%28Nerium%20oleander%29%20habit.jpg"
+    },
+    {
+      "slot": "flower",
+      "label": "flower",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/da/Oleander_Blossoms_%28Boston_Public_Library%29.jpg",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "Kratzer, E. (artist); L. Prang & Co. (publisher)",
+      "title": "Oleander Blossoms (Boston Public Library).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AOleander%20Blossoms%20%28Boston%20Public%20Library%29.jpg"
+    },
+    {
+      "slot": "fruit",
+      "label": "fruit / seed",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Oleander_%28Nerium_oleander%29_Samenkapseln_%288153694264%29.jpg/1280px-Oleander_%28Nerium_oleander%29_Samenkapseln_%288153694264%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "Maja Dumat from Deutschland (Germany)",
+      "title": "Oleander (Nerium oleander) Samenkapseln (8153694264).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AOleander%20%28Nerium%20oleander%29%20Samenkapseln%20%288153694264%29.jpg"
+    },
+    {
+      "slot": "bark",
+      "label": "bark / stem",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/An_oleander_plant_%28Nerium_oleander%29%3B_flowering_stem._Coloure_Wellcome_V0044587.jpg/1280px-An_oleander_plant_%28Nerium_oleander%29%3B_flowering_stem._Coloure_Wellcome_V0044587.jpg",
+      "license": "CC BY 4.0",
+      "license_code": "cc-by-4.0",
+      "attribution": "Wikimedia Commons",
+      "title": "An oleander plant (Nerium oleander); flowering stem. Coloure Wellcome V0044587.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AAn%20oleander%20plant%20%28Nerium%20oleander%29%3B%20flowering%20stem.%20Coloure%20Wellcome%20V0044587.jpg"
+    }
+  ],
+  "foxglove": [
+    {
+      "slot": "leaf",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Digitalis_purpurea_leaf.png/1280px-Digitalis_purpurea_leaf.png",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "Pipi69e",
+      "title": "Digitalis purpurea leaf.png",
+      "source": "https://commons.wikimedia.org/wiki/File%3ADigitalis%20purpurea%20leaf.png"
+    },
+    {
+      "slot": "leaf2",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Digitalis_purpurea_subsp_purpurea_var_nevadensis_LeavesandStemCloseup.jpg/1280px-Digitalis_purpurea_subsp_purpurea_var_nevadensis_LeavesandStemCloseup.jpg",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "Javier martin",
+      "title": "Digitalis purpurea subsp purpurea var nevadensis LeavesandStemCloseup.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ADigitalis%20purpurea%20subsp%20purpurea%20var%20nevadensis%20LeavesandStemCloseup.jpg"
+    },
+    {
+      "slot": "plant",
+      "label": "whole plant",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Digitalis_purpurea_subsp._Purpurea_var._nevadensis_Habitus_25July2009_SierraNevada.jpg/1280px-Digitalis_purpurea_subsp._Purpurea_var._nevadensis_Habitus_25July2009_SierraNevada.jpg",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "Javier martin",
+      "title": "Digitalis purpurea subsp. Purpurea var. nevadensis Habitus 25July2009 SierraNevada.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ADigitalis%20purpurea%20subsp.%20Purpurea%20var.%20nevadensis%20Habitus%2025July2009%20SierraNevada.jpg"
+    },
+    {
+      "slot": "flower",
+      "label": "flower",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/PSM_V55_D393_Monstrous_blossoms_of_foxglove.png/1280px-PSM_V55_D393_Monstrous_blossoms_of_foxglove.png",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "Unknown authorUnknown author",
+      "title": "PSM V55 D393 Monstrous blossoms of foxglove.png",
+      "source": "https://commons.wikimedia.org/wiki/File%3APSM%20V55%20D393%20Monstrous%20blossoms%20of%20foxglove.png"
+    },
+    {
+      "slot": "fruit",
+      "label": "fruit / seed",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/46/Digitalis_purpurea16082001fruits.JPG",
+      "license": "CC BY-SA 3.0",
+      "license_code": "cc-by-sa-3.0",
+      "attribution": "Henry Brisse (upload by user:Abalg)",
+      "title": "Digitalis purpurea16082001fruits.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File%3ADigitalis%20purpurea16082001fruits.JPG"
+    },
+    {
+      "slot": "bark",
+      "label": "bark / stem",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Digitalis_Fasciation_detail_stem.jpg/1280px-Digitalis_Fasciation_detail_stem.jpg",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "Umay",
+      "title": "Digitalis Fasciation detail stem.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ADigitalis%20Fasciation%20detail%20stem.jpg"
+    }
+  ],
+  "castor-bean": [
+    {
+      "slot": "leaf",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Red_leaf_of_Ricinus_communis_-_panoramio_%281441%29.jpg/1280px-Red_leaf_of_Ricinus_communis_-_panoramio_%281441%29.jpg",
+      "license": "CC BY 3.0",
+      "license_code": "cc-by-3.0",
+      "attribution": "\u0639\u0644\u064a \u0641\u0644\u0627\u062d \u0646\u0633\u064a\u0645\u064a",
+      "title": "Red leaf of Ricinus communis - panoramio (1441).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ARed%20leaf%20of%20Ricinus%20communis%20-%20panoramio%20%281441%29.jpg"
+    },
+    {
+      "slot": "leaf2",
+      "label": "leaves",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Ricinus_communis_leaf_NC1.jpg/1280px-Ricinus_communis_leaf_NC1.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "Macleay Grass Man",
+      "title": "Ricinus communis leaf NC1.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ARicinus%20communis%20leaf%20NC1.jpg"
+    },
+    {
+      "slot": "plant",
+      "label": "whole plant",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Starr-060416-7679-Ricinus_communis-habit-Paia-Maui_%2824494080439%29.jpg/1280px-Starr-060416-7679-Ricinus_communis-habit-Paia-Maui_%2824494080439%29.jpg",
+      "license": "CC BY 2.0",
+      "license_code": "cc-by-2.0",
+      "attribution": "Forest and Kim Starr",
+      "title": "Starr-060416-7679-Ricinus communis-habit-Paia-Maui (24494080439).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AStarr-060416-7679-Ricinus%20communis-habit-Paia-Maui%20%2824494080439%29.jpg"
+    },
+    {
+      "slot": "flower",
+      "label": "flower",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Castor_%28Ricinus_communis%29_inflorescence_and_close_up_of_flowers._Thane%2C_Maharashtra..jpg",
+      "license": "CC BY-SA 3.0",
+      "license_code": "cc-by-sa-3.0",
+      "attribution": "Dr. Raju Kasambe",
+      "title": "Castor (Ricinus communis) inflorescence and close up of flowers. Thane, Maharashtra..jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ACastor%20%28Ricinus%20communis%29%20inflorescence%20and%20close%20up%20of%20flowers.%20Thane%2C%20Maharashtra..jpg"
+    },
+    {
+      "slot": "fruit",
+      "label": "fruit / seed",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Airplanes_-_Materials_-_Growing_castor_beans_for_the_U.S._Government_on_the_Sutter_Basin_Co._Lands%2C_Sacremento_Valley%2C_Cal._Castor_bean_plant_showing_%22spike%22_on_which_berry_grows._From_Signal_Office%2C_War_Dept_-_NARA_-_17340633.jpg/1280px-thumbnail.jpg",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "Unknown authorUnknown author or not provided",
+      "title": "Airplanes - Materials - Growing castor beans for the U.S. Government on the Sutter Basin Co. Lands, Sacremento Valley, Cal. Castor bean plant showing \"spike\" on which berry grows. From Signal Office, War Dept - NARA - 17340633.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AAirplanes%20-%20Materials%20-%20Growing%20castor%20beans%20for%20the%20U.S.%20Government%20on%20the%20Sutter%20Basin%20Co.%20Lands%2C%20Sacremento%20Valley%2C%20Cal.%20Castor%20bean%20plant%20showing%20%22spike%22%20on%20which%20berry%20grows.%20From%20Signal%20Office%2C%20War%20Dept%20-%20NARA%20-%2017340633.jpg"
+    },
+    {
+      "slot": "bark",
+      "label": "bark / stem",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/28/EB1911_Plants_-_hypocotyledonary_stem_of_Ricinus_communis.jpg",
+      "license": "Public domain",
+      "license_code": "pd",
+      "attribution": "Unknown authorUnknown author",
+      "title": "EB1911 Plants - hypocotyledonary stem of Ricinus communis.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AEB1911%20Plants%20-%20hypocotyledonary%20stem%20of%20Ricinus%20communis.jpg"
+    }
+  ]
+}
