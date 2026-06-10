@@ -6,6 +6,10 @@
 
   var EDIB = { edible: "Edible", care: "Eat with care", no: "Don't eat" };
   var ORIG = { native: "Native", introduced: "Introduced" };
+  // edibility-at-a-glance icon: safe to eat / caution (some parts or prep risky) / poisonous
+  var EDIB_ICON = { edible: "✅", care: "⚠️", no: "☠️" };
+  var EDIB_TITLE = { edible: "Edible — safe to eat", care: "Caution — some parts toxic or needs preparation", no: "Poisonous — do not eat" };
+  function ediIcon(e) { return '<span class="edi" title="' + esc(EDIB_TITLE[e] || "") + '" aria-label="' + esc(EDIB_TITLE[e] || "") + '">' + (EDIB_ICON[e] || "") + "</span>"; }
 
   // Leitner box -> interval before a card is due again (ms). Box 0 = new/unseen.
   var MIN = 60e3, HOUR = 60 * MIN, DAY = 24 * HOUR;
@@ -29,6 +33,10 @@
   }
   function shuffle(a) { a = a.slice(); for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
   function srcFor(p, slot) { return "img/" + p.id + "/" + slot + ".jpg"; }
+  function labelFor(p, slot) {
+    var m = (p.photos || []).filter(function (x) { return x.slot === slot; })[0];
+    return (m && m.label) || "photo";
+  }
   function imgTag(src, alt) { return '<img src="' + src + '" alt="' + esc(alt) + '" onload="this.classList.add(\'ok\')" onerror="this.remove()" />'; }
 
   // ---------- spaced repetition ----------
@@ -93,13 +101,15 @@
     renderStats();
 
     var photos = current.slots.map(function (slot) {
-      return '<div class="shot">' + imgTag(srcFor(p, slot), p.commonName) +
+      var label = labelFor(p, slot);
+      return '<div class="shot" data-src="' + esc(srcFor(p, slot)) + '" data-label="' + esc(label) +
+        '" data-alt="' + esc(p.commonName) + '">' + imgTag(srcFor(p, slot), p.commonName) +
         '<span class="ph" aria-hidden="true">photo</span></div>';
     }).join("");
 
     var opts = current.options.map(function (o) {
       return '<button type="button" class="opt" data-id="' + esc(o.id) + '">' +
-        '<span>' + esc(o.commonName) + '</span><span class="mark"></span></button>';
+        ediIcon(o.edibility) + '<span>' + esc(o.commonName) + '</span><span class="mark"></span></button>';
     }).join("");
 
     $("quiz").innerHTML =
@@ -110,6 +120,12 @@
 
     [].forEach.call(document.querySelectorAll(".opt"), function (b) {
       b.addEventListener("click", function () { answer(b.getAttribute("data-id"), b); });
+    });
+    [].forEach.call(document.querySelectorAll(".shot"), function (s) {
+      s.addEventListener("click", function (e) {
+        e.stopPropagation();
+        openLightbox(s.getAttribute("data-src"), s.getAttribute("data-label"), s.getAttribute("data-alt"));
+      });
     });
   }
 
@@ -133,7 +149,7 @@
     var r = $("reveal");
     r.className = "reveal";
     r.innerHTML =
-      '<div class="rname">' + (ok ? "✓ " : "") + esc(p.commonName) + "</div>" +
+      '<div class="rname">' + (ok ? "✓ " : "") + ediIcon(p.edibility) + esc(p.commonName) + "</div>" +
       '<div class="rsci">' + esc(p.scientificName) + " · " + esc(EDIB[p.edibility]) + "</div>" +
       watch +
       '<span class="rmore" id="rmore">See full details &amp; photos ›</span>' +
@@ -166,7 +182,7 @@
       var thumb = (p.photos && p.photos[0]) ? srcFor(p, p.photos[0].slot) : "";
       return '<button type="button" class="lrow" data-id="' + esc(p.id) + '" data-edibility="' + esc(p.edibility) + '">' +
         imgTag(thumb, p.commonName) +
-        '<div><div class="lname">' + esc(p.commonName) + "</div>" +
+        '<div><div class="lname">' + ediIcon(p.edibility) + esc(p.commonName) + "</div>" +
         '<div class="lsci">' + esc(p.scientificName) + "</div></div>" +
         '<span class="ledib">' + esc(EDIB[p.edibility]) + "</span></button>";
     }).join("");
@@ -187,10 +203,10 @@
       }).join("");
       $("sheet").innerHTML =
         '<div class="grab"></div>' +
-        '<div class="ghero">' + imgTag(srcFor(p, active.slot), p.commonName) +
+        '<div class="ghero" id="ghero">' + imgTag(srcFor(p, active.slot), p.commonName) +
           (active.label ? '<span class="gcap">' + esc(active.label) + "</span>" : "") + "</div>" +
         '<div class="gthumbs">' + thumbs + "</div>" +
-        '<h2>' + esc(p.commonName) + "</h2>" +
+        '<h2>' + ediIcon(p.edibility) + esc(p.commonName) + "</h2>" +
         '<p class="dsci">' + esc(p.scientificName) + "</p>" +
         '<div class="dbadges"><span class="rb ' + esc(p.edibility) + '">' + esc(EDIB[p.edibility]) + "</span>" +
           '<span class="rb origin">' + esc(ORIG[p.origin] || p.origin) + "</span>" +
@@ -203,6 +219,9 @@
         '<button type="button" class="closebtn" id="closebtn">Close</button>';
       [].forEach.call($("sheet").querySelectorAll(".gthumbs button"), function (b) {
         b.addEventListener("click", function () { heroI = +b.getAttribute("data-i"); draw(); });
+      });
+      $("ghero").addEventListener("click", function () {
+        openLightbox(srcFor(p, active.slot), active.label || "photo", p.commonName);
       });
       $("closebtn").addEventListener("click", closeDetail);
     }
@@ -241,6 +260,106 @@
       e.preventDefault(); renderQuiz();
     }
   });
+
+  // ---------- fullscreen photo lightbox (pinch / double-tap / wheel zoom + pan) ----------
+  (function () {
+    var box = $("lightbox"), stage = $("lbstage"), img = $("lbimg"),
+        cap = $("lbcap"), hint = $("lbhint"), closeBtn = $("lbclose");
+    var scale = 1, tx = 0, ty = 0;
+    var pointers = {}, startDist = 0, startScale = 1, startMid = null, imgAtMid = null, panStart = null;
+    var lastTap = 0;
+
+    function apply() { img.style.transform = "translate(" + tx + "px," + ty + "px) scale(" + scale + ")"; }
+    function clampPan() {
+      var w = stage.clientWidth, h = stage.clientHeight;
+      var minX = w * (1 - scale), minY = h * (1 - scale);
+      tx = Math.min(0, Math.max(minX, tx));
+      ty = Math.min(0, Math.max(minY, ty));
+    }
+    function reset() { scale = 1; tx = 0; ty = 0; apply(); }
+
+    window.openLightbox = function (src, label, alt) {
+      img.src = src; img.alt = alt || "";
+      cap.textContent = label && label !== "photo" ? label : "";
+      reset();
+      box.classList.add("open"); box.setAttribute("aria-hidden", "false");
+      hint.classList.remove("gone");
+      setTimeout(function () { hint.classList.add("gone"); }, 1800);
+    };
+    function close() { box.classList.remove("open"); box.setAttribute("aria-hidden", "true"); img.src = ""; }
+    closeBtn.addEventListener("click", close);
+
+    function ptlist() { return Object.keys(pointers).map(function (k) { return pointers[k]; }); }
+    function dist(a, b) { return Math.hypot(a.x - b.x, a.y - b.y); }
+    function mid(a, b) { return { x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 }; }
+    function rel(e) { var r = stage.getBoundingClientRect(); return { x: e.clientX - r.left, y: e.clientY - r.top }; }
+
+    stage.addEventListener("pointerdown", function (e) {
+      stage.setPointerCapture(e.pointerId);
+      pointers[e.pointerId] = rel(e);
+      var ps = ptlist2();
+      if (ps.length === 2) {
+        startDist = dist(ps[0], ps[1]); startScale = scale; startMid = mid(ps[0], ps[1]);
+        imgAtMid = { x: (startMid.x - tx) / scale, y: (startMid.y - ty) / scale };
+      } else if (ps.length === 1) {
+        panStart = { x: ps[0].x, y: ps[0].y, tx: tx, ty: ty };
+      }
+    });
+    function ptlist2() { return Object.keys(pointers).map(function (k) { return pointers[k]; }); }
+
+    stage.addEventListener("pointermove", function (e) {
+      if (!(e.pointerId in pointers)) return;
+      pointers[e.pointerId] = rel(e);
+      var ps = ptlist2();
+      if (ps.length === 2 && startDist) {
+        e.preventDefault();
+        var d = dist(ps[0], ps[1]);
+        scale = Math.min(6, Math.max(1, startScale * d / startDist));
+        var m = mid(ps[0], ps[1]);
+        tx = m.x - imgAtMid.x * scale; ty = m.y - imgAtMid.y * scale;
+        clampPan(); apply();
+      } else if (ps.length === 1 && panStart && scale > 1) {
+        e.preventDefault();
+        tx = panStart.tx + (ps[0].x - panStart.x); ty = panStart.ty + (ps[0].y - panStart.y);
+        clampPan(); apply();
+      }
+    });
+    function up(e) {
+      delete pointers[e.pointerId];
+      var n = ptlist2().length;
+      if (n === 1) { var p = ptlist2()[0]; panStart = { x: p.x, y: p.y, tx: tx, ty: ty }; }
+      if (n === 0) {
+        var t = now(), wasTap = (t - lastTap) < 300;
+        if (wasTap) {                                  // double-tap: toggle zoom at point
+          var r = rel(e);
+          if (scale > 1) reset();
+          else { scale = 2.6; tx = r.x - r.x * scale; ty = r.y - r.y * scale; clampPan(); apply(); }
+          lastTap = 0;
+        } else lastTap = t;
+        startDist = 0; panStart = null;
+      }
+    }
+    stage.addEventListener("pointerup", up);
+    stage.addEventListener("pointercancel", up);
+
+    stage.addEventListener("wheel", function (e) {
+      e.preventDefault();
+      var r = rel(e), prev = scale;
+      scale = Math.min(6, Math.max(1, scale * (e.deltaY < 0 ? 1.15 : 0.87)));
+      var ix = (r.x - tx) / prev, iy = (r.y - ty) / prev;
+      tx = r.x - ix * scale; ty = r.y - iy * scale;
+      if (scale === 1) { tx = 0; ty = 0; }
+      clampPan(); apply();
+    }, { passive: false });
+
+    // tap background (not the image, when not zoomed) closes
+    box.addEventListener("click", function (e) {
+      if (e.target === box) close();
+    });
+    document.addEventListener("keydown", function (e) {
+      if (box.classList.contains("open") && e.key === "Escape") close();
+    });
+  })();
 
   // ---------- load ----------
   Promise.all([
