@@ -1,17 +1,50 @@
 # Photo credits
 
 Plant photos come mostly from [Wikimedia Commons](https://commons.wikimedia.org) (targeting
-leaf/foliage shots), with two species-correct fallbacks from
+leaf/foliage shots), with a few species-correct fallbacks from
 [iNaturalist](https://www.inaturalist.org). Each row: the plant, what the photo shows, its
 license, the photographer attribution as the source provides it, and a link.
 
-**Licensing.** Almost everything here is public-domain / CC0 / CC-BY / CC-BY-SA. Two photos
-are CC-BY-NC (fine for this noncommercial learning aid).
+**Licensing.** Almost everything is public-domain / CC0 / CC-BY / CC-BY-SA; a couple of
+iNaturalist fallbacks are CC-BY-NC (fine for this noncommercial learning aid).
 
-**License mix:** CC BY 2.0 x 85, CC BY 2.5 x 6, CC BY 3.0 x 8, CC BY 4.0 x 19, CC BY-NC 4.0 x 1, cc-by-sa x 1, CC BY-SA 2.0 x 5, CC BY-SA 2.5 x 4, CC BY-SA 3.0 x 28, CC BY-SA 4.0 x 28, CC0 x 28, Public domain x 59.
+**License mix:** CC BY 2.0 x 110, CC BY 2.5 x 10, CC BY 3.0 x 13, CC BY 4.0 x 28, CC BY-NC 4.0 x 2, cc-by-sa x 1, CC BY-SA 2.0 x 10, CC BY-SA 2.5 x 9, CC BY-SA 3.0 x 38, CC BY-SA 4.0 x 51, CC0 x 47, Public domain x 86.
 
 | plant | shows | license | photographer | source |
 |---|---|---|---|---|
+| almond | leaves | CC0 | AnRo0002 | [src](https://commons.wikimedia.org/wiki/File%3A20141108Prunus%20dulcis4.jpg) |
+| almond | leaves | CC0 | AnRo0002 | [src](https://commons.wikimedia.org/wiki/File%3A20141108Prunus%20dulcis5.jpg) |
+| almond | whole plant | CC BY-SA 3.0 | Andrey Butko | [src](https://commons.wikimedia.org/wiki/File%3APrunus%20dulcis%20fruit%20%28Ab%20plant%2067%29.jpg) |
+| almond | flower | Public domain | Javier martin | [src](https://commons.wikimedia.org/wiki/File%3APrunus%20dulcis%20var.%20amara%20LeavesandtheLastFlower%202010March29%20DehesaBoyaldePuertollano.jpg) |
+| almond | fruit / seed | CC BY 2.5 | שרה גולד | [src](https://commons.wikimedia.org/wiki/File%3AIsrael%207022%20Almond%20fruit.jpg) |
+| almond | bark / stem | CC0 | AnRo0002 | [src](https://commons.wikimedia.org/wiki/File%3A20140316Prunus%20dulcis17.jpg) |
+| apple | leaves | Public domain | Littleinfo | [src](https://commons.wikimedia.org/wiki/File%3ACedar%20apple%20rust%20on%20crab%20apple%20leaf%20showing%20underside%20cup.JPG) |
+| apple | leaves | CC0 | Jimhue | [src](https://commons.wikimedia.org/wiki/File%3AMarssonina%20blotch%20on%20a%20%27Rome%27%20apple%20leaf.jpg) |
+| apple | whole plant | CC0 | W.carter | [src](https://commons.wikimedia.org/wiki/File%3ATree%20with%20red%20apples%20in%20Barkedal%204.jpg) |
+| apple | flower | CC0 | Joselodos | [src](https://commons.wikimedia.org/wiki/File%3AMalus%20domestica%20in%20bloom.jpg) |
+| apple | fruit / seed | CC BY 4.0 | Natalka Ukraine | [src](https://commons.wikimedia.org/wiki/File%3AYoung%20immature%20Malus%20domestica%20Champion%20apple%20fruitlets%20in%20May%2C%20by%20baby-bear.org.jpg) |
+| apple | bark / stem | Public domain | Rosser1954 | [src](https://commons.wikimedia.org/wiki/File%3AApple%20tree%20bark%20burrs.JPG) |
+| arroyo-willow | leaves | CC BY-SA 2.0 | Jim Morefield from Nevada, USA | [src](https://commons.wikimedia.org/wiki/File%3AArroyo%20willow%2C%20Salix%20lasiolepis%20%2841896994930%29.jpg) |
+| arroyo-willow | leaves | CC BY-SA 2.0 | Jim Morefield from Nevada, USA | [src](https://commons.wikimedia.org/wiki/File%3AArroyo%20willow%2C%20Salix%20lasiolepis%20%2843705634811%29.jpg) |
+| arroyo-willow | whole plant | Public domain | William & Wilma Follette @ USDA-NRCS PLANTS Database / USDA NRCS. Western wetlan | [src](https://commons.wikimedia.org/wiki/File%3ASalix%20lasiolepis%2801%29.jpg) |
+| arroyo-willow | flower | CC BY-SA 2.0 | Joe Decruyenaere | [src](https://commons.wikimedia.org/wiki/File%3ASalix%20lasiolepis%20flowers.jpg) |
+| avocado | leaves | CC BY 4.0 | GrahamInHorsham | [src](https://commons.wikimedia.org/wiki/File%3AAvocado%20leaf%20underside.jpg) |
+| avocado | leaves | CC BY-SA 4.0 | Red-back spider | [src](https://commons.wikimedia.org/wiki/File%3AAvocado%20Leaf.jpg) |
+| avocado | whole plant | CC BY-SA 3.0 | Afifa Afrin | [src](https://commons.wikimedia.org/wiki/File%3APersea%20americana%20%28Avocado%29%20tree%20in%20RDA%2C%20Bogra%2001.jpg) |
+| avocado | flower | CC BY-SA 2.5 | Andrew Mandemaker | [src](https://commons.wikimedia.org/wiki/File%3AHoneybee%20%28Apis%20mellifera%29%20pollinating%20Avocado%20cv.%20Zutano%20%28Persea%20americana%29%20flower.JPG) |
+| avocado | fruit / seed | CC0 | Daderot | [src](https://commons.wikimedia.org/wiki/File%3APersea%20americana%20-%20Fruit%20and%20Spice%20Park%20-%20Homestead%2C%20Florida%20-%20DSC08857.jpg) |
+| bigleaf-maple | leaves | CC BY 2.0 | Peter Stevens from Seattle | [src](https://commons.wikimedia.org/wiki/File%3AAcer%20macrophyllum%20leaf.jpg) |
+| bigleaf-maple | leaves | CC BY 2.0 | Sarah McD from Portland, OR, USA | [src](https://commons.wikimedia.org/wiki/File%3AAcer%20macrophyllum%20foliage%20Portland.jpg) |
+| bigleaf-maple | whole plant | Public domain | Angilbas at English Wikipedia | [src](https://commons.wikimedia.org/wiki/File%3AAcer%20macrophyllum%201199.jpg) |
+| bigleaf-maple | flower | CC BY 2.0 | Peter Stevens from Seattle | [src](https://commons.wikimedia.org/wiki/File%3AAcer%20macrophyllum%20flowers.jpg) |
+| bigleaf-maple | fruit / seed | CC BY 2.5 | No machine-readable author provided. Wsiegmund assumed (based on copyright claim | [src](https://commons.wikimedia.org/wiki/File%3AAcer%20macrophyllum%203158.jpg) |
+| bigleaf-maple | bark / stem | CC BY 2.5 | Walter Siegmund (talk) | [src](https://commons.wikimedia.org/wiki/File%3AAcer%20macrophyllum%20bark%207532.jpg) |
+| black-locust | leaves | CC0 | Leonhard Lenz | [src](https://commons.wikimedia.org/wiki/File%3ARobinia%20pseudoacacia%20leafs%20in%20summer%2001.jpg) |
+| black-locust | leaves | CC0 | Leonhard Lenz | [src](https://commons.wikimedia.org/wiki/File%3ARobinia%20pseudoacacia%20leafs%20in%20summer%2002.jpg) |
+| black-locust | whole plant | CC BY-SA 3.0 | Andrey Butko | [src](https://commons.wikimedia.org/wiki/File%3ARobinia%20pseudoacacia%20fruit%20%28Ab%20plant%2087%29.jpg) |
+| black-locust | flower | CC0 | Zaynabxon Xamidullayeva | [src](https://commons.wikimedia.org/wiki/File%3AFlowers%20of%20Robinia%20pseudoacacia%2001.jpg) |
+| black-locust | fruit / seed | Public domain | Apdency | [src](https://commons.wikimedia.org/wiki/File%3ARobinia%20pseudoacacia%20seed%20pod.jpg) |
+| black-locust | bark / stem | Public domain | No machine-readable author provided. Lumbar~commonswiki assumed (based on copyri | [src](https://commons.wikimedia.org/wiki/File%3ARobinia%20bark.jpg) |
 | black-mustard | leaves | CC BY-SA 3.0 | Magnus Manske | [src](https://commons.wikimedia.org/wiki/File%3ABrassica%20nigra%20%27Black%20Mustard%27%20%28Cruciferae%29%20leaves.JPG) |
 | black-mustard | leaves | Public domain | Johann Gottlieb Mann, digitized by Loyola University New Orleans | [src](https://commons.wikimedia.org/wiki/File%3ASinapis%20nigra%20Mann.jpg) |
 | black-mustard | whole plant | CC BY-SA 3.0 | Magnus Manske | [src](https://commons.wikimedia.org/wiki/File%3ABrassica%20nigra%20%27Black%20Mustard%27%20%28Cruciferae%29%20plant.JPG) |
@@ -27,6 +60,12 @@ are CC-BY-NC (fine for this noncommercial learning aid).
 | blue-elderberry | flower | CC BY 3.0 | Dcrjsr | [src](https://commons.wikimedia.org/wiki/File%3ABlue%20elderberry%20Sambucus%20mexicana%20flowerhead.jpg) |
 | blue-elderberry | fruit / seed | CC BY-SA 3.0 | Roger Culos | [src](https://commons.wikimedia.org/wiki/File%3ASambucus%20cerulea%20MHNT.BOT.2016.12.33.jpg) |
 | blue-elderberry | bark / stem | CC BY-SA 4.0 | Thayne Tuason | [src](https://commons.wikimedia.org/wiki/File%3ASambucus%20nigra%20ssp.%20caerulea%203.jpg) |
+| blue-gum-eucalyptus | leaves | CC BY 2.0 | John Tann from Sydney, Australia | [src](https://commons.wikimedia.org/wiki/File%3AEucalyptus%20globulus%20subsp.%20pseudoglobulus.jpg) |
+| blue-gum-eucalyptus | leaves | CC BY 4.0 | Pinzón-Florián O (2020) First report on the gall wasp Ophelimus near migdanorum | [src](https://commons.wikimedia.org/wiki/File%3AEucalyptus%20globulus%20%2810.3897-zookeys.902.39213%29%20Figure%201.jpg) |
+| blue-gum-eucalyptus | whole plant | Public domain | Unknown authorUnknown author | [src](https://commons.wikimedia.org/wiki/File%3APSM%20V12%20D689%20Eucalyptus%20globulus%20young%20tree.jpg) |
+| blue-gum-eucalyptus | flower | CC BY 4.0 | Alexkom000 | [src](https://commons.wikimedia.org/wiki/File%3A2026-01-10%20Flower%20buds%20of%20Eucalyptus%20globulus.jpg) |
+| blue-gum-eucalyptus | fruit / seed | Public domain | Tangopaso | [src](https://commons.wikimedia.org/wiki/File%3AEucalyptus%20globulus%20%28Serres%20de%20la%20Madone%29%20fruits.jpg) |
+| blue-gum-eucalyptus | bark / stem | CC BY 2.0 | Forest and Kim Starr | [src](https://commons.wikimedia.org/wiki/File%3AStarr-211026-1252-Eucalyptus%20globulus-giant%20cut%20trunk%20stump-Skyline%20Crater%20Rd-Maui%20%2852433636798%29.jpg) |
 | broadleaf-plantain | leaves | CC BY-SA 4.0 | Sanjay Acharya | [src](https://commons.wikimedia.org/wiki/File%3ABroadleaf%20Plantain%20Spike.jpg) |
 | broadleaf-plantain | leaves | CC BY-SA 4.0 | W.carter | [src](https://commons.wikimedia.org/wiki/File%3ABroadleaf%20plantain%20in%20the%20middle%20of%20road%20162%2C%20Brastad.jpg) |
 | broadleaf-plantain | whole plant | CC BY 2.0 | NY State IPM Program at Cornell University from New York, USA | [src](https://commons.wikimedia.org/wiki/File%3APlantago%20major%20-%20whole%20plant%20%2818440737953%29.jpg) |
@@ -45,9 +84,21 @@ are CC-BY-NC (fine for this noncommercial learning aid).
 | california-grape | leaves | Public domain | Wikimedia Commons | [src](https://commons.wikimedia.org/wiki/File%3AVitis%20californica%20at%20Caswell%20Memorial%20State%20Park%20spring%20leaves.jpg) |
 | california-grape | whole plant | Public domain | USFWS - Pacific Region | [src](https://commons.wikimedia.org/wiki/File%3AUSFWS%20vitus%20californica%20%2823747125641%29.jpg) |
 | california-grape | fruit / seed | CC BY 2.0 | John Rusk from Berkeley, CA, United States of America | [src](https://commons.wikimedia.org/wiki/File%3AJ20150917-0018%E2%80%94Vitis%20californica%E2%80%94RPBG%20%2821068421593%29.jpg) |
+| california-juniper | leaves | Public domain | NPS | [src](https://commons.wikimedia.org/wiki/File%3AFile--i-Juniperus%20californica-i--br--Cypress%20family%20%28Cupressaceae%29%20%28f1e5e118-a5fb-2c8d-0d11-6ebc1de2f21a%29.jpg) |
+| california-juniper | leaves | CC BY 2.0 | homeredwardprice | [src](https://commons.wikimedia.org/wiki/File%3AJuniperus%20californica%20Joshua%20Tree%20NP.jpg) |
+| california-juniper | whole plant | CC BY-SA 3.0 | Jarek Tuszyński | [src](https://commons.wikimedia.org/wiki/File%3AJoshua%20Tree%20National%20Park%20-%20California%20Juniper%20-%201.jpg) |
+| california-juniper | flower | Public domain | Joshua Tree National Park | [src](https://commons.wikimedia.org/wiki/File%3ACalifornia%20juniper%20%28Juniperus%20californica%29%20%2814212355528%29.jpg) |
+| california-juniper | fruit / seed | CC BY 4.0 | Thayne Tuason | [src](https://commons.wikimedia.org/wiki/File%3AJuniperus%20californica-%20female.jpg) |
+| california-juniper | bark / stem | CC BY-SA 3.0 | Sage Ross | [src](https://commons.wikimedia.org/wiki/File%3ACalifornia%20Juniper%2C%20GSBF-CN%20203%2C%20September%2012%2C%202008.jpg) |
 | california-rose | whole plant | CC BY 2.0 | John Rusk from Berkeley, CA, United States of America | [src](https://commons.wikimedia.org/wiki/File%3AJ20150929-0132%E2%80%94Rosa%20californica%E2%80%94RPBG%20%2822180631810%29.jpg) |
 | california-rose | flower | CC BY-SA 2.5 | No machine-readable author provided. Curtis Clark assumed (based on copyright cl | [src](https://commons.wikimedia.org/wiki/File%3ARosa%20californica%20flowers%202002-11-18.jpg) |
 | california-rose | fruit / seed | CC BY 2.5 | Paula Kate Marmor PKM | [src](https://commons.wikimedia.org/wiki/File%3ARosa%20californica.jpg) |
+| carob | leaves | Public domain | Scan by NYPL | [src](https://commons.wikimedia.org/wiki/File%3AA%20Lebanon%20caf%C3%A9.%20Pleasantly%20situated%20by%20a%20mountain%20stream%20and%20sheltered%20by%20the%20dense%20foliage%20of%20the%20carouba%20trees%20%28Ceratonia%20siliqua%29.%20The%20presence%20of%20one%20of%20these%20wayside%20resting%20places%20%28NYPL%20b10607452-80583%29.jpg) |
+| carob | leaves | CC BY-SA 2.5 | Wikimedia Commons | [src](https://commons.wikimedia.org/wiki/File%3ACarob%20tree%20leaf.JPG) |
+| carob | whole plant | Public domain | Javier martin | [src](https://commons.wikimedia.org/wiki/File%3ACeratonia%20siliqua%20Habitus%2026-10-2010%20ArboretoParqueElPilarCiudadReal.jpg) |
+| carob | flower | CC BY-SA 3.0 | rickjpelleg | [src](https://commons.wikimedia.org/wiki/File%3ACeratonia%20siliqua%20female%20flower%2002-RJP.jpg) |
+| carob | fruit / seed | CC BY 4.0 | W2k2 | [src](https://commons.wikimedia.org/wiki/File%3ACeratonia%20siliqua%20fruit%20and%20leaf-IMG20250629122515.jpg) |
+| carob | bark / stem | CC BY 3.0 | Hanay | [src](https://commons.wikimedia.org/wiki/File%3ACarob%20tree%20trunk%20Cave%20in%20Megadim%20Cliff%20Mount%20Carmel.jpg) |
 | castor-bean | leaves | CC BY 3.0 | علي فلاح نسيمي | [src](https://commons.wikimedia.org/wiki/File%3ARed%20leaf%20of%20Ricinus%20communis%20-%20panoramio%20%281441%29.jpg) |
 | castor-bean | leaves | CC BY 2.0 | Macleay Grass Man | [src](https://commons.wikimedia.org/wiki/File%3ARicinus%20communis%20leaf%20NC1.jpg) |
 | castor-bean | whole plant | CC BY 2.0 | Forest and Kim Starr | [src](https://commons.wikimedia.org/wiki/File%3AStarr-060416-7679-Ricinus%20communis-habit-Paia-Maui%20%2824494080439%29.jpg) |
@@ -84,6 +135,9 @@ are CC-BY-NC (fine for this noncommercial learning aid).
 | common-mallow | flower | Public domain | Javier martin | [src](https://commons.wikimedia.org/wiki/File%3AMalva%20neglecta%20FlowerCloseup%2017June2009%20CampoCalatrava.jpg) |
 | common-mallow | fruit / seed | CC BY 4.0 | Meteorquake | [src](https://commons.wikimedia.org/wiki/File%3AMalva%20neglecta%20in%20Antalya%20by%20David%20Merrick%2014.jpg) |
 | common-mallow | bark / stem | CC BY 2.0 | NY State IPM Program at Cornell University from New York, USA | [src](https://commons.wikimedia.org/wiki/File%3AMalva%20neglecta%20-%20stem%20%2818871618238%29.jpg) |
+| cotoneaster | whole plant | Public domain | El Duende Poliglota | [src](https://commons.wikimedia.org/wiki/File%3ACotoneaster%20Franchetii.JPG) |
+| cotoneaster | plant | CC0 | no rights reserved, uploaded by Peter de Lange | [src](https://www.inaturalist.org/photos/33337608) |
+| cotoneaster | plant | CC BY-NC 4.0 | (c) Cat Chang, some rights reserved (CC BY-NC), uploaded by Cat Chang | [src](https://www.inaturalist.org/photos/57214484) |
 | curly-dock | leaves | Public domain | Javier martin | [src](https://commons.wikimedia.org/wiki/File%3ARumex%20crispus%20Leaves%202009December07%20DehesaBoyalPuertollano.jpg) |
 | curly-dock | leaves | CC BY 2.0 | Harry Rose from South West Rocks, Australia | [src](https://commons.wikimedia.org/wiki/File%3ARumex%20crispus%20leaf2%20%2814901284158%29.jpg) |
 | curly-dock | whole plant | CC BY 2.0 | NY State IPM Program at Cornell University from New York, USA | [src](https://commons.wikimedia.org/wiki/File%3ARumex%20crispus%20-%20seedhead%2C%20whole%20plant%20%2818875443190%29.jpg) |
@@ -102,6 +156,17 @@ are CC-BY-NC (fine for this noncommercial learning aid).
 | datura | flower | Public domain | Dlarsen | [src](https://commons.wikimedia.org/wiki/File%3ADatura%20wrightii%20flower2.jpg) |
 | datura | fruit / seed | CC BY 2.0 | Clinton & Charles Robertson from Del Rio, Texas & College Station, TX, USA | [src](https://commons.wikimedia.org/wiki/File%3ADatura%20wrightii%20seed%20pods.jpg) |
 | datura | bark / stem | CC BY-SA 4.0 | Stefan.lefnaer | [src](https://commons.wikimedia.org/wiki/File%3ADatura%20wrightii%20sl13.jpg) |
+| english-yew | leaves | CC BY-SA 4.0 | ChrisInMilton | [src](https://commons.wikimedia.org/wiki/File%3A05-Stack%2075%20Yew%2010x%20obj%20leaf%20print.jpg) |
+| english-yew | leaves | CC BY-SA 4.0 | ChrisInMilton | [src](https://commons.wikimedia.org/wiki/File%3A05-Stack%2076%20Yew%2040x%20obj%20leaf%20print.jpg) |
+| english-yew | whole plant | Public domain | Jebulon | [src](https://commons.wikimedia.org/wiki/File%3ATaxus%20baccata%20L.%27fastigiata%27%20JdP.jpg) |
+| english-yew | flower | Public domain | Wikimedia Commons | [src](https://commons.wikimedia.org/wiki/File%3ATaxus%20baccata%20flowers.jpg) |
+| english-yew | fruit / seed | CC0 | Gerda Arendt | [src](https://commons.wikimedia.org/wiki/File%3ATaxus%20berries%2C%20Frauenstein.jpg) |
+| english-yew | bark / stem | CC BY-SA 2.0 | Bob Harvey | [src](https://commons.wikimedia.org/wiki/File%3ATaxus%20baccata%2C%20branch%20and%20bark%20-%20geograph.org.uk%20-%207410863.jpg) |
+| feijoa | leaves | CC BY-SA 4.0 | Digigalos | [src](https://commons.wikimedia.org/wiki/File%3AAcca%20sellowiana%2002.jpg) |
+| feijoa | leaves | CC BY-SA 4.0 | Krzysztof Golik | [src](https://commons.wikimedia.org/wiki/File%3AAcca%20sellowiana%2003.jpg) |
+| feijoa | whole plant | CC BY-SA 3.0 | user:yelod - wikimedia commons משתמש:ילוד - ויקיפדיה העיברית | [src](https://commons.wikimedia.org/wiki/File%3AAcca%20sellowiana%20tree.jpg) |
+| feijoa | flower | CC BY 2.0 | Dick Culbert from Gibsons, B.C., Canada | [src](https://commons.wikimedia.org/wiki/File%3AAcca%20sellowiana%2C%20flower%20of%20the%20Guavasteen.%20%2810841333003%29.jpg) |
+| feijoa | fruit / seed | CC BY 4.0 | Missvain | [src](https://commons.wikimedia.org/wiki/File%3AAcca%20sellowiana%20%28fruit%29%20-%20November%202023%20-%20Sarah%20Stierch.jpg) |
 | fig | leaves | Public domain | Tangopaso | [src](https://commons.wikimedia.org/wiki/File%3AFicus%20carica%20bonsai%20A%20D210628%20young%20leaf.jpg) |
 | fig | leaves | Public domain | Tangopaso | [src](https://commons.wikimedia.org/wiki/File%3AFicus%20carica%20bonsai%20A%20D151026%20leaves.jpg) |
 | fig | whole plant | Public domain | Javier martin | [src](https://commons.wikimedia.org/wiki/File%3AFicus%20carica%20habitus%202009December07%20DehesaBoyaldePuertollano.jpg) |
@@ -114,24 +179,53 @@ are CC-BY-NC (fine for this noncommercial learning aid).
 | filaree | flower | Public domain | Javier martin | [src](https://commons.wikimedia.org/wiki/File%3AErodium%20cicutarium%20Flowers%20Closeup%20DehesaBoyaldePuertollano.jpg) |
 | filaree | fruit / seed | Public domain | Syp | [src](https://commons.wikimedia.org/wiki/File%3AErodium%20cicutarium%20fruit.JPG) |
 | filaree | bark / stem | CC BY 2.0 | Harry Rose from South West Rocks, Australia | [src](https://commons.wikimedia.org/wiki/File%3AErodium%20cicutarium%20flower12%20%2815059435058%29.jpg) |
+| firethorn | leaves | CC0 | Gwasheya | [src](https://commons.wikimedia.org/wiki/File%3APyracantha%20Pyracantha%20coccinea.jpg) |
+| firethorn | leaves | CC BY-SA 4.0 | Hladac | [src](https://commons.wikimedia.org/wiki/File%3A%28ms%29%20Pyracantha%20coccinea%202.jpg) |
+| firethorn | whole plant | Public domain | I.Sáček, senior | [src](https://commons.wikimedia.org/wiki/File%3APyracantha153911.JPG) |
+| firethorn | flower | CC BY-SA 4.0 | MurielBendel | [src](https://commons.wikimedia.org/wiki/File%3APyracantha%20coccinea%20flowers.jpg) |
+| firethorn | fruit / seed | CC0 | Gerda Arendt | [src](https://commons.wikimedia.org/wiki/File%3AFirethorn%20berries%2C%20T%C3%BCrmchen%2C%20Ehrenbach.jpg) |
+| firethorn | bark / stem | CC BY-SA 4.0 | Hladac | [src](https://commons.wikimedia.org/wiki/File%3A%28ms%29%20Pyracantha%20coccinea%2010.jpg) |
 | foxglove | leaves | Public domain | Pipi69e | [src](https://commons.wikimedia.org/wiki/File%3ADigitalis%20purpurea%20leaf.png) |
 | foxglove | leaves | Public domain | Javier martin | [src](https://commons.wikimedia.org/wiki/File%3ADigitalis%20purpurea%20subsp%20purpurea%20var%20nevadensis%20LeavesandStemCloseup.jpg) |
 | foxglove | whole plant | Public domain | Javier martin | [src](https://commons.wikimedia.org/wiki/File%3ADigitalis%20purpurea%20subsp.%20Purpurea%20var.%20nevadensis%20Habitus%2025July2009%20SierraNevada.jpg) |
 | foxglove | flower | Public domain | Unknown authorUnknown author | [src](https://commons.wikimedia.org/wiki/File%3APSM%20V55%20D393%20Monstrous%20blossoms%20of%20foxglove.png) |
 | foxglove | fruit / seed | CC BY-SA 3.0 | Henry Brisse (upload by user:Abalg) | [src](https://commons.wikimedia.org/wiki/File%3ADigitalis%20purpurea16082001fruits.JPG) |
 | foxglove | bark / stem | Public domain | Umay | [src](https://commons.wikimedia.org/wiki/File%3ADigitalis%20Fasciation%20detail%20stem.jpg) |
+| hawthorn | leaves | CC BY-SA 3.0 | Famartin | [src](https://commons.wikimedia.org/wiki/File%3A2014-04-15%2008%2003%2052%20Hawthorne%20foliage%20during%20leaf-out%20in%20Elko%2C%20Nevada.JPG) |
+| hawthorn | leaves | Public domain | Javier martin | [src](https://commons.wikimedia.org/wiki/File%3ACrataegus%20monogyna%20StemandLeaves%202009April26%20SierraMadrona.jpg) |
+| hawthorn | whole plant | CC BY-SA 4.0 | Daniel Ballmer | [src](https://commons.wikimedia.org/wiki/File%3ACrataegus%20monogyna%20Habitus.jpg) |
+| hawthorn | flower | CC BY 3.0 | Grandpa David | [src](https://commons.wikimedia.org/wiki/File%3ACrataegus%20monogyna%20Blossom%20Closeup.jpg) |
+| hawthorn | fruit / seed | CC BY 2.0 | Macleay Grass Man | [src](https://commons.wikimedia.org/wiki/File%3ACrataegus%20monogyna%20fruit%20NT1.jpg) |
+| hawthorn | bark / stem | CC BY 2.0 | Macleay Grass Man | [src](https://commons.wikimedia.org/wiki/File%3ACrataegus%20monogyna%20stem%20NT1.jpg) |
 | himalayan-blackberry | leaves | CC BY 2.0 | Forest and Kim Starr | [src](https://commons.wikimedia.org/wiki/File%3AStarr-190930-6988-Rubus%20discolor-glaucous%20underside%20of%20leaf-Puu%20Nianiau-Maui%20%2849254794987%29.jpg) |
 | himalayan-blackberry | leaves | CC BY 2.0 | Forest and Kim Starr | [src](https://commons.wikimedia.org/wiki/File%3AStarr-190930-6992-Rubus%20discolor-thorny%20red%20stems%20and%20leaves-Puu%20Nianiau-Maui%20%2849254796717%29.jpg) |
 | himalayan-blackberry | whole plant | CC BY 2.0 | Forest and Kim Starr | [src](https://commons.wikimedia.org/wiki/File%3AStarr-190930-6986-Rubus%20discolor-habit%20side%20of%20road-Puu%20Nianiau-Maui%20%2849254597596%29.jpg) |
 | himalayan-blackberry | flower | Public domain | Pseudopanax at English Wikipedia | [src](https://commons.wikimedia.org/wiki/File%3ABlackberry%20flower%20and%20developing%20unripe%20berries.jpg) |
 | himalayan-blackberry | fruit / seed | CC BY 2.0 | Forest and Kim Starr | [src](https://commons.wikimedia.org/wiki/File%3AStarr-190930-6989-Rubus%20discolor-fruit%20leaves-Puu%20Nianiau-Maui%20%2849254124678%29.jpg) |
 | himalayan-blackberry | bark / stem | CC BY 2.0 | Forest and Kim Starr | [src](https://commons.wikimedia.org/wiki/File%3AStarr-190930-6987-Rubus%20discolor-stems%20and%20leaves%20with%20chewings-Puu%20Nianiau%20Haleakala%20National%20Park-Maui%20%2849254123693%29.jpg) |
+| hollyleaf-cherry | leaves | CC BY-SA 4.0 | Jengod | [src](https://commons.wikimedia.org/wiki/File%3APrunus%20ilicifolia%20leaf%20shape.jpg) |
+| hollyleaf-cherry | leaves | CC BY 2.0 | John Rusk from Berkeley, CA, United States of America | [src](https://commons.wikimedia.org/wiki/File%3AH20090606-0885--Prunus%20ilicifolia--RPBG%20%2814293000044%29.jpg) |
+| hollyleaf-cherry | whole plant | Public domain | NPS Photo | [src](https://commons.wikimedia.org/wiki/File%3AA%20row%20of%20hollyleaf%20cherries%20%28Prunus%20ilicifolia%29%20borders%20the%20rear%20of%20the%20ranch%20house%2C%20interrupted%20by%20a%20gap%20in%20the%20center%20where%20%28604aca50-0d52-295c-2914-cd6a6a533cba%29.JPG) |
+| hollyleaf-cherry | flower | CC BY-SA 2.5 | No machine-readable author provided. Curtis Clark assumed (based on copyright cl | [src](https://commons.wikimedia.org/wiki/File%3APrunus%20ilicifolia%20flowers%202005-03-24.jpg) |
+| hollyleaf-cherry | fruit / seed | CC BY-SA 2.5 | No machine-readable author provided. NoahElhardt assumed (based on copyright cla | [src](https://commons.wikimedia.org/wiki/File%3APrunus%20ilicifolia%20ne1.jpg) |
+| horsechestnut | leaves | CC0 | Rijksmuseum | [src](https://commons.wikimedia.org/wiki/File%3AWilde%20kastanje%20Wilde%20Kastanje%20Horse%20Chesnut%20%28titel%20op%20object%29%20Verschillende%20soorten%20bomen%20%28serietitel%29%20Delineations%20of%20the%20General%20Character%2C%20Ramifications%20and%20Foliage%20of%20Forest%20Trees%20%28serietitel%29%2C%20RP-P-2014-16-13.jpg) |
+| horsechestnut | leaves | CC BY-SA 4.0 | Alghul96 | [src](https://commons.wikimedia.org/wiki/File%3AAesculus%20hippocastanum%20leaves.jpg) |
+| horsechestnut | whole plant | CC0 | Homoarborea | [src](https://commons.wikimedia.org/wiki/File%3AAesculus%20hippocastanum%20%27Umbraculifera%27%20Meise%20Nat.%20Plantentuin.jpg) |
+| horsechestnut | flower | CC0 | Gerda Arendt | [src](https://commons.wikimedia.org/wiki/File%3AChestnut%20blossom%2C%20Marienthal.jpg) |
+| horsechestnut | fruit / seed | CC BY-SA 2.0 | Solipsist | [src](https://commons.wikimedia.org/wiki/File%3AAesculus%20hippocastanum%20fruit.jpg) |
+| horsechestnut | bark / stem | Public domain | Chhe (talk) | [src](https://commons.wikimedia.org/wiki/File%3AAesculusHippocastanumTrunk.jpg) |
 | lambs-quarters | leaves | CC BY 2.0 | NY State IPM Program at Cornell University from New York, USA | [src](https://commons.wikimedia.org/wiki/File%3AChenopodium%20album%20-%20leaves%20%2818841880431%29.jpg) |
 | lambs-quarters | leaves | CC BY-SA 3.0 | Xufanc | [src](https://commons.wikimedia.org/wiki/File%3ARice%20and%20chenopodium%20album%20leaf%20curry%20with%20potatoes%20and%20onions40.JPG) |
 | lambs-quarters | whole plant | CC BY-SA 3.0 | Rasbak | [src](https://commons.wikimedia.org/wiki/File%3AMelganzenvoet%20plant%20Chenopodium%20album.jpg) |
 | lambs-quarters | flower | CC BY 2.0 | NY State IPM Program at Cornell University from New York, USA | [src](https://commons.wikimedia.org/wiki/File%3AChenopodium%20album%20-%20leaves%2C%20flower%20bud%20%2818651445218%29.jpg) |
 | lambs-quarters | fruit / seed | Public domain | USGS Bee Inventory and Monitoring Lab from Beltsville, Maryland, USA | [src](https://commons.wikimedia.org/wiki/File%3AChenopodium%20album%2C%20upper%20marlboro%202016-10-22-19.04%20%2829867233343%29.jpg) |
 | lambs-quarters | bark / stem | CC BY 2.0 | Harry Rose from South West Rocks, Australia | [src](https://commons.wikimedia.org/wiki/File%3AChenopodium%20album%20stem1%20%2814356578313%29.jpg) |
+| lemon | leaves | Public domain | Fatrabbit | [src](https://commons.wikimedia.org/wiki/File%3ACitrus%20hystrix%20leaf.jpg) |
+| lemon | leaves | CC BY-SA 4.0 | Eiku | [src](https://commons.wikimedia.org/wiki/File%3ACitrus%20limon%20-%20leaf%20with%20winged%20petiole.jpg) |
+| lemon | whole plant | CC BY 4.0 | Wikimedia Commons | [src](https://commons.wikimedia.org/wiki/File%3ALemon%20tree%20%28Citrus%20limon%29%3B%20branch%20with%20fruit%20and%20flowers.%20Ch%20Wellcome%20V0044542.jpg) |
+| lemon | flower | Public domain | Ben Cody | [src](https://commons.wikimedia.org/wiki/File%3ACitrus%20x%20limon%20flowers.jpg) |
+| lemon | fruit / seed | CC BY-SA 4.0 | Commonists | [src](https://commons.wikimedia.org/wiki/File%3AUnripe%20fruits%20of%20Citrus%20limon.jpg) |
+| lemon | bark / stem | CC BY-SA 3.0 | Arivumathi | [src](https://commons.wikimedia.org/wiki/File%3A%22Lemon%20tree%20stem%22.JPG) |
 | loquat | leaves | CC BY 3.0 | Elucidate | [src](https://commons.wikimedia.org/wiki/File%3ALoquat%20leaf.JPG) |
 | loquat | leaves | CC BY 2.0 | Forest and Kim Starr | [src](https://commons.wikimedia.org/wiki/File%3AStarr-230107-0803-Eriobotrya%20japonica-leaf-Hawea%20Pl%20Olinda-Maui%20%2852665861664%29.jpg) |
 | loquat | whole plant | CC BY 2.0 | Forest and Kim Starr | [src](https://commons.wikimedia.org/wiki/File%3AStarr-230106-0624-Eriobotrya%20japonica-habit%20outside%20fence-Hosmers%20Grove%20Haleakala%20National%20Park-Maui%20%2852665970240%29.jpg) |
@@ -156,6 +250,11 @@ are CC-BY-NC (fine for this noncommercial learning aid).
 | miners-lettuce | flower | Public domain | Wikimedia Commons | [src](https://commons.wikimedia.org/wiki/File%3AClaytonia%20perfoliata%20ssp%20perfoliata%20flowers.jpg) |
 | miners-lettuce | fruit / seed | CC0 | AnRo0002 | [src](https://commons.wikimedia.org/wiki/File%3A20150606Claytonia%20perfoliata3.jpg) |
 | miners-lettuce | bark / stem | CC BY-SA 4.0 | Rosser1954 | [src](https://commons.wikimedia.org/wiki/File%3AClaytonia%20perfoliata%20at%20Chapeltoun.JPG) |
+| monterey-pine | leaves | CC BY 2.0 | S. Rae from Scotland, UK | [src](https://commons.wikimedia.org/wiki/File%3APinus%20radiata%20%28Monterey%20Pine%29%20-%20foliage%20-%20Flickr%20-%20S.%20Rae.jpg) |
+| monterey-pine | leaves | CC BY-SA 3.0 | Wikimedia Commons | [src](https://commons.wikimedia.org/wiki/File%3APinus%20radiata%20leaves.JPG) |
+| monterey-pine | whole plant | CC BY 2.0 | Forest and Kim Starr | [src](https://commons.wikimedia.org/wiki/File%3AStarr-051224-8594-Pinus%20radiata-habit-Polipoli-Maui%20%2824222412274%29.jpg) |
+| monterey-pine | fruit / seed | CC BY 2.0 | S. Rae from Scotland, UK | [src](https://commons.wikimedia.org/wiki/File%3APinus%20radiata%20%28Monterey%20Pine%29%20-%20cones%20-%20Flickr%20-%20S.%20Rae.jpg) |
+| monterey-pine | bark / stem | CC BY 4.0 | Bjankuloski06 | [src](https://commons.wikimedia.org/wiki/File%3AMonterey%20pine%20trunk%2C%20Burnside%20Escarpment.jpg) |
 | mugwort | leaves | CC BY 2.0 | Jerry Kirkhart from Los Osos, Calif. | [src](https://commons.wikimedia.org/wiki/File%3AArtemisia%20douglasiana%2090.jpg) |
 | mugwort | whole plant | CC0 | Daderot | [src](https://commons.wikimedia.org/wiki/File%3AArtemisia%20douglasiana%20-%20Manhattan%20Beach%20Botanical%20Garden%20-%20Manhattan%20Beach%2C%20CA%20-%20DSC01354.jpg) |
 | mugwort | plant | cc-by-sa | (c) stonebird, some rights reserved (CC BY-SA) | [src](https://www.inaturalist.org/photos/5232) |
@@ -177,6 +276,12 @@ are CC-BY-NC (fine for this noncommercial learning aid).
 | olive | flower | Public domain | Javier martin | [src](https://commons.wikimedia.org/wiki/File%3AOlea%20europaea%20FlowersCloseup%20SolanadelPino.jpg) |
 | olive | fruit / seed | CC BY-SA 4.0 | John Robert McPherson | [src](https://commons.wikimedia.org/wiki/File%3AOlea%20europaea%20fruit%20Navarre%20St%207th%20Brigade%20Park%20Chermside%20L1050166.jpg) |
 | olive | bark / stem | CC0 | Industrees | [src](https://commons.wikimedia.org/wiki/File%3AThe%20epiphytic%20association%20Lecanoretum%20carpineae%20on%20the%20bark%20of%20Olea%20europaea.jpg) |
+| persimmon | leaves | CC BY-SA 4.0 | Famartin | [src](https://commons.wikimedia.org/wiki/File%3A2024-11-12%2011%2049%2034%20Asian%20persimmon%20leaf%20in%20autumn%20along%20Seven%20Oaks%20Lane%20in%20the%20Mountainview%20section%20of%20Ewing%20Township%2C%20Mercer%20County%2C%20New%20Jersey.jpg) |
+| persimmon | leaves | CC BY-SA 4.0 | Famartin | [src](https://commons.wikimedia.org/wiki/File%3A2024-11-10%2011%2058%2050%20Asian%20persimmon%20leaves%20in%20autumn%20along%20Seven%20Oaks%20Lane%20in%20the%20Mountainview%20section%20of%20Ewing%20Township%2C%20Mercer%20County%2C%20New%20Jersey.jpg) |
+| persimmon | whole plant | CC BY 2.0 | Forest and Kim Starr | [src](https://commons.wikimedia.org/wiki/File%3AStarr-060916-8869-Diospyros%20kaki-habit-Kula-Maui%20%2824838988556%29.jpg) |
+| persimmon | flower | CC BY 3.0 | A. Barra | [src](https://commons.wikimedia.org/wiki/File%3ADiospyros%20kaki%20RJB.jpg) |
+| persimmon | fruit / seed | Public domain | Garitzko | [src](https://commons.wikimedia.org/wiki/File%3ADiospyros%20kaki%20half%20fruit.jpg) |
+| persimmon | bark / stem | CC BY-SA 2.5 | No machine-readable author provided. Abrahami assumed (based on copyright claims | [src](https://commons.wikimedia.org/wiki/File%3ADiospyros%20kaki%20bark.jpg) |
 | pineapple-weed | leaves | CC BY 4.0 | Simiaparva | [src](https://commons.wikimedia.org/wiki/File%3ADetail%20on%20the%20midvein%20of%20a%20Matricaria%20discoidea%20leaf.jpg) |
 | pineapple-weed | leaves | CC BY 4.0 | Simiaparva | [src](https://commons.wikimedia.org/wiki/File%3ATrichomes%20on%20upper%20surface%20of%20Matricaria%20discoidea%20leaf.jpg) |
 | pineapple-weed | whole plant | CC0 | Ira Gershenhorn | [src](https://commons.wikimedia.org/wiki/File%3AMatricaria%20discoidea%20plant%20%2809%29.jpg) |
@@ -194,6 +299,12 @@ are CC-BY-NC (fine for this noncommercial learning aid).
 | poison-oak | whole plant | CC0 | ALAN SCHMIERER | [src](https://commons.wikimedia.org/wiki/File%3APoison-oak%20Toxicodendron%20diversilobum%20%283-16-07%29%2C%20San%20Luis%20Obispo%20-2%20%28535341428%29.jpg) |
 | poison-oak | flower | CC0 | ALAN SCHMIERER | [src](https://commons.wikimedia.org/wiki/File%3APOISON%20OAK%20%28toxicodendron%20diversilobum%29%20%284-5-08%29%20canet%20-1%20%282391067502%29.jpg) |
 | poison-oak | fruit / seed | CC BY-SA 2.5 | Noah Elhardt | [src](https://commons.wikimedia.org/wiki/File%3AToxicodendron%20diversilobum%20berries.jpg) |
+| pomegranate | leaves | CC BY-SA 4.0 | CaNeCoRsO137 | [src](https://commons.wikimedia.org/wiki/File%3APomegranate%20leaf.jpg) |
+| pomegranate | leaves | Public domain | Gerrit Schouten (1823) | [src](https://commons.wikimedia.org/wiki/File%3AGranaatappel%20%28Punica%20granatum%20L.%29.jpg) |
+| pomegranate | whole plant | Public domain | Javier martin | [src](https://commons.wikimedia.org/wiki/File%3APunica%20granatum%20Habitus%202010-9-26%20DehesaBoyaldePuertollano.jpg) |
+| pomegranate | flower | Public domain | user:Alamout | [src](https://commons.wikimedia.org/wiki/File%3APomegranate%20Blossom%20in%20Bardeskan.JPG) |
+| pomegranate | fruit / seed | CC0 | Jebulon | [src](https://commons.wikimedia.org/wiki/File%3APunica%20granatum%20fruit%20Grenade.jpg) |
+| pomegranate | bark / stem | CC BY-SA 4.0 | 小石川人晃 | [src](https://commons.wikimedia.org/wiki/File%3APomegranate%20bark.jpg) |
 | prickly-lettuce | leaves | CC BY 2.0 | NY State IPM Program at Cornell University from New York, USA | [src](https://commons.wikimedia.org/wiki/File%3ALactuca%20serriola%20-%20leaves%20%2818865781610%29.jpg) |
 | prickly-lettuce | leaves | Public domain | Johann Gottlieb Mann, digitized by Loyola University New Orleans | [src](https://commons.wikimedia.org/wiki/File%3ALactuca%20serriola%20Mann.jpg) |
 | prickly-lettuce | whole plant | CC BY 2.0 | NY State IPM Program at Cornell University from New York, USA | [src](https://commons.wikimedia.org/wiki/File%3ALactuca%20serriola%20-%20whole%20plant%20%2818432812883%29.jpg) |
@@ -206,6 +317,11 @@ are CC-BY-NC (fine for this noncommercial learning aid).
 | prickly-pear | flower | CC0 | Zythème | [src](https://commons.wikimedia.org/wiki/File%3AOpuntia%20ficus-indica%20flower%20-%20%C3%8Ele%20de%20Ngor.jpg) |
 | prickly-pear | fruit / seed | CC BY 2.0 | John Tann from Sydney, Australia | [src](https://commons.wikimedia.org/wiki/File%3AOpuntia%20ficus-indica%20fruit%20%2810007109215%29.jpg) |
 | prickly-pear | bark / stem | Public domain | Tangopaso | [src](https://commons.wikimedia.org/wiki/File%3ALignification%20d%27Opuntia%20ficus-indica.jpg) |
+| privet | leaves | CC BY 2.0 | John Tann from Sydney, Australia | [src](https://commons.wikimedia.org/wiki/File%3ABroad-leaf%20privet%20%283159687960%29.jpg) |
+| privet | leaves | CC BY 2.0 | John Tann from Sydney, Australia | [src](https://commons.wikimedia.org/wiki/File%3ABroad-leaf%20privet%20%283210559091%29.jpg) |
+| privet | whole plant | CC BY 2.5 | Taken by Fanghong | [src](https://commons.wikimedia.org/wiki/File%3AFloweringLigustrumLucidumTree.jpg) |
+| privet | flower | CC BY 3.0 | Ανώνυμος Βικιπαιδιστής | [src](https://commons.wikimedia.org/wiki/File%3ALigustrum%20lucidum%20blossoms%20-%20%CE%AC%CE%BD%CE%B8%CE%B7%20%CE%BB%CE%B9%CE%B3%CE%BF%CF%8D%CF%83%CF%84%CF%81%CE%BF%CF%85.jpg) |
+| privet | fruit / seed | CC BY 2.0 | John Tann from Sydney, Australia | [src](https://commons.wikimedia.org/wiki/File%3ABroad-leaf%20privet%20fruit%20%283392199506%29.jpg) |
 | purslane | leaves | CC BY 2.0 | Harry Rose from South West Rocks, Australia | [src](https://commons.wikimedia.org/wiki/File%3APortulaca%20oleracea%20plant7%20%2816728974773%29.jpg) |
 | purslane | leaves | CC BY 2.0 | Harry Rose from South West Rocks, Australia | [src](https://commons.wikimedia.org/wiki/File%3APortulaca%20oleracea%20plant8%20%2817349216245%29.jpg) |
 | purslane | whole plant | Public domain | Javier martin | [src](https://commons.wikimedia.org/wiki/File%3APortulaca%20oleracea%20habitusDehesaBoyalPuertollano.jpg) |
@@ -248,6 +364,12 @@ are CC-BY-NC (fine for this noncommercial learning aid).
 | stinging-nettle | flower | CC BY-SA 4.0 | Vinayaraj | [src](https://commons.wikimedia.org/wiki/File%3AUrtica%20dioica%20-%20Stinging%20Nettle%20on%20way%20from%20Gangria%20to%20Valley%20of%20Flowers%20National%20Park%20-%20during%20LGFC%20-%20VOF%202019%20%281%29.jpg) |
 | stinging-nettle | fruit / seed | CC BY-SA 3.0 | Pancrat | [src](https://commons.wikimedia.org/wiki/File%3AUrtica%20dioica%20fruit.jpg) |
 | stinging-nettle | bark / stem | CC BY-SA 3.0 | Randy A. Nonenmacher | [src](https://commons.wikimedia.org/wiki/File%3AUrtica%20dioica%202839.jpg) |
+| strawberry-tree | leaves | CC BY 2.0 | Umberto Ferrando | [src](https://commons.wikimedia.org/wiki/File%3AArbutus%20unedo%20%2849106319813%29.jpg) |
+| strawberry-tree | leaves | CC BY 2.0 | Umberto Ferrando | [src](https://commons.wikimedia.org/wiki/File%3AArbutus%20unedo%20%2849107021212%29.jpg) |
+| strawberry-tree | whole plant | Public domain | Javier martin | [src](https://commons.wikimedia.org/wiki/File%3AArbutus%20unedo%20habitus%202009November15%20SierraMadrona.jpg) |
+| strawberry-tree | flower | CC BY 2.0 | muffinn from Worcester, UK | [src](https://commons.wikimedia.org/wiki/File%3AAmeixial%20-%20strawberry%20tree%20Arbutus%20unedo%20flowers%20%2813531867643%29.jpg) |
+| strawberry-tree | fruit / seed | CC BY-SA 4.0 | Jules Verne Times Two | [src](https://commons.wikimedia.org/wiki/File%3AStrawberry%20tree%20%28Arbutus%20unedo%29%20fruit%20and%20leaves%20on%20a%20rainy%20day%2C%20Parque%20Florestal%20de%20Monsanto%2C%20Lisbon%2C%20Portugal%20julesvernex2.jpg) |
+| strawberry-tree | bark / stem | CC BY-SA 4.0 | Philmarin | [src](https://commons.wikimedia.org/wiki/File%3A%28MAD%29%20A.%20unedo%20-bark-1.jpg) |
 | thimbleberry | leaves | Public domain | NPS Staff | [src](https://commons.wikimedia.org/wiki/File%3ARubus%20parviflorus%20%28987298cc62de4606bb5538c9d475b122%29.jpg) |
 | thimbleberry | leaves | CC BY-SA 2.0 | Matt Lavin from Bozeman, Montana, USA | [src](https://commons.wikimedia.org/wiki/File%3ARubus%20parviflorus%20%285088036058%29.jpg) |
 | thimbleberry | whole plant | Public domain | Wikimedia Commons | [src](https://commons.wikimedia.org/wiki/File%3ARubus%20parviflorus%20%28Thimbleberry%29%20%281987%29.jpg) |
@@ -270,6 +392,17 @@ are CC-BY-NC (fine for this noncommercial learning aid).
 | valley-oak | flower | CC BY 2.0 | James St. John | [src](https://commons.wikimedia.org/wiki/File%3AQuercus%20lobatus%20%28California%20valley%20oak%29%20%28near%20Calistoga%2C%20California%2C%20USA%29%201%20%2849092893853%29.jpg) |
 | valley-oak | fruit / seed | Public domain | User:Anlace | [src](https://commons.wikimedia.org/wiki/File%3AValleyoakae.jpg) |
 | valley-oak | bark / stem | CC0 | Awinch1001 | [src](https://commons.wikimedia.org/wiki/File%3AQuercus%20lobata%20bark%20Briones%2014.jpg) |
+| western-redbud | leaves | CC BY 2.0 | John Rusk from Berkeley, CA, United States of America | [src](https://commons.wikimedia.org/wiki/File%3AE20160914-0003%E2%80%94Cercis%20occidentalis%E2%80%94Berkeley%20%2829058986914%29.jpg) |
+| western-redbud | whole plant | CC BY 2.0 | cultivar413 from Fallbrook, California | [src](https://commons.wikimedia.org/wiki/File%3A190909%20105%20Chicago%20Botanic%20Gdn%20-%20West%20Flower%20Walk%2C%20Hemerocallis%20%27Autumn%20Minaret%27%20Daylily%2C%20Cercis%20canadensis%20Redbud%20Tree%2C%20Thuja%20occidentalis%20%27Pyramidalis%27%20Arborvitae%20%2848861850407%29.jpg) |
+| western-redbud | flower | CC BY 2.0 | cultivar413 from Fallbrook, California | [src](https://commons.wikimedia.org/wiki/File%3A190909%20104%20Chicago%20Botanic%20Gdn%20-%20West%20Flower%20Walk%2C%20Hemerocallis%20%27Autumn%20Minaret%27%20Daylily%2C%20Cercis%20canadensis%20Redbud%2C%20Thuja%20occidentalis%20%27Pyramidalis%27%20Arborvitae%2C%20Hosta%20%27Striptease%27%20%2848861654546%29.jpg) |
+| western-redbud | fruit / seed | CC BY 2.0 | John Rusk from Berkeley, CA, United States of America | [src](https://commons.wikimedia.org/wiki/File%3A20170912%20092808%E2%80%94Cercis%20occidentalis%E2%80%94Ohlone%20Greenway%E2%80%94DxO%20%2836357278144%29.jpg) |
+| western-redbud | bark / stem | CC BY-SA 4.0 | Nadiatalent | [src](https://commons.wikimedia.org/wiki/File%3ACercis%20occidentalis%20bark.jpg) |
+| white-mulberry | leaves | CC BY 3.0 | Jaknouse | [src](https://commons.wikimedia.org/wiki/File%3AMorus%20alba-leaves.jpg) |
+| white-mulberry | leaves | CC BY-SA 4.0 | Eric Polk | [src](https://commons.wikimedia.org/wiki/File%3AMorus%20alba%20-%20Chaparral%20single%20leaf.png) |
+| white-mulberry | whole plant | CC0 | Homoarborea | [src](https://commons.wikimedia.org/wiki/File%3AMorus%20alba%20%27Nana%27%20%281%29%20Meise%20Nationale%20Plantentuin.jpg) |
+| white-mulberry | flower | CC BY-SA 4.0 | Didier Descouens | [src](https://commons.wikimedia.org/wiki/File%3A%28MHNT%29%20Morus%20alba%20-%20immatures%20inflorescences%20and%20flowers.jpg) |
+| white-mulberry | fruit / seed | CC BY 2.0 | gailhampshire from Cradley, Malvern, U.K | [src](https://commons.wikimedia.org/wiki/File%3AWhite%20Mulberry%2C%20Morus%20alba%2C%20so%20sweet.%20%2845647751371%29.jpg) |
+| white-mulberry | bark / stem | CC BY-SA 4.0 | Famartin | [src](https://commons.wikimedia.org/wiki/File%3A2024-12-06%2012%2008%2034%20White%20Mulberry%20bark%20along%20Willis%20Drive%20in%20the%20Mountainview%20section%20of%20Ewing%20Township%2C%20Mercer%20County%2C%20New%20Jersey.jpg) |
 | wild-fennel | leaves | CC BY 2.0 | Harry Rose from South West Rocks, Australia | [src](https://commons.wikimedia.org/wiki/File%3AFoeniculum%20vulgare%20leaf3%20%2814357190716%29.jpg) |
 | wild-fennel | leaves | CC BY-SA 3.0 | Petruss | [src](https://commons.wikimedia.org/wiki/File%3AFoeniculum%20vulgare%20leaf.JPG) |
 | wild-fennel | whole plant | Public domain | Javier martin | [src](https://commons.wikimedia.org/wiki/File%3AFoeniculum%20vulgare%20Habitus%2015July2009%20ParqueNaturalLagunasdelaMata.jpg) |

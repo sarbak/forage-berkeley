@@ -1,14 +1,19 @@
 # Forage Berkeley
 
-A single-page, mobile-first flash-card field guide to ~49 forageable wild plants of the
-Berkeley / East Bay area. One card at a time: **swipe right for the next plant, left for the
-previous, tap to flip.** The front asks "what is this?" with a leaf-forward photo gallery
-(tap a thumbnail to enlarge it); the back gives the answer plus season, ID notes, a warning,
-and uses. Also: a progress bar, shuffle, keyboard arrows (←/→ navigate, space flips), and an
-edibility filter.
+A single-page, mobile-first app for **learning** the forageable wild plants and common trees
+of the Berkeley / East Bay area — ~73 species in all.
+
+**Learn (the home screen):** a spaced-repetition quiz. You see 2 photos of a plant and pick
+its name from 4 options. Right or wrong, a Leitner schedule (saved on your device) decides
+when each plant comes back, so you review what you keep missing. The 2 photos are picked at
+random from each plant's gallery, so you learn the *plant* rather than memorizing one image.
+
+**Browse:** the full field guide — search/filter every species and open a detail sheet with
+the whole photo gallery plus season, ID notes, a warning, and uses.
 
 **This is a learning aid, not a safety authority.** Never eat anything identified from this
-app alone.
+app alone. The dataset includes toxic "recognition-only" species (poison hemlock, oleander,
+English yew, privet, horse chestnut, …) precisely so you learn what to avoid.
 
 ## Run it
 
