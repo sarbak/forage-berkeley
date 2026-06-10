@@ -8,6 +8,7 @@
   <meta name="theme-color" content="#f7f3ec" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="manifest" href="manifest.json" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Forage Berkeley — learn the wild plants" />
   <meta property="og:description" content="A spaced-repetition quiz for the forageable plants & common trees of Berkeley & the East Bay. Guess the plant from photos; it remembers what you miss. A learning aid, not a safety authority." />
@@ -141,6 +142,8 @@
 
     .foot { text-align: center; margin-top: 8px; font-size: 11px; color: var(--ink-soft); line-height: 1.45; }
     .foot a { color: var(--rust-deep); }
+    .foot .offline { display: block; font-family: var(--mono); font-size: 10px; letter-spacing: .05em; margin-top: 2px; }
+    .foot .offline:empty { display: none; }
 
     /* edibility icon next to names */
     .edi { font-size: .92em; margin-right: 6px; }
@@ -196,7 +199,8 @@
     </section>
 
     <p class="foot">A learning aid, not a safety guide. Never eat anything ID'd from this app alone.
-      <a href="CREDITS.md" id="creditslink">Photo credits</a></p>
+      <a href="CREDITS.md" id="creditslink">Photo credits</a>
+      <span class="offline" id="offline-status"></span></p>
   </div>
 
   <div class="modal" id="modal"><div class="sheet" id="sheet"></div></div>

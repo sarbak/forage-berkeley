@@ -361,6 +361,56 @@
     });
   })();
 
+  // ---------- offline (service worker + full photo download) ----------
+  var IMG_CACHE = "fb-img-v1";
+  function offlineStatus(msg) { var el = $("offline-status"); if (el) el.textContent = msg; }
+
+  function setupOffline() {
+    if (!("serviceWorker" in navigator) || !window.caches) return;
+    navigator.serviceWorker.register("sw.js").catch(function () {});
+    if (navigator.storage && navigator.storage.persist) navigator.storage.persist().catch(function () {});
+    if (navigator.connection && navigator.connection.saveData) {
+      offlineStatus("data saver on — photos cache as you browse");
+      return;
+    }
+    // every photo in the deck, cached in the background so the whole app works offline
+    var urls = [];
+    plants.forEach(function (p) {
+      (p.photos || []).forEach(function (ph) { urls.push(srcFor(p, ph.slot)); });
+    });
+    caches.open(IMG_CACHE).then(function (cache) {
+      return cache.keys().then(function (keys) {
+        var have = {};
+        keys.forEach(function (k) { have[new URL(k.url).pathname] = 1; });
+        var todo = urls.filter(function (u) { return !have["/" + u]; });
+        var total = urls.length, done = total - todo.length, failed = 0;
+        if (!todo.length) { offlineStatus("✓ works offline"); return; }
+        var i = 0, CONC = 4;
+        function tick() {
+          if (done + failed >= total) {
+            offlineStatus(failed ? "offline copy partial · " + done + "/" + total : "✓ works offline");
+          } else if ((done + failed) % 5 === 0) {
+            offlineStatus("saving for offline · " + done + "/" + total);
+          }
+        }
+        function next() {
+          if (i >= todo.length) return Promise.resolve();
+          var u = todo[i++];
+          return fetch(u).then(function (r) {
+            if (!r.ok) throw new Error(String(r.status));
+            return cache.put(u, r);
+          }).then(function () { done++; tick(); })
+            .catch(function () { failed++; tick(); })
+            .then(next);
+        }
+        offlineStatus("saving for offline · " + done + "/" + total);
+        var lanes = [];
+        for (var l = 0; l < CONC; l++) lanes.push(next());
+        return Promise.all(lanes);
+      });
+    }).catch(function () {});
+  }
+
   // ---------- load ----------
   Promise.all([
     fetch("data/berkeley.json").then(function (r) { if (!r.ok) throw new Error("data " + r.status); return r.json(); }),
@@ -373,6 +423,8 @@
     });
     plants.forEach(function (p) { byId[p.id] = p; });
     renderQuiz();
+    if (document.readyState === "complete") setTimeout(setupOffline, 1500);
+    else window.addEventListener("load", function () { setTimeout(setupOffline, 1500); });
   }).catch(function (err) {
     $("quiz").innerHTML = '<div class="done"><h2>Could not load.</h2><p>' + esc(err.message) +
       '<br>Serve over http, e.g. <code>python3 -m http.server</code>.</p></div>';
