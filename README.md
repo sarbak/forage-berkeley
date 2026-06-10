@@ -27,17 +27,57 @@ python3 -m http.server 8000
 
 No build step, no framework, no backend, no login.
 
+## Offline
+
+The app works fully offline once you've visited it. Two layers:
+
+- **Service worker (`sw.js`).** The app shell (page, code, plant data, fonts) is cached on
+  first visit, so the site opens with no connection. Images are served cache-first; the
+  shell is stale-while-revalidate, so an update lands on the *next* visit.
+- **Background photo download.** After the page loads, `app.js` quietly fetches every photo
+  in the deck (4 at a time) into the cache, with a progress line in the footer
+  ("saving for offline · n/405" → "✓ works offline"). The download resumes across visits —
+  it checks the cache and only fetches what's missing — and is skipped when the phone's
+  Data Saver is on (photos then cache as you browse). Plants the download hasn't reached
+  yet show the striped placeholder offline instead of breaking.
+
+Caches are split on purpose: the shell cache is versioned (`fb-shell-v*` — bump
+`SHELL_VERSION` in `sw.js` whenever you ship a change), while the image and font caches
+(`fb-img-v1`, `fb-fonts-v1`) are stable, so an app update never re-downloads the ~334MB
+photo set. The page also asks for persistent storage so the browser won't evict the cache
+under pressure.
+
+It's an installable PWA (`manifest.json` + icons): "Add to Home Screen" gives it an app
+icon and a fullscreen window, which is the nicest way to use it in the field.
+
+## Deploy
+
+Hosted on Vercel (static, no build):
+
+```sh
+vercel --prod --yes   # deploys to https://forage-berkeley.vercel.app
+```
+
+`vercel.json` sets cache headers — images are immutable for a week, `/sw.js` is
+`must-revalidate` so a new service worker is picked up right away. Note that
+`photo_meta.json` must be deployed (the app reads it for each plant's photo slots);
+only the Python scripts are in `.vercelignore`.
+
 ## Structure
 
 ```
 forage-berkeley/
-  index.html       # markup + inlined CSS (design system)
-  app.js           # fetch data, render cards, flip + filter
+  index.html        # markup + inlined CSS (design system)
+  app.js            # quiz + browse + lightbox + offline download driver
+  sw.js             # service worker (offline caching)
+  manifest.json     # PWA manifest (+ icon-192/512/maskable, from favicon.svg via rsvg-convert)
   data/
-    berkeley.json  # the 49-plant dataset
+    berkeley.json   # the 73-plant dataset
+  photo_meta.json   # per-plant photo slots, labels, licenses (app reads this)
   img/
-    <id>/whole.jpg, leaf.jpg, detail.jpg   # photos (optional; placeholders shown until added)
-  CREDITS.md       # per-image photographer + license (fill in as photos are added)
+    <id>/leaf.jpg, leaf2.jpg, plant.jpg, flower.jpg, fruit.jpg, bark.jpg   # up to 6 per plant
+  CREDITS.md        # per-image photographer + license
+  fetch_photos.py   # pulls photos from Wikimedia Commons / iNaturalist
 ```
 
 ## Photos
