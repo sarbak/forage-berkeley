@@ -10,6 +10,7 @@ var FONT_CACHE = "fb-fonts-v1";
 var SHELL = [
   "./",
   "berkeley-plants.html",
+  "uc-berkeley-plant-learning.html",
   "edible-weeds-berkeley-east-bay.html",
   "poison-hemlock-identification.html",
   "analytics.js",

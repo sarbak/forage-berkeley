@@ -350,6 +350,7 @@
     if (!learn) renderList();
     if (!learn) track("browse_opened", extend(deckProps(), { source: "browse_tab", filter: bfilter, search_active: !!bquery }));
   }
+  function tabFromHash() { return window.location.hash === "#browse" ? "browse" : "learn"; }
   $("tab-learn").addEventListener("click", function () {
     track("start_learning_clicked", extend(progressProps(), { source: "learn_tab" }));
     showTab("learn");
@@ -372,6 +373,7 @@
       $("search").focus();
     });
   }
+  window.addEventListener("hashchange", function () { showTab(tabFromHash()); });
   $("search").addEventListener("input", function (e) { bquery = e.target.value; renderList(); });
   [].forEach.call(document.querySelectorAll(".bchip"), function (c) {
     c.addEventListener("click", function () {
@@ -553,6 +555,7 @@
     });
     plants.forEach(function (p) { byId[p.id] = p; });
     renderQuiz();
+    showTab(tabFromHash());
     track("app_loaded", extend(deckProps(), progressProps()));
     setupSignupCapture();
     if (document.readyState === "complete") setTimeout(setupOffline, 1500);
