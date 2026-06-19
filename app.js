@@ -242,6 +242,18 @@
   }
   $("tab-learn").addEventListener("click", function () { showTab("learn"); });
   $("tab-browse").addEventListener("click", function () { showTab("browse"); });
+  $("start-learning").addEventListener("click", function () {
+    showTab("learn");
+    setTimeout(function () {
+      var firstOption = document.querySelector(".opt");
+      if (firstOption) firstOption.focus();
+      else $("quiz").focus();
+    }, 0);
+  });
+  $("browse-plants").addEventListener("click", function () {
+    showTab("browse");
+    $("search").focus();
+  });
   $("search").addEventListener("input", function (e) { bquery = e.target.value; renderList(); });
   [].forEach.call(document.querySelectorAll(".bchip"), function (c) {
     c.addEventListener("click", function () {

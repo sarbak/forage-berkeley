@@ -42,6 +42,21 @@
     .brand b { color: var(--sage-deep); }
     .stats { font-family: var(--mono); font-size: 11px; color: var(--ink-soft); text-align: right; line-height: 1.35; }
     .stats b { color: var(--ink); }
+    .intro { margin: 12px 0 0; padding: 12px; border: 1px solid var(--line); border-radius: 14px;
+      background: rgba(255,253,249,.74); box-shadow: 0 1px 2px rgba(43,33,24,.04); }
+    .intro h1 { margin: 0 0 7px; color: var(--ink); font-size: 27px; line-height: 1.04;
+      font-weight: 600; letter-spacing: 0; }
+    .intro p { margin: 0; color: var(--ink-soft); font-size: 14.5px; line-height: 1.35; }
+    .intro-proof { list-style: none; margin: 10px 0 0; padding: 0; display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+    .intro-proof li { min-width: 0; padding: 7px 7px 6px; border-radius: 10px; border: 1px solid var(--line);
+      background: var(--paper); color: var(--ink-soft); font-family: var(--mono); font-size: 10px; line-height: 1.25; }
+    .intro-proof b { display: block; color: var(--ink); font-family: var(--serif); font-size: 16px; line-height: 1.05; }
+    .intro-actions { display: flex; gap: 8px; margin-top: 10px; }
+    .intro-btn { flex: 1; min-height: 42px; padding: 0 12px; border-radius: 12px; border: 1px solid var(--ink);
+      background: var(--ink); color: var(--paper); font-family: var(--mono); font-size: 12px; letter-spacing: .06em;
+      text-transform: uppercase; cursor: pointer; }
+    .intro-btn.secondary { background: transparent; color: var(--ink); border-color: var(--line); }
     .tabs { display: flex; gap: 6px; margin: 11px 0 12px; }
     .tab { flex: 1; font-family: var(--mono); font-size: 12px; letter-spacing: 0.04em; padding: 10px;
       border-radius: 11px; border: 1px solid var(--line); background: transparent; color: var(--ink-soft); cursor: pointer; }
@@ -174,6 +189,21 @@
       <div class="brand">Forage <b>Berkeley</b></div>
       <div class="stats" id="stats">&nbsp;</div>
     </div>
+
+    <section class="intro" aria-labelledby="home-title">
+      <h1 id="home-title">Learn Berkeley's wild plants before you forage.</h1>
+      <p>Practice East Bay plant ID with photos, seasons, recognition notes, and cautions from a local 73-species learning deck.</p>
+      <ul class="intro-proof" aria-label="Forage Berkeley learning deck facts">
+        <li><b>73</b> local species</li>
+        <li><b>41</b> edible entries</li>
+        <li><b>32</b> caution or no-eat entries</li>
+      </ul>
+      <div class="intro-actions">
+        <button class="intro-btn" id="start-learning" type="button">Start learning</button>
+        <button class="intro-btn secondary" id="browse-plants" type="button">Browse plants</button>
+      </div>
+    </section>
+
     <div class="tabs" role="tablist">
       <button class="tab" id="tab-learn" role="tab" aria-selected="true">Learn</button>
       <button class="tab" id="tab-browse" role="tab" aria-selected="false">Browse</button>
@@ -182,7 +212,7 @@
     <section class="view active" id="learn">
       <div class="qhead"><span id="qcount">—</span><span id="qstreak"></span></div>
       <div class="qbar"><i id="qbarfill"></i></div>
-      <div id="quiz" style="flex:1;min-height:0;display:flex;flex-direction:column;overflow-y:auto;-webkit-overflow-scrolling:touch"></div>
+      <div id="quiz" tabindex="-1" style="flex:1;min-height:0;display:flex;flex-direction:column;overflow-y:auto;-webkit-overflow-scrolling:touch"></div>
     </section>
 
     <section class="view" id="browse">
