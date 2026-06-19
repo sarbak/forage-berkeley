@@ -3,7 +3,7 @@
    Image + font caches are stable so an app update never re-downloads the photo set. */
 "use strict";
 
-var SHELL_VERSION = "fb-shell-v5";
+var SHELL_VERSION = "fb-shell-v6";
 var IMG_CACHE = "fb-img-v1";
 var FONT_CACHE = "fb-fonts-v1";
 
@@ -11,6 +11,7 @@ var SHELL = [
   "./",
   "berkeley-plants.html",
   "uc-berkeley-plant-learning.html",
+  "poisonous-plants.html",
   "edible-weeds-berkeley-east-bay.html",
   "poison-hemlock-identification.html",
   "analytics.js",

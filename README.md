@@ -18,6 +18,9 @@ in the app.
 **Species pages:** one static page per plant under `plants/`, generated from the same deck
 so specific Berkeley plant searches can land on the exact lesson.
 
+**Poisonous plants guide:** a crawlable safety-first guide generated from the same deck,
+focused on do-not-eat plants and common look-alike traps around Berkeley and the East Bay.
+
 **Look-alike guides:** crawlable safety-first lessons, starting with poison hemlock vs wild
 fennel, use the same deck facts without adding eating, touching, or removal advice.
 
@@ -134,8 +137,10 @@ The search-facing hub is generated from the plant data:
 
 ```sh
 python3 generate_plant_hub.py
-python3 generate_hemlock_fennel_guide.py
 python3 generate_species_pages.py
+python3 generate_poisonous_plants_guide.py
+python3 generate_edible_weeds_guide.py
+python3 generate_hemlock_fennel_guide.py
 python3 generate_sitemap.py
 ```
 

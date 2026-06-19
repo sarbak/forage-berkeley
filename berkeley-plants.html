@@ -22,8 +22,9 @@
     a { color: var(--rust); }
     .wrap { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
     header { padding: 22px 0 14px; border-bottom: 1px solid var(--line); }
-    nav { display: flex; justify-content: space-between; gap: 18px; align-items: center; font-family: var(--mono); font-size: 13px; }
+    nav { display: flex; justify-content: space-between; gap: 18px; align-items: center; font-family: var(--mono); font-size: 13px; flex-wrap: wrap; }
     nav a { text-decoration: none; }
+    .nav-links { display: flex; flex-wrap: wrap; gap: 14px; }
     .hero { padding: 54px 0 36px; display: grid; gap: 28px; grid-template-columns: minmax(0, 1.35fr) minmax(260px, .65fr); align-items: end; }
     h1 { font-size: clamp(38px, 7vw, 76px); line-height: .95; max-width: 850px; margin: 0 0 18px; font-weight: 600; }
     h2 { font-size: clamp(28px, 4vw, 44px); line-height: 1; margin: 0 0 10px; }
@@ -78,7 +79,10 @@
   <header>
     <nav class="wrap" aria-label="Main navigation">
       <a href="./">Forage Berkeley</a>
-      <a href="./">Open the learning quiz</a>
+      <div class="nav-links">
+        <a href="./">Open the learning quiz</a>
+        <a href="poisonous-plants.html">Poisonous plants guide</a>
+      </div>
     </nav>
   </header>
   <main>
@@ -102,6 +106,7 @@
         <a href="#edible-plants">Edible plants</a>
         <a href="#care-plants">Eat with care</a>
         <a href="#no-plants">Do not eat</a>
+        <a href="poisonous-plants.html">Poisonous plants guide</a>
       </div>
       <section class="guide-links" aria-labelledby="related-guides-title">
         <h2 id="related-guides-title">Study a focused local guide</h2>
@@ -1320,7 +1325,7 @@
   </main>
   <footer>
     <div class="wrap">
-      <p>This guide uses the same plant deck as the Forage Berkeley quiz. Photo credits live in <a href="CREDITS.md">CREDITS.md</a>. Forage Berkeley remains a learning tool, not a food-safety guide.</p>
+      <p>This guide uses the same plant deck as the Forage Berkeley quiz. For the recognition-first safety page, read the <a href="poisonous-plants.html">poisonous plants guide</a>. Photo credits live in <a href="CREDITS.md">CREDITS.md</a>. Forage Berkeley remains a learning tool, not a food-safety guide.</p>
     </div>
   </footer>
 </body>
