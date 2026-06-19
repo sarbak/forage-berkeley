@@ -37,6 +37,17 @@ python3 -m http.server 8000
 
 No build step, no framework, no backend, no login.
 
+## Signup capture
+
+The app includes a first lightweight email capture for people who want Forage Berkeley
+progress notes and new Berkeley plant lessons. Submitting the form fires
+`signup_capture_submitted` through the managed PostHog path in `analytics.js`.
+
+Email handling is intentionally small: there is no account system, backend database, or
+new vendor. The submitted email is saved on the visitor's device so the form can show a
+joined state, and it is sent as the `email` property on the PostHog event with
+`source=app_signup_card` and the visible consent copy.
+
 ## Offline
 
 The app works fully offline once you've visited it. Two layers:

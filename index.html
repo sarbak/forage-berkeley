@@ -172,6 +172,19 @@
     .foot a { color: var(--rust-deep); }
     .foot .offline { display: block; font-family: var(--mono); font-size: 10px; letter-spacing: .05em; margin-top: 2px; }
     .foot .offline:empty { display: none; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden;
+      clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+    .signup { margin-top: 10px; padding: 10px; border-radius: 14px; border: 1px solid rgba(94,107,67,.24);
+      background: rgba(255,253,249,.78); box-shadow: 0 1px 2px rgba(43,33,24,.04); }
+    .signup h2 { margin: 0 0 2px; font-size: 17px; line-height: 1.1; }
+    .signup p { margin: 0; color: var(--ink-soft); font-size: 12.5px; line-height: 1.35; }
+    .signup form { display: flex; gap: 6px; margin-top: 8px; }
+    .signup input { min-width: 0; flex: 1; border: 1px solid var(--line); background: var(--card); color: var(--ink);
+      border-radius: 10px; padding: 9px 10px; font-family: var(--serif); font-size: 14px; }
+    .signup button { flex: 0 0 auto; border: 0; border-radius: 10px; padding: 0 12px; background: var(--sage-deep);
+      color: var(--paper); font-family: var(--mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; cursor: pointer; }
+    .signup button:disabled { opacity: .65; cursor: default; }
+    .signup .signup-status { min-height: 16px; margin-top: 6px; font-family: var(--mono); font-size: 10px; letter-spacing: .03em; }
 
     /* edibility icon next to names */
     .edi { font-size: .92em; margin-right: 6px; }
@@ -237,6 +250,17 @@
       </div>
     </section>
 
+    <section class="signup" id="signup-capture" aria-labelledby="signup-title">
+      <h2 id="signup-title">Get local plant-learning updates</h2>
+      <p>Leave an email for Forage Berkeley progress notes and new Berkeley plant lessons.</p>
+      <form id="signup-form">
+        <label class="sr-only" for="signup-email">Email address</label>
+        <input id="signup-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required />
+        <button id="signup-submit" type="submit">Join</button>
+      </form>
+      <p class="signup-status" id="signup-status">Learning updates only. No safety advice.</p>
+    </section>
+
     <p class="foot">A learning aid, not a safety guide. Never eat anything ID'd from this app alone.
       <a href="berkeley-plants.html">Berkeley plant guide</a>
       <a href="CREDITS.md" id="creditslink">Photo credits</a>
@@ -252,6 +276,13 @@
     <div class="lb-cap" id="lbcap"></div>
   </div>
 
+  <script>
+    window.FB_ANALYTICS_CONFIG = {
+      posthogKey: "phc_pMzQzy9Yjegx4WeoM4v4LBuYZGscZWsoiaGSDgGeYx39",
+      posthogHost: "https://us.i.posthog.com"
+    };
+  </script>
+  <script src="analytics.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
