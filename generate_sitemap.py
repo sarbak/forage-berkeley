@@ -1,0 +1,64 @@
+#!/usr/bin/env python3
+"""Generate sitemap.xml for the public Forage Berkeley pages."""
+
+from __future__ import annotations
+
+from dataclasses import dataclass
+from pathlib import Path
+from xml.sax.saxutils import escape
+
+
+ROOT = Path(__file__).resolve().parent
+OUT_PATH = ROOT / "sitemap.xml"
+SITE_ORIGIN = "https://forage-berkeley.vercel.app"
+LASTMOD = "2026-06-19"
+
+
+@dataclass(frozen=True)
+class SitemapPage:
+    path: str
+    changefreq: str
+    priority: str
+
+
+PAGES = [
+    SitemapPage("/", "weekly", "1.0"),
+    SitemapPage("/berkeley-plants.html", "monthly", "0.9"),
+    SitemapPage("/poisonous-plants.html", "monthly", "0.8"),
+    SitemapPage("/uc-berkeley-plant-learning.html", "monthly", "0.7"),
+]
+
+
+def page_url(path: str) -> str:
+    if path == "/":
+        return f"{SITE_ORIGIN}/"
+    return f"{SITE_ORIGIN}{path}"
+
+
+def render() -> str:
+    urls = []
+    for page in PAGES:
+        urls.append(
+            "  <url>\n"
+            f"    <loc>{escape(page_url(page.path))}</loc>\n"
+            f"    <lastmod>{LASTMOD}</lastmod>\n"
+            f"    <changefreq>{page.changefreq}</changefreq>\n"
+            f"    <priority>{page.priority}</priority>\n"
+            "  </url>"
+        )
+
+    return (
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+        + "\n".join(urls)
+        + "\n</urlset>\n"
+    )
+
+
+def main() -> None:
+    OUT_PATH.write_text(render(), encoding="utf-8")
+    print(f"Wrote {OUT_PATH.relative_to(ROOT)} with {len(PAGES)} URLs")
+
+
+if __name__ == "__main__":
+    main()
