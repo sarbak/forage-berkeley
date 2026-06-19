@@ -26,6 +26,7 @@ class SitemapPage:
 STATIC_PAGES = [
     SitemapPage("/", "weekly", "1.0"),
     SitemapPage("/berkeley-plants.html", "monthly", "0.9"),
+    SitemapPage("/edible-weeds-berkeley-east-bay.html", "monthly", "0.8"),
 ]
 
 OPTIONAL_PAGES = [
