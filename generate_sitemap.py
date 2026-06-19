@@ -30,6 +30,7 @@ STATIC_PAGES = [
 ]
 
 OPTIONAL_PAGES = [
+    SitemapPage("/poison-hemlock-identification.html", "monthly", "0.8"),
     SitemapPage("/poisonous-plants.html", "monthly", "0.8"),
     SitemapPage("/uc-berkeley-plant-learning.html", "monthly", "0.7"),
 ]

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Poison hemlock identification in Berkeley | Forage Berkeley</title>
+  <meta name="description" content="Learn poison hemlock identification in Berkeley and the East Bay by comparing deck-backed field marks with wild fennel. Recognition practice only, not safety advice." />
+  <link rel="canonical" href="https://forage-berkeley.vercel.app/poison-hemlock-identification.html" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "Poison hemlock identification in Berkeley", "description": "A recognition-first Berkeley and East Bay guide to poison hemlock and the wild fennel look-alike risk, generated from the Forage Berkeley plant deck.", "url": "https://forage-berkeley.vercel.app/poison-hemlock-identification.html", "about": [{"@type": "Thing", "name": "Poison Hemlock", "alternateName": "Conium maculatum"}, {"@type": "Thing", "name": "Wild Fennel", "alternateName": "Foeniculum vulgare"}], "isPartOf": {"@type": "WebSite", "name": "Forage Berkeley", "url": "https://forage-berkeley.vercel.app"}, "learningResourceType": "Plant identification guide", "educationalUse": "Self-guided plant learning"}</script>
+  <style>
+    :root {
+      --paper: #f7f3ec; --card: #fffdf9; --ink: #2b2118; --ink-soft: #6f624f;
+      --sage: #4f6339; --rust: #a8421f; --amber: #b9791b; --line: #e6dccb;
+      --serif: "Fraunces", Georgia, serif; --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--serif); line-height: 1.5; }
+    a { color: var(--rust); }
+    .wrap { width: min(1080px, calc(100% - 32px)); margin: 0 auto; }
+    header { padding: 22px 0 14px; border-bottom: 1px solid var(--line); }
+    nav { display: flex; justify-content: space-between; gap: 18px; align-items: center; font-family: var(--mono); font-size: 13px; }
+    nav a { text-decoration: none; }
+    main { padding-bottom: 44px; }
+    .hero { padding: 52px 0 32px; display: grid; gap: 28px; grid-template-columns: minmax(0, 1.05fr) minmax(280px, .65fr); align-items: end; }
+    h1 { margin: 0 0 18px; font-size: clamp(40px, 7vw, 78px); line-height: .95; font-weight: 600; max-width: 850px; }
+    h2 { margin: 0 0 12px; font-size: clamp(28px, 4vw, 44px); line-height: 1; }
+    h3 { margin: 0; font-size: 25px; line-height: 1.05; }
+    p { margin: 0; }
+    .eyebrow { font-family: var(--mono); text-transform: uppercase; letter-spacing: 0; font-size: 11px; color: var(--ink-soft); }
+    .lede { color: var(--ink-soft); font-size: 20px; max-width: 740px; }
+    .safety { padding: 18px; border: 1px solid rgba(168,66,31,.28); background: rgba(168,66,31,.08); border-radius: 12px; color: var(--rust); }
+    .image-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin: 18px 0 34px; }
+    .image-card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+    .image-card img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; background: #efe7d8; }
+    .image-card div { padding: 15px; }
+    .plant-photo { min-height: 320px; display: grid; place-items: center; padding: 24px; background: #efe7d8; color: var(--ink-soft); font-family: var(--mono); font-size: 13px; text-align: center; }
+    .latin { color: var(--ink-soft); font-style: italic; margin-top: 2px; }
+    .panel { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 20px; margin-bottom: 16px; }
+    .compare { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; min-width: 720px; }
+    th, td { border-bottom: 1px solid var(--line); padding: 13px 12px; text-align: left; vertical-align: top; }
+    th { font-family: var(--mono); text-transform: uppercase; letter-spacing: 0; font-size: 10px; color: var(--ink-soft); width: 22%; }
+    thead th { color: var(--ink); font-size: 12px; }
+    .note-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+    .note-grid p { color: var(--ink-soft); font-size: 17px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 18px; }
+    .actions a { border: 1px solid var(--line); border-radius: 999px; padding: 9px 12px; background: #f8f1e7; text-decoration: none; font-family: var(--mono); font-size: 12px; }
+    .signup-cta { display: grid; gap: 10px; margin-bottom: 16px; border-color: rgba(79,99,57,.26); background: rgba(79,99,57,.08); }
+    .signup-cta h2 { font-size: 28px; margin: 0; }
+    .signup-cta p { color: var(--ink-soft); max-width: 720px; }
+    .signup-cta a { width: fit-content; border: 1px solid var(--sage); border-radius: 999px; padding: 9px 13px; background: var(--sage); color: var(--card); text-decoration: none; font-family: var(--mono); font-size: 12px; }
+    footer { border-top: 1px solid var(--line); margin-top: 34px; padding: 28px 0 42px; color: var(--ink-soft); }
+    @media (max-width: 820px) {
+      .hero, .image-grid, .note-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="wrap" aria-label="Main navigation">
+      <a href="./">Forage Berkeley</a>
+      <a href="berkeley-plants.html">All Berkeley plants</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero wrap">
+      <div>
+        <p class="eyebrow">Berkeley and East Bay plant identification</p>
+        <h1>Poison hemlock identification, compared with wild fennel.</h1>
+        <p class="lede">Poison hemlock and wild fennel can sit in the same local learner's mind because the deck calls out the look-alike risk directly. This page turns those deck notes into recognition practice, with no eating, touching, removal, or harvesting advice.</p>
+      </div>
+      <p class="safety"><strong>Safety note:</strong> This is a learning page, not a field-safety authority. Do not eat, touch, crush, remove, or prepare any plant based on this page. If a real plant is uncertain, step away and use a qualified local source.</p>
+    </section>
+
+    <section class="wrap" aria-label="Plant photos">
+      <div class="image-grid">
+        
+        <article class="image-card">
+          <img src="img/poison-hemlock/leaf.jpg" alt="Poison Hemlock leaves" width="720" height="540" loading="eager" />
+          <div>
+            <p class="eyebrow">Spring–summer</p>
+            <h3>Poison Hemlock</h3>
+            <p class="latin">Conium maculatum</p>
+          </div>
+        </article>
+        
+        <article class="image-card">
+          <img src="img/wild-fennel/leaf.jpg" alt="Wild Fennel leaves" width="720" height="540" loading="eager" />
+          <div>
+            <p class="eyebrow">Fronds spring–fall; seeds late summer</p>
+            <h3>Wild Fennel</h3>
+            <p class="latin">Foeniculum vulgare</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap panel" aria-labelledby="comparison-title">
+      <h2 id="comparison-title">What the deck says to compare</h2>
+      <p class="lede">The scent row is deck context, not a handling instruction. Learn the contrast here, then practice from the species pages and quiz.</p>
+      <div class="compare">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Field mark</th>
+              <th scope="col">Poison Hemlock</th>
+              <th scope="col">Wild Fennel</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          <tr>
+            <th scope="row">Deck label</th>
+            <td>Do not eat. Recognition only.</td>
+            <td>Edible entry in the deck, but not eating permission.</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Stems</th>
+            <td>Smooth hairless stems with purple/maroon blotches</td>
+            <td>Solid green stems.</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Leaves</th>
+            <td>Fern-like leaves.</td>
+            <td>Feathery thread-like leaves.</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Flowers</th>
+            <td>White flower umbels.</td>
+            <td>Yellow flower umbels.</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Scent note</th>
+            <td>Musty or mousy, with no anise scent.</td>
+            <td>Strong anise or licorice smell when crushed. Do not crush or handle plants to test this.</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Where the deck places it</th>
+            <td>The plant that killed Socrates, and it&#x27;s common in damp, disturbed Bay Area ground.</td>
+            <td>A Mediterranean escapee that lines East Bay trailheads and BART tracks.</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="wrap note-grid" aria-label="Deck notes">
+      <article class="panel">
+        <p class="eyebrow">Do not eat entry</p>
+        <h2>Poison Hemlock</h2>
+        <p>DEADLY. Mistaken for fennel or wild carrot — the purple-blotched stems and lack of anise scent give it away. All parts are lethal.</p>
+        <div class="actions">
+          <a href="plants/poison-hemlock.html">Open Poison Hemlock species page</a>
+        </div>
+      </article>
+      <article class="panel">
+        <p class="eyebrow">Use note is context only</p>
+        <h2>Wild Fennel</h2>
+        <p>Resembles DEADLY poison hemlock — but hemlock has purple-blotched stems and a musty smell, never anise. If it doesn&#x27;t smell of licorice, walk away.</p>
+        <div class="actions">
+          <a href="plants/wild-fennel.html">Open Wild Fennel species page</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="wrap panel signup-cta" aria-labelledby="hemlock-signup-title">
+      <h2 id="hemlock-signup-title">Get local plant-learning updates</h2>
+      <p>Leave an email for Forage Berkeley progress notes and new Berkeley plant lessons. Updates only, never safety advice.</p>
+      <a href="./#signup-capture">Join the update list</a>
+    </section>
+
+    <section class="wrap panel" aria-labelledby="practice-title">
+      <h2 id="practice-title">Practice without turning it into advice</h2>
+      <p class="lede">Use this guide to learn the words and images. Forage Berkeley is independent, unaffiliated with UC Berkeley, and generated from the current plant deck, not from an expert safety review.</p>
+      <div class="actions">
+        <a href="berkeley-plants.html#poison-hemlock">Find Poison Hemlock in the full guide</a>
+        <a href="berkeley-plants.html#wild-fennel">Find Wild Fennel in the full guide</a>
+        <a href="./#learn">Practice in the quiz</a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="wrap">
+      <p>Forage Berkeley is a learning aid, not a safety authority. Never rely on a website or app alone for eating, handling, or removal decisions.</p>
+    </div>
+  </footer>
+</body>
+</html>

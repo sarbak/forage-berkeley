@@ -27,6 +27,18 @@ GROUP_INTROS = {
     "no": "Toxic or recognition-only plants that local learners should be able to spot and avoid.",
 }
 
+TOPIC_GUIDES = [
+    {
+        "href": "poison-hemlock-identification.html",
+        "label": "Look-alike guide",
+        "title": "Poison hemlock vs wild fennel",
+        "copy": (
+            "A recognition-only Berkeley and East Bay lesson for the deck's clearest "
+            "deadly look-alike pair."
+        ),
+    },
+]
+
 
 def text(value: object) -> str:
     return escape(str(value or ""), quote=True)
@@ -181,6 +193,10 @@ def render(plants: list[dict], meta: dict) -> str:
     .guide-links h2 {{ font-size: 28px; margin: 0; }}
     .guide-links p {{ color: var(--ink-soft); max-width: 720px; }}
     .guide-links a {{ width: fit-content; border: 1px solid var(--line); border-radius: 999px; padding: 9px 13px; background: var(--card); text-decoration: none; font-family: var(--mono); font-size: 12px; }}
+    .topic-guides {{ margin: 0 0 42px; }}
+    .topic-grid {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }}
+    .topic-card {{ display: grid; gap: 8px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 18px; text-decoration: none; color: inherit; }}
+    .topic-card p:last-child {{ color: var(--ink-soft); }}
     .plant-group {{ padding: 38px 0; border-top: 1px solid var(--line); }}
     .group-head {{ max-width: 720px; margin-bottom: 20px; }}
     .group-head p:last-child {{ color: var(--ink-soft); font-size: 17px; }}
@@ -243,6 +259,13 @@ def render(plants: list[dict], meta: dict) -> str:
         <h2 id="guide-signup-title">Get local plant-learning updates</h2>
         <p>Leave an email for Forage Berkeley progress notes and new Berkeley plant lessons. Updates only, never safety advice.</p>
         <a href="./#signup-capture">Join the update list</a>
+      </section>
+      <section class="topic-guides" aria-labelledby="topic-guides-title">
+        <p class="eyebrow">Recognition-first lessons</p>
+        <h2 id="topic-guides-title">Local look-alike guides</h2>
+        <div class="topic-grid">
+          {''.join(f'<a class="topic-card" href="{text(guide["href"])}"><p class="eyebrow">{text(guide["label"])}</p><h3>{text(guide["title"])}</h3><p>{text(guide["copy"])}</p></a>' for guide in TOPIC_GUIDES)}
+        </div>
       </section>
     </section>
 {''.join(groups)}

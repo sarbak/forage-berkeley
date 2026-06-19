@@ -26,6 +26,15 @@ EDIBILITY_NOTES = {
     "no": "Use this entry only to recognize and avoid this plant.",
 }
 
+RELATED_GUIDES = {
+    "poison-hemlock": [
+        ("../poison-hemlock-identification.html", "Compare with wild fennel"),
+    ],
+    "wild-fennel": [
+        ("../poison-hemlock-identification.html", "Compare with poison hemlock"),
+    ],
+}
+
 
 def text(value: object) -> str:
     return escape(str(value or ""), quote=True)
@@ -60,6 +69,16 @@ def use_note(plant: dict) -> str:
     if not uses:
         return "No deck use note is available for this entry."
     return f"Learning context only, not eating or preparation advice. The deck notes: {uses}"
+
+
+def related_guide_actions(plant_id: str) -> str:
+    links = RELATED_GUIDES.get(plant_id, [])
+    if not links:
+        return ""
+    return "".join(
+        f'            <a href="{text(href)}">{text(label)}</a>\n'
+        for href, label in links
+    )
 
 
 def render_page(plant: dict, meta: dict) -> str:
@@ -214,7 +233,7 @@ def render_page(plant: dict, meta: dict) -> str:
           <h2 id="story-title">Deck note</h2>
           <p class="story">{story}</p>
           <div class="actions">
-            <a href="../berkeley-plants.html#{text(plant_id)}">See it in the full guide</a>
+{related_guide_actions(plant_id)}            <a href="../berkeley-plants.html#{text(plant_id)}">See it in the full guide</a>
             <a href="../#learn">Practice in the quiz</a>
           </div>
         </aside>
