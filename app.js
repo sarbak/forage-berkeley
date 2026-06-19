@@ -240,8 +240,10 @@
     $("browse").classList.toggle("active", !learn);
     if (!learn) renderList();
   }
+  function tabFromHash() { return window.location.hash === "#browse" ? "browse" : "learn"; }
   $("tab-learn").addEventListener("click", function () { showTab("learn"); });
   $("tab-browse").addEventListener("click", function () { showTab("browse"); });
+  window.addEventListener("hashchange", function () { showTab(tabFromHash()); });
   $("search").addEventListener("input", function (e) { bquery = e.target.value; renderList(); });
   [].forEach.call(document.querySelectorAll(".bchip"), function (c) {
     c.addEventListener("click", function () {
@@ -423,6 +425,7 @@
     });
     plants.forEach(function (p) { byId[p.id] = p; });
     renderQuiz();
+    showTab(tabFromHash());
     if (document.readyState === "complete") setTimeout(setupOffline, 1500);
     else window.addEventListener("load", function () { setTimeout(setupOffline, 1500); });
   }).catch(function (err) {
