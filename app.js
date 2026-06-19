@@ -91,10 +91,67 @@
     var parts = email.split("@");
     return parts.length === 2 ? parts[1] : "";
   }
+  var GUIDE_SIGNUP_SOURCES = {
+    "plant-guide": true,
+    "poisonous-plants-guide": true,
+    "edible-weeds-guide": true,
+    "hemlock-fennel-guide": true,
+    "uc-berkeley-page": true
+  };
+  var LAUNCH_SOURCE_ALIASES = {
+    "r_berkeley": "r_berkeley",
+    "rberkeley": "r_berkeley",
+    "reddit_berkeley": "r_berkeley",
+    "berkeley_reddit": "r_berkeley",
+    "chaos": "chaos",
+    "serc": "serc",
+    "serc_eco_leaders": "serc",
+    "bfi": "bfi_student_farms",
+    "bfi_student_farms": "bfi_student_farms",
+    "berkeley_food_institute": "bfi_student_farms",
+    "student_farms": "bfi_student_farms",
+    "cnps": "cnps_east_bay",
+    "cnps_east_bay": "cnps_east_bay"
+  };
+  var LAUNCH_SOURCE_LABELS = {
+    "r_berkeley": "r/berkeley",
+    "chaos": "CHAOS",
+    "serc": "SERC Eco Leaders",
+    "bfi_student_farms": "Berkeley Food Institute / Berkeley Student Farms",
+    "cnps_east_bay": "CNPS East Bay"
+  };
+  function safeSignupParam(value) {
+    return String(value || "")
+      .trim()
+      .toLowerCase()
+      .replace(/[^a-z0-9_-]+/g, "_")
+      .replace(/^_+|_+$/g, "")
+      .slice(0, 80);
+  }
+  function canonicalLaunchSource(value) {
+    var source = safeSignupParam(value);
+    return LAUNCH_SOURCE_ALIASES[source.replace(/-/g, "_")] || source;
+  }
   function signupAttribution() {
-    var source = "direct", referrerPath = "";
+    var source = "direct", referrerPath = "", sourceKind = "direct";
+    var params, signupSource = "", externalSource = "", campaign = "";
     try {
-      source = new URLSearchParams(window.location.search).get("signup_source") || source;
+      params = new URLSearchParams(window.location.search);
+      signupSource = safeSignupParam(params.get("signup_source"));
+      campaign = safeSignupParam(params.get("utm_campaign"));
+      if (signupSource && GUIDE_SIGNUP_SOURCES[signupSource]) {
+        source = signupSource;
+        sourceKind = "guide_cta";
+      } else if (signupSource) {
+        externalSource = canonicalLaunchSource(signupSource);
+      }
+      if (!externalSource) externalSource = canonicalLaunchSource(params.get("utm_source"));
+      if (externalSource) {
+        if (sourceKind === "direct") {
+          source = externalSource;
+          sourceKind = "external_link";
+        }
+      }
     } catch (e) {}
     try {
       if (document.referrer) {
@@ -104,14 +161,20 @@
         }
       }
     } catch (e) {}
-    return {
+    var props = {
       signup_source: source,
-      signup_source_kind: source === "direct" ? "direct" : "guide_cta",
+      signup_source_kind: sourceKind,
       signup_entry_path: window.location.pathname || "/",
       signup_entry_hash: window.location.hash || "",
       signup_referrer_path: referrerPath,
-      signup_cta_label: source === "direct" ? "signup card" : "Join the update list"
+      signup_cta_label: sourceKind === "guide_cta" ? "Join the update list" : "signup card"
     };
+    if (externalSource) {
+      props.signup_external_source = externalSource;
+      props.signup_external_source_label = LAUNCH_SOURCE_LABELS[externalSource] || externalSource;
+    }
+    if (campaign) props.signup_campaign = campaign;
+    return props;
   }
 
   function esc(s) {
