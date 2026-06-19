@@ -15,6 +15,9 @@ the whole photo gallery plus season, ID notes, a warning, and uses.
 from the home screen so search engines can read the same 73-species deck people practice
 in the app.
 
+**Poisonous plants guide:** a crawlable safety-first guide generated from the same deck,
+focused on do-not-eat plants and common look-alike traps around Berkeley and the East Bay.
+
 **This is a learning aid, not a safety authority.** Never eat anything identified from this
 app alone. The dataset includes toxic "recognition-only" species (poison hemlock, oleander,
 English yew, privet, horse chestnut, …) precisely so you learn what to avoid.
@@ -108,9 +111,11 @@ The search-facing hub is generated from the plant data:
 
 ```sh
 python3 generate_plant_hub.py
+python3 generate_poisonous_plants_guide.py
 ```
 
-Commit the regenerated `berkeley-plants.html` whenever `data/berkeley.json` changes.
+Commit the regenerated `berkeley-plants.html` and `poisonous-plants.html` whenever
+`data/berkeley.json` changes.
 
 ## Adding a region (roadmap)
 
