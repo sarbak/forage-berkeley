@@ -143,6 +143,9 @@
     .foot { text-align: center; margin-top: 8px; font-size: 11px; color: var(--ink-soft); line-height: 1.45; }
     .foot a { color: var(--rust-deep); }
     .foot .offline { display: block; font-family: var(--mono); font-size: 10px; letter-spacing: .05em; margin-top: 2px; }
+    .foot .offline button { margin-left: 4px; padding: 2px 7px; border-radius: 999px; border: 1px solid var(--line);
+      background: var(--card); color: var(--rust-deep); font: inherit; letter-spacing: inherit; cursor: pointer; }
+    .foot .offline button:disabled { opacity: .6; cursor: default; }
     .foot .offline:empty { display: none; }
 
     /* edibility icon next to names */

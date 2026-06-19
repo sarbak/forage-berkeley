@@ -361,9 +361,74 @@
     });
   })();
 
-  // ---------- offline (service worker + full photo download) ----------
+  // ---------- offline (service worker + opt-in full photo download) ----------
   var IMG_CACHE = "fb-img-v1";
+  var OFFLINE_PHOTOS_KEY = "fb-offline-photos-v1";
   function offlineStatus(msg) { var el = $("offline-status"); if (el) el.textContent = msg; }
+  function offlineAction(msg, label, action) {
+    var el = $("offline-status");
+    if (!el) return;
+    el.textContent = msg + " ";
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.textContent = label;
+    btn.addEventListener("click", function () { action(btn); });
+    el.appendChild(btn);
+  }
+  function wantsFullOffline() { try { return localStorage.getItem(OFFLINE_PHOTOS_KEY) === "1"; } catch (e) { return false; } }
+  function rememberFullOffline() { try { localStorage.setItem(OFFLINE_PHOTOS_KEY, "1"); } catch (e) {} }
+  function photoUrls() {
+    var urls = [];
+    plants.forEach(function (p) {
+      (p.photos || []).forEach(function (ph) { urls.push(srcFor(p, ph.slot)); });
+    });
+    return urls;
+  }
+  function cacheStatus(cache, urls) {
+    return cache.keys().then(function (keys) {
+      var have = {};
+      keys.forEach(function (k) { have[new URL(k.url).pathname] = 1; });
+      var todo = urls.filter(function (u) { return !have["/" + u]; });
+      return { total: urls.length, done: urls.length - todo.length, todo: todo };
+    });
+  }
+
+  function offerOfflineDownload(cache, urls, done, total) {
+    offlineAction("photos cache as you browse · " + done + "/" + total + " saved", "save all for offline", function (btn) {
+      btn.disabled = true;
+      rememberFullOffline();
+      downloadOfflinePhotos(cache, urls);
+    });
+  }
+
+  function downloadOfflinePhotos(cache, urls) {
+    return cacheStatus(cache, urls).then(function (status) {
+      var todo = status.todo, total = status.total, done = status.done, failed = 0;
+      if (!todo.length) { offlineStatus("✓ works offline"); return; }
+      var i = 0, CONC = 4;
+      function tick() {
+        if (done + failed >= total) {
+          offlineStatus(failed ? "offline copy partial · " + done + "/" + total : "✓ works offline");
+        } else if ((done + failed) % 5 === 0) {
+          offlineStatus("saving for offline · " + done + "/" + total);
+        }
+      }
+      function next() {
+        if (i >= todo.length) return Promise.resolve();
+        var u = todo[i++];
+        return fetch(u).then(function (r) {
+          if (!r.ok) throw new Error(String(r.status));
+          return cache.put(u, r);
+        }).then(function () { done++; tick(); })
+          .catch(function () { failed++; tick(); })
+          .then(next);
+      }
+      offlineStatus("saving for offline · " + done + "/" + total);
+      var lanes = [];
+      for (var l = 0; l < CONC; l++) lanes.push(next());
+      return Promise.all(lanes);
+    });
+  }
 
   function setupOffline() {
     if (!("serviceWorker" in navigator) || !window.caches) return;
@@ -373,40 +438,12 @@
       offlineStatus("data saver on — photos cache as you browse");
       return;
     }
-    // every photo in the deck, cached in the background so the whole app works offline
-    var urls = [];
-    plants.forEach(function (p) {
-      (p.photos || []).forEach(function (ph) { urls.push(srcFor(p, ph.slot)); });
-    });
+    var urls = photoUrls();
     caches.open(IMG_CACHE).then(function (cache) {
-      return cache.keys().then(function (keys) {
-        var have = {};
-        keys.forEach(function (k) { have[new URL(k.url).pathname] = 1; });
-        var todo = urls.filter(function (u) { return !have["/" + u]; });
-        var total = urls.length, done = total - todo.length, failed = 0;
-        if (!todo.length) { offlineStatus("✓ works offline"); return; }
-        var i = 0, CONC = 4;
-        function tick() {
-          if (done + failed >= total) {
-            offlineStatus(failed ? "offline copy partial · " + done + "/" + total : "✓ works offline");
-          } else if ((done + failed) % 5 === 0) {
-            offlineStatus("saving for offline · " + done + "/" + total);
-          }
-        }
-        function next() {
-          if (i >= todo.length) return Promise.resolve();
-          var u = todo[i++];
-          return fetch(u).then(function (r) {
-            if (!r.ok) throw new Error(String(r.status));
-            return cache.put(u, r);
-          }).then(function () { done++; tick(); })
-            .catch(function () { failed++; tick(); })
-            .then(next);
-        }
-        offlineStatus("saving for offline · " + done + "/" + total);
-        var lanes = [];
-        for (var l = 0; l < CONC; l++) lanes.push(next());
-        return Promise.all(lanes);
+      return cacheStatus(cache, urls).then(function (status) {
+        if (!status.todo.length) { offlineStatus("✓ works offline"); return; }
+        if (wantsFullOffline()) return downloadOfflinePhotos(cache, urls);
+        offerOfflineDownload(cache, urls, status.done, status.total);
       });
     }).catch(function () {});
   }
