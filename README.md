@@ -15,6 +15,9 @@ the whole photo gallery plus season, ID notes, a warning, and uses.
 from the home screen so search engines can read the same 73-species deck people practice
 in the app.
 
+**Species pages:** one static page per plant under `plants/`, generated from the same deck
+so specific Berkeley plant searches can land on the exact lesson.
+
 **This is a learning aid, not a safety authority.** Never eat anything identified from this
 app alone. The dataset includes toxic "recognition-only" species (poison hemlock, oleander,
 English yew, privet, horse chestnut, …) precisely so you learn what to avoid.
@@ -72,16 +75,22 @@ only the Python scripts are in `.vercelignore`.
 ```
 forage-berkeley/
   index.html        # markup + inlined CSS (design system)
+  berkeley-plants.html # crawlable 73-species hub
   app.js            # quiz + browse + lightbox + offline download driver
   sw.js             # service worker (offline caching)
   manifest.json     # PWA manifest (+ icon-192/512/maskable, from favicon.svg via rsvg-convert)
   data/
     berkeley.json   # the 73-plant dataset
+  plants/
+    <id>.html       # generated species pages, one per plant
   photo_meta.json   # per-plant photo slots, labels, licenses (app reads this)
   img/
     <id>/leaf.jpg, leaf2.jpg, plant.jpg, flower.jpg, fruit.jpg, bark.jpg   # up to 6 per plant
   CREDITS.md        # per-image photographer + license
   fetch_photos.py   # pulls photos from Wikimedia Commons / iNaturalist
+  generate_plant_hub.py
+  generate_species_pages.py
+  generate_sitemap.py
 ```
 
 ## Photos
@@ -108,9 +117,12 @@ The search-facing hub is generated from the plant data:
 
 ```sh
 python3 generate_plant_hub.py
+python3 generate_species_pages.py
+python3 generate_sitemap.py
 ```
 
-Commit the regenerated `berkeley-plants.html` whenever `data/berkeley.json` changes.
+Commit the regenerated `berkeley-plants.html`, `plants/*.html`, and `sitemap.xml`
+whenever `data/berkeley.json` changes.
 
 ## Adding a region (roadmap)
 

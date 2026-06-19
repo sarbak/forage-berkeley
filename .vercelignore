@@ -1,2 +1,5 @@
 fetch_photos.py
 generate_og.py
+generate_plant_hub.py
+generate_sitemap.py
+generate_species_pages.py

@@ -13,6 +13,7 @@ ROOT = Path(__file__).resolve().parent
 DATA_PATH = ROOT / "data" / "berkeley.json"
 META_PATH = ROOT / "photo_meta.json"
 OUT_PATH = ROOT / "berkeley-plants.html"
+SPECIES_DIR = "plants"
 
 EDIBILITY_LABELS = {
     "edible": "Edible",
@@ -44,6 +45,10 @@ def local_photo(plant_id: str, meta: dict) -> tuple[str | None, str]:
     return None, ""
 
 
+def species_page_path(plant_id: str) -> str:
+    return f"{SPECIES_DIR}/{plant_id}.html"
+
+
 def plant_card(plant: dict, meta: dict) -> str:
     common = text(plant["commonName"])
     scientific = text(plant["scientificName"])
@@ -53,6 +58,7 @@ def plant_card(plant: dict, meta: dict) -> str:
     warning = text(plant.get("warning"))
     uses = text(plant.get("uses"))
     plant_id = text(plant["id"])
+    species_href = text(species_page_path(plant["id"]))
     edibility = text(EDIBILITY_LABELS.get(plant.get("edibility"), plant.get("edibility")))
     origin = text(sentence_case(plant.get("origin")))
     photo, photo_label = local_photo(plant["id"], meta)
@@ -66,7 +72,7 @@ def plant_card(plant: dict, meta: dict) -> str:
             {media}
             <div class="plant-copy">
               <p class="eyebrow">{edibility} · {origin} · {category}</p>
-              <h3>{common}</h3>
+              <h3><a href="{species_href}">{common}</a></h3>
               <p class="latin">{scientific}</p>
               <dl>
                 <div><dt>Season</dt><dd>{season}</dd></div>
@@ -74,6 +80,7 @@ def plant_card(plant: dict, meta: dict) -> str:
                 <div><dt>Watch for</dt><dd>{warning}</dd></div>
                 <div><dt>Common uses</dt><dd>{uses}</dd></div>
               </dl>
+              <a class="species-link" href="{species_href}">Open the species page</a>
             </div>
           </article>"""
 
@@ -98,7 +105,7 @@ def render(plants: list[dict], meta: dict) -> str:
                 "@type": "ListItem",
                 "position": index + 1,
                 "name": plant["commonName"],
-                "url": f"https://forage-berkeley.vercel.app/berkeley-plants.html#{plant['id']}",
+                "url": f"https://forage-berkeley.vercel.app/{species_page_path(plant['id'])}",
             }
             for index, plant in enumerate(sorted(plants, key=lambda p: p["commonName"].lower()))
         ],
@@ -157,6 +164,7 @@ def render(plants: list[dict], meta: dict) -> str:
     h2 {{ font-size: clamp(28px, 4vw, 44px); line-height: 1; margin: 0 0 10px; }}
     h3 {{ font-size: 25px; line-height: 1.1; margin: 0; }}
     p {{ margin: 0; }}
+    h3 a {{ color: inherit; text-decoration-color: rgba(168,66,31,.35); text-underline-offset: 4px; }}
     .lede {{ font-size: 20px; max-width: 760px; color: var(--ink-soft); }}
     .eyebrow {{ font-family: var(--mono); text-transform: uppercase; letter-spacing: 0; font-size: 11px; color: var(--ink-soft); }}
     .safety {{ padding: 16px 18px; border: 1px solid rgba(168,66,31,.25); background: rgba(168,66,31,.07); border-radius: 12px; color: var(--rust); }}
@@ -181,6 +189,7 @@ def render(plants: list[dict], meta: dict) -> str:
     dl {{ margin: 0; display: grid; gap: 10px; }}
     dt {{ font-family: var(--mono); text-transform: uppercase; letter-spacing: 0; font-size: 10px; color: var(--ink-soft); }}
     dd {{ margin: 0; font-size: 15px; }}
+    .species-link {{ display: inline-flex; width: fit-content; margin-top: 13px; border: 1px solid var(--line); border-radius: 999px; padding: 7px 10px; background: #f8f1e7; text-decoration: none; font-family: var(--mono); font-size: 11px; }}
     footer {{ border-top: 1px solid var(--line); margin-top: 28px; padding: 28px 0 42px; color: var(--ink-soft); }}
     @media (max-width: 850px) {{
       .hero, .plant-grid {{ grid-template-columns: 1fr; }}
