@@ -40,6 +40,10 @@
     .path a, .path div { border: 1px solid var(--line); background: var(--card); border-radius: 12px; padding: 15px; text-decoration: none; }
     .path strong { display: block; color: var(--ink); font-size: 18px; line-height: 1.1; margin-bottom: 6px; }
     .path span { color: var(--ink-soft); }
+    .signup-cta { display: grid; gap: 10px; margin: -18px 0 42px; padding: 18px; border: 1px solid rgba(79,99,57,.26); background: rgba(79,99,57,.08); border-radius: 12px; }
+    .signup-cta h2 { font-size: 28px; margin: 0; }
+    .signup-cta p { color: var(--ink-soft); max-width: 720px; }
+    .signup-cta a { width: fit-content; border: 1px solid var(--sage); border-radius: 999px; padding: 9px 13px; background: var(--sage); color: var(--card); text-decoration: none; font-family: var(--mono); font-size: 12px; }
     .plant-group { padding: 38px 0; border-top: 1px solid var(--line); }
     .group-head { max-width: 760px; margin-bottom: 20px; }
     .group-head p:last-child { color: var(--ink-soft); font-size: 17px; }
@@ -108,6 +112,11 @@
           <span>Use the app to recognize photos, but treat the real world as higher stakes than a quiz.</span>
         </a>
       </div>
+      <section class="signup-cta" aria-labelledby="poison-signup-title">
+        <h2 id="poison-signup-title">Get local plant-learning updates</h2>
+        <p>Leave an email for Forage Berkeley progress notes and new Berkeley plant lessons. Updates only, never safety advice.</p>
+        <a href="./#signup-capture">Join the update list</a>
+      </section>
     </section>
 
       <section class="plant-group" id="do-not-eat" aria-labelledby="do-not-eat-title">
