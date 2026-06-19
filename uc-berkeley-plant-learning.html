@@ -75,6 +75,17 @@
     .lede { margin: 18px 0 0; max-width: 660px; color: var(--ink-soft); font-size: 20px; line-height: 1.45; }
     .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
     .actions .primary { color: var(--paper); background: var(--ink); border-color: var(--ink); }
+    .signup-cta {
+      display: grid; gap: 9px; margin-top: 16px; padding: 15px; border: 1px solid rgba(94,107,67,.25);
+      background: rgba(94,107,67,.08); border-radius: 8px;
+    }
+    .signup-cta h2 { margin: 0; font-size: 23px; line-height: 1.08; }
+    .signup-cta p { margin: 0; color: var(--ink-soft); font-size: 15px; line-height: 1.45; }
+    .signup-cta a {
+      width: fit-content; font-family: var(--mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase;
+      text-decoration: none; border: 1px solid var(--sage-deep); border-radius: 999px;
+      padding: 9px 12px; background: var(--sage-deep); color: var(--paper);
+    }
     .affiliation {
       margin-top: 16px; color: var(--rust-deep); font-size: 14.5px; line-height: 1.45;
     }
@@ -136,6 +147,11 @@
           <a class="primary" href="./#learn">Start the quiz</a>
           <a href="./#browse">Browse 73 species</a>
         </div>
+        <section class="signup-cta" aria-labelledby="uc-signup-title">
+          <h2 id="uc-signup-title">Get local plant-learning updates</h2>
+          <p>Leave an email for Forage Berkeley progress notes and new Berkeley plant lessons. Updates only, never safety advice.</p>
+          <a href="./#signup-capture">Join the update list</a>
+        </section>
         <p class="affiliation">Independent project. Not affiliated with, endorsed by, or sponsored by the University of California, Berkeley.</p>
       </div>
       <div class="photo-strip" aria-label="Example plants in the Forage Berkeley deck">
