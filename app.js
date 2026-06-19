@@ -16,6 +16,7 @@
   var INTERVALS = [0, 8 * HOUR, DAY, 3 * DAY, 8 * DAY, 21 * DAY, 60 * DAY];
   var MAX_BOX = INTERVALS.length - 1;
   var SRS_KEY = "fb-srs-v1";
+  var SIGNUP_KEY = "fb-signup-email-v1";
   var ANALYTICS_MILESTONE_KEY = "fb-analytics-milestones-v1";
   var ANALYTICS_MILESTONES = [1, 5, 10, 25, 50, 73];
 
@@ -76,6 +77,19 @@
       }
     });
     if (changed) saveMilestones(sent);
+  }
+  function readSignupEmail() {
+    try { return localStorage.getItem(SIGNUP_KEY) || ""; } catch (e) { return ""; }
+  }
+  function saveSignupEmail(email) {
+    try { localStorage.setItem(SIGNUP_KEY, email); } catch (e) {}
+  }
+  function normalizeEmail(email) {
+    return String(email || "").trim().toLowerCase();
+  }
+  function emailDomain(email) {
+    var parts = email.split("@");
+    return parts.length === 2 ? parts[1] : "";
   }
 
   function esc(s) {
@@ -290,6 +304,42 @@
   function closeDetail() { $("modal").classList.remove("open"); }
   $("modal").addEventListener("click", function (e) { if (e.target === $("modal")) closeDetail(); });
 
+  // ---------- first signup capture ----------
+  function setupSignupCapture() {
+    var form = $("signup-form"), emailInput = $("signup-email"), submit = $("signup-submit"), status = $("signup-status");
+    if (!form || !emailInput || !submit || !status) return;
+
+    var saved = readSignupEmail();
+    if (saved) {
+      emailInput.value = saved;
+      submit.textContent = "Joined";
+      status.textContent = "You're on the update list for local plant-learning notes.";
+    }
+
+    track("signup_capture_viewed", extend(deckProps(), progressProps()));
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var email = normalizeEmail(emailInput.value);
+      if (!email || email.indexOf("@") < 1 || !emailInput.checkValidity()) {
+        status.textContent = "Enter an email address to join the update list.";
+        emailInput.focus();
+        return;
+      }
+
+      saveSignupEmail(email);
+      submit.disabled = true;
+      submit.textContent = "Joined";
+      status.textContent = "Thanks. You're on the list for local plant-learning updates.";
+      track("signup_capture_submitted", extend(deckProps(), extend(progressProps(), {
+        email: email,
+        email_domain: emailDomain(email),
+        source: "app_signup_card",
+        consent_copy: "Forage Berkeley progress notes and new Berkeley plant lessons"
+      })));
+    });
+  }
+
   // ---------- tabs ----------
   function showTab(which) {
     var learn = which === "learn";
@@ -487,6 +537,7 @@
     plants.forEach(function (p) { byId[p.id] = p; });
     renderQuiz();
     track("app_loaded", extend(deckProps(), progressProps()));
+    setupSignupCapture();
     if (document.readyState === "complete") setTimeout(setupOffline, 1500);
     else window.addEventListener("load", function () { setTimeout(setupOffline, 1500); });
   }).catch(function (err) {
