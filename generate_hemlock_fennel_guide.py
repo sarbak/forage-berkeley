@@ -235,7 +235,7 @@ def render() -> str:
     <section class="wrap panel signup-cta" aria-labelledby="hemlock-signup-title">
       <h2 id="hemlock-signup-title">Get local plant-learning updates</h2>
       <p>Leave an email for Forage Berkeley progress notes and new Berkeley plant lessons. Updates only, never safety advice.</p>
-      <a href="./#signup-capture">Join the update list</a>
+      <a href="./?signup_source=hemlock-fennel-guide#signup-capture">Join the update list</a>
     </section>
 
     <section class="wrap panel" aria-labelledby="practice-title">

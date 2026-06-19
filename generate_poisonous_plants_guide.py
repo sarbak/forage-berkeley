@@ -275,7 +275,7 @@ def render(plants: list[dict], meta: dict) -> str:
       <section class="signup-cta" aria-labelledby="poison-signup-title">
         <h2 id="poison-signup-title">Get local plant-learning updates</h2>
         <p>Leave an email for Forage Berkeley progress notes and new Berkeley plant lessons. Updates only, never safety advice.</p>
-        <a href="./#signup-capture">Join the update list</a>
+        <a href="./?signup_source=poisonous-plants-guide#signup-capture">Join the update list</a>
       </section>
     </section>
 {section("do-not-eat", core, meta)}

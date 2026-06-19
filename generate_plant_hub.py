@@ -263,7 +263,7 @@ def render(plants: list[dict], meta: dict) -> str:
       <section class="signup-cta" aria-labelledby="guide-signup-title">
         <h2 id="guide-signup-title">Get local plant-learning updates</h2>
         <p>Leave an email for Forage Berkeley progress notes and new Berkeley plant lessons. Updates only, never safety advice.</p>
-        <a href="./#signup-capture">Join the update list</a>
+        <a href="./?signup_source=plant-guide#signup-capture">Join the update list</a>
       </section>
       <section class="topic-guides" aria-labelledby="topic-guides-title">
         <p class="eyebrow">Recognition-first lessons</p>

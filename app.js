@@ -91,6 +91,28 @@
     var parts = email.split("@");
     return parts.length === 2 ? parts[1] : "";
   }
+  function signupAttribution() {
+    var source = "direct", referrerPath = "";
+    try {
+      source = new URLSearchParams(window.location.search).get("signup_source") || source;
+    } catch (e) {}
+    try {
+      if (document.referrer) {
+        var ref = new URL(document.referrer);
+        if (ref.origin === window.location.origin) {
+          referrerPath = ref.pathname + ref.search + ref.hash;
+        }
+      }
+    } catch (e) {}
+    return {
+      signup_source: source,
+      signup_source_kind: source === "direct" ? "direct" : "guide_cta",
+      signup_entry_path: window.location.pathname || "/",
+      signup_entry_hash: window.location.hash || "",
+      signup_referrer_path: referrerPath,
+      signup_cta_label: source === "direct" ? "signup card" : "Join the update list"
+    };
+  }
 
   function esc(s) {
     return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;")
@@ -316,7 +338,7 @@
       status.textContent = "You're on the update list for local plant-learning notes.";
     }
 
-    track("signup_capture_viewed", extend(deckProps(), progressProps()));
+    track("signup_capture_viewed", extend(deckProps(), extend(progressProps(), signupAttribution())));
 
     form.addEventListener("submit", function (e) {
       e.preventDefault();
@@ -331,12 +353,12 @@
       submit.disabled = true;
       submit.textContent = "Joined";
       status.textContent = "Thanks. You're on the list for local plant-learning updates.";
-      track("signup_capture_submitted", extend(deckProps(), extend(progressProps(), {
+      track("signup_capture_submitted", extend(deckProps(), extend(extend(progressProps(), {
         email: email,
         email_domain: emailDomain(email),
-        source: "app_signup_card",
+        source: "signup_capture_form",
         consent_copy: "Forage Berkeley progress notes and new Berkeley plant lessons"
-      })));
+      }), signupAttribution())));
     });
   }
 
