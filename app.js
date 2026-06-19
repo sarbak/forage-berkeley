@@ -355,16 +355,19 @@
     showTab("learn");
   });
   $("tab-browse").addEventListener("click", function () { showTab("browse"); });
-  if ($("home-start")) {
-    $("home-start").addEventListener("click", function (e) {
-      e.preventDefault();
+  if ($("start-learning")) {
+    $("start-learning").addEventListener("click", function () {
+      track("start_learning_clicked", extend(progressProps(), { source: "home_intro" }));
       showTab("learn");
-      $("tab-learn").focus();
+      setTimeout(function () {
+        var firstOption = document.querySelector(".opt");
+        if (firstOption) firstOption.focus();
+        else $("quiz").focus();
+      }, 0);
     });
   }
-  if ($("home-browse")) {
-    $("home-browse").addEventListener("click", function (e) {
-      e.preventDefault();
+  if ($("browse-plants")) {
+    $("browse-plants").addEventListener("click", function () {
       showTab("browse");
       $("search").focus();
     });
