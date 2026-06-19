@@ -29,6 +29,7 @@ STATIC_PAGES = [
     SitemapPage("/poisonous-plants.html", "monthly", "0.8"),
     SitemapPage("/edible-weeds-berkeley-east-bay.html", "monthly", "0.8"),
     SitemapPage("/poison-hemlock-identification.html", "monthly", "0.8"),
+    SitemapPage("/poison-oak-identification.html", "monthly", "0.8"),
     SitemapPage("/uc-berkeley-plant-learning.html", "monthly", "0.7"),
 ]
 

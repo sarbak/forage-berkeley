@@ -27,6 +27,15 @@ EDIBILITY_NOTES = {
 }
 
 RELATED_GUIDES = {
+    "poison-oak": [
+        ("../poison-oak-identification.html", "Compare with blackberries"),
+    ],
+    "california-blackberry": [
+        ("../poison-oak-identification.html", "Compare with poison oak"),
+    ],
+    "himalayan-blackberry": [
+        ("../poison-oak-identification.html", "Compare with poison oak"),
+    ],
     "poison-hemlock": [
         ("../poison-hemlock-identification.html", "Compare with wild fennel"),
     ],

@@ -29,6 +29,15 @@ GROUP_INTROS = {
 
 TOPIC_GUIDES = [
     {
+        "href": "poison-oak-identification.html",
+        "label": "Recognition guide",
+        "title": "Poison oak vs blackberries",
+        "copy": (
+            "A recognition-only Berkeley and East Bay lesson for poison oak "
+            "and the blackberry entries learners may compare against it."
+        ),
+    },
+    {
         "href": "poison-hemlock-identification.html",
         "label": "Look-alike guide",
         "title": "Poison hemlock vs wild fennel",

@@ -96,6 +96,7 @@
     "poisonous-plants-guide": true,
     "edible-weeds-guide": true,
     "hemlock-fennel-guide": true,
+    "poison-oak-guide": true,
     "uc-berkeley-page": true
   };
   var LAUNCH_SOURCE_ALIASES = {
