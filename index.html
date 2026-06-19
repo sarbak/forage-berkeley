@@ -3,19 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1" />
-  <title>Forage Berkeley — learn the wild plants</title>
-  <meta name="description" content="A spaced-repetition quiz for learning forageable wild plants and common trees of Berkeley and the East Bay. Guess the plant from photos. A learning aid, not a safety authority." />
+  <title>Forage Berkeley — Berkeley plant identification practice</title>
+  <meta name="description" content="Learn Berkeley and East Bay wild plants with a local 73-species plant identification quiz, browse guide, and crawlable plant reference. A learning aid, not a safety authority." />
+  <link rel="canonical" href="https://forage-berkeley.vercel.app/" />
   <meta name="theme-color" content="#f7f3ec" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
   <link rel="manifest" href="manifest.json" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Forage Berkeley — learn the wild plants" />
-  <meta property="og:description" content="A spaced-repetition quiz for the forageable plants & common trees of Berkeley & the East Bay. Guess the plant from photos; it remembers what you miss. A learning aid, not a safety authority." />
+  <meta property="og:title" content="Forage Berkeley — Berkeley plant identification practice" />
+  <meta property="og:description" content="Practice Berkeley and East Bay plant identification with 73 local species, a learning quiz, a browse guide, and safety-first notes." />
+  <meta property="og:url" content="https://forage-berkeley.vercel.app/" />
   <meta property="og:image" content="og.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Forage Berkeley — learn the wild plants" />
+  <meta name="twitter:title" content="Forage Berkeley — Berkeley plant identification practice" />
+  <meta name="twitter:description" content="A local 73-species plant learning quiz and guide for Berkeley and the East Bay." />
   <meta name="twitter:image" content="og.png" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Forage Berkeley",
+      "url": "https://forage-berkeley.vercel.app/",
+      "applicationCategory": "EducationalApplication",
+      "description": "A local learning aid for practicing Berkeley and East Bay plant identification with a 73-species quiz and browse guide.",
+      "operatingSystem": "Any",
+      "isAccessibleForFree": true,
+      "about": [
+        "Berkeley plant identification",
+        "East Bay wild plants",
+        "plant learning quiz"
+      ]
+    }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -42,6 +62,14 @@
     .brand b { color: var(--sage-deep); }
     .stats { font-family: var(--mono); font-size: 11px; color: var(--ink-soft); text-align: right; line-height: 1.35; }
     .stats b { color: var(--ink); }
+    .home-index { margin: 10px 0 0; padding: 11px 12px; border: 1px solid var(--line);
+      border-radius: 12px; background: rgba(255,253,249,.75); box-shadow: 0 1px 2px rgba(43,33,24,.04); }
+    .home-index h1 { margin: 0 0 5px; font-size: 23px; line-height: 1.08; letter-spacing: 0; }
+    .home-index p { margin: 0; color: var(--ink-soft); font-size: 13.5px; line-height: 1.35; }
+    .home-index nav { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 9px; }
+    .home-index a { font-family: var(--mono); font-size: 10.5px; letter-spacing: .02em; color: var(--ink);
+      text-decoration: none; border: 1px solid var(--line); border-radius: 999px; padding: 6px 9px; background: var(--paper); }
+    .home-index .home-safety { margin-top: 8px; color: var(--rust-deep); }
     .tabs { display: flex; gap: 6px; margin: 11px 0 12px; }
     .tab { flex: 1; font-family: var(--mono); font-size: 12px; letter-spacing: 0.04em; padding: 10px;
       border-radius: 11px; border: 1px solid var(--line); background: transparent; color: var(--ink-soft); cursor: pointer; }
@@ -174,6 +202,16 @@
       <div class="brand">Forage <b>Berkeley</b></div>
       <div class="stats" id="stats">&nbsp;</div>
     </div>
+    <section class="home-index" aria-labelledby="home-index-title">
+      <h1 id="home-index-title">Berkeley plant identification practice for local learners</h1>
+      <p>Forage Berkeley helps people in Berkeley and the East Bay learn 73 common local plants through a photo quiz, a searchable browse guide, and plain warnings for edible, caution, and do-not-eat species.</p>
+      <nav aria-label="Forage Berkeley learning paths">
+        <a href="#learn" id="home-start">Start the learning quiz</a>
+        <a href="#browse" id="home-browse">Browse plants in the app</a>
+        <a href="berkeley-plants.html">Read the 73-species guide</a>
+      </nav>
+      <p class="home-safety">Learning aid only. Never eat anything based on this app alone.</p>
+    </section>
     <div class="tabs" role="tablist">
       <button class="tab" id="tab-learn" role="tab" aria-selected="true">Learn</button>
       <button class="tab" id="tab-browse" role="tab" aria-selected="false">Browse</button>

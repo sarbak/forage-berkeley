@@ -242,6 +242,20 @@
   }
   $("tab-learn").addEventListener("click", function () { showTab("learn"); });
   $("tab-browse").addEventListener("click", function () { showTab("browse"); });
+  if ($("home-start")) {
+    $("home-start").addEventListener("click", function (e) {
+      e.preventDefault();
+      showTab("learn");
+      $("tab-learn").focus();
+    });
+  }
+  if ($("home-browse")) {
+    $("home-browse").addEventListener("click", function (e) {
+      e.preventDefault();
+      showTab("browse");
+      $("search").focus();
+    });
+  }
   $("search").addEventListener("input", function (e) { bquery = e.target.value; renderList(); });
   [].forEach.call(document.querySelectorAll(".bchip"), function (c) {
     c.addEventListener("click", function () {
