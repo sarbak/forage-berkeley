@@ -88,6 +88,19 @@ vercel --prod --yes   # deploys to https://forage-berkeley.vercel.app
 `photo_meta.json` must be deployed (the app reads it for each plant's photo slots);
 only the Python scripts are in `.vercelignore`.
 
+## Search crawling
+
+`robots.txt` points crawlers to `sitemap.xml`. Regenerate the sitemap after adding
+or renaming crawlable public pages:
+
+```sh
+python3 generate_sitemap.py
+```
+
+The sitemap should list the homepage and public local-learning pages. App hash routes
+such as `/#learn` and `/#browse` are intentionally left out because they are not
+separate crawlable documents.
+
 ## Structure
 
 ```
@@ -108,9 +121,11 @@ forage-berkeley/
   CREDITS.md        # per-image photographer + license
   fetch_photos.py   # pulls photos from Wikimedia Commons / iNaturalist
   generate_plant_hub.py
-  generate_hemlock_fennel_guide.py
   generate_species_pages.py
-  generate_sitemap.py
+  generate_poisonous_plants_guide.py
+  generate_edible_weeds_guide.py
+  generate_hemlock_fennel_guide.py
+  generate_sitemap.py # rewrites sitemap.xml for public crawlable pages
 ```
 
 ## Photos

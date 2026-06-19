@@ -3,3 +3,6 @@ generate_og.py
 generate_plant_hub.py
 generate_sitemap.py
 generate_species_pages.py
+generate_poisonous_plants_guide.py
+generate_edible_weeds_guide.py
+generate_hemlock_fennel_guide.py

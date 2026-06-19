@@ -26,18 +26,15 @@ class SitemapPage:
 STATIC_PAGES = [
     SitemapPage("/", "weekly", "1.0"),
     SitemapPage("/berkeley-plants.html", "monthly", "0.9"),
-    SitemapPage("/edible-weeds-berkeley-east-bay.html", "monthly", "0.8"),
-]
-
-OPTIONAL_PAGES = [
-    SitemapPage("/poison-hemlock-identification.html", "monthly", "0.8"),
     SitemapPage("/poisonous-plants.html", "monthly", "0.8"),
+    SitemapPage("/edible-weeds-berkeley-east-bay.html", "monthly", "0.8"),
+    SitemapPage("/poison-hemlock-identification.html", "monthly", "0.8"),
     SitemapPage("/uc-berkeley-plant-learning.html", "monthly", "0.7"),
 ]
 
 
 def species_pages() -> list[SitemapPage]:
-    plants = json.loads(DATA_PATH.read_text())
+    plants = json.loads(DATA_PATH.read_text(encoding="utf-8"))
     return [
         SitemapPage(f"/plants/{plant['id']}.html", "monthly", "0.6")
         for plant in sorted(plants, key=lambda p: p["commonName"].lower())
@@ -45,9 +42,9 @@ def species_pages() -> list[SitemapPage]:
 
 
 def public_pages() -> list[SitemapPage]:
-    pages = list(STATIC_PAGES)
-    for page in OPTIONAL_PAGES:
-        if (ROOT / page.path.lstrip("/")).exists():
+    pages = []
+    for page in STATIC_PAGES:
+        if page.path == "/" or (ROOT / page.path.lstrip("/")).exists():
             pages.append(page)
     return pages + species_pages()
 
@@ -79,8 +76,9 @@ def render() -> str:
 
 
 def main() -> None:
+    pages = public_pages()
     OUT_PATH.write_text(render(), encoding="utf-8")
-    print(f"Wrote {OUT_PATH.relative_to(ROOT)} with {len(public_pages())} URLs")
+    print(f"Wrote {OUT_PATH.relative_to(ROOT)} with {len(pages)} URLs")
 
 
 if __name__ == "__main__":
