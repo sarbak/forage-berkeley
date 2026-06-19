@@ -21,9 +21,9 @@ EDIBILITY_LABELS = {
 }
 
 EDIBILITY_NOTES = {
-    "edible": "This entry describes common uses from the learning deck. It is not eating advice.",
-    "care": "This plant needs extra plant-part knowledge, preparation, or caution before anyone thinks about use.",
-    "no": "This is a recognition-only plant for local learners to spot and avoid.",
+    "edible": "The use notes below are deck context, not eating clearance or preparation advice.",
+    "care": "This plant needs extra plant-part knowledge, preparation, or caution before any real-world use decision.",
+    "no": "Use this entry only to recognize and avoid this plant.",
 }
 
 
@@ -48,14 +48,28 @@ def page_url(plant_id: str) -> str:
     return f"{SITE_ORIGIN}/plants/{plant_id}.html"
 
 
+def caution_note(plant: dict) -> str:
+    warning = str(plant.get("warning") or "").strip()
+    if not warning:
+        return "No deck caution note is available for this entry. Confirm real plants with an expert source before any field decision."
+    return f"For recognition practice, the deck notes: {warning}"
+
+
+def use_note(plant: dict) -> str:
+    uses = str(plant.get("uses") or "").strip()
+    if not uses:
+        return "No deck use note is available for this entry."
+    return f"Learning context only, not eating or preparation advice. The deck notes: {uses}"
+
+
 def render_page(plant: dict, meta: dict) -> str:
     plant_id = str(plant["id"])
     common = text(plant["commonName"])
     scientific = text(plant["scientificName"])
     season = text(plant.get("season"))
     features = text(plant.get("idFeatures"))
-    warning = text(plant.get("warning"))
-    uses = text(plant.get("uses"))
+    warning = text(caution_note(plant))
+    uses = text(use_note(plant))
     story = text(plant.get("story"))
     category = text(sentence_case(plant.get("category")))
     origin = text(sentence_case(plant.get("origin")))
@@ -65,7 +79,7 @@ def render_page(plant: dict, meta: dict) -> str:
     canonical = page_url(plant_id)
     description = (
         f"Learn {plant['commonName']} around Berkeley with existing Forage Berkeley "
-        "season, identification, warning, and use notes."
+        "season, identification, caution, and deck-use notes for recognition practice."
     )
 
     photo, photo_label = local_photo(plant_id, meta)
@@ -172,7 +186,7 @@ def render_page(plant: dict, meta: dict) -> str:
         <p class="eyebrow">Berkeley plant identification</p>
         <h1>{common}</h1>
         <p class="latin">{scientific}</p>
-        <p class="lede">Use this page to learn the season, field marks, warnings, and common uses already in the Forage Berkeley deck.</p>
+        <p class="lede">Use this page to learn the season, field marks, caution notes, and deck-use context already in the Forage Berkeley deck. It is for recognition practice, not eating or harvesting guidance.</p>
       </div>
       <figure class="hero-media">
         {media}
@@ -185,15 +199,15 @@ def render_page(plant: dict, meta: dict) -> str:
         <div class="stat"><span>Origin</span><b>{origin}</b></div>
         <div class="stat"><span>Plant type</span><b>{category}</b></div>
       </div>
-      <p class="safety"><strong>Safety note:</strong> Forage Berkeley is a learning aid, not a safety authority. Never eat anything based on this app alone. {edibility_note}</p>
+      <p class="safety"><strong>Safety note:</strong> Forage Berkeley is a learning aid, not a safety authority. Never eat, handle, harvest, or prepare a plant based on this app alone. This page is for recognition practice only. {edibility_note}</p>
       <div class="details">
         <section class="panel" aria-labelledby="details-title">
           <h2 id="details-title">How to recognize it</h2>
           <dl>
             <div><dt>Season</dt><dd>{season}</dd></div>
             <div><dt>Identification features</dt><dd>{features}</dd></div>
-            <div><dt>Watch for</dt><dd>{warning}</dd></div>
-            <div><dt>Common uses</dt><dd>{uses}</dd></div>
+            <div><dt>Deck caution note</dt><dd>{warning}</dd></div>
+            <div><dt>Deck use context</dt><dd>{uses}</dd></div>
           </dl>
         </section>
         <aside class="panel" aria-labelledby="story-title">
