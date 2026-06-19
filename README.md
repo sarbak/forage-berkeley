@@ -11,6 +11,10 @@ random from each plant's gallery, so you learn the *plant* rather than memorizin
 **Browse:** the full field guide — search/filter every species and open a detail sheet with
 the whole photo gallery plus season, ID notes, a warning, and uses.
 
+**Berkeley plant guide:** a crawlable HTML hub generated from `data/berkeley.json`, linked
+from the home screen so search engines can read the same 73-species deck people practice
+in the app.
+
 **This is a learning aid, not a safety authority.** Never eat anything identified from this
 app alone. The dataset includes toxic "recognition-only" species (poison hemlock, oleander,
 English yew, privet, horse chestnut, …) precisely so you learn what to avoid.
@@ -97,6 +101,16 @@ back to a species-correct iNaturalist photo. Per-photo attribution and source li
 
 To refresh: `python3 fetch_photos.py` (rewrites `photo_meta.json`), then regenerate
 `CREDITS.md`. Licenses are overwhelmingly public-domain / CC0 / CC-BY / CC-BY-SA.
+
+## Plant hub
+
+The search-facing hub is generated from the plant data:
+
+```sh
+python3 generate_plant_hub.py
+```
+
+Commit the regenerated `berkeley-plants.html` whenever `data/berkeley.json` changes.
 
 ## Adding a region (roadmap)
 
