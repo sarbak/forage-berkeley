@@ -16,6 +16,8 @@
   var INTERVALS = [0, 8 * HOUR, DAY, 3 * DAY, 8 * DAY, 21 * DAY, 60 * DAY];
   var MAX_BOX = INTERVALS.length - 1;
   var SRS_KEY = "fb-srs-v1";
+  var ANALYTICS_MILESTONE_KEY = "fb-analytics-milestones-v1";
+  var ANALYTICS_MILESTONES = [1, 5, 10, 25, 50, 73];
 
   var $ = function (id) { return document.getElementById(id); };
   var plants = [], byId = {};
@@ -26,6 +28,55 @@
   function loadSRS() { try { return JSON.parse(localStorage.getItem(SRS_KEY)) || {}; } catch (e) { return {}; } }
   function saveSRS() { try { localStorage.setItem(SRS_KEY, JSON.stringify(srs)); } catch (e) {} }
   function now() { return Date.now(); }
+
+  function track(event, props) {
+    if (window.fbAnalytics && typeof window.fbAnalytics.capture === "function") {
+      window.fbAnalytics.capture(event, props || {});
+    }
+  }
+  function extend(a, b) {
+    var out = {}, k;
+    for (k in a || {}) if (Object.prototype.hasOwnProperty.call(a, k)) out[k] = a[k];
+    for (k in b || {}) if (Object.prototype.hasOwnProperty.call(b, k)) out[k] = b[k];
+    return out;
+  }
+  function deckProps() {
+    var props = { species_count: plants.length, edible_count: 0, care_count: 0, no_count: 0 };
+    plants.forEach(function (p) {
+      if (p.edibility === "edible") props.edible_count++;
+      else if (p.edibility === "care") props.care_count++;
+      else if (p.edibility === "no") props.no_count++;
+    });
+    return props;
+  }
+  function progressProps() {
+    var s = stats();
+    return { due_count: s.due, seen_count: s.seen, mastered_count: s.mastered, fresh_count: s.fresh };
+  }
+  function plantProps(p) {
+    return {
+      plant_id: p.id,
+      plant_common_name: p.commonName,
+      plant_scientific_name: p.scientificName,
+      plant_edibility: p.edibility,
+      plant_category: p.category,
+      plant_origin: p.origin
+    };
+  }
+  function sentMilestones() {
+    try { return JSON.parse(localStorage.getItem(ANALYTICS_MILESTONE_KEY)) || {}; } catch (e) { return {}; }
+  }
+  function saveMilestones(sent) { try { localStorage.setItem(ANALYTICS_MILESTONE_KEY, JSON.stringify(sent)); } catch (e) {} }
+  function trackProgressMilestones() {
+    var s = stats(), sent = sentMilestones(), changed = false;
+    ANALYTICS_MILESTONES.forEach(function (m) {
+      if (s.seen >= m && !sent[m]) {
+        sent[m] = true; changed = true;
+        track("quiz_progress_milestone", extend(deckProps(), extend(progressProps(), { milestone_seen_count: m })));
+      }
+    });
+    if (changed) saveMilestones(sent);
+  }
 
   function esc(s) {
     return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;")
@@ -157,6 +208,13 @@
     $("nextbtn").addEventListener("click", renderQuiz);
     $("rmore").addEventListener("click", function () { openDetail(p); });
     renderStats();
+    track("quiz_answered", extend(plantProps(p), extend(progressProps(), {
+      correct: ok,
+      chosen_plant_id: chosenId,
+      streak_after: streak,
+      box_after: st(p.id).box
+    })));
+    trackProgressMilestones();
   }
 
   // ---------- swipe = advance ----------
@@ -188,12 +246,13 @@
     }).join("");
     $("list").innerHTML = rows || '<div style="color:var(--ink-soft);font-style:italic;padding:24px;text-align:center">No matches.</div>';
     [].forEach.call(document.querySelectorAll(".lrow"), function (b) {
-      b.addEventListener("click", function () { openDetail(byId[b.getAttribute("data-id")]); });
+      b.addEventListener("click", function () { openDetail(byId[b.getAttribute("data-id")], "browse_list"); });
     });
   }
 
   // ---------- detail modal ----------
-  function openDetail(p) {
+  function openDetail(p, source) {
+    track("plant_detail_opened", extend(plantProps(p), { source: source || "quiz_reveal" }));
     var ph = (p.photos && p.photos.length) ? p.photos : [{ slot: "leaf", label: "" }];
     var heroI = 0;
     function draw() {
@@ -239,8 +298,12 @@
     $("learn").classList.toggle("active", learn);
     $("browse").classList.toggle("active", !learn);
     if (!learn) renderList();
+    if (!learn) track("browse_opened", extend(deckProps(), { source: "browse_tab", filter: bfilter, search_active: !!bquery }));
   }
-  $("tab-learn").addEventListener("click", function () { showTab("learn"); });
+  $("tab-learn").addEventListener("click", function () {
+    track("start_learning_clicked", extend(progressProps(), { source: "learn_tab" }));
+    showTab("learn");
+  });
   $("tab-browse").addEventListener("click", function () { showTab("browse"); });
   $("search").addEventListener("input", function (e) { bquery = e.target.value; renderList(); });
   [].forEach.call(document.querySelectorAll(".bchip"), function (c) {
@@ -423,6 +486,7 @@
     });
     plants.forEach(function (p) { byId[p.id] = p; });
     renderQuiz();
+    track("app_loaded", extend(deckProps(), progressProps()));
     if (document.readyState === "complete") setTimeout(setupOffline, 1500);
     else window.addEventListener("load", function () { setTimeout(setupOffline, 1500); });
   }).catch(function (err) {
