@@ -50,21 +50,22 @@ joined state, and it is sent as the `email` property on the PostHog event with
 
 ## Offline
 
-The app works fully offline once you've visited it. Two layers:
+The app shell opens offline once you've visited it, and full-photo offline mode is opt-in.
+Two layers:
 
 - **Service worker (`sw.js`).** The app shell (page, code, plant data, fonts) is cached on
   first visit, so the site opens with no connection. Images are served cache-first; the
   shell is stale-while-revalidate, so an update lands on the *next* visit.
-- **Background photo download.** After the page loads, `app.js` quietly fetches every photo
-  in the deck (4 at a time) into the cache, with a progress line in the footer
-  ("saving for offline · n/405" → "✓ works offline"). The download resumes across visits —
-  it checks the cache and only fetches what's missing — and is skipped when the phone's
-  Data Saver is on (photos then cache as you browse). Plants the download hasn't reached
-  yet show the striped placeholder offline instead of breaking.
+- **Photo caching.** Photos are cached as you browse them. The full 335 MB gallery download
+  is opt-in from the footer ("save all for offline") so first visits do not start pulling
+  hundreds of images in the background. Once someone opts in, the download resumes across
+  visits, checks the cache, and only fetches what's missing. Data Saver still skips bulk
+  download; photos then cache as you browse. Plants that are not cached yet show the striped
+  placeholder offline instead of breaking.
 
 Caches are split on purpose: the shell cache is versioned (`fb-shell-v*` — bump
 `SHELL_VERSION` in `sw.js` whenever you ship a change), while the image and font caches
-(`fb-img-v1`, `fb-fonts-v1`) are stable, so an app update never re-downloads the ~334MB
+(`fb-img-v1`, `fb-fonts-v1`) are stable, so an app update never re-downloads the ~335MB
 photo set. The page also asks for persistent storage so the browser won't evict the cache
 under pressure.
 
