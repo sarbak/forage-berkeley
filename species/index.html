@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Berkeley plant species directory | Forage Berkeley</title>
+  <meta name="description" content="Browse the 73 local plant species in Forage Berkeley, grouped by edible, use-with-care, and recognition-only safety labels." />
+  <meta name="theme-color" content="#f7f3ec" />
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+  <link rel="canonical" href="https://forage-berkeley.vercel.app/species/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Berkeley plant species directory | Forage Berkeley" />
+  <meta property="og:description" content="A crawlable list of the 73 local plant species in Forage Berkeley, grouped by edible, use-with-care, and recognition-only labels." />
+  <meta property="og:image" content="../og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --paper: #f7f3ec; --card: #fffdf9; --ink: #2b2118; --ink-soft: #7b6c57;
+      --rust: #a8421f; --rust-deep: #7d2f14; --sage: #5e6b43; --sage-deep:#46512f;
+      --amber: #8f5a10; --line: #e6dccb; --serif: "Fraunces", Georgia, serif;
+      --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: var(--paper); color: var(--ink); font-family: var(--serif);
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--rust-deep); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    .wrap { width: min(920px, calc(100% - 32px)); margin: 0 auto; padding: 22px 0 40px; }
+    .top { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 24px; }
+    .brand { font-weight: 600; font-size: 18px; color: var(--ink); text-decoration: none; }
+    .brand b { color: var(--sage-deep); }
+    .app-link { font-family: var(--mono); font-size: 12px; letter-spacing: .05em; text-transform: uppercase; }
+    .hero { display: grid; gap: 14px; margin-bottom: 26px; }
+    h1 { margin: 0; max-width: 760px; font-size: clamp(34px, 6vw, 56px); line-height: 1; font-weight: 600; }
+    .lede { margin: 0; max-width: 680px; color: var(--ink-soft); font-size: 18px; line-height: 1.45; }
+    .safety {
+      max-width: 680px; padding: 10px 12px; border: 1px solid rgba(168,66,31,.25);
+      border-radius: 8px; color: var(--rust-deep); background: rgba(168,66,31,.06);
+      font-size: 15px; line-height: 1.4;
+    }
+    .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 8px 0 22px; }
+    .stat {
+      border: 1px solid var(--line); border-radius: 8px; background: rgba(255,253,249,.7);
+      padding: 10px; font-family: var(--mono); color: var(--ink-soft); font-size: 11px;
+    }
+    .stat b { display: block; color: var(--ink); font-size: 20px; font-weight: 500; line-height: 1.1; }
+    .species-group { margin-top: 18px; }
+    .group-head {
+      display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px 16px; align-items: start;
+      border-bottom: 1px solid var(--line); padding-bottom: 9px; margin-bottom: 8px;
+    }
+    .group-head h2 { margin: 0; font-size: 24px; font-weight: 600; }
+    .group-head p { grid-column: 1 / -1; margin: 0; color: var(--ink-soft); line-height: 1.4; }
+    .group-head b { font-family: var(--mono); font-size: 11px; color: var(--ink-soft); white-space: nowrap; }
+    ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 7px; }
+    .plant-row {
+      display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; align-items: center;
+      padding: 10px 12px; border: 1px solid var(--line); border-left: 4px solid var(--accent);
+      border-radius: 8px; background: var(--card);
+    }
+    .plant-row[data-edibility="edible"] { --accent: var(--sage); }
+    .plant-row[data-edibility="care"] { --accent: var(--amber); }
+    .plant-row[data-edibility="no"] { --accent: var(--rust); }
+    .plant-row h3 { margin: 0 0 2px; font-size: 18px; font-weight: 500; }
+    .plant-row p { margin: 0; color: var(--ink-soft); font-size: 14px; }
+    .plant-row span {
+      border-radius: 999px; color: white; background: var(--accent); padding: 4px 8px;
+      font-family: var(--mono); font-size: 10px; letter-spacing: .05em; text-transform: uppercase;
+    }
+    .foot { margin-top: 28px; color: var(--ink-soft); font-size: 14px; line-height: 1.5; }
+    @media (max-width: 640px) {
+      .top { align-items: flex-start; flex-direction: column; }
+      .stats { grid-template-columns: 1fr; }
+      .plant-row { grid-template-columns: 1fr; }
+      .plant-row span { width: fit-content; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <nav class="top" aria-label="Species directory navigation">
+      <a class="brand" href="../">Forage <b>Berkeley</b></a>
+      <a class="app-link" href="../">Start quiz</a>
+    </nav>
+
+    <header class="hero">
+      <h1>Berkeley plant species directory</h1>
+      <p class="lede">Browse the 73 local wild plants, common trees, garden escapes, and toxic look-alikes in Forage Berkeley. The app uses this catalog for its photo quiz and field-guide browse mode.</p>
+      <p class="safety">This is a learning aid, not a safety guide. Never eat anything based on this directory or the app alone.</p>
+    </header>
+
+    <section class="stats" aria-label="Directory summary">
+      <div class="stat"><b>73</b> local species</div>
+      <div class="stat"><b>41</b> edible-use cards</div>
+      <div class="stat"><b>32</b> caution or avoid cards</div>
+    </section>
+
+      <section class="species-group" id="edible">
+        <div class="group-head">
+          <h2>Edible</h2>
+          <p>Plants in this group have edible uses in the app, but still need confident identification and clean harvesting conditions.</p>
+          <b>41 plants</b>
+        </div>
+        <ol>
+          <li class="plant-row" data-edibility="edible">
+            <div>
+              <h3>Dandelion</h3>
+              <p><i>Taraxacum officinale</i> · herb</p>
+            </div>
+            <span>Edible</span>
+          </li>
+          <li class="plant-row" data-edibility="edible">
+            <div>
+              <h3>Common Mallow (Cheeseweed)</h3>
+              <p><i>Malva neglecta</i> · herb</p>
+            </div>
+            <span>Edible</span>
+          </li>
+          <li class="plant-row" data-edibility="edible">
+            <div>
+              <h3>Chickweed</h3>
+              <p><i>Stellaria media</i> · herb</p>
+            </div>
+            <span>Edible</span>
+          </li>
+          <li class="plant-row" data-edibility="edible">
+            <div>
+              <h3>Common Purslane</h3>
+              <p><i>Portulaca oleracea</i> · herb</p>
+            </div>
+            <span>Edible</span>
+          </li>
+          <li class="plant-row" data-edibility="edible">
+            <div>
+              <h3>Lamb's Quarters</h3>
+              <p><i>Chenopodium album</i> · herb</p>
+            </div>
+            <span>Edible</span>
+          </li>
+          <li class="plant-row" data-edibility="edible">
+            <div>
+              <h3>Broadleaf Plantain</h3>
+              <p><i>Plantago major</i> · herb</p>
+            </div>
+            <span>Edible</span>
+          </li>
+          <li class="plant-row" data-edibility="edible">
+            <div>
+              <h3>Common Sow Thistle</h3>
+              <p><i>Sonchus oleraceus</i> · herb</p>
+            </div>
+            <span>Edible</span>
+          </li>
+          <li class="plant-row" data-edibility="edible">
+            <div>
+              <h3>Shepherd's Purse</h3>
+              <p><i>Capsella bursa-pastoris</i> · herb</p>
+            </div>
+            <span>Edible</span>
+          </li>
+          <li class="plant-row" data-edibility="edible">
+            <div>
+              <h3>Black Mustard</h3>
+              <p><i>Brassica nigra</i> · herb</p>
+            </div>
+            <span>Edible</span>
+          </li>
+          <li class="plant-row" data-edibility="edible">
+            <div>
+              <h3>Wild Radish</h3>
+              <p><i>Raphanus sativus</i> · herb</p>
+            </div>
+            <span>Edible</span>
+          </li>
+          <li class="plant-row" data-edibility="edible">
+            <div>
+              <h3>Redstem Filaree</h3>
+              <p><i>Erodium cicutarium</i> · herb</p>
+            </div>
+            <span>Edible</span>
+          </li>
+          <li class="plant-row" data-edibility="edible">
+            <div>
+              <h3>Miner's Lettuce</h3>
+              <p><i>Claytonia perfoliata</i> · herb</p>
+            </div>
+            <span>Edible</span>
+          </li>
+          <li class="plant-row" data-edibility="edible">
+            <div>
+              <h3>Yerba Buena</h3>
+              <p><i>Clinopodium douglasii</i> · herb</p>
+            </div>
+            <span>Edible</span>
+          </li>
+          <li class="plant-row" data-edibility="edible">
+            <div>
+              <h3>Pineapple Weed</h3>
+              <p><i>Matricaria discoidea</i> · herb</p>
+            </div>
+            <span>Edible</span>
+          </li>
+          <li class="plant-row" data-edibility="edible">
+            <div>
+              <h3>Three-cornered Leek</h3>
+              <p><i>Allium triquetrum</i> · herb</p>
+            </div>
+            <span>Edible</span>
+          </li>
+          <li class="plant-row" data-edibility="edible">
+            <div>
+              <h3>Wild Fennel</h3>
+              <p><i>Foeniculum vulgare</i> · herb</p>
+            </div>
+            <span>Edible</span>
+          </li>
+          <li class="plant-row" data-edibility="edible">
+            <div>
+              <h3>Nasturtium</h3>
+              <p><i>Tropaeolum majus</i> · vine</p>
+            </div>
+            <span>Edible</span>
+          </li>
+          <li class="plant-row" data-edibility="edible">
+            <div>
+              <h3>California Blackberry</h3>
+              <p><i>Rubus ursinus</i> · vine</p>
+            </div>
+            <span>Edible</span>
+          </li>
+          <li class="plant-row" data-edibility="edible">
+            <div>
+              <h3>Himalayan Blackberry</h3>
+              <p><i>Rubus armeniacus</i> · vine</p>
+            </div>
+            <span>Edible</span>
+          </li>
+          <li class="plant-row" data-edibility="edible">
+            <div>
+              <h3>Thimbleberry</h3>
+              <p><i>Rubus parviflorus</i> · shrub</p>
+            </div>
+            <span>Edible</span>
+          </li>
+          <li class="plant-row" data-edibility="edible">
+            <div>
+              <h3>California Wild Grape</h3>
+              <p><i>Vitis californica</i> · vine</p>
+            </div>
+            <span>Edible</span>
+          </li>
+          <li class="plant-row" data-edibility="edible">
+            <div>
+              <h3>Manzanita</h3>
+              <p><i>Arctostaphylos spp.</i> · shrub</p>
+            </div>
+            <span>Edible</span>
+          </li>
+          <li class="plant-row" data-edibility="edible">
+            <div>
+              <h3>California Wild Rose</h3>
+              <p><i>Rosa californica</i> · shrub</p>
+            </div>
+            <span>Edible</span>
+          </li>
+          <li class="plant-row" data-edibility="edible">
+            <div>
+              <h3>California Bay Laurel</h3>
+              <p><i>Umbellularia californica</i> · tree</p>
+            </div>
+            <span>Edible</span>
+          </li>
+          <li class="plant-row" data-edibility="edible">
+            <div>
+              <h3>California Black Walnut</h3>
+              <p><i>Juglans hindsii</i> · tree</p>
+            </div>
+            <span>Edible</span>
+          </li>
+          <li class="plant-row" data-edibility="edible">
+            <div>
+              <h3>Loquat</h3>
+              <p><i>Eriobotrya japonica</i> · tree</p>
+            </div>
+            <span>Edible</span>
+          </li>
+          <li class="plant-row" data-edibility="edible">
+            <div>
+              <h3>Cherry Plum</h3>
+              <p><i>Prunus cerasifera</i> · tree</p>
+            </div>
+            <span>Edible</span>
+          </li>
+          <li class="plant-row" data-edibility="edible">
+            <div>
+              <h3>Common Fig</h3>
+              <p><i>Ficus carica</i> · tree</p>
+            </div>
+            <span>Edible</span>
+          </li>
+          <li class="plant-row" data-edibility="edible">
+            <div>
+              <h3>Rosemary</h3>
+              <p><i>Salvia rosmarinus</i> · shrub</p>
+            </div>
+            <span>Edible</span>
+          </li>
+          <li class="plant-row" data-edibility="edible">
+            <div>
+              <h3>Mulberry</h3>
+              <p><i>Morus alba</i> · tree</p>
+            </div>
+            <span>Edible</span>
+          </li>
+          <li class="plant-row" data-edibility="edible">
+            <div>
+              <h3>Persimmon</h3>
+              <p><i>Diospyros kaki</i> · tree</p>
+            </div>
+            <span>Edible</span>
+          </li>
+          <li class="plant-row" data-edibility="edible">
+            <div>
+              <h3>Pomegranate</h3>
+              <p><i>Punica granatum</i> · tree</p>
+            </div>
+            <span>Edible</span>
+          </li>
+          <li class="plant-row" data-edibility="edible">
+            <div>
+              <h3>Lemon</h3>
+              <p><i>Citrus × limon</i> · tree</p>
+            </div>
+            <span>Edible</span>
+          </li>
+          <li class="plant-row" data-edibility="edible">
+            <div>
+              <h3>Apple</h3>
+              <p><i>Malus domestica</i> · tree</p>
+            </div>
+            <span>Edible</span>
+          </li>
+          <li class="plant-row" data-edibility="edible">
+            <div>
+              <h3>Almond</h3>
+              <p><i>Prunus dulcis</i> · tree</p>
+            </div>
+            <span>Edible</span>
+          </li>
+          <li class="plant-row" data-edibility="edible">
+            <div>
+              <h3>Carob</h3>
+              <p><i>Ceratonia siliqua</i> · tree</p>
+            </div>
+            <span>Edible</span>
+          </li>
+          <li class="plant-row" data-edibility="edible">
+            <div>
+              <h3>Strawberry Tree</h3>
+              <p><i>Arbutus unedo</i> · tree</p>
+            </div>
+            <span>Edible</span>
+          </li>
+          <li class="plant-row" data-edibility="edible">
+            <div>
+              <h3>Pineapple Guava (Feijoa)</h3>
+              <p><i>Acca sellowiana</i> · shrub</p>
+            </div>
+            <span>Edible</span>
+          </li>
+          <li class="plant-row" data-edibility="edible">
+            <div>
+              <h3>Hawthorn</h3>
+              <p><i>Crataegus monogyna</i> · tree</p>
+            </div>
+            <span>Edible</span>
+          </li>
+          <li class="plant-row" data-edibility="edible">
+            <div>
+              <h3>Avocado</h3>
+              <p><i>Persea americana</i> · tree</p>
+            </div>
+            <span>Edible</span>
+          </li>
+          <li class="plant-row" data-edibility="edible">
+            <div>
+              <h3>Western Redbud</h3>
+              <p><i>Cercis occidentalis</i> · shrub</p>
+            </div>
+            <span>Edible</span>
+          </li>
+        </ol>
+      </section>
+
+      <section class="species-group" id="care">
+        <div class="group-head">
+          <h2>Use with care</h2>
+          <p>Plants in this group need preparation, restraint, or extra caution. Read the warning before treating them as food.</p>
+          <b>21 plants</b>
+        </div>
+        <ol>
+          <li class="plant-row" data-edibility="care">
+            <div>
+              <h3>Prickly Lettuce</h3>
+              <p><i>Lactuca serriola</i> · herb</p>
+            </div>
+            <span>Use with care</span>
+          </li>
+          <li class="plant-row" data-edibility="care">
+            <div>
+              <h3>Curly Dock</h3>
+              <p><i>Rumex crispus</i> · herb</p>
+            </div>
+            <span>Use with care</span>
+          </li>
+          <li class="plant-row" data-edibility="care">
+            <div>
+              <h3>Sheep Sorrel</h3>
+              <p><i>Rumex acetosella</i> · herb</p>
+            </div>
+            <span>Use with care</span>
+          </li>
+          <li class="plant-row" data-edibility="care">
+            <div>
+              <h3>Cleavers</h3>
+              <p><i>Galium aparine</i> · herb</p>
+            </div>
+            <span>Use with care</span>
+          </li>
+          <li class="plant-row" data-edibility="care">
+            <div>
+              <h3>Stinging Nettle</h3>
+              <p><i>Urtica dioica</i> · herb</p>
+            </div>
+            <span>Use with care</span>
+          </li>
+          <li class="plant-row" data-edibility="care">
+            <div>
+              <h3>California Mugwort</h3>
+              <p><i>Artemisia douglasiana</i> · herb</p>
+            </div>
+            <span>Use with care</span>
+          </li>
+          <li class="plant-row" data-edibility="care">
+            <div>
+              <h3>Sourgrass (Bermuda Buttercup)</h3>
+              <p><i>Oxalis pes-caprae</i> · herb</p>
+            </div>
+            <span>Use with care</span>
+          </li>
+          <li class="plant-row" data-edibility="care">
+            <div>
+              <h3>Blue Elderberry</h3>
+              <p><i>Sambucus nigra ssp. cerulea</i> · shrub</p>
+            </div>
+            <span>Use with care</span>
+          </li>
+          <li class="plant-row" data-edibility="care">
+            <div>
+              <h3>Toyon</h3>
+              <p><i>Heteromeles arbutifolia</i> · shrub</p>
+            </div>
+            <span>Use with care</span>
+          </li>
+          <li class="plant-row" data-edibility="care">
+            <div>
+              <h3>Prickly Pear</h3>
+              <p><i>Opuntia ficus-indica</i> · cactus</p>
+            </div>
+            <span>Use with care</span>
+          </li>
+          <li class="plant-row" data-edibility="care">
+            <div>
+              <h3>Coast Live Oak</h3>
+              <p><i>Quercus agrifolia</i> · tree</p>
+            </div>
+            <span>Use with care</span>
+          </li>
+          <li class="plant-row" data-edibility="care">
+            <div>
+              <h3>Valley Oak</h3>
+              <p><i>Quercus lobata</i> · tree</p>
+            </div>
+            <span>Use with care</span>
+          </li>
+          <li class="plant-row" data-edibility="care">
+            <div>
+              <h3>Pacific Madrone</h3>
+              <p><i>Arbutus menziesii</i> · tree</p>
+            </div>
+            <span>Use with care</span>
+          </li>
+          <li class="plant-row" data-edibility="care">
+            <div>
+              <h3>Olive</h3>
+              <p><i>Olea europaea</i> · tree</p>
+            </div>
+            <span>Use with care</span>
+          </li>
+          <li class="plant-row" data-edibility="care">
+            <div>
+              <h3>Bigleaf Maple</h3>
+              <p><i>Acer macrophyllum</i> · tree</p>
+            </div>
+            <span>Use with care</span>
+          </li>
+          <li class="plant-row" data-edibility="care">
+            <div>
+              <h3>Hollyleaf Cherry</h3>
+              <p><i>Prunus ilicifolia</i> · shrub</p>
+            </div>
+            <span>Use with care</span>
+          </li>
+          <li class="plant-row" data-edibility="care">
+            <div>
+              <h3>California Juniper</h3>
+              <p><i>Juniperus californica</i> · shrub</p>
+            </div>
+            <span>Use with care</span>
+          </li>
+          <li class="plant-row" data-edibility="care">
+            <div>
+              <h3>Monterey Pine</h3>
+              <p><i>Pinus radiata</i> · tree</p>
+            </div>
+            <span>Use with care</span>
+          </li>
+          <li class="plant-row" data-edibility="care">
+            <div>
+              <h3>Arroyo Willow</h3>
+              <p><i>Salix lasiolepis</i> · tree</p>
+            </div>
+            <span>Use with care</span>
+          </li>
+          <li class="plant-row" data-edibility="care">
+            <div>
+              <h3>Blue Gum Eucalyptus</h3>
+              <p><i>Eucalyptus globulus</i> · tree</p>
+            </div>
+            <span>Use with care</span>
+          </li>
+          <li class="plant-row" data-edibility="care">
+            <div>
+              <h3>Black Locust</h3>
+              <p><i>Robinia pseudoacacia</i> · tree</p>
+            </div>
+            <span>Use with care</span>
+          </li>
+        </ol>
+      </section>
+
+      <section class="species-group" id="no">
+        <div class="group-head">
+          <h2>Recognition only</h2>
+          <p>Plants in this group are included so learners recognize what to avoid. Do not eat them.</p>
+          <b>11 plants</b>
+        </div>
+        <ol>
+          <li class="plant-row" data-edibility="no">
+            <div>
+              <h3>Poison Hemlock</h3>
+              <p><i>Conium maculatum</i> · herb</p>
+            </div>
+            <span>Recognition only</span>
+          </li>
+          <li class="plant-row" data-edibility="no">
+            <div>
+              <h3>Poison Oak</h3>
+              <p><i>Toxicodendron diversilobum</i> · shrub</p>
+            </div>
+            <span>Recognition only</span>
+          </li>
+          <li class="plant-row" data-edibility="no">
+            <div>
+              <h3>Sacred Datura (Jimsonweed)</h3>
+              <p><i>Datura wrightii</i> · herb</p>
+            </div>
+            <span>Recognition only</span>
+          </li>
+          <li class="plant-row" data-edibility="no">
+            <div>
+              <h3>Oleander</h3>
+              <p><i>Nerium oleander</i> · shrub</p>
+            </div>
+            <span>Recognition only</span>
+          </li>
+          <li class="plant-row" data-edibility="no">
+            <div>
+              <h3>Foxglove</h3>
+              <p><i>Digitalis purpurea</i> · herb</p>
+            </div>
+            <span>Recognition only</span>
+          </li>
+          <li class="plant-row" data-edibility="no">
+            <div>
+              <h3>Castor Bean</h3>
+              <p><i>Ricinus communis</i> · shrub</p>
+            </div>
+            <span>Recognition only</span>
+          </li>
+          <li class="plant-row" data-edibility="no">
+            <div>
+              <h3>English Yew</h3>
+              <p><i>Taxus baccata</i> · tree</p>
+            </div>
+            <span>Recognition only</span>
+          </li>
+          <li class="plant-row" data-edibility="no">
+            <div>
+              <h3>Privet</h3>
+              <p><i>Ligustrum lucidum</i> · shrub</p>
+            </div>
+            <span>Recognition only</span>
+          </li>
+          <li class="plant-row" data-edibility="no">
+            <div>
+              <h3>Firethorn (Pyracantha)</h3>
+              <p><i>Pyracantha coccinea</i> · shrub</p>
+            </div>
+            <span>Recognition only</span>
+          </li>
+          <li class="plant-row" data-edibility="no">
+            <div>
+              <h3>Cotoneaster</h3>
+              <p><i>Cotoneaster franchetii</i> · shrub</p>
+            </div>
+            <span>Recognition only</span>
+          </li>
+          <li class="plant-row" data-edibility="no">
+            <div>
+              <h3>Horse Chestnut</h3>
+              <p><i>Aesculus hippocastanum</i> · tree</p>
+            </div>
+            <span>Recognition only</span>
+          </li>
+        </ol>
+      </section>
+
+    <p class="foot">Want to practice from photos instead of reading the list? <a href="../">Start the Forage Berkeley quiz</a> or use the app's Browse plants tab.</p>
+  </main>
+</body>
+</html>
