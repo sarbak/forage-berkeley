@@ -149,6 +149,8 @@
     .closebtn { width: 100%; min-height: 50px; margin-top: 12px; border-radius: 14px; border: 1px solid var(--line); background: var(--card); font-family: var(--mono); font-size: 13px; cursor: pointer; }
 
     .foot { text-align: center; margin-top: 8px; font-size: 11px; color: var(--ink-soft); line-height: 1.45; }
+    .foot .trial { display: block; margin-bottom: 2px; color: var(--ink); font-family: var(--mono); font-size: 10px; letter-spacing: .04em; }
+    .foot .safety { display: block; }
     .foot a { color: var(--rust-deep); }
     .foot .offline { display: block; font-family: var(--mono); font-size: 10px; letter-spacing: .05em; margin-top: 2px; }
     .foot .offline:empty { display: none; }
@@ -214,8 +216,9 @@
       </div>
     </section>
 
-    <p class="foot">A learning aid, not a safety guide. Never eat anything ID'd from this app alone.
-      <a href="CREDITS.md" id="creditslink">Photo credits</a>
+    <p class="foot"><span class="trial">Free to try. No signup or payment. Progress saves on this device.</span>
+      <span class="safety">A learning aid, not a safety guide. Never eat anything ID'd from this app alone.
+      <a href="CREDITS.md" id="creditslink">Photo credits</a></span>
       <span class="offline" id="offline-status"></span></p>
   </div>
 
