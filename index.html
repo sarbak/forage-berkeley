@@ -42,7 +42,8 @@
     .brand b { color: var(--sage-deep); }
     .stats { font-family: var(--mono); font-size: 11px; color: var(--ink-soft); text-align: right; line-height: 1.35; }
     .stats b { color: var(--ink); }
-    .tabs { display: flex; gap: 6px; margin: 11px 0 12px; }
+    .hero-title { margin: 12px 0 5px; font-size: 25px; line-height: 1.08; font-weight: 600; }
+    .tabs { display: flex; gap: 6px; margin: 9px 0 12px; }
     .tab { flex: 1; font-family: var(--mono); font-size: 12px; letter-spacing: 0.04em; padding: 10px;
       border-radius: 11px; border: 1px solid var(--line); background: transparent; color: var(--ink-soft); cursor: pointer; }
     .tab[aria-selected="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
@@ -176,6 +177,7 @@
       <div class="brand">Forage <b>Berkeley</b></div>
       <div class="stats" id="stats">&nbsp;</div>
     </div>
+    <h1 class="hero-title">Learn Berkeley’s wild plants by sight</h1>
     <div class="tabs" role="tablist">
       <button class="tab" id="tab-learn" role="tab" aria-selected="true">Learn</button>
       <button class="tab" id="tab-browse" role="tab" aria-selected="false">Browse</button>
