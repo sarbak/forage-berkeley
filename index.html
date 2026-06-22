@@ -23,7 +23,7 @@
     :root {
       --paper: #f7f3ec; --card: #fffdf9; --ink: #2b2118; --ink-soft: #7b6c57;
       --rust: #a8421f; --rust-deep: #7d2f14; --sage: #5e6b43; --sage-deep:#46512f;
-      --amber: #b9791b; --line: #e6dccb; --green:#3f7d3a; --red:#b23b22;
+      --amber: #8f5a10; --line: #e6dccb; --green:#3f7d3a; --red:#b23b22;
       --serif: "Fraunces", Georgia, serif; --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
     }
     * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
@@ -49,6 +49,8 @@
 
     .view { flex: 1; min-height: 0; display: none; flex-direction: column; }
     .view.active { display: flex; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 
     /* ---------- QUIZ ---------- */
     .qhead { font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
@@ -187,6 +189,7 @@
 
     <section class="view" id="browse">
       <div class="browse-wrap">
+        <label class="sr-only" for="search">Search plants</label>
         <input class="search" id="search" type="search" placeholder="Search plants…" autocomplete="off" />
         <div class="bfilters">
           <button class="bchip" data-bf="all" aria-pressed="true">All</button>
