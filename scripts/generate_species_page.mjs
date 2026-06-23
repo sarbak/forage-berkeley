@@ -28,7 +28,7 @@ function esc(value) {
 }
 
 function plantRow(plant) {
-  return `          <li class="plant-row" data-edibility="${esc(plant.edibility)}">
+  return `          <li class="plant-row" data-edibility="${esc(plant.edibility)}" data-search="${esc(`${plant.commonName} ${plant.scientificName}`)}">
             <div>
               <h3>${esc(plant.commonName)}</h3>
               <p><i>${esc(plant.scientificName)}</i> · ${esc(plant.category)}</p>
@@ -110,6 +110,7 @@ const html = `<!DOCTYPE html>
     .top { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 24px; }
     .brand { font-weight: 600; font-size: 18px; color: var(--ink); text-decoration: none; }
     .brand b { color: var(--sage-deep); }
+    .app-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 14px; }
     .app-link { font-family: var(--mono); font-size: 12px; letter-spacing: .05em; text-transform: uppercase; }
     .hero { display: grid; gap: 14px; margin-bottom: 26px; }
     h1 { margin: 0; max-width: 760px; font-size: clamp(34px, 6vw, 56px); line-height: 1; font-weight: 600; }
@@ -125,6 +126,23 @@ const html = `<!DOCTYPE html>
       padding: 10px; font-family: var(--mono); color: var(--ink-soft); font-size: 11px;
     }
     .stat b { display: block; color: var(--ink); font-size: 20px; font-weight: 500; line-height: 1.1; }
+    .directory-controls {
+      display: grid; gap: 10px; margin: 0 0 24px; padding: 12px;
+      border: 1px solid var(--line); border-radius: 8px; background: rgba(255,253,249,.62);
+    }
+    .directory-label { font-family: var(--mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); }
+    .directory-search {
+      width: 100%; min-height: 44px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px;
+      background: var(--card); color: var(--ink); font: 16px var(--serif);
+    }
+    .filter-row { display: flex; flex-wrap: wrap; gap: 8px; }
+    .filter-chip {
+      min-height: 34px; padding: 0 12px; border-radius: 999px; border: 1px solid var(--line);
+      background: transparent; color: var(--ink-soft); font-family: var(--mono); font-size: 11px;
+      letter-spacing: .05em; text-transform: uppercase; cursor: pointer;
+    }
+    .filter-chip[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+    .filter-status, .no-results { margin: 0; color: var(--ink-soft); font-size: 14px; line-height: 1.4; }
     .species-group { margin-top: 18px; }
     .group-head {
       display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px 16px; align-items: start;
@@ -151,6 +169,7 @@ const html = `<!DOCTYPE html>
     .foot { margin-top: 28px; color: var(--ink-soft); font-size: 14px; line-height: 1.5; }
     @media (max-width: 640px) {
       .top { align-items: flex-start; flex-direction: column; }
+      .app-actions { justify-content: flex-start; }
       .stats { grid-template-columns: 1fr; }
       .plant-row { grid-template-columns: 1fr; }
       .plant-row span { width: fit-content; }
@@ -161,7 +180,10 @@ const html = `<!DOCTYPE html>
   <main class="wrap">
     <nav class="top" aria-label="Species directory navigation">
       <a class="brand" href="../">Forage <b>Berkeley</b></a>
-      <a class="app-link" href="../">Start quiz</a>
+      <div class="app-actions">
+        <a class="app-link" href="../#quiz">Start quiz</a>
+        <a class="app-link" href="../#browse">Browse plants</a>
+      </div>
     </nav>
 
     <header class="hero">
@@ -176,10 +198,67 @@ const html = `<!DOCTYPE html>
       <div class="stat"><b>${(counts.care || 0) + (counts.no || 0)}</b> caution or avoid cards</div>
     </section>
 
+    <section class="directory-controls" aria-label="Search and filter species">
+      <label class="directory-label" for="species-search">Find a plant</label>
+      <input class="directory-search" id="species-search" type="search" placeholder="Search by common or scientific name" autocomplete="off" />
+      <div class="filter-row" role="group" aria-label="Filter by safety label">
+        <button class="filter-chip" type="button" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter-chip" type="button" data-filter="edible" aria-pressed="false">Edible</button>
+        <button class="filter-chip" type="button" data-filter="care" aria-pressed="false">Use with care</button>
+        <button class="filter-chip" type="button" data-filter="no" aria-pressed="false">Recognition only</button>
+      </div>
+      <p class="filter-status" id="species-status" aria-live="polite">Showing all ${plants.length} plants.</p>
+      <p class="no-results" id="species-no-results" hidden>No plants match that search.</p>
+    </section>
+
 ${["edible", "care", "no"].map(groupSection).join("\n\n")}
 
-    <p class="foot">Want to practice from photos instead of reading the list? <a href="../">Start the Forage Berkeley quiz</a> or use the app's Browse plants tab.</p>
+    <p class="foot">Want to practice from photos instead of reading the list? <a href="../#quiz">Start the Forage Berkeley quiz</a> or use the app's <a href="../#browse">Browse plants</a> tab.</p>
   </main>
+  <script>
+    (function () {
+      var search = document.getElementById("species-search");
+      var status = document.getElementById("species-status");
+      var noResults = document.getElementById("species-no-results");
+      var rows = Array.prototype.slice.call(document.querySelectorAll(".plant-row"));
+      var groups = Array.prototype.slice.call(document.querySelectorAll(".species-group"));
+      var chips = Array.prototype.slice.call(document.querySelectorAll(".filter-chip"));
+      var activeFilter = "all";
+      var labels = { all: "all labels", edible: "edible", care: "use with care", no: "recognition only" };
+
+      function applyFilters() {
+        var query = search.value.trim().toLowerCase();
+        var visible = 0;
+        rows.forEach(function (row) {
+          var edibility = row.getAttribute("data-edibility");
+          var matchesFilter = activeFilter === "all" || edibility === activeFilter;
+          var matchesQuery = !query || row.getAttribute("data-search").toLowerCase().indexOf(query) !== -1;
+          var show = matchesFilter && matchesQuery;
+          row.hidden = !show;
+          if (show) visible++;
+        });
+        groups.forEach(function (group) {
+          var hasVisible = !!group.querySelector(".plant-row:not([hidden])");
+          group.hidden = !hasVisible;
+        });
+        status.textContent = query || activeFilter !== "all"
+          ? "Showing " + visible + " of " + rows.length + " plants for " + labels[activeFilter] + "."
+          : "Showing all " + rows.length + " plants.";
+        noResults.hidden = visible !== 0;
+      }
+
+      search.addEventListener("input", applyFilters);
+      chips.forEach(function (chip) {
+        chip.addEventListener("click", function () {
+          activeFilter = chip.getAttribute("data-filter");
+          chips.forEach(function (button) {
+            button.setAttribute("aria-pressed", button === chip ? "true" : "false");
+          });
+          applyFilters();
+        });
+      });
+    }());
+  </script>
 </body>
 </html>
 `;

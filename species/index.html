@@ -73,6 +73,23 @@
       padding: 10px; font-family: var(--mono); color: var(--ink-soft); font-size: 11px;
     }
     .stat b { display: block; color: var(--ink); font-size: 20px; font-weight: 500; line-height: 1.1; }
+    .directory-controls {
+      display: grid; gap: 10px; margin: 0 0 24px; padding: 12px;
+      border: 1px solid var(--line); border-radius: 8px; background: rgba(255,253,249,.62);
+    }
+    .directory-label { font-family: var(--mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); }
+    .directory-search {
+      width: 100%; min-height: 44px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px;
+      background: var(--card); color: var(--ink); font: 16px var(--serif);
+    }
+    .filter-row { display: flex; flex-wrap: wrap; gap: 8px; }
+    .filter-chip {
+      min-height: 34px; padding: 0 12px; border-radius: 999px; border: 1px solid var(--line);
+      background: transparent; color: var(--ink-soft); font-family: var(--mono); font-size: 11px;
+      letter-spacing: .05em; text-transform: uppercase; cursor: pointer;
+    }
+    .filter-chip[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+    .filter-status, .no-results { margin: 0; color: var(--ink-soft); font-size: 14px; line-height: 1.4; }
     .species-group { margin-top: 18px; }
     .group-head {
       display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px 16px; align-items: start;
@@ -128,6 +145,19 @@
       <div class="stat"><b>32</b> caution or avoid cards</div>
     </section>
 
+    <section class="directory-controls" aria-label="Search and filter species">
+      <label class="directory-label" for="species-search">Find a plant</label>
+      <input class="directory-search" id="species-search" type="search" placeholder="Search by common or scientific name" autocomplete="off" />
+      <div class="filter-row" role="group" aria-label="Filter by safety label">
+        <button class="filter-chip" type="button" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter-chip" type="button" data-filter="edible" aria-pressed="false">Edible</button>
+        <button class="filter-chip" type="button" data-filter="care" aria-pressed="false">Use with care</button>
+        <button class="filter-chip" type="button" data-filter="no" aria-pressed="false">Recognition only</button>
+      </div>
+      <p class="filter-status" id="species-status" aria-live="polite">Showing all 73 plants.</p>
+      <p class="no-results" id="species-no-results" hidden>No plants match that search.</p>
+    </section>
+
       <section class="species-group" id="edible">
         <div class="group-head">
           <h2>Edible</h2>
@@ -135,287 +165,287 @@
           <b>41 plants</b>
         </div>
         <ol>
-          <li class="plant-row" data-edibility="edible">
+          <li class="plant-row" data-edibility="edible" data-search="Dandelion Taraxacum officinale">
             <div>
               <h3>Dandelion</h3>
               <p><i>Taraxacum officinale</i> · herb</p>
             </div>
             <span>Edible</span>
           </li>
-          <li class="plant-row" data-edibility="edible">
+          <li class="plant-row" data-edibility="edible" data-search="Common Mallow (Cheeseweed) Malva neglecta">
             <div>
               <h3>Common Mallow (Cheeseweed)</h3>
               <p><i>Malva neglecta</i> · herb</p>
             </div>
             <span>Edible</span>
           </li>
-          <li class="plant-row" data-edibility="edible">
+          <li class="plant-row" data-edibility="edible" data-search="Chickweed Stellaria media">
             <div>
               <h3>Chickweed</h3>
               <p><i>Stellaria media</i> · herb</p>
             </div>
             <span>Edible</span>
           </li>
-          <li class="plant-row" data-edibility="edible">
+          <li class="plant-row" data-edibility="edible" data-search="Common Purslane Portulaca oleracea">
             <div>
               <h3>Common Purslane</h3>
               <p><i>Portulaca oleracea</i> · herb</p>
             </div>
             <span>Edible</span>
           </li>
-          <li class="plant-row" data-edibility="edible">
+          <li class="plant-row" data-edibility="edible" data-search="Lamb's Quarters Chenopodium album">
             <div>
               <h3>Lamb's Quarters</h3>
               <p><i>Chenopodium album</i> · herb</p>
             </div>
             <span>Edible</span>
           </li>
-          <li class="plant-row" data-edibility="edible">
+          <li class="plant-row" data-edibility="edible" data-search="Broadleaf Plantain Plantago major">
             <div>
               <h3>Broadleaf Plantain</h3>
               <p><i>Plantago major</i> · herb</p>
             </div>
             <span>Edible</span>
           </li>
-          <li class="plant-row" data-edibility="edible">
+          <li class="plant-row" data-edibility="edible" data-search="Common Sow Thistle Sonchus oleraceus">
             <div>
               <h3>Common Sow Thistle</h3>
               <p><i>Sonchus oleraceus</i> · herb</p>
             </div>
             <span>Edible</span>
           </li>
-          <li class="plant-row" data-edibility="edible">
+          <li class="plant-row" data-edibility="edible" data-search="Shepherd's Purse Capsella bursa-pastoris">
             <div>
               <h3>Shepherd's Purse</h3>
               <p><i>Capsella bursa-pastoris</i> · herb</p>
             </div>
             <span>Edible</span>
           </li>
-          <li class="plant-row" data-edibility="edible">
+          <li class="plant-row" data-edibility="edible" data-search="Black Mustard Brassica nigra">
             <div>
               <h3>Black Mustard</h3>
               <p><i>Brassica nigra</i> · herb</p>
             </div>
             <span>Edible</span>
           </li>
-          <li class="plant-row" data-edibility="edible">
+          <li class="plant-row" data-edibility="edible" data-search="Wild Radish Raphanus sativus">
             <div>
               <h3>Wild Radish</h3>
               <p><i>Raphanus sativus</i> · herb</p>
             </div>
             <span>Edible</span>
           </li>
-          <li class="plant-row" data-edibility="edible">
+          <li class="plant-row" data-edibility="edible" data-search="Redstem Filaree Erodium cicutarium">
             <div>
               <h3>Redstem Filaree</h3>
               <p><i>Erodium cicutarium</i> · herb</p>
             </div>
             <span>Edible</span>
           </li>
-          <li class="plant-row" data-edibility="edible">
+          <li class="plant-row" data-edibility="edible" data-search="Miner's Lettuce Claytonia perfoliata">
             <div>
               <h3>Miner's Lettuce</h3>
               <p><i>Claytonia perfoliata</i> · herb</p>
             </div>
             <span>Edible</span>
           </li>
-          <li class="plant-row" data-edibility="edible">
+          <li class="plant-row" data-edibility="edible" data-search="Yerba Buena Clinopodium douglasii">
             <div>
               <h3>Yerba Buena</h3>
               <p><i>Clinopodium douglasii</i> · herb</p>
             </div>
             <span>Edible</span>
           </li>
-          <li class="plant-row" data-edibility="edible">
+          <li class="plant-row" data-edibility="edible" data-search="Pineapple Weed Matricaria discoidea">
             <div>
               <h3>Pineapple Weed</h3>
               <p><i>Matricaria discoidea</i> · herb</p>
             </div>
             <span>Edible</span>
           </li>
-          <li class="plant-row" data-edibility="edible">
+          <li class="plant-row" data-edibility="edible" data-search="Three-cornered Leek Allium triquetrum">
             <div>
               <h3>Three-cornered Leek</h3>
               <p><i>Allium triquetrum</i> · herb</p>
             </div>
             <span>Edible</span>
           </li>
-          <li class="plant-row" data-edibility="edible">
+          <li class="plant-row" data-edibility="edible" data-search="Wild Fennel Foeniculum vulgare">
             <div>
               <h3>Wild Fennel</h3>
               <p><i>Foeniculum vulgare</i> · herb</p>
             </div>
             <span>Edible</span>
           </li>
-          <li class="plant-row" data-edibility="edible">
+          <li class="plant-row" data-edibility="edible" data-search="Nasturtium Tropaeolum majus">
             <div>
               <h3>Nasturtium</h3>
               <p><i>Tropaeolum majus</i> · vine</p>
             </div>
             <span>Edible</span>
           </li>
-          <li class="plant-row" data-edibility="edible">
+          <li class="plant-row" data-edibility="edible" data-search="California Blackberry Rubus ursinus">
             <div>
               <h3>California Blackberry</h3>
               <p><i>Rubus ursinus</i> · vine</p>
             </div>
             <span>Edible</span>
           </li>
-          <li class="plant-row" data-edibility="edible">
+          <li class="plant-row" data-edibility="edible" data-search="Himalayan Blackberry Rubus armeniacus">
             <div>
               <h3>Himalayan Blackberry</h3>
               <p><i>Rubus armeniacus</i> · vine</p>
             </div>
             <span>Edible</span>
           </li>
-          <li class="plant-row" data-edibility="edible">
+          <li class="plant-row" data-edibility="edible" data-search="Thimbleberry Rubus parviflorus">
             <div>
               <h3>Thimbleberry</h3>
               <p><i>Rubus parviflorus</i> · shrub</p>
             </div>
             <span>Edible</span>
           </li>
-          <li class="plant-row" data-edibility="edible">
+          <li class="plant-row" data-edibility="edible" data-search="California Wild Grape Vitis californica">
             <div>
               <h3>California Wild Grape</h3>
               <p><i>Vitis californica</i> · vine</p>
             </div>
             <span>Edible</span>
           </li>
-          <li class="plant-row" data-edibility="edible">
+          <li class="plant-row" data-edibility="edible" data-search="Manzanita Arctostaphylos spp.">
             <div>
               <h3>Manzanita</h3>
               <p><i>Arctostaphylos spp.</i> · shrub</p>
             </div>
             <span>Edible</span>
           </li>
-          <li class="plant-row" data-edibility="edible">
+          <li class="plant-row" data-edibility="edible" data-search="California Wild Rose Rosa californica">
             <div>
               <h3>California Wild Rose</h3>
               <p><i>Rosa californica</i> · shrub</p>
             </div>
             <span>Edible</span>
           </li>
-          <li class="plant-row" data-edibility="edible">
+          <li class="plant-row" data-edibility="edible" data-search="California Bay Laurel Umbellularia californica">
             <div>
               <h3>California Bay Laurel</h3>
               <p><i>Umbellularia californica</i> · tree</p>
             </div>
             <span>Edible</span>
           </li>
-          <li class="plant-row" data-edibility="edible">
+          <li class="plant-row" data-edibility="edible" data-search="California Black Walnut Juglans hindsii">
             <div>
               <h3>California Black Walnut</h3>
               <p><i>Juglans hindsii</i> · tree</p>
             </div>
             <span>Edible</span>
           </li>
-          <li class="plant-row" data-edibility="edible">
+          <li class="plant-row" data-edibility="edible" data-search="Loquat Eriobotrya japonica">
             <div>
               <h3>Loquat</h3>
               <p><i>Eriobotrya japonica</i> · tree</p>
             </div>
             <span>Edible</span>
           </li>
-          <li class="plant-row" data-edibility="edible">
+          <li class="plant-row" data-edibility="edible" data-search="Cherry Plum Prunus cerasifera">
             <div>
               <h3>Cherry Plum</h3>
               <p><i>Prunus cerasifera</i> · tree</p>
             </div>
             <span>Edible</span>
           </li>
-          <li class="plant-row" data-edibility="edible">
+          <li class="plant-row" data-edibility="edible" data-search="Common Fig Ficus carica">
             <div>
               <h3>Common Fig</h3>
               <p><i>Ficus carica</i> · tree</p>
             </div>
             <span>Edible</span>
           </li>
-          <li class="plant-row" data-edibility="edible">
+          <li class="plant-row" data-edibility="edible" data-search="Rosemary Salvia rosmarinus">
             <div>
               <h3>Rosemary</h3>
               <p><i>Salvia rosmarinus</i> · shrub</p>
             </div>
             <span>Edible</span>
           </li>
-          <li class="plant-row" data-edibility="edible">
+          <li class="plant-row" data-edibility="edible" data-search="Mulberry Morus alba">
             <div>
               <h3>Mulberry</h3>
               <p><i>Morus alba</i> · tree</p>
             </div>
             <span>Edible</span>
           </li>
-          <li class="plant-row" data-edibility="edible">
+          <li class="plant-row" data-edibility="edible" data-search="Persimmon Diospyros kaki">
             <div>
               <h3>Persimmon</h3>
               <p><i>Diospyros kaki</i> · tree</p>
             </div>
             <span>Edible</span>
           </li>
-          <li class="plant-row" data-edibility="edible">
+          <li class="plant-row" data-edibility="edible" data-search="Pomegranate Punica granatum">
             <div>
               <h3>Pomegranate</h3>
               <p><i>Punica granatum</i> · tree</p>
             </div>
             <span>Edible</span>
           </li>
-          <li class="plant-row" data-edibility="edible">
+          <li class="plant-row" data-edibility="edible" data-search="Lemon Citrus × limon">
             <div>
               <h3>Lemon</h3>
               <p><i>Citrus × limon</i> · tree</p>
             </div>
             <span>Edible</span>
           </li>
-          <li class="plant-row" data-edibility="edible">
+          <li class="plant-row" data-edibility="edible" data-search="Apple Malus domestica">
             <div>
               <h3>Apple</h3>
               <p><i>Malus domestica</i> · tree</p>
             </div>
             <span>Edible</span>
           </li>
-          <li class="plant-row" data-edibility="edible">
+          <li class="plant-row" data-edibility="edible" data-search="Almond Prunus dulcis">
             <div>
               <h3>Almond</h3>
               <p><i>Prunus dulcis</i> · tree</p>
             </div>
             <span>Edible</span>
           </li>
-          <li class="plant-row" data-edibility="edible">
+          <li class="plant-row" data-edibility="edible" data-search="Carob Ceratonia siliqua">
             <div>
               <h3>Carob</h3>
               <p><i>Ceratonia siliqua</i> · tree</p>
             </div>
             <span>Edible</span>
           </li>
-          <li class="plant-row" data-edibility="edible">
+          <li class="plant-row" data-edibility="edible" data-search="Strawberry Tree Arbutus unedo">
             <div>
               <h3>Strawberry Tree</h3>
               <p><i>Arbutus unedo</i> · tree</p>
             </div>
             <span>Edible</span>
           </li>
-          <li class="plant-row" data-edibility="edible">
+          <li class="plant-row" data-edibility="edible" data-search="Pineapple Guava (Feijoa) Acca sellowiana">
             <div>
               <h3>Pineapple Guava (Feijoa)</h3>
               <p><i>Acca sellowiana</i> · shrub</p>
             </div>
             <span>Edible</span>
           </li>
-          <li class="plant-row" data-edibility="edible">
+          <li class="plant-row" data-edibility="edible" data-search="Hawthorn Crataegus monogyna">
             <div>
               <h3>Hawthorn</h3>
               <p><i>Crataegus monogyna</i> · tree</p>
             </div>
             <span>Edible</span>
           </li>
-          <li class="plant-row" data-edibility="edible">
+          <li class="plant-row" data-edibility="edible" data-search="Avocado Persea americana">
             <div>
               <h3>Avocado</h3>
               <p><i>Persea americana</i> · tree</p>
             </div>
             <span>Edible</span>
           </li>
-          <li class="plant-row" data-edibility="edible">
+          <li class="plant-row" data-edibility="edible" data-search="Western Redbud Cercis occidentalis">
             <div>
               <h3>Western Redbud</h3>
               <p><i>Cercis occidentalis</i> · shrub</p>
@@ -432,147 +462,147 @@
           <b>21 plants</b>
         </div>
         <ol>
-          <li class="plant-row" data-edibility="care">
+          <li class="plant-row" data-edibility="care" data-search="Prickly Lettuce Lactuca serriola">
             <div>
               <h3>Prickly Lettuce</h3>
               <p><i>Lactuca serriola</i> · herb</p>
             </div>
             <span>Use with care</span>
           </li>
-          <li class="plant-row" data-edibility="care">
+          <li class="plant-row" data-edibility="care" data-search="Curly Dock Rumex crispus">
             <div>
               <h3>Curly Dock</h3>
               <p><i>Rumex crispus</i> · herb</p>
             </div>
             <span>Use with care</span>
           </li>
-          <li class="plant-row" data-edibility="care">
+          <li class="plant-row" data-edibility="care" data-search="Sheep Sorrel Rumex acetosella">
             <div>
               <h3>Sheep Sorrel</h3>
               <p><i>Rumex acetosella</i> · herb</p>
             </div>
             <span>Use with care</span>
           </li>
-          <li class="plant-row" data-edibility="care">
+          <li class="plant-row" data-edibility="care" data-search="Cleavers Galium aparine">
             <div>
               <h3>Cleavers</h3>
               <p><i>Galium aparine</i> · herb</p>
             </div>
             <span>Use with care</span>
           </li>
-          <li class="plant-row" data-edibility="care">
+          <li class="plant-row" data-edibility="care" data-search="Stinging Nettle Urtica dioica">
             <div>
               <h3>Stinging Nettle</h3>
               <p><i>Urtica dioica</i> · herb</p>
             </div>
             <span>Use with care</span>
           </li>
-          <li class="plant-row" data-edibility="care">
+          <li class="plant-row" data-edibility="care" data-search="California Mugwort Artemisia douglasiana">
             <div>
               <h3>California Mugwort</h3>
               <p><i>Artemisia douglasiana</i> · herb</p>
             </div>
             <span>Use with care</span>
           </li>
-          <li class="plant-row" data-edibility="care">
+          <li class="plant-row" data-edibility="care" data-search="Sourgrass (Bermuda Buttercup) Oxalis pes-caprae">
             <div>
               <h3>Sourgrass (Bermuda Buttercup)</h3>
               <p><i>Oxalis pes-caprae</i> · herb</p>
             </div>
             <span>Use with care</span>
           </li>
-          <li class="plant-row" data-edibility="care">
+          <li class="plant-row" data-edibility="care" data-search="Blue Elderberry Sambucus nigra ssp. cerulea">
             <div>
               <h3>Blue Elderberry</h3>
               <p><i>Sambucus nigra ssp. cerulea</i> · shrub</p>
             </div>
             <span>Use with care</span>
           </li>
-          <li class="plant-row" data-edibility="care">
+          <li class="plant-row" data-edibility="care" data-search="Toyon Heteromeles arbutifolia">
             <div>
               <h3>Toyon</h3>
               <p><i>Heteromeles arbutifolia</i> · shrub</p>
             </div>
             <span>Use with care</span>
           </li>
-          <li class="plant-row" data-edibility="care">
+          <li class="plant-row" data-edibility="care" data-search="Prickly Pear Opuntia ficus-indica">
             <div>
               <h3>Prickly Pear</h3>
               <p><i>Opuntia ficus-indica</i> · cactus</p>
             </div>
             <span>Use with care</span>
           </li>
-          <li class="plant-row" data-edibility="care">
+          <li class="plant-row" data-edibility="care" data-search="Coast Live Oak Quercus agrifolia">
             <div>
               <h3>Coast Live Oak</h3>
               <p><i>Quercus agrifolia</i> · tree</p>
             </div>
             <span>Use with care</span>
           </li>
-          <li class="plant-row" data-edibility="care">
+          <li class="plant-row" data-edibility="care" data-search="Valley Oak Quercus lobata">
             <div>
               <h3>Valley Oak</h3>
               <p><i>Quercus lobata</i> · tree</p>
             </div>
             <span>Use with care</span>
           </li>
-          <li class="plant-row" data-edibility="care">
+          <li class="plant-row" data-edibility="care" data-search="Pacific Madrone Arbutus menziesii">
             <div>
               <h3>Pacific Madrone</h3>
               <p><i>Arbutus menziesii</i> · tree</p>
             </div>
             <span>Use with care</span>
           </li>
-          <li class="plant-row" data-edibility="care">
+          <li class="plant-row" data-edibility="care" data-search="Olive Olea europaea">
             <div>
               <h3>Olive</h3>
               <p><i>Olea europaea</i> · tree</p>
             </div>
             <span>Use with care</span>
           </li>
-          <li class="plant-row" data-edibility="care">
+          <li class="plant-row" data-edibility="care" data-search="Bigleaf Maple Acer macrophyllum">
             <div>
               <h3>Bigleaf Maple</h3>
               <p><i>Acer macrophyllum</i> · tree</p>
             </div>
             <span>Use with care</span>
           </li>
-          <li class="plant-row" data-edibility="care">
+          <li class="plant-row" data-edibility="care" data-search="Hollyleaf Cherry Prunus ilicifolia">
             <div>
               <h3>Hollyleaf Cherry</h3>
               <p><i>Prunus ilicifolia</i> · shrub</p>
             </div>
             <span>Use with care</span>
           </li>
-          <li class="plant-row" data-edibility="care">
+          <li class="plant-row" data-edibility="care" data-search="California Juniper Juniperus californica">
             <div>
               <h3>California Juniper</h3>
               <p><i>Juniperus californica</i> · shrub</p>
             </div>
             <span>Use with care</span>
           </li>
-          <li class="plant-row" data-edibility="care">
+          <li class="plant-row" data-edibility="care" data-search="Monterey Pine Pinus radiata">
             <div>
               <h3>Monterey Pine</h3>
               <p><i>Pinus radiata</i> · tree</p>
             </div>
             <span>Use with care</span>
           </li>
-          <li class="plant-row" data-edibility="care">
+          <li class="plant-row" data-edibility="care" data-search="Arroyo Willow Salix lasiolepis">
             <div>
               <h3>Arroyo Willow</h3>
               <p><i>Salix lasiolepis</i> · tree</p>
             </div>
             <span>Use with care</span>
           </li>
-          <li class="plant-row" data-edibility="care">
+          <li class="plant-row" data-edibility="care" data-search="Blue Gum Eucalyptus Eucalyptus globulus">
             <div>
               <h3>Blue Gum Eucalyptus</h3>
               <p><i>Eucalyptus globulus</i> · tree</p>
             </div>
             <span>Use with care</span>
           </li>
-          <li class="plant-row" data-edibility="care">
+          <li class="plant-row" data-edibility="care" data-search="Black Locust Robinia pseudoacacia">
             <div>
               <h3>Black Locust</h3>
               <p><i>Robinia pseudoacacia</i> · tree</p>
@@ -589,77 +619,77 @@
           <b>11 plants</b>
         </div>
         <ol>
-          <li class="plant-row" data-edibility="no">
+          <li class="plant-row" data-edibility="no" data-search="Poison Hemlock Conium maculatum">
             <div>
               <h3>Poison Hemlock</h3>
               <p><i>Conium maculatum</i> · herb</p>
             </div>
             <span>Recognition only</span>
           </li>
-          <li class="plant-row" data-edibility="no">
+          <li class="plant-row" data-edibility="no" data-search="Poison Oak Toxicodendron diversilobum">
             <div>
               <h3>Poison Oak</h3>
               <p><i>Toxicodendron diversilobum</i> · shrub</p>
             </div>
             <span>Recognition only</span>
           </li>
-          <li class="plant-row" data-edibility="no">
+          <li class="plant-row" data-edibility="no" data-search="Sacred Datura (Jimsonweed) Datura wrightii">
             <div>
               <h3>Sacred Datura (Jimsonweed)</h3>
               <p><i>Datura wrightii</i> · herb</p>
             </div>
             <span>Recognition only</span>
           </li>
-          <li class="plant-row" data-edibility="no">
+          <li class="plant-row" data-edibility="no" data-search="Oleander Nerium oleander">
             <div>
               <h3>Oleander</h3>
               <p><i>Nerium oleander</i> · shrub</p>
             </div>
             <span>Recognition only</span>
           </li>
-          <li class="plant-row" data-edibility="no">
+          <li class="plant-row" data-edibility="no" data-search="Foxglove Digitalis purpurea">
             <div>
               <h3>Foxglove</h3>
               <p><i>Digitalis purpurea</i> · herb</p>
             </div>
             <span>Recognition only</span>
           </li>
-          <li class="plant-row" data-edibility="no">
+          <li class="plant-row" data-edibility="no" data-search="Castor Bean Ricinus communis">
             <div>
               <h3>Castor Bean</h3>
               <p><i>Ricinus communis</i> · shrub</p>
             </div>
             <span>Recognition only</span>
           </li>
-          <li class="plant-row" data-edibility="no">
+          <li class="plant-row" data-edibility="no" data-search="English Yew Taxus baccata">
             <div>
               <h3>English Yew</h3>
               <p><i>Taxus baccata</i> · tree</p>
             </div>
             <span>Recognition only</span>
           </li>
-          <li class="plant-row" data-edibility="no">
+          <li class="plant-row" data-edibility="no" data-search="Privet Ligustrum lucidum">
             <div>
               <h3>Privet</h3>
               <p><i>Ligustrum lucidum</i> · shrub</p>
             </div>
             <span>Recognition only</span>
           </li>
-          <li class="plant-row" data-edibility="no">
+          <li class="plant-row" data-edibility="no" data-search="Firethorn (Pyracantha) Pyracantha coccinea">
             <div>
               <h3>Firethorn (Pyracantha)</h3>
               <p><i>Pyracantha coccinea</i> · shrub</p>
             </div>
             <span>Recognition only</span>
           </li>
-          <li class="plant-row" data-edibility="no">
+          <li class="plant-row" data-edibility="no" data-search="Cotoneaster Cotoneaster franchetii">
             <div>
               <h3>Cotoneaster</h3>
               <p><i>Cotoneaster franchetii</i> · shrub</p>
             </div>
             <span>Recognition only</span>
           </li>
-          <li class="plant-row" data-edibility="no">
+          <li class="plant-row" data-edibility="no" data-search="Horse Chestnut Aesculus hippocastanum">
             <div>
               <h3>Horse Chestnut</h3>
               <p><i>Aesculus hippocastanum</i> · tree</p>
@@ -669,7 +699,51 @@
         </ol>
       </section>
 
-    <p class="foot">Want to practice from photos instead of reading the list? <a href="../">Start the Forage Berkeley quiz</a> or use the app's Browse plants tab.</p>
+    <p class="foot">Want to practice from photos instead of reading the list? <a href="../#quiz">Start the Forage Berkeley quiz</a> or use the app's <a href="../#browse">Browse plants</a> tab.</p>
   </main>
+  <script>
+    (function () {
+      var search = document.getElementById("species-search");
+      var status = document.getElementById("species-status");
+      var noResults = document.getElementById("species-no-results");
+      var rows = Array.prototype.slice.call(document.querySelectorAll(".plant-row"));
+      var groups = Array.prototype.slice.call(document.querySelectorAll(".species-group"));
+      var chips = Array.prototype.slice.call(document.querySelectorAll(".filter-chip"));
+      var activeFilter = "all";
+      var labels = { all: "all labels", edible: "edible", care: "use with care", no: "recognition only" };
+
+      function applyFilters() {
+        var query = search.value.trim().toLowerCase();
+        var visible = 0;
+        rows.forEach(function (row) {
+          var edibility = row.getAttribute("data-edibility");
+          var matchesFilter = activeFilter === "all" || edibility === activeFilter;
+          var matchesQuery = !query || row.getAttribute("data-search").toLowerCase().indexOf(query) !== -1;
+          var show = matchesFilter && matchesQuery;
+          row.hidden = !show;
+          if (show) visible++;
+        });
+        groups.forEach(function (group) {
+          var hasVisible = !!group.querySelector(".plant-row:not([hidden])");
+          group.hidden = !hasVisible;
+        });
+        status.textContent = query || activeFilter !== "all"
+          ? "Showing " + visible + " of " + rows.length + " plants for " + labels[activeFilter] + "."
+          : "Showing all " + rows.length + " plants.";
+        noResults.hidden = visible !== 0;
+      }
+
+      search.addEventListener("input", applyFilters);
+      chips.forEach(function (chip) {
+        chip.addEventListener("click", function () {
+          activeFilter = chip.getAttribute("data-filter");
+          chips.forEach(function (button) {
+            button.setAttribute("aria-pressed", button === chip ? "true" : "false");
+          });
+          applyFilters();
+        });
+      });
+    }());
+  </script>
 </body>
 </html>
