@@ -232,9 +232,10 @@
   $("modal").addEventListener("click", function (e) { if (e.target === $("modal")) closeDetail(); });
 
   // ---------- tabs ----------
-  function tabFromHash() {
+  function routeFromHash() {
     var hash = (window.location.hash || "").replace(/^#\/?/, "").toLowerCase();
-    return hash === "browse" ? "browse" : "learn";
+    var plant = hash.match(/^plant\/([a-z0-9-]+)$/);
+    return plant ? { tab: "browse", plantId: plant[1] } : { tab: hash === "browse" ? "browse" : "learn", plantId: null };
   }
 
   function setTabHash(which) {
@@ -253,7 +254,16 @@
     $("browse").classList.toggle("active", !learn);
     if (!learn) renderList();
   }
-  function showTabFromHash() { showTab(tabFromHash()); }
+  function showTabFromHash() {
+    var route = routeFromHash();
+    showTab(route.tab);
+    if (route.plantId) {
+      if (byId[route.plantId]) openDetail(byId[route.plantId]);
+      else closeDetail();
+    } else {
+      closeDetail();
+    }
+  }
   $("tab-learn").addEventListener("click", function () { showTab("learn"); setTabHash("learn"); });
   $("tab-browse").addEventListener("click", function () { showTab("browse"); setTabHash("browse"); });
   window.addEventListener("hashchange", showTabFromHash);

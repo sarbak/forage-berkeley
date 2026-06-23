@@ -38,6 +38,10 @@ function plantUrl(plant) {
   return `${baseUrl}/species/${plant.id}/`;
 }
 
+function appPlantHash(plant) {
+  return `#plant/${plant.id}`;
+}
+
 function titleCase(value) {
   return String(value).replace(/\b\w/g, (match) => match.toUpperCase());
 }
@@ -439,7 +443,7 @@ function plantPage(plant) {
       <a class="brand" href="../../">Forage <b>Berkeley</b></a>
       <div class="app-actions">
         <a class="app-link" href="../../#quiz">Start quiz</a>
-        <a class="app-link" href="../../#browse">Browse plants</a>
+        <a class="app-link" href="../../${esc(appPlantHash(plant))}">Open photo guide</a>
       </div>
     </nav>
 
@@ -487,6 +491,7 @@ function plantPage(plant) {
 
     <footer class="foot">
       <a class="back-link" href="../">All species</a>
+      <a class="back-link" href="../../${esc(appPlantHash(plant))}">Open photo guide</a>
       <a class="back-link" href="../../#quiz">Practice this catalog</a>
       <a class="back-link" href="../../berkeley-plant-identification/">Plant identification guide</a>
       <a class="back-link" href="../../CREDITS.md">Photo credits</a>
