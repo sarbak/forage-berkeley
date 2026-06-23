@@ -3,7 +3,7 @@
    Image + font caches are stable so an app update never re-downloads the photo set. */
 "use strict";
 
-var SHELL_VERSION = "fb-shell-v1";
+var SHELL_VERSION = "fb-shell-v2";
 var IMG_CACHE = "fb-img-v1";
 var FONT_CACHE = "fb-fonts-v1";
 
@@ -18,6 +18,10 @@ var SHELL = [
   "icon-192.png",
   "icon-512.png",
   "icon-maskable-512.png",
+  "berkeley-plant-identification/",
+  "berkeley-plant-identification/index.html",
+  "species/",
+  "species/index.html",
   "CREDITS.md"
 ];
 
@@ -63,6 +67,27 @@ function staleWhileRevalidate(req, cacheName) {
   });
 }
 
+function cachedNavigation(req) {
+  var url = new URL(req.url);
+  var path = url.pathname.replace(/^\/+/, "");
+  var fallbacks = [req];
+
+  if (path && url.pathname.slice(-1) === "/") {
+    fallbacks.push(path + "index.html");
+  } else if (path) {
+    fallbacks.push(path + "/");
+    fallbacks.push(path + "/index.html");
+  }
+
+  fallbacks.push("./");
+
+  return fallbacks.reduce(function (promise, candidate) {
+    return promise.then(function (hit) {
+      return hit || caches.match(candidate);
+    });
+  }, Promise.resolve());
+}
+
 self.addEventListener("fetch", function (e) {
   var req = e.request;
   if (req.method !== "GET") return;
@@ -74,9 +99,9 @@ self.addEventListener("fetch", function (e) {
     } else if (req.mode === "navigate") {
       e.respondWith(
         fetch(req).then(function (res) {
-          caches.open(SHELL_VERSION).then(function (c) { c.put("./", res.clone()); });
+          if (res.ok) caches.open(SHELL_VERSION).then(function (c) { c.put(req, res.clone()); });
           return res;
-        }).catch(function () { return caches.match("./"); })
+        }).catch(function () { return cachedNavigation(req); })
       );
     } else {
       e.respondWith(staleWhileRevalidate(req, SHELL_VERSION));

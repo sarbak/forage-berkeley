@@ -257,6 +257,10 @@ ${["edible", "care", "no"].map(groupSection).join("\n\n")}
           applyFilters();
         });
       });
+
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("../sw.js").catch(function () {});
+      }
     }());
   </script>
 </body>

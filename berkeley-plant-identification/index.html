@@ -189,5 +189,10 @@
 
     <p class="foot">Forage Berkeley is free to try. It needs no signup or payment, and progress saves on this device.</p>
   </main>
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("../sw.js").catch(function () {});
+    }
+  </script>
 </body>
 </html>
