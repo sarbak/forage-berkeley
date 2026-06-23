@@ -63,13 +63,36 @@ const html = `<!DOCTYPE html>
   <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
   <link rel="canonical" href="https://forage-berkeley.vercel.app/species/" />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://forage-berkeley.vercel.app/species/" />
   <meta property="og:title" content="Berkeley plant species directory | Forage Berkeley" />
   <meta property="og:description" content="A crawlable list of the 73 local plant species in Forage Berkeley, grouped by edible, use-with-care, and recognition-only labels." />
-  <meta property="og:image" content="../og.png" />
+  <meta property="og:image" content="https://forage-berkeley.vercel.app/og.png" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Berkeley plant species directory | Forage Berkeley" />
+  <meta name="twitter:description" content="Browse 73 Berkeley and East Bay plants by edible, use-with-care, and recognition-only labels." />
+  <meta name="twitter:image" content="https://forage-berkeley.vercel.app/og.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": "https://forage-berkeley.vercel.app/species/#webpage",
+    "url": "https://forage-berkeley.vercel.app/species/",
+    "name": "Berkeley plant species directory",
+    "description": "A crawlable list of the 73 local plant species in Forage Berkeley, grouped by edible, use-with-care, and recognition-only labels.",
+    "isPartOf": {
+      "@id": "https://forage-berkeley.vercel.app/#website"
+    },
+    "about": {
+      "@id": "https://forage-berkeley.vercel.app/#app"
+    },
+    "publisher": {
+      "@id": "https://forage-berkeley.vercel.app/#organization"
+    }
+  }
+  </script>
   <style>
     :root {
       --paper: #f7f3ec; --card: #fffdf9; --ink: #2b2118; --ink-soft: #7b6c57;
