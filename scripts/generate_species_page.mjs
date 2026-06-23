@@ -1,6 +1,8 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 
 const plants = JSON.parse(await readFile(new URL("../data/berkeley.json", import.meta.url), "utf8"));
+const baseUrl = "https://forage-berkeley.vercel.app";
+const lastmod = "2026-06-23";
 
 const labels = {
   edible: "Edible",
@@ -27,10 +29,26 @@ function esc(value) {
     .replace(/"/g, "&quot;");
 }
 
+function json(value) {
+  return JSON.stringify(value);
+}
+
+function plantUrl(plant) {
+  return `${baseUrl}/species/${plant.id}/`;
+}
+
+function titleCase(value) {
+  return String(value).replace(/\b\w/g, (match) => match.toUpperCase());
+}
+
+function plantMetaDescription(plant) {
+  return `${plant.commonName} (${plant.scientificName}) in Forage Berkeley: ${labels[plant.edibility]} notes, season, identification cues, warnings, and uses from the local photo quiz.`;
+}
+
 function plantRow(plant) {
   return `          <li class="plant-row" data-edibility="${esc(plant.edibility)}" data-search="${esc(`${plant.commonName} ${plant.scientificName}`)}">
             <div>
-              <h3>${esc(plant.commonName)}</h3>
+              <h3><a href="${esc(plant.id)}/">${esc(plant.commonName)}</a></h3>
               <p><i>${esc(plant.scientificName)}</i> · ${esc(plant.category)}</p>
             </div>
             <span>${esc(labels[plant.edibility])}</span>
@@ -161,6 +179,8 @@ const html = `<!DOCTYPE html>
     .plant-row[data-edibility="care"] { --accent: var(--amber); }
     .plant-row[data-edibility="no"] { --accent: var(--rust); }
     .plant-row h3 { margin: 0 0 2px; font-size: 18px; font-weight: 500; }
+    .plant-row h3 a { color: inherit; text-decoration-color: rgba(125,47,20,.35); }
+    .plant-row h3 a:hover { text-decoration-color: currentColor; }
     .plant-row p { margin: 0; color: var(--ink-soft); font-size: 14px; }
     .plant-row span {
       border-radius: 999px; color: white; background: var(--accent); padding: 4px 8px;
@@ -267,5 +287,222 @@ ${["edible", "care", "no"].map(groupSection).join("\n\n")}
 </html>
 `;
 
-await mkdir(new URL("../species", import.meta.url), { recursive: true });
-await writeFile(new URL("../species/index.html", import.meta.url), html);
+function plantPage(plant) {
+  const url = plantUrl(plant);
+  const metaDescription = plantMetaDescription(plant);
+  const safetyDescription = descriptions[plant.edibility] || "Use this page as a learning aid, not a safety authority.";
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>${esc(plant.commonName)} | Forage Berkeley plant guide</title>
+  <meta name="description" content="${esc(metaDescription)}" />
+  <meta name="theme-color" content="#f7f3ec" />
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="../../apple-touch-icon.png" />
+  <link rel="canonical" href="${esc(url)}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="${esc(url)}" />
+  <meta property="og:title" content="${esc(plant.commonName)} | Forage Berkeley plant guide" />
+  <meta property="og:description" content="${esc(metaDescription)}" />
+  <meta property="og:image" content="${baseUrl}/og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="${esc(plant.commonName)} | Forage Berkeley" />
+  <meta name="twitter:description" content="${esc(metaDescription)}" />
+  <meta name="twitter:image" content="${baseUrl}/og.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": ${json(`${url}#webpage`)},
+    "url": ${json(url)},
+    "name": ${json(`${plant.commonName} | Forage Berkeley plant guide`)},
+    "description": ${json(metaDescription)},
+    "isPartOf": {
+      "@id": "https://forage-berkeley.vercel.app/species/#webpage"
+    },
+    "about": {
+      "@type": "Thing",
+      "name": ${json(plant.commonName)},
+      "alternateName": ${json(plant.scientificName)}
+    },
+    "publisher": {
+      "@id": "https://forage-berkeley.vercel.app/#organization"
+    }
+  }
+  </script>
+  <style>
+    :root {
+      --paper: #f7f3ec; --card: #fffdf9; --ink: #2b2118; --ink-soft: #7b6c57;
+      --rust: #a8421f; --rust-deep: #7d2f14; --sage: #5e6b43; --sage-deep:#46512f;
+      --amber: #8f5a10; --line: #e6dccb; --serif: "Fraunces", Georgia, serif;
+      --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: var(--paper); color: var(--ink); font-family: var(--serif);
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--rust-deep); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    .wrap { width: min(900px, calc(100% - 32px)); margin: 0 auto; padding: 22px 0 42px; }
+    .top { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 24px; }
+    .brand { font-weight: 600; font-size: 18px; color: var(--ink); text-decoration: none; }
+    .brand b { color: var(--sage-deep); }
+    .app-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 14px; }
+    .app-link, .back-link {
+      font-family: var(--mono); font-size: 12px; letter-spacing: .05em; text-transform: uppercase;
+    }
+    .breadcrumbs { margin: 0 0 18px; color: var(--ink-soft); font-size: 14px; }
+    .hero { display: grid; gap: 12px; margin-bottom: 24px; }
+    h1 { margin: 0; max-width: 760px; font-size: clamp(34px, 6vw, 58px); line-height: 1; font-weight: 600; }
+    .sci { margin: 0; color: var(--ink-soft); font-size: 20px; line-height: 1.3; }
+    .badges { display: flex; flex-wrap: wrap; gap: 8px; }
+    .badge {
+      width: fit-content; border-radius: 999px; color: white; background: var(--accent); padding: 5px 9px;
+      font-family: var(--mono); font-size: 11px; letter-spacing: .05em; text-transform: uppercase;
+    }
+    .badge.origin {
+      color: var(--ink-soft); background: transparent; border: 1px solid var(--line);
+    }
+    .plant-page[data-edibility="edible"] { --accent: var(--sage); }
+    .plant-page[data-edibility="care"] { --accent: var(--amber); }
+    .plant-page[data-edibility="no"] { --accent: var(--rust); }
+    .safety {
+      margin: 0 0 22px; padding: 11px 12px; border: 1px solid rgba(168,66,31,.25);
+      border-radius: 8px; color: var(--rust-deep); background: rgba(168,66,31,.06);
+      font-size: 15px; line-height: 1.45;
+    }
+    .summary {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 0 0 22px;
+    }
+    .stat {
+      border: 1px solid var(--line); border-radius: 8px; background: rgba(255,253,249,.72);
+      padding: 10px; font-family: var(--mono); color: var(--ink-soft); font-size: 11px;
+    }
+    .stat b { display: block; color: var(--ink); font-size: 18px; font-weight: 500; line-height: 1.2; }
+    .details { display: grid; gap: 10px; }
+    .detail {
+      display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 14px;
+      padding: 13px 0; border-top: 1px solid var(--line);
+    }
+    .detail:last-child { border-bottom: 1px solid var(--line); }
+    .detail b {
+      color: var(--ink-soft); font-family: var(--mono); font-size: 11px; letter-spacing: .07em;
+      text-transform: uppercase; font-weight: 500;
+    }
+    .detail p { margin: 0; font-size: 17px; line-height: 1.5; }
+    .story { margin-top: 18px; color: var(--ink-soft); font-style: italic; font-size: 16px; line-height: 1.5; }
+    .foot {
+      display: flex; flex-wrap: wrap; gap: 14px 18px; margin-top: 28px; color: var(--ink-soft);
+      font-size: 14px; line-height: 1.5;
+    }
+    @media (max-width: 640px) {
+      .top { align-items: flex-start; flex-direction: column; }
+      .app-actions { justify-content: flex-start; }
+      .summary { grid-template-columns: 1fr; }
+      .detail { grid-template-columns: 1fr; gap: 4px; }
+    }
+  </style>
+</head>
+<body class="plant-page" data-edibility="${esc(plant.edibility)}">
+  <main class="wrap">
+    <nav class="top" aria-label="Plant page navigation">
+      <a class="brand" href="../../">Forage <b>Berkeley</b></a>
+      <div class="app-actions">
+        <a class="app-link" href="../../#quiz">Start quiz</a>
+        <a class="app-link" href="../../#browse">Browse plants</a>
+      </div>
+    </nav>
+
+    <p class="breadcrumbs"><a href="../">Species directory</a> / ${esc(plant.commonName)}</p>
+
+    <header class="hero">
+      <h1>${esc(plant.commonName)}</h1>
+      <p class="sci"><i>${esc(plant.scientificName)}</i></p>
+      <div class="badges">
+        <span class="badge">${esc(labels[plant.edibility])}</span>
+        <span class="badge origin">${esc(titleCase(plant.origin))}</span>
+      </div>
+    </header>
+
+    <p class="safety">This page is a recognition practice aid, not an eating guide. Never eat anything based on this page or the app alone. ${esc(safetyDescription)}</p>
+
+    <section class="summary" aria-label="Plant summary">
+      <div class="stat"><b>${esc(titleCase(plant.category))}</b> plant type</div>
+      <div class="stat"><b>${esc(labels[plant.edibility])}</b> safety label</div>
+      <div class="stat"><b>${esc(titleCase(plant.origin))}</b> origin</div>
+    </section>
+
+    <section class="details" aria-label="${esc(plant.commonName)} details">
+      <div class="detail">
+        <b>Season</b>
+        <p>${esc(plant.season)}</p>
+      </div>
+      <div class="detail">
+        <b>How to ID</b>
+        <p>${esc(plant.idFeatures)}</p>
+      </div>
+      <div class="detail">
+        <b>Watch</b>
+        <p>${esc(plant.warning)}</p>
+      </div>
+      <div class="detail">
+        <b>Uses</b>
+        <p>${esc(plant.uses)}</p>
+      </div>
+    </section>
+
+    <p class="story">${esc(plant.story)}</p>
+
+    <footer class="foot">
+      <a class="back-link" href="../">All species</a>
+      <a class="back-link" href="../../#quiz">Practice this catalog</a>
+      <a class="back-link" href="../../berkeley-plant-identification/">Plant identification guide</a>
+    </footer>
+  </main>
+  <script>
+    (function () {
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("../../sw.js").catch(function () {});
+      }
+    }());
+  </script>
+</body>
+</html>
+`;
+}
+
+function sitemapXml() {
+  const urls = [
+    `${baseUrl}/`,
+    `${baseUrl}/berkeley-plant-identification/`,
+    `${baseUrl}/species/`,
+    ...plants.map(plantUrl)
+  ];
+
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urls.map((url) => `  <url>
+    <loc>${esc(url)}</loc>
+    <lastmod>${lastmod}</lastmod>
+  </url>`).join("\n")}
+</urlset>
+`;
+}
+
+const speciesDir = new URL("../species/", import.meta.url);
+await mkdir(speciesDir, { recursive: true });
+await writeFile(new URL("index.html", speciesDir), html);
+
+for (const plant of plants) {
+  const plantDir = new URL(`${plant.id}/`, speciesDir);
+  await mkdir(plantDir, { recursive: true });
+  await writeFile(new URL("index.html", plantDir), plantPage(plant));
+}
+
+await writeFile(new URL("../sitemap.xml", import.meta.url), sitemapXml());
