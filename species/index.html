@@ -57,6 +57,7 @@
     .top { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 24px; }
     .brand { font-weight: 600; font-size: 18px; color: var(--ink); text-decoration: none; }
     .brand b { color: var(--sage-deep); }
+    .app-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 14px; }
     .app-link { font-family: var(--mono); font-size: 12px; letter-spacing: .05em; text-transform: uppercase; }
     .hero { display: grid; gap: 14px; margin-bottom: 26px; }
     h1 { margin: 0; max-width: 760px; font-size: clamp(34px, 6vw, 56px); line-height: 1; font-weight: 600; }
@@ -98,6 +99,7 @@
     .foot { margin-top: 28px; color: var(--ink-soft); font-size: 14px; line-height: 1.5; }
     @media (max-width: 640px) {
       .top { align-items: flex-start; flex-direction: column; }
+      .app-actions { justify-content: flex-start; }
       .stats { grid-template-columns: 1fr; }
       .plant-row { grid-template-columns: 1fr; }
       .plant-row span { width: fit-content; }
@@ -108,7 +110,10 @@
   <main class="wrap">
     <nav class="top" aria-label="Species directory navigation">
       <a class="brand" href="../">Forage <b>Berkeley</b></a>
-      <a class="app-link" href="../">Start quiz</a>
+      <div class="app-actions">
+        <a class="app-link" href="../#quiz">Start quiz</a>
+        <a class="app-link" href="../#browse">Browse plants</a>
+      </div>
     </nav>
 
     <header class="hero">

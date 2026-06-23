@@ -232,7 +232,20 @@
   $("modal").addEventListener("click", function (e) { if (e.target === $("modal")) closeDetail(); });
 
   // ---------- tabs ----------
+  function tabFromHash() {
+    var hash = (window.location.hash || "").replace(/^#\/?/, "").toLowerCase();
+    return hash === "browse" ? "browse" : "learn";
+  }
+
+  function setTabHash(which) {
+    var hash = which === "browse" ? "#browse" : "#quiz";
+    if (window.location.hash === hash) return;
+    if (window.history && window.history.pushState) window.history.pushState(null, "", hash);
+    else window.location.hash = hash;
+  }
+
   function showTab(which) {
+    which = which === "browse" ? "browse" : "learn";
     var learn = which === "learn";
     $("tab-learn").setAttribute("aria-selected", learn ? "true" : "false");
     $("tab-browse").setAttribute("aria-selected", learn ? "false" : "true");
@@ -240,8 +253,11 @@
     $("browse").classList.toggle("active", !learn);
     if (!learn) renderList();
   }
-  $("tab-learn").addEventListener("click", function () { showTab("learn"); });
-  $("tab-browse").addEventListener("click", function () { showTab("browse"); });
+  function showTabFromHash() { showTab(tabFromHash()); }
+  $("tab-learn").addEventListener("click", function () { showTab("learn"); setTabHash("learn"); });
+  $("tab-browse").addEventListener("click", function () { showTab("browse"); setTabHash("browse"); });
+  window.addEventListener("hashchange", showTabFromHash);
+  window.addEventListener("popstate", showTabFromHash);
   $("search").addEventListener("input", function (e) { bquery = e.target.value; renderList(); });
   [].forEach.call(document.querySelectorAll(".bchip"), function (c) {
     c.addEventListener("click", function () {
@@ -423,6 +439,7 @@
     });
     plants.forEach(function (p) { byId[p.id] = p; });
     renderQuiz();
+    showTabFromHash();
     if (document.readyState === "complete") setTimeout(setupOffline, 1500);
     else window.addEventListener("load", function () { setTimeout(setupOffline, 1500); });
   }).catch(function (err) {
