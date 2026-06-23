@@ -36,8 +36,8 @@ node scripts/generate_species_page.mjs
 node scripts/check_static_pages.mjs
 ```
 
-The check is dependency-free. It confirms the 73 generated plant pages, poisonous plant
-guides, directory links, sitemap URLs, safety language, plant-specific app links, canonical
+The check is dependency-free. It confirms the 73 generated plant pages, edible and poisonous
+plant guides, directory links, sitemap URLs, safety language, plant-specific app links, canonical
 URLs, and parseable JSON-LD.
 
 ## Offline

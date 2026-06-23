@@ -3,6 +3,23 @@ import { readdir, readFile } from "node:fs/promises";
 const baseUrl = "https://forage-berkeley.vercel.app";
 const safetyText = "This page is a recognition practice aid, not an eating guide. Never eat anything based on this page or the app alone.";
 const guideSafetyText = "This page is a recognition practice aid, not a safety authority. Never eat, touch, harvest, remove, or prepare any plant based on this page or the app alone.";
+const edibleWeedIds = [
+  "dandelion",
+  "common-mallow",
+  "broadleaf-plantain",
+  "sow-thistle",
+  "pineapple-weed",
+  "chickweed",
+  "purslane",
+  "lambs-quarters",
+  "shepherds-purse",
+  "black-mustard",
+  "wild-radish",
+  "miners-lettuce",
+  "stinging-nettle",
+  "three-cornered-leek",
+  "wild-fennel"
+];
 const failures = [];
 
 async function readText(path) {
@@ -55,12 +72,17 @@ checkJsonLd(await readText("berkeley-plant-identification/index.html"), "berkele
 
 const poisonousGuideHtml = await readText("poisonous-plants/index.html");
 const hemlockGuideHtml = await readText("poison-hemlock-identification/index.html");
+const edibleWeedsGuideHtml = await readText("edible-weeds-berkeley-east-bay/index.html");
 checkJsonLd(poisonousGuideHtml, "poisonous-plants/index.html");
 checkJsonLd(hemlockGuideHtml, "poison-hemlock-identification/index.html");
+checkJsonLd(edibleWeedsGuideHtml, "edible-weeds-berkeley-east-bay/index.html");
 includes(sitemap, `<loc>${baseUrl}/poisonous-plants/</loc>`, "sitemap.xml: missing poisonous plants guide URL");
 includes(sitemap, `<loc>${baseUrl}/poison-hemlock-identification/</loc>`, "sitemap.xml: missing hemlock guide URL");
+includes(sitemap, `<loc>${baseUrl}/edible-weeds-berkeley-east-bay/</loc>`, "sitemap.xml: missing edible weeds guide URL");
 includes(poisonousGuideHtml, guideSafetyText, "poisonous-plants/index.html: missing safety language");
 includes(hemlockGuideHtml, guideSafetyText, "poison-hemlock-identification/index.html: missing safety language");
+includes(edibleWeedsGuideHtml, guideSafetyText, "edible-weeds-berkeley-east-bay/index.html: missing safety language");
+if (edibleWeedsGuideHtml.includes("signup-capture")) fail("edible-weeds-berkeley-east-bay/index.html: should not link to signup capture");
 for (const id of ["poison-oak", "poison-hemlock", "datura", "wild-fennel"]) {
   includes(poisonousGuideHtml, `href="../species/${id}/"`, `poisonous-plants/index.html: missing species link for ${id}`);
   includes(poisonousGuideHtml, `href="../#plant/${id}"`, `poisonous-plants/index.html: missing app link for ${id}`);
@@ -68,6 +90,10 @@ for (const id of ["poison-oak", "poison-hemlock", "datura", "wild-fennel"]) {
 for (const id of ["poison-hemlock", "wild-fennel"]) {
   includes(hemlockGuideHtml, `href="../species/${id}/"`, `poison-hemlock-identification/index.html: missing species link for ${id}`);
   includes(hemlockGuideHtml, `href="../#plant/${id}"`, `poison-hemlock-identification/index.html: missing app link for ${id}`);
+}
+for (const id of edibleWeedIds) {
+  includes(edibleWeedsGuideHtml, `href="../species/${id}/"`, `edible-weeds-berkeley-east-bay/index.html: missing species link for ${id}`);
+  includes(edibleWeedsGuideHtml, `href="../#plant/${id}"`, `edible-weeds-berkeley-east-bay/index.html: missing app link for ${id}`);
 }
 
 const plantIds = new Set(plants.map((plant) => plant.id));
@@ -95,10 +121,10 @@ for (const plant of plants) {
   checkJsonLd(pageHtml, plantPath);
 }
 
-const expectedUrls = 5 + plants.length;
+const expectedUrls = 6 + plants.length;
 if (urls.length !== expectedUrls) fail(`sitemap.xml: expected ${expectedUrls} URLs, found ${urls.length}`);
 
-for (const url of [`${baseUrl}/`, `${baseUrl}/berkeley-plant-identification/`, `${baseUrl}/species/`, `${baseUrl}/poisonous-plants/`, `${baseUrl}/poison-hemlock-identification/`]) {
+for (const url of [`${baseUrl}/`, `${baseUrl}/berkeley-plant-identification/`, `${baseUrl}/species/`, `${baseUrl}/poisonous-plants/`, `${baseUrl}/poison-hemlock-identification/`, `${baseUrl}/edible-weeds-berkeley-east-bay/`]) {
   if (!urls.includes(url)) fail(`sitemap.xml: missing URL ${url}`);
 }
 

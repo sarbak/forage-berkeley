@@ -40,6 +40,60 @@ const poisonousCautionIds = [
   "blue-gum-eucalyptus"
 ];
 
+const edibleWeedGroups = [
+  {
+    id: "sidewalk-lawns",
+    title: "Sidewalk, lawn, and hard-packed edges",
+    intro: "Common deck entries learners tend to notice in paths, parking strips, lawns, and disturbed ground.",
+    plantIds: [
+      "dandelion",
+      "common-mallow",
+      "broadleaf-plantain",
+      "sow-thistle",
+      "pineapple-weed"
+    ]
+  },
+  {
+    id: "garden-weeds",
+    title: "Cool-season garden weeds",
+    intro: "Fast-growing herbs that show up in beds, lots, and spring growth around Berkeley.",
+    plantIds: [
+      "chickweed",
+      "purslane",
+      "lambs-quarters",
+      "shepherds-purse",
+      "black-mustard",
+      "wild-radish"
+    ]
+  },
+  {
+    id: "shade-trail-edges",
+    title: "Moist shade and trail-edge plants",
+    intro: "Plants from the deck that need extra attention because habitat, stings, or toxic look-alikes can change the learning context.",
+    plantIds: [
+      "miners-lettuce",
+      "stinging-nettle",
+      "three-cornered-leek",
+      "wild-fennel"
+    ]
+  }
+];
+
+const edibleWeedWarningOverrides = {
+  dandelion: "The deck warns that sprayed lawns, roadsides, and yellow composite look-alikes change the context. Use the hollow stem, milky sap, rosette, and puffball seed head for recognition practice.",
+  "common-mallow": "The deck flags contaminated soil as the caution context. Use the round scalloped leaves, pale flowers, and cheese-wheel seed pods for recognition practice.",
+  "broadleaf-plantain": "The deck does not flag a dangerous local look-alike, but this page is still recognition practice, not clearance to use a real plant.",
+  "black-mustard": "The deck flags this as highly invasive. Learn the four-petal yellow flowers and upright seed pods without treating this guide as harvesting advice.",
+  "lambs-quarters": "The deck flags oxalates and toxic nightshade seedlings as the caution context. Use the white mealy new growth and goosefoot-shaped leaves for recognition practice.",
+  "miners-lettuce": "The deck points to the perfoliate disc leaf as the main recognition cue. Use that field mark for practice, not as a safety shortcut.",
+  "pineapple-weed": "The deck highlights the pineapple scent and petal-less chamomile form. Treat scent as deck context, not a handling instruction from this guide.",
+  "shepherds-purse": "The deck points to the purse-shaped pods as the reliable field mark. Treat the timing notes as deck context, not use advice.",
+  "stinging-nettle": "The deck flags raw stings. Treat that as a handling boundary and use this page for recognition practice only.",
+  "three-cornered-leek": "The deck's allium rule is strict: a true onion or garlic smell matters, and no smell means no allium assumption. Do not handle plants to test that from this page.",
+  "wild-fennel": "The deck flags deadly Poison Hemlock as the look-alike risk. Learn the green stems, yellow umbels, and anise-scent contrast without handling plants to test them.",
+  "wild-radish": "The deck treats this as a feral garden relative, but the guide still does not clear any real plant for use. Practice the rough lobed leaves, pale four-petal flowers, and beaded pods."
+};
+
 const guidePages = [
   {
     path: "poisonous-plants/",
@@ -52,6 +106,12 @@ const guidePages = [
     title: "Poison hemlock identification in Berkeley",
     description: "Compare Poison Hemlock and Wild Fennel using Forage Berkeley deck notes and field photos. Recognition practice only.",
     id: "poison-hemlock-identification"
+  },
+  {
+    path: "edible-weeds-berkeley-east-bay/",
+    title: "Edible weeds in Berkeley and the East Bay",
+    description: "Practice recognizing 15 edible or use-with-care weed entries from the Forage Berkeley local photo deck. Recognition practice only.",
+    id: "edible-weeds-berkeley-east-bay"
   }
 ];
 
@@ -743,6 +803,30 @@ function guidePlantCard(plant, eager = false) {
           </article>`;
 }
 
+function edibleWeedWarning(plant) {
+  return edibleWeedWarningOverrides[plant.id] || plant.warning;
+}
+
+function edibleWeedPlantCard(plant, eager = false) {
+  return `<article class="guide-card" id="${esc(plant.id)}" data-edibility="${esc(plant.edibility)}">
+            ${guidePhoto(plant, eager)}
+            <div class="guide-copy">
+              <p class="meta">${esc(labels[plant.edibility])} / ${esc(titleCase(plant.origin))} / ${esc(titleCase(plant.category))}</p>
+              <h3>${esc(plant.commonName)}</h3>
+              <p class="latin">${esc(plant.scientificName)}</p>
+              <dl>
+                <div><dt>Season</dt><dd>${esc(plant.season)}</dd></div>
+                <div><dt>How to recognize it</dt><dd>${esc(plant.idFeatures)}</dd></div>
+                <div><dt>Recognition boundary</dt><dd>${esc(edibleWeedWarning(plant))}</dd></div>
+              </dl>
+              <div class="guide-links">
+                <a href="../species/${esc(plant.id)}/">Species page</a>
+                <a href="../#plant/${esc(plant.id)}">Open photo guide</a>
+              </div>
+            </div>
+          </article>`;
+}
+
 function poisonousSection(sectionId, title, intro, plantIds) {
   const cards = plantIds.map((id, index) => guidePlantCard(plantById(id), index === 0)).join("\n");
   return `<section class="section" id="${esc(sectionId)}" aria-labelledby="${esc(sectionId)}-title">
@@ -755,6 +839,128 @@ function poisonousSection(sectionId, title, intro, plantIds) {
 ${cards}
       </div>
     </section>`;
+}
+
+function edibleWeedSection(group, offset) {
+  const cards = group.plantIds.map((id, index) => edibleWeedPlantCard(plantById(id), offset + index === 0)).join("\n");
+  return `<section class="section" id="${esc(group.id)}" aria-labelledby="${esc(group.id)}-title">
+      <div class="section-head">
+        <p class="eyebrow">${group.plantIds.length} deck entries</p>
+        <h2 id="${esc(group.id)}-title">${esc(group.title)}</h2>
+        <p>${esc(group.intro)}</p>
+      </div>
+      <div class="guide-grid">
+${cards}
+      </div>
+    </section>`;
+}
+
+function edibleWeedsPage() {
+  const page = guidePageById("edible-weeds-berkeley-east-bay");
+  const selectedIds = edibleWeedGroups.flatMap((group) => group.plantIds);
+  const selectedPlants = selectedIds.map(plantById);
+  const edibleCount = selectedPlants.filter((plant) => plant.edibility === "edible").length;
+  const careCount = selectedPlants.filter((plant) => plant.edibility === "care").length;
+  const itemList = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": `${guideUrl(page)}#webpage`,
+    "url": guideUrl(page),
+    "name": page.title,
+    "description": page.description,
+    "isPartOf": { "@id": `${baseUrl}/#website` },
+    "about": {
+      "@type": "ItemList",
+      "name": "Forage Berkeley edible and use-with-care weed practice list",
+      "numberOfItems": selectedPlants.length,
+      "itemListElement": selectedPlants.map((plant, index) => ({
+        "@type": "ListItem",
+        "position": index + 1,
+        "name": plant.commonName,
+        "url": plantUrl(plant)
+      }))
+    },
+    "publisher": { "@id": `${baseUrl}/#organization` }
+  };
+
+  let offset = 0;
+  const sections = edibleWeedGroups.map((group) => {
+    const section = edibleWeedSection(group, offset);
+    offset += group.plantIds.length;
+    return section;
+  }).join("\n\n");
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  ${guideHead(page)}
+  <script type="application/ld+json">
+  ${json(itemList)}
+  </script>
+  <style>
+${guideStyles()}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    ${guideNav("Edible weeds guide navigation")}
+
+    <header class="hero">
+      <p class="eyebrow">Berkeley and East Bay edible weed recognition</p>
+      <h1>Edible weeds to learn as recognition practice</h1>
+      <p class="lede">Use this guide to practice the 15 edible or use-with-care weed entries from the current Forage Berkeley deck. The labels are study categories, not permission to eat, harvest, handle, or prepare a real plant.</p>
+      <div class="actions" aria-label="Guide actions">
+        <a class="button" href="../#quiz">Practice the quiz</a>
+        <a class="button secondary" href="../species/">Browse all species</a>
+      </div>
+      <p class="safety">${esc(guideSafetyText)}</p>
+    </header>
+
+    <section class="stats" aria-label="Edible weeds guide summary">
+      <div class="stat"><b>${selectedPlants.length}</b> deck-backed entries</div>
+      <div class="stat"><b>${edibleCount}</b> edible-use cards</div>
+      <div class="stat"><b>${careCount}</b> use-with-care card</div>
+    </section>
+
+    <section class="section" aria-labelledby="how-to-use-title">
+      <div class="section-head">
+        <p class="eyebrow">How to use this page</p>
+        <h2 id="how-to-use-title">Treat it like a study checklist</h2>
+        <p>Read the field marks, open the species pages, and practice from photos in the app. Stop before any real-world eating, handling, harvesting, removal, or preparation decision.</p>
+      </div>
+    </section>
+
+    ${sections}
+
+    <section class="section" aria-labelledby="practice-title">
+      <div class="section-head">
+        <p class="eyebrow">Practice path</p>
+        <h2 id="practice-title">Move from reading to photo practice</h2>
+        <p>Every card links to the current species page and the matching in-app photo guide, so search visitors can keep learning without a signup flow.</p>
+      </div>
+      <div class="actions">
+        <a class="button" href="../#browse">Browse plants</a>
+        <a class="button secondary" href="../berkeley-plant-identification/">Berkeley plant ID guide</a>
+      </div>
+    </section>
+
+    <footer class="foot">
+      <a href="../">Home</a>
+      <a href="../species/">Species directory</a>
+      <a href="../poisonous-plants/">Poisonous plants guide</a>
+      <a href="../CREDITS.md">Photo credits</a>
+    </footer>
+  </main>
+  <script>
+    (function () {
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("../sw.js").catch(function () {});
+      }
+    }());
+  </script>
+</body>
+</html>
+`;
 }
 
 function poisonousPlantsPage() {
@@ -1036,6 +1242,9 @@ await writeFile(new URL("../poisonous-plants/index.html", import.meta.url), pois
 
 await mkdir(new URL("../poison-hemlock-identification/", import.meta.url), { recursive: true });
 await writeFile(new URL("../poison-hemlock-identification/index.html", import.meta.url), hemlockGuidePage());
+
+await mkdir(new URL("../edible-weeds-berkeley-east-bay/", import.meta.url), { recursive: true });
+await writeFile(new URL("../edible-weeds-berkeley-east-bay/index.html", import.meta.url), edibleWeedsPage());
 
 for (const plant of plants) {
   const plantDir = new URL(`${plant.id}/`, speciesDir);
