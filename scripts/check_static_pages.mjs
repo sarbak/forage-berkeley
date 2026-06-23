@@ -20,6 +20,20 @@ const edibleWeedIds = [
   "three-cornered-leek",
   "wild-fennel"
 ];
+const commonWeedIds = [
+  "dandelion",
+  "common-mallow",
+  "broadleaf-plantain",
+  "sow-thistle",
+  "chickweed",
+  "purslane",
+  "lambs-quarters",
+  "prickly-lettuce",
+  "shepherds-purse",
+  "black-mustard",
+  "wild-radish",
+  "sourgrass"
+];
 const failures = [];
 
 async function readText(path) {
@@ -73,16 +87,21 @@ checkJsonLd(await readText("berkeley-plant-identification/index.html"), "berkele
 const poisonousGuideHtml = await readText("poisonous-plants/index.html");
 const hemlockGuideHtml = await readText("poison-hemlock-identification/index.html");
 const edibleWeedsGuideHtml = await readText("edible-weeds-berkeley-east-bay/index.html");
+const commonWeedsGuideHtml = await readText("common-east-bay-weeds/index.html");
 checkJsonLd(poisonousGuideHtml, "poisonous-plants/index.html");
 checkJsonLd(hemlockGuideHtml, "poison-hemlock-identification/index.html");
 checkJsonLd(edibleWeedsGuideHtml, "edible-weeds-berkeley-east-bay/index.html");
+checkJsonLd(commonWeedsGuideHtml, "common-east-bay-weeds/index.html");
 includes(sitemap, `<loc>${baseUrl}/poisonous-plants/</loc>`, "sitemap.xml: missing poisonous plants guide URL");
 includes(sitemap, `<loc>${baseUrl}/poison-hemlock-identification/</loc>`, "sitemap.xml: missing hemlock guide URL");
 includes(sitemap, `<loc>${baseUrl}/edible-weeds-berkeley-east-bay/</loc>`, "sitemap.xml: missing edible weeds guide URL");
+includes(sitemap, `<loc>${baseUrl}/common-east-bay-weeds/</loc>`, "sitemap.xml: missing common East Bay weeds guide URL");
 includes(poisonousGuideHtml, guideSafetyText, "poisonous-plants/index.html: missing safety language");
 includes(hemlockGuideHtml, guideSafetyText, "poison-hemlock-identification/index.html: missing safety language");
 includes(edibleWeedsGuideHtml, guideSafetyText, "edible-weeds-berkeley-east-bay/index.html: missing safety language");
+includes(commonWeedsGuideHtml, guideSafetyText, "common-east-bay-weeds/index.html: missing safety language");
 if (edibleWeedsGuideHtml.includes("signup-capture")) fail("edible-weeds-berkeley-east-bay/index.html: should not link to signup capture");
+if (commonWeedsGuideHtml.includes("signup-capture")) fail("common-east-bay-weeds/index.html: should not link to signup capture");
 for (const id of ["poison-oak", "poison-hemlock", "datura", "wild-fennel"]) {
   includes(poisonousGuideHtml, `href="../species/${id}/"`, `poisonous-plants/index.html: missing species link for ${id}`);
   includes(poisonousGuideHtml, `href="../#plant/${id}"`, `poisonous-plants/index.html: missing app link for ${id}`);
@@ -94,6 +113,10 @@ for (const id of ["poison-hemlock", "wild-fennel"]) {
 for (const id of edibleWeedIds) {
   includes(edibleWeedsGuideHtml, `href="../species/${id}/"`, `edible-weeds-berkeley-east-bay/index.html: missing species link for ${id}`);
   includes(edibleWeedsGuideHtml, `href="../#plant/${id}"`, `edible-weeds-berkeley-east-bay/index.html: missing app link for ${id}`);
+}
+for (const id of commonWeedIds) {
+  includes(commonWeedsGuideHtml, `href="../species/${id}/"`, `common-east-bay-weeds/index.html: missing species link for ${id}`);
+  includes(commonWeedsGuideHtml, `href="../#plant/${id}"`, `common-east-bay-weeds/index.html: missing app link for ${id}`);
 }
 
 const plantIds = new Set(plants.map((plant) => plant.id));
@@ -121,10 +144,10 @@ for (const plant of plants) {
   checkJsonLd(pageHtml, plantPath);
 }
 
-const expectedUrls = 6 + plants.length;
+const expectedUrls = 7 + plants.length;
 if (urls.length !== expectedUrls) fail(`sitemap.xml: expected ${expectedUrls} URLs, found ${urls.length}`);
 
-for (const url of [`${baseUrl}/`, `${baseUrl}/berkeley-plant-identification/`, `${baseUrl}/species/`, `${baseUrl}/poisonous-plants/`, `${baseUrl}/poison-hemlock-identification/`, `${baseUrl}/edible-weeds-berkeley-east-bay/`]) {
+for (const url of [`${baseUrl}/`, `${baseUrl}/berkeley-plant-identification/`, `${baseUrl}/species/`, `${baseUrl}/poisonous-plants/`, `${baseUrl}/poison-hemlock-identification/`, `${baseUrl}/edible-weeds-berkeley-east-bay/`, `${baseUrl}/common-east-bay-weeds/`]) {
   if (!urls.includes(url)) fail(`sitemap.xml: missing URL ${url}`);
 }
 
