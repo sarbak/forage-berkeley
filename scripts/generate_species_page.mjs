@@ -1,6 +1,7 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 
 const plants = JSON.parse(await readFile(new URL("../data/berkeley.json", import.meta.url), "utf8"));
+const photoMeta = JSON.parse(await readFile(new URL("../photo_meta.json", import.meta.url), "utf8"));
 const baseUrl = "https://forage-berkeley.vercel.app";
 const lastmod = "2026-06-23";
 
@@ -43,6 +44,14 @@ function titleCase(value) {
 
 function plantMetaDescription(plant) {
   return `${plant.commonName} (${plant.scientificName}) in Forage Berkeley: ${labels[plant.edibility]} notes, season, identification cues, warnings, and uses from the local photo quiz.`;
+}
+
+function photoEntries(plant) {
+  return (photoMeta[plant.id] || []).map((photo) => ({
+    ...photo,
+    src: `/img/${plant.id}/${photo.slot}.jpg`,
+    alt: `${plant.commonName} ${photo.label || "photo"}`
+  }));
 }
 
 function plantRow(plant) {
@@ -401,10 +410,25 @@ function plantPage(plant) {
       display: flex; flex-wrap: wrap; gap: 14px 18px; margin-top: 28px; color: var(--ink-soft);
       font-size: 14px; line-height: 1.5;
     }
+    .photos {
+      margin: 0 0 22px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;
+    }
+    .photo-card {
+      margin: 0; border: 1px solid var(--line); border-radius: 8px; background: var(--card);
+      overflow: hidden;
+    }
+    .photo-card img {
+      display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; background: #efe7d8;
+    }
+    .photo-card figcaption {
+      padding: 7px 8px; color: var(--ink-soft); font-family: var(--mono); font-size: 10px;
+      letter-spacing: .05em; text-transform: uppercase;
+    }
     @media (max-width: 640px) {
       .top { align-items: flex-start; flex-direction: column; }
       .app-actions { justify-content: flex-start; }
       .summary { grid-template-columns: 1fr; }
+      .photos { grid-template-columns: 1fr 1fr; }
       .detail { grid-template-columns: 1fr; gap: 4px; }
     }
   </style>
@@ -431,6 +455,8 @@ function plantPage(plant) {
     </header>
 
     <p class="safety">This page is a recognition practice aid, not an eating guide. Never eat anything based on this page or the app alone. ${esc(safetyDescription)}</p>
+
+    ${photoGallery(plant)}
 
     <section class="summary" aria-label="Plant summary">
       <div class="stat"><b>${esc(titleCase(plant.category))}</b> plant type</div>
@@ -463,6 +489,7 @@ function plantPage(plant) {
       <a class="back-link" href="../">All species</a>
       <a class="back-link" href="../../#quiz">Practice this catalog</a>
       <a class="back-link" href="../../berkeley-plant-identification/">Plant identification guide</a>
+      <a class="back-link" href="../../CREDITS.md">Photo credits</a>
     </footer>
   </main>
   <script>
@@ -475,6 +502,20 @@ function plantPage(plant) {
 </body>
 </html>
 `;
+}
+
+function photoGallery(plant) {
+  const photos = photoEntries(plant);
+  if (!photos.length) {
+    return "";
+  }
+
+  return `<section class="photos" aria-label="${esc(plant.commonName)} field photos">
+${photos.map((photo, index) => `      <figure class="photo-card">
+        <img src="${esc(photo.src)}" alt="${esc(photo.alt)}" loading="${index === 0 ? "eager" : "lazy"}" decoding="async" />
+        <figcaption>${esc(photo.label || "photo")}</figcaption>
+      </figure>`).join("\n")}
+    </section>`;
 }
 
 function sitemapXml() {

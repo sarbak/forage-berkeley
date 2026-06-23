@@ -107,10 +107,25 @@
       display: flex; flex-wrap: wrap; gap: 14px 18px; margin-top: 28px; color: var(--ink-soft);
       font-size: 14px; line-height: 1.5;
     }
+    .photos {
+      margin: 0 0 22px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;
+    }
+    .photo-card {
+      margin: 0; border: 1px solid var(--line); border-radius: 8px; background: var(--card);
+      overflow: hidden;
+    }
+    .photo-card img {
+      display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; background: #efe7d8;
+    }
+    .photo-card figcaption {
+      padding: 7px 8px; color: var(--ink-soft); font-family: var(--mono); font-size: 10px;
+      letter-spacing: .05em; text-transform: uppercase;
+    }
     @media (max-width: 640px) {
       .top { align-items: flex-start; flex-direction: column; }
       .app-actions { justify-content: flex-start; }
       .summary { grid-template-columns: 1fr; }
+      .photos { grid-template-columns: 1fr 1fr; }
       .detail { grid-template-columns: 1fr; gap: 4px; }
     }
   </style>
@@ -137,6 +152,33 @@
     </header>
 
     <p class="safety">This page is a recognition practice aid, not an eating guide. Never eat anything based on this page or the app alone. Plants in this group have edible uses in the app, but still need confident identification and clean harvesting conditions.</p>
+
+    <section class="photos" aria-label="Broadleaf Plantain field photos">
+      <figure class="photo-card">
+        <img src="/img/broadleaf-plantain/leaf.jpg" alt="Broadleaf Plantain leaves" loading="eager" decoding="async" />
+        <figcaption>leaves</figcaption>
+      </figure>
+      <figure class="photo-card">
+        <img src="/img/broadleaf-plantain/leaf2.jpg" alt="Broadleaf Plantain leaves" loading="lazy" decoding="async" />
+        <figcaption>leaves</figcaption>
+      </figure>
+      <figure class="photo-card">
+        <img src="/img/broadleaf-plantain/plant.jpg" alt="Broadleaf Plantain whole plant" loading="lazy" decoding="async" />
+        <figcaption>whole plant</figcaption>
+      </figure>
+      <figure class="photo-card">
+        <img src="/img/broadleaf-plantain/flower.jpg" alt="Broadleaf Plantain flower" loading="lazy" decoding="async" />
+        <figcaption>flower</figcaption>
+      </figure>
+      <figure class="photo-card">
+        <img src="/img/broadleaf-plantain/fruit.jpg" alt="Broadleaf Plantain fruit / seed" loading="lazy" decoding="async" />
+        <figcaption>fruit / seed</figcaption>
+      </figure>
+      <figure class="photo-card">
+        <img src="/img/broadleaf-plantain/bark.jpg" alt="Broadleaf Plantain bark / stem" loading="lazy" decoding="async" />
+        <figcaption>bark / stem</figcaption>
+      </figure>
+    </section>
 
     <section class="summary" aria-label="Plant summary">
       <div class="stat"><b>Herb</b> plant type</div>
@@ -169,6 +211,7 @@
       <a class="back-link" href="../">All species</a>
       <a class="back-link" href="../../#quiz">Practice this catalog</a>
       <a class="back-link" href="../../berkeley-plant-identification/">Plant identification guide</a>
+      <a class="back-link" href="../../CREDITS.md">Photo credits</a>
     </footer>
   </main>
   <script>
