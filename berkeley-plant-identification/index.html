@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Berkeley plant identification practice | Forage Berkeley</title>
+  <meta name="description" content="Practice Berkeley plant identification with Forage Berkeley, a free photo quiz and browseable catalog of 73 local plants, trees, and toxic look-alikes." />
+  <meta name="theme-color" content="#f7f3ec" />
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+  <link rel="canonical" href="https://forage-berkeley.vercel.app/berkeley-plant-identification/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://forage-berkeley.vercel.app/berkeley-plant-identification/" />
+  <meta property="og:title" content="Berkeley plant identification practice | Forage Berkeley" />
+  <meta property="og:description" content="A local photo quiz and plant catalog for learning 73 Berkeley and East Bay plants by sight." />
+  <meta property="og:image" content="https://forage-berkeley.vercel.app/og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Berkeley plant identification practice | Forage Berkeley" />
+  <meta name="twitter:description" content="Practice local plant ID with a free Berkeley photo quiz and 73-plant species catalog." />
+  <meta name="twitter:image" content="https://forage-berkeley.vercel.app/og.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://forage-berkeley.vercel.app/berkeley-plant-identification/#webpage",
+    "url": "https://forage-berkeley.vercel.app/berkeley-plant-identification/",
+    "name": "Berkeley plant identification practice",
+    "description": "A local landing page for practicing Berkeley plant identification with Forage Berkeley's photo quiz and species catalog.",
+    "isPartOf": {
+      "@id": "https://forage-berkeley.vercel.app/#website"
+    },
+    "about": {
+      "@id": "https://forage-berkeley.vercel.app/#app"
+    },
+    "publisher": {
+      "@id": "https://forage-berkeley.vercel.app/#organization"
+    }
+  }
+  </script>
+  <style>
+    :root {
+      --paper: #f7f3ec; --card: #fffdf9; --ink: #2b2118; --ink-soft: #7b6c57;
+      --rust: #a8421f; --rust-deep: #7d2f14; --sage: #5e6b43; --sage-deep:#46512f;
+      --amber: #8f5a10; --line: #e6dccb; --serif: "Fraunces", Georgia, serif;
+      --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: var(--paper); color: var(--ink); font-family: var(--serif);
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--rust-deep); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    .wrap { width: min(960px, calc(100% - 32px)); margin: 0 auto; padding: 22px 0 42px; }
+    .top { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 42px; }
+    .brand { font-weight: 600; font-size: 18px; color: var(--ink); text-decoration: none; }
+    .brand b { color: var(--sage-deep); }
+    .navlinks { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 14px; font-family: var(--mono); font-size: 12px; letter-spacing: .05em; text-transform: uppercase; }
+    .hero { display: grid; gap: 16px; margin-bottom: 30px; }
+    .eyebrow { margin: 0; color: var(--sage-deep); font-family: var(--mono); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; }
+    h1 { margin: 0; max-width: 780px; font-size: clamp(38px, 7vw, 68px); line-height: .98; font-weight: 600; }
+    .lede { margin: 0; max-width: 720px; color: var(--ink-soft); font-size: 19px; line-height: 1.45; }
+    .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; }
+    .button {
+      display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 18px;
+      border-radius: 999px; border: 1px solid var(--ink); background: var(--ink); color: var(--paper);
+      font-family: var(--mono); font-size: 12px; letter-spacing: .07em; text-transform: uppercase; text-decoration: none;
+    }
+    .button.secondary { background: transparent; color: var(--ink); border-color: var(--line); }
+    .safety {
+      max-width: 720px; padding: 11px 13px; border: 1px solid rgba(168,66,31,.25);
+      border-radius: 8px; color: var(--rust-deep); background: rgba(168,66,31,.06);
+      font-size: 15px; line-height: 1.45;
+    }
+    .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 8px 0 34px; }
+    .stat {
+      border: 1px solid var(--line); border-radius: 8px; background: rgba(255,253,249,.7);
+      padding: 11px; font-family: var(--mono); color: var(--ink-soft); font-size: 11px;
+    }
+    .stat b { display: block; color: var(--ink); font-size: 22px; font-weight: 500; line-height: 1.1; }
+    .sections { display: grid; gap: 18px; }
+    .section {
+      display: grid; grid-template-columns: minmax(180px, 280px) minmax(0, 1fr); gap: 18px;
+      padding: 22px 0; border-top: 1px solid var(--line);
+    }
+    .section h2 { margin: 0; font-size: 26px; line-height: 1.1; font-weight: 600; }
+    .section p { margin: 0 0 12px; color: var(--ink-soft); font-size: 17px; line-height: 1.5; }
+    .section p:last-child { margin-bottom: 0; }
+    .labels { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .label {
+      border-radius: 999px; color: white; background: var(--sage); padding: 5px 9px;
+      font-family: var(--mono); font-size: 10px; letter-spacing: .06em; text-transform: uppercase;
+    }
+    .label.care { background: var(--amber); }
+    .label.no { background: var(--rust); }
+    .closing {
+      margin-top: 18px; padding: 18px; border: 1px solid var(--line); border-radius: 8px;
+      background: rgba(255,253,249,.65);
+    }
+    .closing h2 { margin: 0 0 8px; font-size: 25px; }
+    .closing p { margin: 0 0 14px; color: var(--ink-soft); font-size: 17px; line-height: 1.5; }
+    .foot { margin-top: 28px; color: var(--ink-soft); font-size: 14px; line-height: 1.5; }
+    @media (max-width: 720px) {
+      .top { align-items: flex-start; flex-direction: column; margin-bottom: 28px; }
+      .navlinks { justify-content: flex-start; }
+      .stats { grid-template-columns: 1fr; }
+      .section { grid-template-columns: 1fr; gap: 8px; }
+      .button { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <nav class="top" aria-label="Plant identification page navigation">
+      <a class="brand" href="../">Forage <b>Berkeley</b></a>
+      <div class="navlinks">
+        <a href="../#quiz">Start quiz</a>
+        <a href="../#browse">Browse plants</a>
+        <a href="../species/">Species catalog</a>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <p class="eyebrow">Berkeley plant identification</p>
+      <h1>Practice local plant ID before you meet them outside</h1>
+      <p class="lede">Forage Berkeley is a free photo quiz for learning wild plants, common trees, garden escapes, and toxic look-alikes around Berkeley and the East Bay.</p>
+      <div class="actions" aria-label="Primary actions">
+        <a class="button" href="../#quiz">Start quiz</a>
+        <a class="button secondary" href="../#browse">Browse plants</a>
+      </div>
+      <p class="safety">Use this as recognition practice, not as a safety authority. Never eat anything based on this app, this page, or a single identification alone.</p>
+    </header>
+
+    <section class="stats" aria-label="Forage Berkeley summary">
+      <div class="stat"><b>73</b> local species</div>
+      <div class="stat"><b>405</b> field photos</div>
+      <div class="stat"><b>Offline</b> after first visit</div>
+    </section>
+
+    <div class="sections">
+      <section class="section">
+        <h2>Who it is for</h2>
+        <div>
+          <p>Use it when you are trying to recognize the plants you keep seeing on Berkeley walks, campus edges, street trees, gardens, and nearby East Bay trails.</p>
+          <p>The app is built for practice, not expert verification. It helps you learn names and visual patterns so the real plants feel less anonymous.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>How the quiz works</h2>
+        <div>
+          <p>You look at field photos and guess the plant. The app remembers what you miss, so unfamiliar species, look-alikes, and caution plants come back more often.</p>
+          <p>The same catalog is available in Browse plants mode when you want to search by name instead of quiz yourself.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>What the catalog covers</h2>
+        <div>
+          <p>The catalog includes forageable plants, common trees, garden escapes, and plants that are useful to recognize because they should not be eaten.</p>
+          <p>Every species is labeled with the same safety bucket used in the app and the crawlable species directory.</p>
+          <div class="labels" aria-label="Catalog labels">
+            <span class="label">Edible</span>
+            <span class="label care">Use with care</span>
+            <span class="label no">Recognition only</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>The safety boundary</h2>
+        <div>
+          <p>Plant identification is risky when it turns into eating advice. Forage Berkeley does not replace a field guide, expert help, local rules, or careful confirmation from multiple sources.</p>
+          <p>The best use is simple: practice the visual patterns, learn the names, and treat anything edible as a prompt for more careful research.</p>
+        </div>
+      </section>
+    </div>
+
+    <section class="closing" aria-label="Try Forage Berkeley">
+      <h2>Start with the local quiz</h2>
+      <p>Try a few photo questions now, then use the species catalog when you want a slower read through the 73-plant list.</p>
+      <div class="actions">
+        <a class="button" href="../#quiz">Start quiz</a>
+        <a class="button secondary" href="../#browse">Browse plants</a>
+      </div>
+    </section>
+
+    <p class="foot">Forage Berkeley is free to try. It needs no signup or payment, and progress saves on this device.</p>
+  </main>
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("../sw.js").catch(function () {});
+    }
+  </script>
+</body>
+</html>

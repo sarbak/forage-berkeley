@@ -232,7 +232,21 @@
   $("modal").addEventListener("click", function (e) { if (e.target === $("modal")) closeDetail(); });
 
   // ---------- tabs ----------
+  function routeFromHash() {
+    var hash = (window.location.hash || "").replace(/^#\/?/, "").toLowerCase();
+    var plant = hash.match(/^plant\/([a-z0-9-]+)$/);
+    return plant ? { tab: "browse", plantId: plant[1] } : { tab: hash === "browse" ? "browse" : "learn", plantId: null };
+  }
+
+  function setTabHash(which) {
+    var hash = which === "browse" ? "#browse" : "#quiz";
+    if (window.location.hash === hash) return;
+    if (window.history && window.history.pushState) window.history.pushState(null, "", hash);
+    else window.location.hash = hash;
+  }
+
   function showTab(which) {
+    which = which === "browse" ? "browse" : "learn";
     var learn = which === "learn";
     $("tab-learn").setAttribute("aria-selected", learn ? "true" : "false");
     $("tab-browse").setAttribute("aria-selected", learn ? "false" : "true");
@@ -240,8 +254,20 @@
     $("browse").classList.toggle("active", !learn);
     if (!learn) renderList();
   }
-  $("tab-learn").addEventListener("click", function () { showTab("learn"); });
-  $("tab-browse").addEventListener("click", function () { showTab("browse"); });
+  function showTabFromHash() {
+    var route = routeFromHash();
+    showTab(route.tab);
+    if (route.plantId) {
+      if (byId[route.plantId]) openDetail(byId[route.plantId]);
+      else closeDetail();
+    } else {
+      closeDetail();
+    }
+  }
+  $("tab-learn").addEventListener("click", function () { showTab("learn"); setTabHash("learn"); });
+  $("tab-browse").addEventListener("click", function () { showTab("browse"); setTabHash("browse"); });
+  window.addEventListener("hashchange", showTabFromHash);
+  window.addEventListener("popstate", showTabFromHash);
   $("search").addEventListener("input", function (e) { bquery = e.target.value; renderList(); });
   [].forEach.call(document.querySelectorAll(".bchip"), function (c) {
     c.addEventListener("click", function () {
@@ -361,9 +387,72 @@
     });
   })();
 
-  // ---------- offline (service worker + full photo download) ----------
+  // ---------- offline (service worker + opt-in full photo download) ----------
   var IMG_CACHE = "fb-img-v1";
+  var OFFLINE_PHOTOS_KEY = "fb-offline-photos-v1";
   function offlineStatus(msg) { var el = $("offline-status"); if (el) el.textContent = msg; }
+  function offlineAction(msg, label, action) {
+    var el = $("offline-status");
+    if (!el) return;
+    el.textContent = msg + " ";
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.textContent = label;
+    btn.addEventListener("click", function () { action(btn); });
+    el.appendChild(btn);
+  }
+  function wantsFullOffline() { try { return localStorage.getItem(OFFLINE_PHOTOS_KEY) === "1"; } catch (e) { return false; } }
+  function rememberFullOffline() { try { localStorage.setItem(OFFLINE_PHOTOS_KEY, "1"); } catch (e) {} }
+  function photoUrls() {
+    var urls = [];
+    plants.forEach(function (p) {
+      (p.photos || []).forEach(function (ph) { urls.push(srcFor(p, ph.slot)); });
+    });
+    return urls;
+  }
+  function cacheStatus(cache, urls) {
+    return cache.keys().then(function (keys) {
+      var have = {};
+      keys.forEach(function (k) { have[new URL(k.url).pathname] = 1; });
+      var todo = urls.filter(function (u) { return !have["/" + u]; });
+      return { total: urls.length, done: urls.length - todo.length, todo: todo };
+    });
+  }
+  function offerOfflineDownload(cache, urls, done, total) {
+    offlineAction("photos cache as you browse · " + done + "/" + total + " saved", "save all for offline", function (btn) {
+      btn.disabled = true;
+      rememberFullOffline();
+      downloadOfflinePhotos(cache, urls);
+    });
+  }
+  function downloadOfflinePhotos(cache, urls) {
+    return cacheStatus(cache, urls).then(function (status) {
+      var todo = status.todo, total = status.total, done = status.done, failed = 0;
+      if (!todo.length) { offlineStatus("✓ works offline"); return; }
+      var i = 0, CONC = 4;
+      function tick() {
+        if (done + failed >= total) {
+          offlineStatus(failed ? "offline copy partial · " + done + "/" + total : "✓ works offline");
+        } else if ((done + failed) % 5 === 0) {
+          offlineStatus("saving for offline · " + done + "/" + total);
+        }
+      }
+      function next() {
+        if (i >= todo.length) return Promise.resolve();
+        var u = todo[i++];
+        return fetch(u).then(function (r) {
+          if (!r.ok) throw new Error(String(r.status));
+          return cache.put(u, r);
+        }).then(function () { done++; tick(); })
+          .catch(function () { failed++; tick(); })
+          .then(next);
+      }
+      offlineStatus("saving for offline · " + done + "/" + total);
+      var lanes = [];
+      for (var l = 0; l < CONC; l++) lanes.push(next());
+      return Promise.all(lanes);
+    });
+  }
 
   function setupOffline() {
     if (!("serviceWorker" in navigator) || !window.caches) return;
@@ -373,40 +462,12 @@
       offlineStatus("data saver on — photos cache as you browse");
       return;
     }
-    // every photo in the deck, cached in the background so the whole app works offline
-    var urls = [];
-    plants.forEach(function (p) {
-      (p.photos || []).forEach(function (ph) { urls.push(srcFor(p, ph.slot)); });
-    });
+    var urls = photoUrls();
     caches.open(IMG_CACHE).then(function (cache) {
-      return cache.keys().then(function (keys) {
-        var have = {};
-        keys.forEach(function (k) { have[new URL(k.url).pathname] = 1; });
-        var todo = urls.filter(function (u) { return !have["/" + u]; });
-        var total = urls.length, done = total - todo.length, failed = 0;
-        if (!todo.length) { offlineStatus("✓ works offline"); return; }
-        var i = 0, CONC = 4;
-        function tick() {
-          if (done + failed >= total) {
-            offlineStatus(failed ? "offline copy partial · " + done + "/" + total : "✓ works offline");
-          } else if ((done + failed) % 5 === 0) {
-            offlineStatus("saving for offline · " + done + "/" + total);
-          }
-        }
-        function next() {
-          if (i >= todo.length) return Promise.resolve();
-          var u = todo[i++];
-          return fetch(u).then(function (r) {
-            if (!r.ok) throw new Error(String(r.status));
-            return cache.put(u, r);
-          }).then(function () { done++; tick(); })
-            .catch(function () { failed++; tick(); })
-            .then(next);
-        }
-        offlineStatus("saving for offline · " + done + "/" + total);
-        var lanes = [];
-        for (var l = 0; l < CONC; l++) lanes.push(next());
-        return Promise.all(lanes);
+      return cacheStatus(cache, urls).then(function (status) {
+        if (!status.todo.length) { offlineStatus("✓ works offline"); return; }
+        if (wantsFullOffline()) return downloadOfflinePhotos(cache, urls);
+        offerOfflineDownload(cache, urls, status.done, status.total);
       });
     }).catch(function () {});
   }
@@ -423,6 +484,7 @@
     });
     plants.forEach(function (p) { byId[p.id] = p; });
     renderQuiz();
+    showTabFromHash();
     if (document.readyState === "complete") setTimeout(setupOffline, 1500);
     else window.addEventListener("load", function () { setTimeout(setupOffline, 1500); });
   }).catch(function (err) {
