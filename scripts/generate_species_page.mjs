@@ -4,6 +4,8 @@ const plants = JSON.parse(await readFile(new URL("../data/berkeley.json", import
 const photoMeta = JSON.parse(await readFile(new URL("../photo_meta.json", import.meta.url), "utf8"));
 const baseUrl = "https://forage-berkeley.vercel.app";
 const lastmod = "2026-06-23";
+const supportEmail = "forage-berkeley@support.tin.computer";
+const supportHref = `mailto:${supportEmail}`;
 
 const labels = {
   edible: "Edible",
@@ -112,6 +114,18 @@ const guidePages = [
     title: "Edible weeds in Berkeley and the East Bay",
     description: "Practice recognizing 15 edible or use-with-care weed entries from the Forage Berkeley local photo deck. Recognition practice only.",
     id: "edible-weeds-berkeley-east-bay"
+  },
+  {
+    path: "common-east-bay-weeds/",
+    title: "Common East Bay weeds",
+    description: "Practice recognizing common Berkeley and East Bay weeds from the Forage Berkeley local photo deck. Recognition practice only.",
+    id: "common-east-bay-weeds"
+  },
+  {
+    path: "berkeley-plant-walk/",
+    title: "Self-guided Berkeley plant walk",
+    description: "Use Forage Berkeley as a free self-guided photo practice walk for common plants and caution species. Recognition practice only.",
+    id: "berkeley-plant-walk"
   }
 ];
 
@@ -371,7 +385,7 @@ const html = `<!DOCTYPE html>
 
 ${["edible", "care", "no"].map(groupSection).join("\n\n")}
 
-    <p class="foot">Want to practice from photos instead of reading the list? <a href="../#quiz">Start the Forage Berkeley quiz</a> or use the app's <a href="../#browse">Browse plants</a> tab.</p>
+    <p class="foot">Want to practice from photos instead of reading the list? <a href="../#quiz">Start the Forage Berkeley quiz</a> or use the app's <a href="../#browse">Browse plants</a> tab. Found a page issue? <a href="${supportHref}">Contact support</a>.</p>
   </main>
   <script>
     (function () {
@@ -620,6 +634,7 @@ function plantPage(plant) {
       <a class="back-link" href="../../#quiz">Practice this catalog</a>
       <a class="back-link" href="../../berkeley-plant-identification/">Plant identification guide</a>
       <a class="back-link" href="../../CREDITS.md">Photo credits</a>
+      <a class="back-link" href="${supportHref}">Contact support</a>
     </footer>
   </main>
   <script>
@@ -949,6 +964,7 @@ ${guideStyles()}
       <a href="../species/">Species directory</a>
       <a href="../poisonous-plants/">Poisonous plants guide</a>
       <a href="../CREDITS.md">Photo credits</a>
+      <a href="${supportHref}">Contact support</a>
     </footer>
   </main>
   <script>
@@ -1041,6 +1057,7 @@ ${guideStyles()}
       <a href="../">Home</a>
       <a href="../species/">Species directory</a>
       <a href="../CREDITS.md">Photo credits</a>
+      <a href="${supportHref}">Contact support</a>
     </footer>
   </main>
   <script>
@@ -1200,6 +1217,7 @@ ${guideStyles()}
       <a href="../">Home</a>
       <a href="../species/">Species directory</a>
       <a href="../CREDITS.md">Photo credits</a>
+      <a href="${supportHref}">Contact support</a>
     </footer>
   </main>
   <script>

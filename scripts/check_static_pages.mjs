@@ -1,6 +1,7 @@
 import { readdir, readFile } from "node:fs/promises";
 
 const baseUrl = "https://forage-berkeley.vercel.app";
+const supportHref = "mailto:forage-berkeley@support.tin.computer";
 const safetyText = "This page is a recognition practice aid, not an eating guide. Never eat anything based on this page or the app alone.";
 const guideSafetyText = "This page is a recognition practice aid, not a safety authority. Never eat, touch, harvest, remove, or prepare any plant based on this page or the app alone.";
 const edibleWeedIds = [
@@ -56,6 +57,10 @@ function includes(html, needle, message) {
   if (!html.includes(needle)) fail(message);
 }
 
+function checkSupportLink(html, path) {
+  includes(html, supportHref, `${path}: missing support contact link`);
+}
+
 function jsonLdBlocks(html, path) {
   const blocks = [...html.matchAll(/<script\s+type="application\/ld\+json">([\s\S]*?)<\/script>/g)];
   if (!blocks.length) fail(`${path}: missing JSON-LD block`);
@@ -88,9 +93,14 @@ const plantDirs = (await readdir(new URL("../species/", import.meta.url), { with
 if (plants.length !== 73) fail(`data/berkeley.json: expected 73 plants, found ${plants.length}`);
 if (plantDirs.length !== plants.length) fail(`species/: expected ${plants.length} plant page directories, found ${plantDirs.length}`);
 
-checkJsonLd(await readText("index.html"), "index.html");
+const homeHtml = await readText("index.html");
+const plantIdHtml = await readText("berkeley-plant-identification/index.html");
+checkJsonLd(homeHtml, "index.html");
 checkJsonLd(speciesHtml, "species/index.html");
-checkJsonLd(await readText("berkeley-plant-identification/index.html"), "berkeley-plant-identification/index.html");
+checkJsonLd(plantIdHtml, "berkeley-plant-identification/index.html");
+checkSupportLink(homeHtml, "index.html");
+checkSupportLink(speciesHtml, "species/index.html");
+checkSupportLink(plantIdHtml, "berkeley-plant-identification/index.html");
 
 const poisonousGuideHtml = await readText("poisonous-plants/index.html");
 const hemlockGuideHtml = await readText("poison-hemlock-identification/index.html");
@@ -102,6 +112,11 @@ checkJsonLd(hemlockGuideHtml, "poison-hemlock-identification/index.html");
 checkJsonLd(edibleWeedsGuideHtml, "edible-weeds-berkeley-east-bay/index.html");
 checkJsonLd(commonWeedsGuideHtml, "common-east-bay-weeds/index.html");
 checkJsonLd(plantWalkHtml, "berkeley-plant-walk/index.html");
+checkSupportLink(poisonousGuideHtml, "poisonous-plants/index.html");
+checkSupportLink(hemlockGuideHtml, "poison-hemlock-identification/index.html");
+checkSupportLink(edibleWeedsGuideHtml, "edible-weeds-berkeley-east-bay/index.html");
+checkSupportLink(commonWeedsGuideHtml, "common-east-bay-weeds/index.html");
+checkSupportLink(plantWalkHtml, "berkeley-plant-walk/index.html");
 includes(sitemap, `<loc>${baseUrl}/poisonous-plants/</loc>`, "sitemap.xml: missing poisonous plants guide URL");
 includes(sitemap, `<loc>${baseUrl}/poison-hemlock-identification/</loc>`, "sitemap.xml: missing hemlock guide URL");
 includes(sitemap, `<loc>${baseUrl}/edible-weeds-berkeley-east-bay/</loc>`, "sitemap.xml: missing edible weeds guide URL");
@@ -160,6 +175,7 @@ for (const plant of plants) {
   includes(pageHtml, safetyText, `${plantPath}: missing safety language`);
   includes(pageHtml, `href="../../#plant/${plant.id}"`, `${plantPath}: missing plant-specific app link`);
   includes(pageHtml, `<link rel="canonical" href="${plantUrl}"`, `${plantPath}: missing canonical URL`);
+  checkSupportLink(pageHtml, plantPath);
   checkJsonLd(pageHtml, plantPath);
 }
 
