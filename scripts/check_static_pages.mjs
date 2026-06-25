@@ -3,6 +3,7 @@ import { readdir, readFile } from "node:fs/promises";
 const baseUrl = "https://forage-berkeley.vercel.app";
 const safetyText = "This page is a recognition practice aid, not an eating guide. Never eat anything based on this page or the app alone.";
 const guideSafetyText = "This page is a recognition practice aid, not a safety authority. Never eat, touch, harvest, remove, or prepare any plant based on this page or the app alone.";
+const analyticsPrivacyText = "Privacy: we measure only simple product events";
 const edibleWeedIds = [
   "dandelion",
   "common-mallow",
@@ -88,7 +89,10 @@ const plantDirs = (await readdir(new URL("../species/", import.meta.url), { with
 if (plants.length !== 73) fail(`data/berkeley.json: expected 73 plants, found ${plants.length}`);
 if (plantDirs.length !== plants.length) fail(`species/: expected ${plants.length} plant page directories, found ${plantDirs.length}`);
 
-checkJsonLd(await readText("index.html"), "index.html");
+const indexHtml = await readText("index.html");
+checkJsonLd(indexHtml, "index.html");
+includes(indexHtml, analyticsPrivacyText, "index.html: missing analytics privacy note");
+includes(indexHtml, "No accounts, names, emails, exact location, ad pixels, session replay, signup fields, or personal profiles.", "index.html: analytics privacy note no longer matches implementation");
 checkJsonLd(speciesHtml, "species/index.html");
 checkJsonLd(await readText("berkeley-plant-identification/index.html"), "berkeley-plant-identification/index.html");
 
