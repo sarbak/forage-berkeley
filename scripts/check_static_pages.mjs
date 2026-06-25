@@ -4,6 +4,7 @@ const baseUrl = "https://forage-berkeley.vercel.app";
 const supportHref = "mailto:forage-berkeley@support.tin.computer";
 const safetyText = "This page is a recognition practice aid, not an eating guide. Never eat anything based on this page or the app alone.";
 const guideSafetyText = "This page is a recognition practice aid, not a safety authority. Never eat, touch, harvest, remove, or prepare any plant based on this page or the app alone.";
+const analyticsPrivacyText = "Privacy: we measure only simple product events";
 const edibleWeedIds = [
   "dandelion",
   "common-mallow",
@@ -96,6 +97,8 @@ if (plantDirs.length !== plants.length) fail(`species/: expected ${plants.length
 const homeHtml = await readText("index.html");
 const plantIdHtml = await readText("berkeley-plant-identification/index.html");
 checkJsonLd(homeHtml, "index.html");
+includes(homeHtml, analyticsPrivacyText, "index.html: missing analytics privacy note");
+includes(homeHtml, "No accounts, names, emails, exact location, ad pixels, session replay, signup fields, or personal profiles.", "index.html: analytics privacy note no longer matches implementation");
 checkJsonLd(speciesHtml, "species/index.html");
 checkJsonLd(plantIdHtml, "berkeley-plant-identification/index.html");
 checkSupportLink(homeHtml, "index.html");

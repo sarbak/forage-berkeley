@@ -191,6 +191,7 @@
     .foot { text-align: center; margin-top: 8px; font-size: 11px; color: var(--ink-soft); line-height: 1.45; }
     .foot .trial { display: block; margin-bottom: 2px; color: var(--ink); font-family: var(--mono); font-size: 10px; letter-spacing: .04em; }
     .foot .safety { display: block; }
+    .foot .privacy { display: block; margin-top: 2px; }
     .foot a { color: var(--rust-deep); }
     .foot a + a { margin-left: 8px; }
     .foot .offline { display: block; font-family: var(--mono); font-size: 10px; letter-spacing: .05em; margin-top: 2px; }
@@ -270,6 +271,7 @@
       <a href="poisonous-plants/">Poisonous plants</a>
       <a href="CREDITS.md" id="creditslink">Photo credits</a>
       <a href="mailto:forage-berkeley@support.tin.computer">Contact support</a></span>
+      <span class="privacy">Privacy: we measure only simple product events, like quiz starts, answers, plant-guide opens, and progress milestones. No accounts, names, emails, exact location, ad pixels, session replay, signup fields, or personal profiles.</span>
       <span class="offline" id="offline-status"></span></p>
   </div>
 
@@ -282,6 +284,13 @@
     <div class="lb-cap" id="lbcap"></div>
   </div>
 
+  <script>
+    window.FB_ANALYTICS_CONFIG = {
+      posthogKey: "phc_pMzQzy9Yjegx4WeoM4v4LBuYZGscZWsoiaGSDgGeYx39",
+      posthogHost: "https://us.i.posthog.com"
+    };
+  </script>
+  <script src="analytics.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
