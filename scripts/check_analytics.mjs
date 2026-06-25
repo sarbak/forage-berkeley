@@ -34,6 +34,10 @@ includes(index, "window.FB_ANALYTICS_CONFIG", "index.html: missing analytics con
 includes(index, "analytics.js", "index.html: missing analytics script");
 includes(sw, "analytics.js", "sw.js: analytics helper is not precached");
 includes(analytics, "/capture/", "analytics.js: missing PostHog capture endpoint");
+includes(analytics, "$process_person_profile: false", "analytics.js: missing person-profile opt out");
+includes(analytics, "sessionStorage", "analytics.js: should use session-scoped identity storage");
+includes(analytics, "same_site_referrer_path", "analytics.js: missing same-site-only referrer path");
+includes(analytics, "viewport_width", "analytics.js: missing viewport width context");
 
 if (/posthog-js|\bgtag\(|googletagmanager|plausible|mixpanel|\banalytics\.identify|autocapture|session[_-]?record/i.test(analytics + app + index)) {
   fail("analytics: found SDK, autocapture, session recording, or identify-style tracking");
@@ -45,6 +49,10 @@ if (/\b(email|phone|customer|user_name|full_name|message_body|prompt_text)\b/i.t
 
 if (/plant_common_name|plant_scientific_name|page_title/i.test(app + analytics)) {
   fail("analytics: event properties should use stable ids and buckets, not names or titles");
+}
+
+if (/properties:\s*merge\([^]*distinct_id:/m.test(analytics)) {
+  fail("analytics: distinct_id should stay top-level, not inside event properties");
 }
 
 if (failures.length) {

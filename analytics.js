@@ -25,12 +25,24 @@
     }
   }
 
+  function sameSiteReferrerPath() {
+    try {
+      var referrer = new URL(document.referrer);
+      return referrer.origin === location.origin ? referrer.pathname : "";
+    } catch (e) {
+      return "";
+    }
+  }
+
   function context() {
     return {
       app: "forage-berkeley",
       environment: location.hostname === "forage-berkeley.vercel.app" ? "production" : "local",
       page_path: location.pathname || "/",
-      page_hash: location.hash || ""
+      page_hash: location.hash || "",
+      same_site_referrer_path: sameSiteReferrerPath(),
+      viewport_width: window.innerWidth,
+      viewport_height: window.innerHeight
     };
   }
 
@@ -43,13 +55,11 @@
 
   function capture(event, properties) {
     if (!key || !host || !event) return;
-    var id = sessionId();
     var payload = JSON.stringify({
       api_key: key,
       event: event,
-      distinct_id: id,
+      distinct_id: sessionId(),
       properties: merge(context(), merge({
-        distinct_id: id,
         $process_person_profile: false
       }, properties))
     });
